@@ -192,8 +192,14 @@ export default function RetirosPage() {
                         <>
                           <Link
                             href={`/retiros/${retreat.id}`}
-                            onClick={(e) => e.stopPropagation()}
-                            className="flex-1 px-4 py-3 border border-foreground/30 text-foreground text-sm font-medium hover:border-foreground hover:bg-foreground/5 transition-all text-center"
+                            // 1. Frenamos el clic normal (compu)
+                            onClick={(e) => e.stopPropagation()} 
+                            // 2. Frenamos el inicio del toque (celular)
+                            onTouchStart={(e) => e.stopPropagation()} 
+                            // 3. Frenamos el final del toque (celular)
+                            onTouchEnd={(e) => e.stopPropagation()} 
+                            // 4. Le agregamos relative y z-50 a tus clases para que quede bien al frente
+                            className="relative z-50 flex-1 px-4 py-3 border border-foreground/30 text-foreground text-sm font-medium hover:border-foreground hover:bg-foreground/5 transition-all text-center rounded-full"
                           >
                             {content.ctas.moreInfo}
                           </Link>
