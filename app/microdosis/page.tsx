@@ -14,7 +14,10 @@ import {
   Check,
   ArrowRight,
   Calendar,
+  FileText, // Ícono nuevo para el PDF
+  Download, // Ícono nuevo para el botón
 } from "lucide-react";
+import Image from "next/image";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { PageHero } from "@/components/page-hero";
@@ -53,18 +56,51 @@ export default function MicrodosisPage() {
         backgroundImage={content.hero.backgroundImage}
       />
 
-      {/* Intro */}
+      {/* Intro con Imagen */}
       <SectionWrapper variant="default">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="max-w-3xl mx-auto text-center"
-        >
-          <p className="text-lg md:text-xl text-foreground/70 leading-relaxed">
-            {content.intro.description}
-          </p>
-        </motion.div>
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center px-4">
+          
+          {/* Columna de Imagen */}
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="relative w-full aspect-square md:aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl"
+          >
+            <Image
+              src="/images/microdosis/primer-hongo.jpg" 
+              alt="Acompañamiento con Microdosis"
+              width={800}
+              height={500}
+              className="object-cover"
+            />
+          </motion.div>
+
+          {/* Columna de Texto */}
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="space-y-6 lg:pl-8"
+          >
+            <h2 className="text-3xl md:text-5xl font-bold font-serif text-[#292E17]">
+              Un proceso a tu propio ritmo
+            </h2>
+            <div className="text-lg md:text-xl text-foreground/80 leading-relaxed space-y-4 font-medium">
+              <p>
+                {content.intro.description}
+              </p>
+            </div>
+            
+            {/* Detalle decorativo para sumar a la identidad visual */}
+            <div className="pt-6 border-t border-[#868859]/30">
+              <p className="text-sm font-bold text-[#7E2625] tracking-widest uppercase">
+                Acompañamiento Integral y Seguro
+              </p>
+            </div>
+          </motion.div>
+
+        </div>
       </SectionWrapper>
 
       {/* Considerations */}
@@ -209,6 +245,46 @@ export default function MicrodosisPage() {
             );
           })}
         </div>
+      </SectionWrapper>
+
+      {/* NUEVA SECCIÓN: PDF Descargable */}
+      <SectionWrapper variant="default">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="max-w-5xl mx-auto"
+        >
+          <div className="bg-[#292E17] rounded-3xl p-8 md:p-12 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-8 relative overflow-hidden">
+            {/* Elemento decorativo de fondo */}
+            <div className="absolute top-0 right-0 w-64 h-64 bg-[#868859]/10 rounded-full blur-3xl -mr-20 -mt-20 pointer-events-none" />
+            
+            <div className="flex flex-col md:flex-row items-center md:items-start text-center md:text-left gap-6 relative z-10">
+              <div className="w-20 h-20 bg-[#E8DCC4] rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg transform -rotate-3">
+                <FileText size={40} className="text-[#3B1B0E]" />
+              </div>
+              <div>
+                <h3 className="text-3xl font-bold font-serif text-[#E8DCC4] mb-3">
+                  Guía básica para microdosis
+                </h3>
+                <p className="text-[#E8DCC4]/80 text-lg max-w-xl leading-relaxed">
+                  Descarga nuestro material gratuito para conocer en detalle los protocolos, recomendaciones y cómo prepararte para iniciar tu proceso.
+                </p>
+              </div>
+            </div>
+
+            <a
+              href="/docs/guia-microdosis.pdf"
+              download="Guia_Microdosis_TramaViva.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="relative z-10 flex-shrink-0 flex items-center gap-3 px-8 py-4 bg-[#E8DCC4] text-[#3B1B0E] font-bold rounded-full hover:bg-white transition-all shadow-lg hover:shadow-xl hover:-translate-y-1"
+            >
+              <Download size={20} />
+              Descargar PDF
+            </a>
+          </div>
+        </motion.div>
       </SectionWrapper>
 
       {/* CTA */}
