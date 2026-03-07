@@ -191,7 +191,7 @@ export default function RetiroLanding() {
                 <div className="w-full">
                   <FlipCard 
                     frontImage="/images/VERDE CLARO.png"
-                    front={<><h3 className="text-xl font-bold font-serif">Formulario Inicial</h3><p className="text-sm mt-2 font-light opacity-80">Toca para leer</p></>}
+                    front={<><h3 className="text-xl font-bold font-serif"></h3><p className="text-sm mt-2 font-light opacity-80"></p></>}
                     back={<p className="text-sm leading-relaxed">Para inscribirte te enviamos un formulario con preguntas específicas para conocerte mejor.</p>}
                   />
                 </div>
@@ -205,7 +205,7 @@ export default function RetiroLanding() {
                 <div className="w-full">
                   <FlipCard 
                     frontImage="/images/VERDE CLARO.png"
-                    front={<><h3 className="text-xl font-bold font-serif">Entrevista Previa</h3><p className="text-sm mt-2 font-light opacity-80">Toca para leer</p></>}
+                    front={<><h3 className="text-xl font-bold font-serif"></h3><p className="text-sm mt-2 font-light opacity-80"></p></>}
                     back={<p className="text-sm leading-relaxed">Coordinamos un encuentro online de 30 minutos para despejar cualquier duda o consulta.</p>}
                   />
                 </div>
@@ -219,7 +219,7 @@ export default function RetiroLanding() {
                 <div className="w-full">
                   <FlipCard 
                     frontImage="/images/VERDE CLARO.png"
-                    front={<><h3 className="text-xl font-bold font-serif">Pre-Retiro</h3><p className="text-sm mt-2 font-light opacity-80">Encuentro Grupal 1</p></>}
+                    front={<><h3 className="text-xl font-bold font-serif"></h3><p className="text-sm mt-2 font-light opacity-80"></p></>}
                     back={<p className="text-sm leading-relaxed">Una semana antes tendremos un encuentro online grupal para conocernos, brindar herramientas, sugerencias para preparar el cuerpo y despejar dudas.</p>}
                   />
                 </div>
@@ -233,7 +233,7 @@ export default function RetiroLanding() {
                 <div className="w-full">
                   <FlipCard 
                     frontImage="/images/VERDE CLARO.png"
-                    front={<><h3 className="text-xl font-bold font-serif">Post-Retiro</h3><p className="text-sm mt-2 font-light opacity-80">Encuentro Grupal 2</p></>}
+                    front={<><h3 className="text-xl font-bold font-serif"></h3><p className="text-sm mt-2 font-light opacity-80"></p></>}
                     back={<p className="text-sm leading-relaxed">Dos semanas después del retiro nos reencontramos online para optimizar la integración y capitalizar los aprendizajes obtenidos.</p>}
                   />
                 </div>
