@@ -303,7 +303,7 @@ export default function MicrodosisPage() {
           </p>
           <div className="mt-10">
             <Link
-              href="/#contacto"
+              href="/contacto"
               className="inline-flex items-center gap-3 px-8 py-4 bg-accent text-accent-foreground font-medium tracking-wide uppercase text-sm hover:bg-accent/90 transition-all duration-300 group"
             >
               <Calendar size={18} />

@@ -204,7 +204,7 @@ export default function RetirosPage() {
                             {content.ctas.moreInfo}
                           </Link>
                           <Link
-                            href="/#contacto"
+                            href="/contacto"
                             onClick={(e) => e.stopPropagation()}
                             className="flex-1 px-4 py-3 bg-accent text-accent-foreground text-sm font-medium text-center hover:bg-accent/90 transition-all flex items-center justify-center gap-2"
                           >
@@ -313,10 +313,10 @@ export default function RetirosPage() {
 
                 <div className="mt-8 flex gap-4">
                   <Link
-                    href="/#contacto"
+                    href="/contacto"
                     className="flex-1 px-6 py-4 bg-accent text-accent-foreground font-medium text-center hover:bg-accent/90 transition-all flex items-center justify-center gap-2"
                   >
-                    {content.ctas.reserve}
+                    
                     <ArrowRight size={16} />
                   </Link>
                 </div>

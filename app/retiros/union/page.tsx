@@ -298,6 +298,7 @@ export default function RetiroLanding() {
       </section>
 
       {/* 6. VALORES Y CONDICIONES */}
+      {/* 6. VALORES Y CONDICIONES */}
       <section className="py-20 px-4 max-w-5xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-5xl font-bold font-serif text-[#3B1B0E]">Precios</h2>
@@ -305,17 +306,36 @@ export default function RetiroLanding() {
         </div>
 
         <div className="grid md:grid-cols-2 gap-8 mb-12">
-          <div className="bg-white rounded-3xl p-8 shadow-xl border border-[#868859]/20 text-center relative overflow-hidden">
+          
+          {/* Tarjeta 1: Inscripción al Form */}
+          <div className="bg-white rounded-3xl p-6 md:p-8 shadow-xl border border-[#868859]/20 text-center relative overflow-hidden flex flex-col justify-between">
             <div className="absolute top-0 left-0 w-full h-2 bg-[#868859]" />
-            <h3 className="text-2xl font-bold text-[#292E17] mb-2">1 Persona</h3>
-            <p className="text-5xl font-bold font-serif text-[#7E2625] mb-6">$600 <span className="text-lg text-[#3B1B0E]/50 font-sans">USD</span></p>
-            <button className="w-full py-4 bg-[#292E17] text-[#E8DCC4] rounded-full font-bold hover:bg-[#3B1B0E] transition-all">Iniciar Inscripción</button>
+            <div>
+              <h3 className="text-2xl font-bold text-[#292E17] mb-1"></h3>
+              <p className="text-5xl font-bold font-serif text-[#7E2625] mb-4">$600 <span className="text-lg text-[#3B1B0E]/50 font-sans">USD</span></p>
+            </div>
+            <a 
+              href="https://docs.google.com/forms/d/e/1FAIpQLSfcTIFxNn8oyNWtbM9rWhMKSQoNQ7R22PNbTEVN1HsHK2Y3rA/viewform?usp=publish-editor"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block w-full py-3 bg-[#292E17] text-[#E8DCC4] rounded-full font-bold hover:bg-[#3B1B0E] transition-all hover:-translate-y-1 hover:shadow-lg mt-2"
+            >
+              Iniciar Inscripción
+            </a>
           </div>
-          <div className="bg-white rounded-3xl p-8 shadow-xl border border-[#7E2625]/20 text-center relative overflow-hidden">
+
+          {/* Tarjeta 2: Contacto */}
+          <div className="bg-white rounded-3xl p-6 md:p-8 shadow-xl border border-[#7E2625]/20 text-center relative overflow-hidden flex flex-col justify-between">
             <div className="absolute top-0 left-0 w-full h-2 bg-[#7E2625]" />
-            <h3 className="text-2xl font-bold text-[#292E17] mb-2">2 Personas</h3>
-            <p className="text-5xl font-bold font-serif text-[#7E2625] mb-6">$1,100 <span className="text-lg text-[#3B1B0E]/50 font-sans">USD</span></p>
-            <button className="w-full py-4 bg-[#7E2625] text-[#E8DCC4] rounded-full font-bold hover:bg-[#3B1B0E] transition-all">Iniciar Inscripción Dúo</button>
+            <div>
+              <p className="text-3xl md:text-4xl font-bold font-serif text-[#7E2625] mb-4 mt-2">Realiza tu consulta</p>
+            </div>
+            <Link 
+              href="/contacto"
+              className="block w-full py-3 bg-[#7E2625] text-[#E8DCC4] rounded-full font-bold hover:bg-[#3B1B0E] transition-all hover:-translate-y-1 hover:shadow-lg mt-2"
+            >
+              Contacto
+            </Link>
           </div>
         </div>
 

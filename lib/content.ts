@@ -16,7 +16,7 @@ export const navigation = {
       { label: "Microdosis", href: "/microdosis" },
       { label: "Ceremonias", href: "/ceremonias" },
       { label: "Data", href: "/data" },
-      { label: "Contacto", href: "/#contacto" },
+      { label: "Contacto", href: "/contacto" },
     ],
   },
   en: {

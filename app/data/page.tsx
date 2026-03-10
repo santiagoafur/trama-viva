@@ -243,7 +243,7 @@ export default function DataPage() {
 
                 <div className="mt-10 pt-8 border-t border-border">
                   <Link
-                    href="/#contacto"
+                    href="/contacto"
                     className="inline-flex items-center gap-3 px-6 py-3 bg-accent text-accent-foreground font-medium hover:bg-accent/90 transition-all"
                   >
                     Contáctanos para más información
