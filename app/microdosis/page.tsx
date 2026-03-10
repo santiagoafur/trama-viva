@@ -24,6 +24,7 @@ import { PageHero } from "@/components/page-hero";
 import { SectionWrapper } from "@/components/section-wrapper";
 import { useLanguage } from "@/lib/language-context";
 import { microdosisPage } from "@/lib/content";
+import { InlineWidget } from "react-calendly";
 
 const considerationIcons: Record<string, React.ComponentType<{ size?: number; className?: string }>> = {
   sparkles: Sparkles,
@@ -265,10 +266,12 @@ export default function MicrodosisPage() {
               </div>
               <div>
                 <h3 className="text-3xl font-bold font-serif text-[#E8DCC4] mb-3">
-                  Guía básica para microdosis
+                  { locale === 'es' ? 'Guía básica para microdosis' : 'Basic guide for microdosis' }
                 </h3>
                 <p className="text-[#E8DCC4]/80 text-lg max-w-xl leading-relaxed">
-                  Descarga nuestro material gratuito para conocer en detalle los protocolos, recomendaciones y cómo prepararte para iniciar tu proceso.
+                  { locale === 'es' ? 
+                  'Descarga nuestro material gratuito para conocer en detalle los protocolos, recomendaciones y cómo prepararte para iniciar tu proceso.' :
+                  'Download our free material to know in detail protocols, recomendations and how to prepaire yourself for starting this process.' }
                 </p>
               </div>
             </div>
@@ -287,36 +290,39 @@ export default function MicrodosisPage() {
         </motion.div>
       </SectionWrapper>
 
-      {/* CTA */}
-      <SectionWrapper variant="dark">
+      {/* SECCIÓN CALENDLY */}
+      <section className="pt-12 pb-24 px-4 w-full">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center max-w-2xl mx-auto"
+          className="max-w-6xl mx-auto text-center"
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight">
-            {content.cta.title}
+          <h2 className="text-3xl md:text-5xl font-bold font-serif text-[#292E17] mb-4">
+            {locale === "es" ? "Agenda tu sesión" : "Book your session"}
           </h2>
-          <p className="mt-6 text-lg text-primary-foreground/70">
-            {content.cta.description}
+          <p className="text-lg text-[#3B1B0E]/70 mb-10">
+            {locale === "es" 
+              ? "Elige el día y horario que mejor se adapte a ti para nuestra primera charla." 
+              : "Choose the day and time that best suits you for our first chat."}
           </p>
-          <div className="mt-10">
-            <Link
-              href="/contacto"
-              className="inline-flex items-center gap-3 px-8 py-4 bg-accent text-accent-foreground font-medium tracking-wide uppercase text-sm hover:bg-accent/90 transition-all duration-300 group"
-            >
-              <Calendar size={18} />
-              {content.cta.button}
-              <ArrowRight
-                size={18}
-                className="group-hover:translate-x-1 transition-transform"
-              />
-            </Link>
+
+          {/* Contenedor del Widget LIMPIO (sin bordes, ni sombras, ni fondo extra) */}
+          <div className="w-full h-[750px]">
+            <InlineWidget 
+              url="https://calendly.com/trama-viva/30min" 
+              styles={{ height: '100%', width: '100%' }}
+              pageSettings={{
+                //backgroundColor: 'e8dcc4', // Este color hace que se funda invisiblemente con tu fondo
+                textColor: '3b1b0e',
+                primaryColor: '7e2625',
+                hideEventTypeDetails: false,
+                hideLandingPageDetails: false,
+              }}
+            />
           </div>
         </motion.div>
-      </SectionWrapper>
-
+      </section>
       <Footer />
     </main>
   );

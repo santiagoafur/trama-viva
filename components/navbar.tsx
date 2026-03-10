@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { Globe, Menu, X } from "lucide-react";
 import { useLanguage } from "@/lib/language-context";
 import { navigation, commonUI } from "@/lib/content";
 
@@ -113,9 +113,10 @@ export function Navbar() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.6 }}
                 onClick={toggleLocale}
-                className="ml-4 px-4 py-2 border border-foreground/30 text-foreground/80 hover:text-foreground hover:border-foreground text-sm tracking-wider uppercase font-medium transition-all duration-300"
+                className="ml-4 flex items-center gap-2 px-3 py-1.5 border border-[#3B1B0E]/30 text-[#3B1B0E] hover:bg-[#3B1B0E]/5 hover:border-[#3B1B0E] text-sm tracking-wider uppercase font-medium transition-all duration-300"
               >
-                {ui.languageToggle}
+                <Globe size={16} className="opacity-80" />
+                <span>{ui.languageToggle}</span>
               </motion.button>
             </div>
 
@@ -185,9 +186,10 @@ export function Navbar() {
                   toggleLocale();
                   setIsOpen(false);
                 }}
-                className="mt-8 px-6 py-3 border border-primary-foreground/50 text-primary-foreground text-lg tracking-wider uppercase transition-all duration-300 hover:bg-primary-foreground/10"
+                className="mt-8 flex items-center gap-3 px-6 py-3 border border-primary-foreground/50 text-primary-foreground text-lg tracking-wider uppercase transition-all duration-300 hover:bg-primary-foreground/10"
               >
-                {ui.languageToggle}
+                <Globe size={20} />
+                <span>{ui.languageToggle}</span>
               </motion.button>
             </motion.nav>
           </motion.div>
