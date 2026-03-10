@@ -145,7 +145,7 @@ export default function RetirosPage() {
                         {retreat.date}
                       </span>
                       <span className="flex items-center gap-2">
-                        <DollarSign size={14} />
+                        {/* <DollarSign size={14} /> */}
                         {retreat.price}
                       </span>
                     </div>
