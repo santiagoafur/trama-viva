@@ -62,28 +62,25 @@ const FlipCard = ({ front, back, frontImage }: { front: React.ReactNode, back: R
 // --- Datos Mockeados de Testimonios para Retiros ---
 const testimoniosRetiro = [
   {
-    name: "María Laura Gómez", 
-    age: "32 años",
-    image: "/images/testimonio-1.jpg",
-    text: "El retiro Within en Costa Rica fue un antes y un después en mi vida. El nivel de contención del equipo y la belleza de la selva me permitieron entregarme al proceso por completo. Volví renovada y con muchísima claridad."
+    name: "María Belen - Argentina", 
+    age: "31 años",
+    image: "/images/testimonios/belen.png",
+    text: `Cuando pienso en los servicios de algunas personas con las que resueno, que puedo ver y sentir desde el amor real que lo brindan, pienso en llaves, en que en cada sesión esa persona, en este caso vos, te da una llave. Vos elegís qué hacer con esa llave: si la querés perder, si la ponés en tu llavero y la usás a diario, esa llave ya es tuya. Un poco así es la vida.
+Gracias por ser tan vos siempre, porque no fue solamente en la sesión de ayer, sino también en el retiro y siempre. Sos una persona real y hermosa, humilde, dispuesta a escuchar y no juzgar, auténtica y vulnerable. Es muy valioso todo eso.
+Gracias por verme y darme esa llave para abrir esa puerta a esa suavidad y contención que tanto estaba necesitando y no me había dado cuenta por correr evitando sentir.
+Te quiero infinito 🤍
+`
   },
   {
-    name: "Joaquín Fernández", 
-    age: "41 años",
-    image: "/images/testimonio-2.jpg",
-    text: "Llegué con muchas dudas, pero la profesionalidad de Eli y Jony me dio la paz que necesitaba. Cada detalle, desde la comida hasta las ceremonias, está pensado para tu bienestar. Lo recomiendo a cualquiera que busque un reseteo profundo."
-  },
-  {
-    name: "Valentina Ruiz", 
-    age: "28 años",
-    image: "/images/testimonio-3.jpg",
-    text: "Una experiencia mágica. Nunca me había sentido tan segura para explorar mis emociones. El grupo que se armó fue hermoso y el Santuario House of Shakti es, literalmente, un paraíso. Gracias a todo el equipo."
-  },
-  {
-    name: "Roberto Méndez", 
-    age: "45 años",
-    image: "/images/testimonio-4.jpg",
-    text: "La estructura del retiro me encantó. Los encuentros previos online me ayudaron a prepararme, y el retiro en sí superó mis expectativas. La sanación que se vive ahí es real y muy profunda."
+    name: "Fiorella - Perú", 
+    age: "36 años",
+    image: "/images/testimonios/fiorella.jpg",
+    text: `Este retiro fue como un sueño. Cada detalle lo sentí con mucho amor. Desde el acompañamiento de Eli, la comida deliciosa, hasta el amor de los honguitos para mostrarme que la vida es más simple de lo que pienso.
+Claramente afloró el amor en todo mi ser, lo sentí por las personas que se me acercaron post retiro y por el amor y compasión de cómo me veo y veo a otras personas.
+Ahora estoy más convencida de que esta medicina me recuerda lo maravillosos que somos, con todas nuestras experiencias de vida. Todos estamos conectados, así lo sentí todo el tiempo.
+Me encantó el servicio y la apertura de todos los que participamos. Esta experiencia me la llevo en el corazón.
+Recomiendo mucho este espacio con la guía de este maravilloso equipo
+`
   }
 ];
 

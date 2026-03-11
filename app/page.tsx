@@ -19,7 +19,6 @@ export default function Home() {
       <CaminosSection />
       <TestimonialsSection />
       <ContactoPage />
-      <Footer />
     </main>
   );
 }

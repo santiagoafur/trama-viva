@@ -62,28 +62,36 @@ const FlipCard = ({ front, back, frontImage }: { front: React.ReactNode, back: R
 // --- Datos Mockeados de Testimonios para Retiros ---
 const testimoniosRetiro = [
   {
-    name: "Martina Lazzaro", 
+    name: "Martina - Argentina", 
     age: "32 años",
-    image: "/images/testimonio-1.jpg",
-    text: "El retiro Within en Costa Rica fue un antes y un después en mi vida. El nivel de contención del equipo y la belleza de la selva me permitieron entregarme al proceso por completo. Volví renovada y con muchísima claridad."
+    image: "/images/testimonios/martina.PNG",
+    text: `Volví y hablé como nunca con mi papá, pude agradecerle por todo su esfuerzo y decirle que lo amo.
+          Abrace mucho también.
+          Gracias por tanto amor que me compartieron 🤍 
+          Fue un viaje maravilloso y transformador.`
   },
   {
-    name: "Joaquín Fernández", 
-    age: "41 años",
-    image: "/images/testimonio-2.jpg",
-    text: "Llegué con muchas dudas, pero la profesionalidad de Eli y Jony me dio la paz que necesitaba. Cada detalle, desde la comida hasta las ceremonias, está pensado para tu bienestar. Lo recomiendo a cualquiera que busque un reseteo profundo."
+    name: "Dagmar - República Checa", 
+    age: "33 años",
+    image: "/images/testimonios/dagmar.jpg",
+    text: `Estar en un ambiente cuidadísimo, con alguien que no pretende juzgarte y te acepta como sos y te acompaña en tu camino. 
+    Se requiere ser un alma de mucho viaje por el Universo para poder hacerlo.  Gracias 🤍🙏`
   },
   {
-    name: "Valentina Ruiz", 
+    name: "Jimena - Argentina", 
     age: "28 años",
-    image: "/images/testimonio-3.jpg",
-    text: "Una experiencia mágica. Nunca me había sentido tan segura para explorar mis emociones. El grupo que se armó fue hermoso y el Santuario House of Shakti es, literalmente, un paraíso. Gracias a todo el equipo."
+    image: "/images/testimonios/jimena.jpg",
+    text: `Gracias! Por ser tan dedicadas, amorosas, respetuosas. 
+    Gracias por confiar y hacer este llamado convocando a esta red, la de las personas que asistimos y la que está debajo de la tierra siempre dispuesta a expandirnos y enseñarnos 🍄 `
   },
   {
-    name: "Roberto Méndez", 
-    age: "45 años",
-    image: "/images/testimonio-4.jpg",
-    text: "La estructura del retiro me encantó. Los encuentros previos online me ayudaron a prepararme, y el retiro en sí superó mis expectativas. La sanación que se vive ahí es real y muy profunda."
+    name: "Facundo - Argentina", 
+    age: "27 años",
+    image: "/images/testimonios/facundo.PNG",
+    text: `La verdad que fue una experiencia muy enriquecedora. Fue mi segunda vez utilizando la medicina con fines terapeuticos y realmente se noto como cambia cuando se hace en grupo y en forma de retiro. 
+    Es un portal hacia adentro para seguir profundizando sobre el autoconocimiento pero sin dudas que la integracion posterior es igual de importante. 
+    Por eso me gusto tanto, por que no es solo el dia de la ceremonia sino el pre y el post que lo hace tan especial. 
+    Lo volveria a hacer de nuevo sin dudarlo con plena confianza.`
   }
 ];
 

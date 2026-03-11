@@ -62,28 +62,40 @@ const FlipCard = ({ front, back, frontImage }: { front: React.ReactNode, back: R
 // --- Datos del Carrusel de Testimonios ---
 const testimoniosData = [
   {
-    name: "Carolina Battistesa", 
+    name: "Sofía - Argentina", 
     age: "30 años",
-    image: "/images/testimonio-1.jpg",
-    text: "Nunca había tratado con hongos desde el punto de vista medicinal. La propuesta de estar solo con uno mismo me pareció increíble. El ambiente que lograron crear fue fabuloso, desde el espacio, la música y sus palabras. Gracias."
+    image: "/images/testimonios/sofia.PNG",
+    text: `Me encanto, fue perfecto como fue. Amo al mundo, me siento super expandida, vi muchas cosas que no habia podiado ver antes. O q las entendia pero no las sentia de verdad. 
+Fue muy cuidado, el lugar alucinante y la musica muy hermosa. Gracias!
+`
   },
   {
-    name: "Esther Sofia Karlbler", 
-    age: "38 años",
-    image: "/images/testimonio-2.jpg",
-    text: "Fue una experiencia increíblemente hermosa, el espacio se llevó a cabo de manera tan segura, respetuosa y con tanto amor. ¡Qué equipo!! Eli es una verdadera mamá medicina, su capacidad para conectarse y sostener el campo fue increíble. Puedo recomendar esto 100%."
+    name: "Natalie - United States", 
+    age: "32 años",
+    image: "/images/testimonios/natalie.PNG",
+    text: `Happy to! I told Eli after the experience - Im so grateful for the safe space you created here. 
+    Ive joined other plant medicine ceremonies in the past and actually had negative experiences from them because it didnt feel like a safe, welcoming, supportive space. 
+    You all did such a fantastic job of making it feel like a safe space from the very beginning, which allowed all of us to have the positive experiences we did and release control to the medicine. 
+    The location was absolutely incredible - I loved hearing the sounds of the jungle around me, watching the most beautiful sunset (which felt like it went on for two hours and brought profound messages to me), and watching the stars. 
+    You made me feel comfortable right away when I got there. The breathwork to bring us into it was great, and the music was incredible and added so much to guiding the experience with the medicine. 
+    I trusted Eli a lot with her knowledge and respect for the medicine and really liked how she met with us one on one to decide our dosage and our additional microdose if we wanted it later - that felt very comfortable. 
+    And the pipas and fruit at the end just felt like they were sent from an angel. All around, fantastic. Id recommend this so highly (and already have told so many people how much I loved it). Muchísimas gracias!`
   },
   {
-    name: "Sofia Mattone", 
-    age: "35 años",
-    image: "/images/testimonio-3.jpg",
-    text: "Me encantó, fue perfecto como fue. Amo al mundo, me siento super expandida, vi muchas cosas que no había podido ver antes. O que las entendía pero no las sentía de verdad. Fue muy cuidado, el lugar alucinante y la música muy hermosa."
+    name: "Francisco - Ecuador", 
+    age: "42 años",
+    image: "/images/testimonios/francisco.jpg",
+    text: `Ya en camino de regreso a la realidad!!! Lleno de gratitud, amor y sobretodo mayor perspectiva y claridad mental después de una experiencia realmente mágica!!!
+Gracias por tu compañía y cariño!!!
+Me sentí muy seguro, cuidado, guiado y querido!!! Gracias, gracias, gracias!!!
+`
   },
   {
-    name: "Alejandra Russo", 
-    age: "59 años",
-    image: "/images/testimonio-4.jpg",
-    text: "He compartido una hermosa ceremonia que me permitió realizar un viaje maravilloso. Sigo descubriendo nuevos recuerdos e información recibida sobre mi cuerpo, mi esencia y mi alrededor. Me sentí parte del mundo. Mil gracias por todo lo vivido!!!"
+    name: "Emilie - Lisboa", 
+    age: "33 años",
+    image: "/images/testimonios/emilie.PNG",
+    text: `Eli ensured that the Sacred Medicine Ceremony took place under the right conditions, in the perfect environment- 
+    House of Shakti was ideal for it. She also made sure her own intentions and energy were aligned, creating a truly sacred space.`
   }
 ];
 

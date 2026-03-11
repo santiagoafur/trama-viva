@@ -105,25 +105,34 @@ export const homePage = {
       subtitle: "Experiencias de transformación",
       items: [
         {
-          name: "Martina Lazzaro",
+          name: "Martina - Argentina",
           role: "Participante de Retiro 2024",
-          image: "/images/testimonial-martina.jpg",
+          image: "/images/testimonios/martina.png",
           quote:
-            "El retiro con Eli fue una experiencia que marcó un antes y un después en mi vida. La combinación de prácticas somáticas, ceremonia y acompañamiento profesional me permitió acceder a partes de mí que desconocía.",
+            `Volví y hablé como nunca con mi papá, pude agradecerle por todo su esfuerzo y decirle que lo amo.
+          Abrace mucho también.
+          Gracias por tanto amor que me compartieron 🤍 
+          Fue un viaje maravilloso y transformador.`,
         },
         {
-          name: "Julia Vennera",
+          name: "Octavia - Chile",
           role: "Proceso de Microdosis",
-          image: "/images/testimonial-julia.jpg",
-          quote:
-            "El acompañamiento durante mi proceso de microdosis fue fundamental. Eli me guió con profesionalismo y calidez, ayudándome a integrar cada experiencia en mi vida cotidiana.",
+          image: "/images/testimonios/octavia.png",
+          quote:`La experiencia vivida en el programa produce la sinergia entre la amorosa guía de Eli, la gran calidad humana del grupo y el trabajo "silencioso", pero profundo de la medicina. 
+    Lo anterior se potencia por el hecho de haber sostenido un trabajo semanal durante 2 meses, que me permitió adquirir nuevos hábitos de conexión y autoconocimiento de forma duradera.
+Realmente muy agradecida de la experiencia!`
+            ,
         },
         {
-          name: "Fiorella Burnuy",
+          name: "Fiorella - Perú",
           role: "Participante de Ceremonias",
-          image: "/images/testimonial-fiorella.jpg",
-          quote:
-            "Las ceremonias facilitadas por Trama Viva son espacios sagrados donde pude reconectar con mi esencia. La preparación, el setting y el cierre son impecables.",
+          image: "/images/testimonios/fiorella.jpg",
+          quote:`Este retiro fue como un sueño. Cada detalle lo sentí con mucho amor. Desde el acompañamiento de Eli, la comida deliciosa, hasta el amor de los honguitos para mostrarme que la vida es más simple de lo que pienso.
+Claramente afloró el amor en todo mi ser, lo sentí por las personas que se me acercaron post retiro y por el amor y compasión de cómo me veo y veo a otras personas.
+Ahora estoy más convencida de que esta medicina me recuerda lo maravillosos que somos, con todas nuestras experiencias de vida. Todos estamos conectados, así lo sentí todo el tiempo.
+Me encantó el servicio y la apertura de todos los que participamos. Esta experiencia me la llevo en el corazón.
+Recomiendo mucho este espacio con la guía de este maravilloso equipo`
+            ,
         },
       ],
     },

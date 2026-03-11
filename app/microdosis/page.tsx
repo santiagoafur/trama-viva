@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import {
   Sparkles,
@@ -15,7 +15,10 @@ import {
   ArrowRight,
   Calendar,
   FileText, // Ícono nuevo para el PDF
-  Download, // Ícono nuevo para el botón
+  Download,
+  ChevronRight,
+  ChevronLeft,
+  Quote, // Ícono nuevo para el botón
 } from "lucide-react";
 import Image from "next/image";
 import { Navbar } from "@/components/navbar";
@@ -39,10 +42,46 @@ const benefitIcons: Record<string, React.ComponentType<{ size?: number; classNam
   heart: Heart,
 };
 
+const testimoniosRetiro = [
+  {
+    name: "Octavia - Chile", 
+    age: "30 años",
+    image: "/images/testimonios/octavia.png",
+    text: `La experiencia vivida en el programa produce la sinergia entre la amorosa guía de Eli, la gran calidad humana del grupo y el trabajo "silencioso", pero profundo de la medicina. 
+    Lo anterior se potencia por el hecho de haber sostenido un trabajo semanal durante 2 meses, que me permitió adquirir nuevos hábitos de conexión y autoconocimiento de forma duradera.
+Realmente muy agradecida de la experiencia!
+
+`
+  },
+  {
+    name: "Andrea - Argentina", 
+    age: "36 años",
+    image: "/images/testimonios/andrea.jpg",
+    text: `Recuerdo mucho nuestras sesiones, nuestros encuentros, las charlas. Entre tu calidez, tu presencia, tus palabras y las micro liberaron en mí, entre otros mundos, un gran enojo que tenía adentro, enquistado, callado, silenciado.
+Hoy me siento más liviana, aprendiendo a poner límites y así cuidarme. Con el paso de los meses está queriendo aparecer, ya mucho más despejada, la creatividad y junto con ella el gozo, la diversión y la alegría.
+Agradezco la sabiduría de esos 🍄guitos, que sutilmente despejaban camino y agradezco tu sostén en todo momento.
+Gracias Eli, gracias 🙏. Desde Argentina, aprendiendo a vivir al suave.
+Te mando amor. Ojalá llegue ✨
+
+`
+  }
+];
+
 export default function MicrodosisPage() {
   const { locale } = useLanguage();
   const content = microdosisPage[locale];
   const [flippedCards, setFlippedCards] = useState<Record<number, boolean>>({});
+
+    // Estado para el Carrusel de Testimonios
+    const [currentTestimonial, setCurrentTestimonial] = useState(0);
+  
+    const nextTestimonial = () => {
+      setCurrentTestimonial((prev) => (prev + 1) % testimoniosRetiro.length);
+    };
+  
+    const prevTestimonial = () => {
+      setCurrentTestimonial((prev) => (prev - 1 + testimoniosRetiro.length) % testimoniosRetiro.length);
+    };
 
   const toggleCard = (index: number) => {
     setFlippedCards((prev) => ({ ...prev, [index]: !prev[index] }));
@@ -322,6 +361,74 @@ export default function MicrodosisPage() {
             />
           </div>
         </motion.div>
+      </section>
+
+      {/* Testimonios */}
+      <section className="py-24 bg-[#E8DCC4] text-[#3B1B0E] px-4 border-t border-[#868859]/20">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl md:text-6xl font-bold font-serif mb-4 text-[#292E17]">Testimonios</h2>
+          <p className="text-lg opacity-80 mb-16 text-[#7E2625]">Experiencias de Acompañamiento Microdosis</p>
+
+          <div className="relative min-h-[400px] md:min-h-[300px] flex flex-col items-center justify-center">
+            <Quote className="text-[#868859]/40 mb-8" size={64} />
+            
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={currentTestimonial}
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -20 }}
+                transition={{ duration: 0.3 }}
+                className="flex flex-col items-center"
+              >
+                <p className="text-xl md:text-3xl italic font-serif leading-relaxed mb-10 text-[#3B1B0E]/90">
+                  "{testimoniosRetiro[currentTestimonial].text}"
+                </p>
+                
+                <div className="flex flex-col items-center gap-4">
+                  <div className="w-16 h-16 relative rounded-full overflow-hidden border-2 border-[#868859]">
+                    <Image 
+                      src={testimoniosRetiro[currentTestimonial].image} 
+                      alt={testimoniosRetiro[currentTestimonial].name}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-lg text-[#292E17]">{testimoniosRetiro[currentTestimonial].name}</h4>
+                    <p className="text-sm text-[#7E2625]">Participante • {testimoniosRetiro[currentTestimonial].age}</p>
+                  </div>
+                </div>
+              </motion.div>
+            </AnimatePresence>
+          </div>
+
+          <div className="flex items-center justify-center gap-6 mt-12">
+            <button 
+              onClick={prevTestimonial}
+              className="w-12 h-12 rounded-full border border-[#868859] flex items-center justify-center text-[#868859] hover:bg-[#868859] hover:text-[#E8DCC4] transition-all"
+            >
+              <ChevronLeft size={24} />
+            </button>
+            
+            <div className="flex gap-2">
+              {testimoniosRetiro.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentTestimonial(index)}
+                  className={`h-2 rounded-full transition-all ${currentTestimonial === index ? 'w-8 bg-[#868859]' : 'w-2 bg-[#868859]/30'}`}
+                />
+              ))}
+            </div>
+
+            <button 
+              onClick={nextTestimonial}
+              className="w-12 h-12 rounded-full border border-[#868859] flex items-center justify-center text-[#868859] hover:bg-[#868859] hover:text-[#E8DCC4] transition-all"
+            >
+              <ChevronRight size={24} />
+            </button>
+          </div>
+        </div>
       </section>
       <Footer />
     </main>
