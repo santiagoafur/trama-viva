@@ -13,7 +13,7 @@ export function CaminosSection() {
   const content = homePage[locale].caminos;
 
   return (
-    <SectionWrapper variant="alt">
+    <SectionWrapper variant="alt" id="caminos">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}

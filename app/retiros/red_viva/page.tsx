@@ -20,7 +20,7 @@ import {
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 
-// --- Subcomponente Reutilizable para las Flip Cards ---
+// --- Subcomponente Reutilizable para las Flip Cards (FIX SAFARI) ---
 const FlipCard = ({ front, back, frontImage }: { front: React.ReactNode, back: React.ReactNode, frontImage?: string }) => {
   const [isFlipped, setIsFlipped] = useState(false);
 
@@ -37,23 +37,35 @@ const FlipCard = ({ front, back, frontImage }: { front: React.ReactNode, back: R
       >
         {/* Frente */}
         <div 
-          className="absolute inset-0 rounded-2xl overflow-hidden bg-[#E8DCC4] border border-[#3B1B0E]/10 flex flex-col justify-center p-6 text-center z-10" 
-          style={{ backfaceVisibility: "hidden", WebkitBackfaceVisibility: "hidden" }}
+          className="absolute inset-0 rounded-2xl overflow-hidden bg-[#E8DCC4] border border-[#3B1B0E]/10 flex flex-col justify-center p-6 text-center" 
+          style={{ 
+            backfaceVisibility: "hidden", 
+            WebkitBackfaceVisibility: "hidden",
+            transform: "rotateY(0deg) translateZ(1px)" /* Fix Safari */
+          }}
         >
           {frontImage && (
             <Image src={frontImage} alt="Cover" fill className="object-cover opacity-60 mix-blend-multiply" />
           )}
-          <div className="absolute inset-0 from-[#3B1B0E]/90 via-[#3B1B0E]/40 to-transparent" />
+          <div className="absolute" />
           <div className="relative z-10 flex flex-col items-center justify-end h-full text-[#E8DCC4]">
             {front}
           </div>
         </div>
+        
         {/* Dorso */}
         <div 
-          className="absolute inset-0 rounded-2xl overflow-hidden bg-[#868859] text-[#E8DCC4] p-6 flex items-center justify-center text-center shadow-lg z-0"
-          style={{ backfaceVisibility: "hidden", WebkitBackfaceVisibility: "hidden", transform: "rotateY(180deg)" }}
+          className="absolute inset-0 rounded-2xl overflow-hidden bg-[#868859] text-[#E8DCC4] p-6 flex items-center justify-center text-center shadow-lg"
+          style={{ 
+            backfaceVisibility: "hidden", 
+            WebkitBackfaceVisibility: "hidden", 
+            transform: "rotateY(180deg) translateZ(1px)" /* Fix Safari */
+          }}
         >
-          {back}
+          {/* El contenedor interno extra asegura que el texto no herede bugs de safari */}
+          <div className="w-full h-full flex flex-col items-center justify-center" style={{ transform: "translateZ(0)" }}>
+            {back}
+          </div>
         </div>
       </motion.div>
     </div>
@@ -176,7 +188,7 @@ export default function RetiroUruguayLanding() {
                 <div className="w-full">
                   <FlipCard 
                     frontImage="/images/VERDE CLARO.png"
-                    front={<><h3 className="text-xl font-bold font-serif">Formulario</h3><p className="text-sm mt-2 font-light opacity-80">Toca para leer</p></>}
+                    front={<><h3 className="text-xl font-bold font-serif"></h3><p className="text-sm mt-2 font-light opacity-80"></p></>}
                     back={<p className="text-sm leading-relaxed">Para inscribirte primero te enviamos un formulario inicial con preguntas específicas para conocerte mejor.</p>}
                   />
                 </div>
@@ -189,7 +201,7 @@ export default function RetiroUruguayLanding() {
                 <div className="w-full">
                   <FlipCard 
                     frontImage="/images/VERDE CLARO.png"
-                    front={<><h3 className="text-xl font-bold font-serif">Entrevista</h3><p className="text-sm mt-2 font-light opacity-80">Toca para leer</p></>}
+                    front={<><h3 className="text-xl font-bold font-serif"></h3><p className="text-sm mt-2 font-light opacity-80"></p></>}
                     back={<p className="text-sm leading-relaxed">Luego coordinamos una entrevista virtual para conocernos, despejar todas tus dudas y consultas sobre el proceso.</p>}
                   />
                 </div>
@@ -202,7 +214,7 @@ export default function RetiroUruguayLanding() {
                 <div className="w-full">
                   <FlipCard 
                     frontImage="/images/VERDE CLARO.png"
-                    front={<><h3 className="text-xl font-bold font-serif">Admisión</h3><p className="text-sm mt-2 font-light opacity-80">Acuerdo Mutuo</p></>}
+                    front={<><h3 className="text-xl font-bold font-serif"></h3><p className="text-sm mt-2 font-light opacity-80"></p></>}
                     back={<p className="text-sm leading-relaxed">Una vez hecha la admisión, se firma el acuerdo y el consentimiento informado por parte de ambas partes.</p>}
                   />
                 </div>
@@ -215,7 +227,7 @@ export default function RetiroUruguayLanding() {
                 <div className="w-full">
                   <FlipCard 
                     frontImage="/images/VERDE CLARO.png"
-                    front={<><h3 className="text-xl font-bold font-serif">Reserva</h3><p className="text-sm mt-2 font-light opacity-80">Tu lugar asegurado</p></>}
+                    front={<><h3 className="text-xl font-bold font-serif"></h3><p className="text-sm mt-2 font-light opacity-80"></p></>}
                     back={<p className="text-sm leading-relaxed">Con el pago de la primera cuota (o pago total) tu espacio en el retiro queda oficialmente reservado.</p>}
                   />
                 </div>

@@ -122,4 +122,19 @@
   body {
     @apply bg-background text-foreground;
   }
+  button, 
+  a, 
+  [role="button"] {
+    @apply cursor-pointer;
+  }
+}
+
+/* Ocultar barra de scroll pero mantener la funcionalidad */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;  /* IE y Edge */
+  scrollbar-width: none;  /* Firefox */
 }

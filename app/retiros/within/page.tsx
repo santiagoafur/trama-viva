@@ -21,7 +21,7 @@ import {
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 
-// --- Subcomponente Reutilizable para las Flip Cards ---
+// --- Subcomponente Reutilizable para las Flip Cards (FIX SAFARI) ---
 const FlipCard = ({ front, back, frontImage }: { front: React.ReactNode, back: React.ReactNode, frontImage?: string }) => {
   const [isFlipped, setIsFlipped] = useState(false);
 
@@ -34,25 +34,39 @@ const FlipCard = ({ front, back, frontImage }: { front: React.ReactNode, back: R
       <motion.div
         className="relative w-full h-full duration-700"
         animate={{ rotateY: isFlipped ? 180 : 0 }}
-        style={{ transformStyle: "preserve-3d" }}
+        style={{ transformStyle: "preserve-3d", WebkitTransformStyle: "preserve-3d" }}
       >
         {/* Frente */}
-        <div className="absolute inset-0 rounded-2xl overflow-hidden bg-[#E8DCC4] border border-[#3B1B0E]/10 flex flex-col justify-center p-6 text-center" style={{ backfaceVisibility: "hidden" }}>
+        <div 
+          className="absolute inset-0 rounded-2xl overflow-hidden bg-[#E8DCC4] border border-[#3B1B0E]/10 flex flex-col justify-center p-6 text-center" 
+          style={{ 
+            backfaceVisibility: "hidden", 
+            WebkitBackfaceVisibility: "hidden",
+            transform: "rotateY(0deg) translateZ(1px)" /* Fix Safari */
+          }}
+        >
           {frontImage && (
             <Image src={frontImage} alt="Cover" fill className="object-cover opacity-60 mix-blend-multiply" />
           )}
-          {/* Corregido: se agregó bg-gradient-to-t */}
-          <div className="absolute inset-0 from-[#3B1B0E]/90 via-[#3B1B0E]/40 to-transparent" />
+          <div className="absolute" />
           <div className="relative z-10 flex flex-col items-center justify-end h-full text-[#E8DCC4]">
             {front}
           </div>
         </div>
+        
         {/* Dorso */}
         <div 
           className="absolute inset-0 rounded-2xl overflow-hidden bg-[#868859] text-[#E8DCC4] p-6 flex items-center justify-center text-center shadow-lg"
-          style={{ backfaceVisibility: "hidden", transform: "rotateY(180deg)" }}
+          style={{ 
+            backfaceVisibility: "hidden", 
+            WebkitBackfaceVisibility: "hidden", 
+            transform: "rotateY(180deg) translateZ(1px)" /* Fix Safari */
+          }}
         >
-          {back}
+          {/* El contenedor interno extra asegura que el texto no herede bugs de safari */}
+          <div className="w-full h-full flex flex-col items-center justify-center" style={{ transform: "translateZ(0)" }}>
+            {back}
+          </div>
         </div>
       </motion.div>
     </div>
@@ -161,7 +175,7 @@ export default function RetiroLanding() {
             </div>
             <div className="mt-4 w-full h-48 rounded-2xl overflow-hidden shadow-md">
               <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3928.7836374026627!2d-85.1678122241031!3d9.64628899042598!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f9e71ec202221b5%3A0xc6651bc97851e36c!2sHouse%20of%20Shakti!5e0!3m2!1ses-419!2sar!4v1709698543210!5m2!1ses-419!2sar" 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6279.62086190889!2d-85.17602807082716!3d9.669989699071966!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f9f6f548041a59b%3A0x69586416c9cba625!2sHouse%20of%20Shakti%20Sanctuary%2C%20Retreats%20%26%20Yoga%20studio!5e0!3m2!1ses-419!2sar!4v1773442878379!5m2!1ses-419!2sar" 
                 width="100%" height="100%" style={{ border: 0 }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade">
               </iframe>
             </div>

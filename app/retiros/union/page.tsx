@@ -21,7 +21,7 @@ import {
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 
-// --- Subcomponente Reutilizable para las Flip Cards ---
+// --- Subcomponente Reutilizable para las Flip Cards (FIX SAFARI) ---
 const FlipCard = ({ front, back, frontImage }: { front: React.ReactNode, back: React.ReactNode, frontImage?: string }) => {
   const [isFlipped, setIsFlipped] = useState(false);
 
@@ -34,25 +34,39 @@ const FlipCard = ({ front, back, frontImage }: { front: React.ReactNode, back: R
       <motion.div
         className="relative w-full h-full duration-700"
         animate={{ rotateY: isFlipped ? 180 : 0 }}
-        style={{ transformStyle: "preserve-3d" }}
+        style={{ transformStyle: "preserve-3d", WebkitTransformStyle: "preserve-3d" }}
       >
         {/* Frente */}
-        <div className="absolute inset-0 rounded-2xl overflow-hidden bg-[#E8DCC4] border border-[#3B1B0E]/10 flex flex-col justify-center p-6 text-center" style={{ backfaceVisibility: "hidden" }}>
+        <div 
+          className="absolute inset-0 rounded-2xl overflow-hidden bg-[#E8DCC4] border border-[#3B1B0E]/10 flex flex-col justify-center p-6 text-center" 
+          style={{ 
+            backfaceVisibility: "hidden", 
+            WebkitBackfaceVisibility: "hidden",
+            transform: "rotateY(0deg) translateZ(1px)" /* Fix Safari */
+          }}
+        >
           {frontImage && (
             <Image src={frontImage} alt="Cover" fill className="object-cover opacity-60 mix-blend-multiply" />
           )}
-          {/* Corregido: se agregó bg-gradient-to-t */}
-          <div className="absolute inset-0 from-[#3B1B0E]/90 via-[#3B1B0E]/40 to-transparent" />
+          <div className="absolute" />
           <div className="relative z-10 flex flex-col items-center justify-end h-full text-[#E8DCC4]">
             {front}
           </div>
         </div>
+        
         {/* Dorso */}
         <div 
           className="absolute inset-0 rounded-2xl overflow-hidden bg-[#868859] text-[#E8DCC4] p-6 flex items-center justify-center text-center shadow-lg"
-          style={{ backfaceVisibility: "hidden", transform: "rotateY(180deg)" }}
+          style={{ 
+            backfaceVisibility: "hidden", 
+            WebkitBackfaceVisibility: "hidden", 
+            transform: "rotateY(180deg) translateZ(1px)" /* Fix Safari */
+          }}
         >
-          {back}
+          {/* El contenedor interno extra asegura que el texto no herede bugs de safari */}
+          <div className="w-full h-full flex flex-col items-center justify-center" style={{ transform: "translateZ(0)" }}>
+            {back}
+          </div>
         </div>
       </motion.div>
     </div>
@@ -203,7 +217,7 @@ export default function RetiroLanding() {
                 <div className="w-full">
                   <FlipCard 
                     frontImage="/images/VERDE CLARO.png"
-                    front={<><h3 className="text-xl font-bold font-serif">Formulario Inicial</h3><p className="text-sm mt-2 font-light opacity-80">Toca para leer</p></>}
+                    front={<><h3 className="text-xl font-bold font-serif"></h3><p className="text-sm mt-2 font-light opacity-80"></p></>}
                     back={<p className="text-sm leading-relaxed">Para inscribirte te enviamos un formulario con preguntas específicas para conocerte mejor.</p>}
                   />
                 </div>
@@ -217,7 +231,7 @@ export default function RetiroLanding() {
                 <div className="w-full">
                   <FlipCard 
                     frontImage="/images/VERDE CLARO.png"
-                    front={<><h3 className="text-xl font-bold font-serif">Entrevista Previa</h3><p className="text-sm mt-2 font-light opacity-80">Toca para leer</p></>}
+                    front={<><h3 className="text-xl font-bold font-serif"></h3><p className="text-sm mt-2 font-light opacity-80"></p></>}
                     back={<p className="text-sm leading-relaxed">Coordinamos un encuentro online de 30 minutos para despejar cualquier duda o consulta.</p>}
                   />
                 </div>
@@ -231,7 +245,7 @@ export default function RetiroLanding() {
                 <div className="w-full">
                   <FlipCard 
                     frontImage="/images/VERDE CLARO.png"
-                    front={<><h3 className="text-xl font-bold font-serif">Pre-Retiro</h3><p className="text-sm mt-2 font-light opacity-80">Encuentro Grupal 1</p></>}
+                    front={<><h3 className="text-xl font-bold font-serif"></h3><p className="text-sm mt-2 font-light opacity-80"></p></>}
                     back={<p className="text-sm leading-relaxed">Una semana antes tendremos un encuentro online grupal para conocernos, brindar herramientas, sugerencias para preparar el cuerpo y despejar dudas.</p>}
                   />
                 </div>
@@ -245,7 +259,7 @@ export default function RetiroLanding() {
                 <div className="w-full">
                   <FlipCard 
                     frontImage="/images/VERDE CLARO.png"
-                    front={<><h3 className="text-xl font-bold font-serif">Post-Retiro</h3><p className="text-sm mt-2 font-light opacity-80">Encuentro Grupal 2</p></>}
+                    front={<><h3 className="text-xl font-bold font-serif"></h3><p className="text-sm mt-2 font-light opacity-80"></p></>}
                     back={<p className="text-sm leading-relaxed">Dos semanas después del retiro nos reencontramos online para optimizar la integración y capitalizar los aprendizajes obtenidos.</p>}
                   />
                 </div>
