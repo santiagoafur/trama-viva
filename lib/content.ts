@@ -328,17 +328,21 @@ export const retirosPage = {
         ],
       },
       {
-        id: "uruguay",
-        name: "Uruguay",
-        location: "Punta del Este, Uruguay",
+        id: "red_viva",
+        name: "Red Viva",
+        location: "Minas, Uruguay",
         date: "Próximamente",
         price: "$1000 USD",
         image: "/images/retiro-uruguay.jpg",
-        status: "coming-soon",
-        frontDescription: "Una nueva experiencia en la costa atlántica uruguaya.",
-        backDescription:
-          "Estamos preparando un nuevo retiro en Uruguay para 2026. Regístrate para ser el primero en conocer las fechas y detalles cuando estén disponibles.",
-        includes: [],
+        status: "available",
+        frontDescription: "Retiro de Conexión somática miceliar. Una invitación a recordar la sabiduría de la tierra.",
+        backDescription: "Una invitación a recordar la sabiduría del micelio. A reunirnos como la Red Viva que ya somos, donde nuestras experiencias se entrelazan y nos permiten reconocernos parte de un mismo tejido mediante Terapia Asistida por Psicodélicos.",
+        includes: [
+          "Alojamiento en entorno natural",
+          "Alimentación consciente",
+          "Proceso completo de T.A.P.",
+          "Facilitación por Eli y Fer"
+        ]
       },
     ],
     ctas: {

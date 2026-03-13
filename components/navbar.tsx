@@ -41,10 +41,9 @@ export function Navbar() {
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          scrolled
-            ? "bg-background/95 backdrop-blur-md shadow-sm"
-            : "bg-transparent"
+        // ACÁ ESTÁ LA MAGIA: Fondo crema fijo (#E8DCC4) y solo agregamos sombra al scrollear
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-[#E8DCC4] ${
+          scrolled ? "shadow-md border-b border-[#3B1B0E]/10" : "border-b border-transparent"
         }`}
       >
         <nav className="container mx-auto px-6 lg:px-12">
@@ -62,9 +61,7 @@ export function Navbar() {
                 transition={{ delay: 0.2 }}
                 className="flex items-center"
               >
-                {/* Logo Desktop (logo_secundario_rojo.png) 
-                    Le damos muchisimo más alto (h-20 a lg:h-28)
-                */}
+                {/* Logo Desktop */}
                 <Image 
                   src="/images/logo_secundario_rojo.png"
                   alt="Trama Viva Logo"
@@ -74,9 +71,7 @@ export function Navbar() {
                   priority
                 />
                 
-                {/* Logo Mobile (ROJO.png) 
-                    También lo agrandamos a h-16
-                */}
+                {/* Logo Mobile */}
                 <Image 
                   src="/images/ROJO.png"
                   alt="Trama Viva Logo"
@@ -99,10 +94,10 @@ export function Navbar() {
                 >
                   <Link
                     href={item.href}
-                    className="relative text-foreground/80 hover:text-foreground transition-colors duration-300 text-sm tracking-wide uppercase font-medium group"
+                    className="relative text-[#3B1B0E]/80 hover:text-[#7E2625] transition-colors duration-300 text-sm tracking-wide uppercase font-bold group"
                   >
                     {item.label}
-                    <span className="absolute -bottom-1 left-0 w-0 h-px bg-foreground transition-all duration-300 group-hover:w-full" />
+                    <span className="absolute -bottom-1 left-0 w-0 h-px bg-[#7E2625] transition-all duration-300 group-hover:w-full" />
                   </Link>
                 </motion.div>
               ))}
@@ -113,7 +108,7 @@ export function Navbar() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.6 }}
                 onClick={toggleLocale}
-                className="ml-4 flex items-center gap-2 px-3 py-1.5 border border-[#3B1B0E]/30 text-[#3B1B0E] hover:bg-[#3B1B0E]/5 hover:border-[#3B1B0E] text-sm tracking-wider uppercase font-medium transition-all duration-300"
+                className="ml-4 flex items-center gap-2 px-3 py-1.5 border border-[#3B1B0E]/30 text-[#3B1B0E] hover:bg-[#3B1B0E]/10 hover:border-[#3B1B0E] rounded-full text-sm tracking-wider uppercase font-bold transition-all duration-300"
               >
                 <Globe size={16} className="opacity-80" />
                 <span>{ui.languageToggle}</span>
@@ -123,7 +118,7 @@ export function Navbar() {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="md:hidden relative z-50 p-2 text-foreground"
+              className="md:hidden relative z-50 p-2 text-[#3B1B0E]"
               aria-label={isOpen ? "Close menu" : "Open menu"}
             >
               {isOpen ? <X size={28} /> : <Menu size={28} />}
@@ -147,7 +142,7 @@ export function Navbar() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="absolute inset-0 bg-primary"
+              className="absolute inset-0 bg-[#E8DCC4]"
               onClick={() => setIsOpen(false)}
             />
 
@@ -170,7 +165,7 @@ export function Navbar() {
                   <Link
                     href={item.href}
                     onClick={() => setIsOpen(false)}
-                    className="text-primary-foreground text-3xl font-medium tracking-wide hover:opacity-70 transition-opacity"
+                    className="text-[#292E17] text-3xl font-bold font-serif tracking-wide hover:text-[#7E2625] transition-colors"
                   >
                     {item.label}
                   </Link>
@@ -186,7 +181,7 @@ export function Navbar() {
                   toggleLocale();
                   setIsOpen(false);
                 }}
-                className="mt-8 flex items-center gap-3 px-6 py-3 border border-primary-foreground/50 text-primary-foreground text-lg tracking-wider uppercase transition-all duration-300 hover:bg-primary-foreground/10"
+                className="mt-8 flex items-center gap-3 px-6 py-3 border border-[#3B1B0E]/50 text-[#3B1B0E] font-bold rounded-full text-lg tracking-wider uppercase transition-all duration-300 hover:bg-[#3B1B0E]/10"
               >
                 <Globe size={20} />
                 <span>{ui.languageToggle}</span>

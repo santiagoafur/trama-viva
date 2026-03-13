@@ -122,7 +122,7 @@ export default function RetirosPage() {
                   
                   {/* Status Badge */}
                   {retreat.status === "coming-soon" && (
-                    <div className="absolute top-4 right-4 px-3 py-1 bg-secondary text-secondary-foreground text-xs uppercase tracking-wider">
+                    <div className="absolute top-4 right-4 px-3 py-1 bg-secondary text-secondary-foreground text-xs uppercase tracking-wider rounded-full">
                       {retreat.date}
                     </div>
                   )}
@@ -145,7 +145,6 @@ export default function RetirosPage() {
                         {retreat.date}
                       </span>
                       <span className="flex items-center gap-2">
-                        {/* <DollarSign size={14} /> */}
                         {retreat.price}
                       </span>
                     </div>
@@ -192,13 +191,9 @@ export default function RetirosPage() {
                         <>
                           <Link
                             href={`/retiros/${retreat.id}`}
-                            // 1. Frenamos el clic normal (compu)
                             onClick={(e) => e.stopPropagation()} 
-                            // 2. Frenamos el inicio del toque (celular)
                             onTouchStart={(e) => e.stopPropagation()} 
-                            // 3. Frenamos el final del toque (celular)
                             onTouchEnd={(e) => e.stopPropagation()} 
-                            // 4. Le agregamos relative y z-50 a tus clases para que quede bien al frente
                             className="relative z-50 flex-1 px-4 py-3 border border-foreground/30 text-foreground text-sm font-medium hover:border-foreground hover:bg-foreground/5 transition-all text-center rounded-full"
                           >
                             {content.ctas.moreInfo}
@@ -206,7 +201,9 @@ export default function RetirosPage() {
                           <Link
                             href="/contacto"
                             onClick={(e) => e.stopPropagation()}
-                            className="flex-1 px-4 py-3 bg-accent text-accent-foreground text-sm font-medium text-center hover:bg-accent/90 transition-all flex items-center justify-center gap-2"
+                            onTouchStart={(e) => e.stopPropagation()} 
+                            onTouchEnd={(e) => e.stopPropagation()} 
+                            className="relative z-50 flex-1 px-4 py-3 bg-accent text-accent-foreground text-sm font-medium text-center hover:bg-accent/90 transition-all flex items-center justify-center gap-2 rounded-full"
                           >
                             {content.ctas.reserve}
                             <ArrowRight size={14} />
@@ -215,7 +212,9 @@ export default function RetirosPage() {
                       ) : (
                         <button
                           onClick={(e) => e.stopPropagation()}
-                          className="w-full px-4 py-3 bg-secondary text-secondary-foreground text-sm font-medium flex items-center justify-center gap-2"
+                          onTouchStart={(e) => e.stopPropagation()} 
+                          onTouchEnd={(e) => e.stopPropagation()} 
+                          className="relative z-50 w-full px-4 py-3 bg-secondary text-secondary-foreground text-sm font-medium flex items-center justify-center gap-2 rounded-full"
                         >
                           <Bell size={14} />
                           {content.ctas.notify}
@@ -248,12 +247,12 @@ export default function RetirosPage() {
               initial={{ opacity: 0, scale: 0.95, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 20 }}
-              className="relative bg-card rounded-sm max-w-2xl w-full max-h-[80vh] overflow-y-auto"
+              className="relative bg-card rounded-xl max-w-2xl w-full max-h-[80vh] overflow-y-auto"
               onClick={(e) => e.stopPropagation()}
             >
               <button
                 onClick={() => setSelectedRetreat(null)}
-                className="absolute top-4 right-4 p-2 hover:bg-foreground/5 transition-colors z-10"
+                className="absolute top-4 right-4 p-2 hover:bg-foreground/5 transition-colors z-10 rounded-full"
               >
                 <X size={24} className="text-foreground/70" />
               </button>
@@ -279,7 +278,7 @@ export default function RetirosPage() {
                     {selectedRetreatData.date}
                   </span>
                   <span className="flex items-center gap-2">
-                    <DollarSign size={14} />
+                    {/* <DollarSign size={14} /> */}
                     {selectedRetreatData.price}
                   </span>
                 </div>
@@ -313,10 +312,10 @@ export default function RetirosPage() {
 
                 <div className="mt-8 flex gap-4">
                   <Link
-                    href="/contacto"
-                    className="flex-1 px-6 py-4 bg-accent text-accent-foreground font-medium text-center hover:bg-accent/90 transition-all flex items-center justify-center gap-2"
+                    href={`/retiros/${selectedRetreatData.id}`}
+                    className="flex-1 px-6 py-4 bg-accent text-accent-foreground font-medium text-center hover:bg-accent/90 transition-all flex items-center justify-center gap-2 rounded-full"
                   >
-                    
+                    Ver más información
                     <ArrowRight size={16} />
                   </Link>
                 </div>
