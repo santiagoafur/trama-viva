@@ -4,7 +4,7 @@ import { useState, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { Search, Clock, ArrowRight, BookOpen, X } from "lucide-react";
+import { Search, Clock, ArrowRight, BookOpen, X, Mail } from "lucide-react";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { PageHero } from "@/components/page-hero";
@@ -73,7 +73,7 @@ export default function DataPage() {
             )}
           </motion.div>
 
-          {/* Quick Links */}
+          {/* Quick Links (Categorías) */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -85,18 +85,21 @@ export default function DataPage() {
               {content.quickLinks.title}
             </h3>
             <div className="flex flex-wrap gap-3">
-              {content.quickLinks.items.map((link) => (
-                <button
-                  key={link.href}
-                  onClick={() => {
-                    const id = link.href.replace("#", "");
-                    setSelectedArticle(id);
-                  }}
-                  className="px-4 py-2 bg-card border border-border hover:border-secondary hover:bg-secondary/5 transition-all duration-300 text-sm text-foreground/70 hover:text-foreground rounded-sm"
-                >
-                  {link.title}
-                </button>
-              ))}
+              {content.quickLinks.items.map((link) => {
+                const categoryName = link.href.replace("#", "");
+                return (
+                  <button
+                    key={link.href}
+                    onClick={() => {
+                      // Al hacer click en la categoría, actualiza la barra de búsqueda
+                      setSearchQuery(categoryName);
+                    }}
+                    className="px-4 py-2 bg-card border border-border hover:border-secondary hover:bg-secondary/5 transition-all duration-300 text-sm text-foreground/70 hover:text-foreground rounded-sm"
+                  >
+                    {link.title}
+                  </button>
+                );
+              })}
             </div>
           </motion.div>
         </div>
@@ -180,14 +183,14 @@ export default function DataPage() {
               initial={{ opacity: 0, scale: 0.95, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 20 }}
-              className="relative bg-card rounded-sm max-w-3xl w-full my-8 max-h-[90vh] overflow-y-auto"
+              className="relative bg-[#E8DCC4] rounded-xl max-w-3xl w-full my-8 max-h-[90vh] overflow-y-auto shadow-2xl"
               onClick={(e) => e.stopPropagation()}
             >
               <button
                 onClick={() => setSelectedArticle(null)}
-                className="absolute top-4 right-4 p-2 hover:bg-foreground/5 transition-colors z-10 bg-card/80 rounded-full"
+                className="absolute top-4 right-4 p-2 bg-[#3B1B0E]/20 hover:bg-[#3B1B0E]/40 text-[#3B1B0E] transition-colors z-10 rounded-full"
               >
-                <X size={24} className="text-foreground/70" />
+                <X size={24} />
               </button>
 
               <div className="relative h-64 md:h-80">
@@ -197,43 +200,38 @@ export default function DataPage() {
                   fill
                   className="object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-card via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#E8DCC4] via-transparent to-transparent" />
               </div>
 
-              <div className="p-8 md:p-12">
-                <div className="flex items-center gap-4 text-foreground/50 text-sm mb-4">
-                  <span className="px-3 py-1 bg-secondary/10 text-secondary text-xs uppercase tracking-wider">
+              <div className="p-8 md:p-12 text-[#3B1B0E]">
+                <div className="flex items-center gap-4 text-[#3B1B0E]/60 text-sm mb-4">
+                  <span className="px-3 py-1 bg-[#868859] text-[#E8DCC4] rounded-full text-xs uppercase tracking-wider font-bold">
                     {selectedArticleData.category}
                   </span>
-                  <span className="flex items-center gap-1">
+                  <span className="flex items-center gap-1 font-medium">
                     <Clock size={14} />
                     {selectedArticleData.readTime}
                   </span>
                 </div>
 
-                <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+                <h1 className="text-3xl md:text-4xl font-bold font-serif mb-6 text-[#292E17]">
                   {selectedArticleData.title}
                 </h1>
 
                 <div className="prose prose-lg max-w-none">
                   {selectedArticleData.content.split("\n\n").map((paragraph, i) => {
-                    if (paragraph.includes(":") && paragraph.split(":")[0].length < 40 && paragraph.split(":")[0] === paragraph.split(":")[0].toUpperCase()) {
-                      const [title, ...rest] = paragraph.split(":");
+                    // Si el párrafo parece un subtitulo en mayúsculas
+                    if (paragraph === paragraph.toUpperCase() && paragraph.length < 50) {
                       return (
-                        <div key={i} className="mb-6">
-                          <h3 className="text-lg font-bold text-foreground mb-2">
-                            {title}
-                          </h3>
-                          <p className="text-foreground/70 leading-relaxed whitespace-pre-line">
-                            {rest.join(":")}
-                          </p>
-                        </div>
+                        <h3 key={i} className="text-xl font-bold font-serif text-[#7E2625] mt-8 mb-4">
+                          {paragraph}
+                        </h3>
                       );
                     }
                     return (
                       <p
                         key={i}
-                        className="text-foreground/70 leading-relaxed mb-4 whitespace-pre-line"
+                        className="text-[#3B1B0E]/80 leading-relaxed mb-4 whitespace-pre-line"
                       >
                         {paragraph}
                       </p>
@@ -241,15 +239,30 @@ export default function DataPage() {
                   })}
                 </div>
 
-                <div className="mt-10 pt-8 border-t border-border">
-                  <Link
-                    href="/contacto"
-                    className="inline-flex items-center gap-3 px-6 py-3 bg-accent text-accent-foreground font-medium hover:bg-accent/90 transition-all"
-                  >
-                    Contáctanos para más información
-                    <ArrowRight size={16} />
-                  </Link>
+                {/* Newsletter Box inside Modal */}
+                <div className="mt-12 pt-8 border-t border-[#868859]/30 bg-[#868859]/10 p-8 rounded-2xl text-center">
+                  <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-[#7E2625] text-[#E8DCC4] mb-4">
+                    <Mail size={24} />
+                  </div>
+                  <h4 className="text-2xl font-bold font-serif text-[#292E17] mb-2">
+                    {content.newsletter.title}
+                  </h4>
+                  <p className="text-[#3B1B0E]/70 mb-6 max-w-md mx-auto">
+                    {content.newsletter.description}
+                  </p>
+                  <form className="flex flex-col sm:flex-row gap-3 max-w-lg mx-auto" onSubmit={(e) => e.preventDefault()}>
+                    <input 
+                      type="email" 
+                      placeholder={content.newsletter.placeholder} 
+                      required
+                      className="flex-1 px-4 py-3 bg-white border border-[#868859]/30 rounded-full focus:outline-none focus:border-[#7E2625] focus:ring-1 focus:ring-[#7E2625] text-[#3B1B0E]"
+                    />
+                    <button type="submit" className="px-8 py-3 bg-[#7E2625] text-[#E8DCC4] font-bold rounded-full hover:bg-[#3B1B0E] transition-all shadow-lg hover:-translate-y-1">
+                      {content.newsletter.button}
+                    </button>
+                  </form>
                 </div>
+
               </div>
             </motion.article>
           </motion.div>

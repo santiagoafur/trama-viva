@@ -331,7 +331,7 @@ export const retirosPage = {
         id: "red_viva",
         name: "Red Viva",
         location: "Minas, Uruguay",
-        date: "Próximamente",
+        date: "1-4 Octubre 2026",
         price: "$1000 USD",
         image: "/images/retiro-uruguay.jpg",
         status: "available",
@@ -413,15 +413,19 @@ export const retirosPage = {
       {
         id: "uruguay",
         name: "Uruguay",
-        location: "Punta del Este, Uruguay",
-        date: "Coming Soon",
+        location: "Minas, Uruguay",
+        date: "October 1-4. 2026",
         price: "$1000 USD",
         image: "/images/retiro-uruguay.jpg",
-        status: "coming-soon",
-        frontDescription: "A new experience on the Uruguayan Atlantic coast.",
-        backDescription:
-          "We are preparing a new retreat in Uruguay for 2026. Register to be the first to know the dates and details when available.",
-        includes: [],
+        status: "available",
+        frontDescription: "Somatic-mycelial connection retreat. An invitation to remember the wisdom of the earth.",
+        backDescription: "An invitation to remember the wisdom of the mycelium. To gather as the Living Network we already are, where our experiences intertwine and allow us to recognize ourselves as part of the same fabric through Psychedelic-Assisted Therapy.",
+        includes: [
+          "Accommodation in a natural environment",
+          "Conscious meals",
+          "Complete P.A.T. process",
+          "Facilitation by Eli and Fer"
+        ]
       },
     ],
     ctas: {
@@ -725,106 +729,63 @@ export const dataPage = {
       noResults: "No se encontraron resultados",
     },
     quickLinks: {
-      title: "Enlaces rápidos",
+      title: "Categorías",
       items: [
-        { title: "La red Miceliar", href: "#red-miceliar" },
-        { title: "Cómo tomar microdosis? Guía básica", href: "#guia-basica" },
-        { title: "Info para los más curiosos", href: "#curiosos" },
+        { title: "Educativo", href: "#Educativo" },
+        { title: "Informativo", href: "#Informativo" },
       ],
+    },
+    newsletter: {
+      title: "¿Te gustó el artículo?",
+      description: "Déjanos tu email para recibir más novedades e información valiosa.",
+      placeholder: "Tu correo electrónico",
+      button: "Suscribirme"
     },
     articles: [
       {
-        id: "red-miceliar",
-        title: "La Red Miceliar: La Internet del Bosque",
-        category: "Ciencia",
+        id: "psilocibina-ninos-santos",
+        title: "Hongos con Psilocibina - Niños Santos",
+        category: "Educativo",
         readTime: "8 min",
         image: "/images/article-red-miceliar.jpg",
-        excerpt:
-          "Descubre cómo los hongos forman una red de comunicación subterránea que conecta y nutre a todo el bosque.",
-        content: `La red miceliar es uno de los descubrimientos más fascinantes de la biología moderna. Bajo nuestros pies, existe una vasta red de filamentos fúngicos llamados hifas que conectan los árboles y plantas de un bosque, permitiéndoles compartir nutrientes, agua e incluso información.
-
-Esta red, a menudo llamada "Wood Wide Web" o la internet del bosque, demuestra que los ecosistemas no son colecciones de individuos competidores, sino comunidades cooperativas profundamente interconectadas.
-
-Los hongos actúan como intermediarios, facilitando el intercambio entre plantas. Un árbol madre puede enviar nutrientes a sus plántulas a través de esta red. Árboles de diferentes especies comparten recursos según las necesidades de cada uno.
-
-Esta visión del bosque como una red cooperativa nos invita a reconsiderar nuestra propia relación con la naturaleza y entre nosotros. Somos parte de una trama viva, interconectada y mutuamente dependiente.`,
+        excerpt: "Descubre qué es la psilocibina, su conexión con la serotonina y el asombroso paralelo entre el micelio y nuestras redes neuronales.",
+        content: `HONGOS CON PSILOCIBINA\nLa psilocibina es el compuesto psicoactivo de los hongos psicodélicos llamados Psylocibe Cubensis. El término psicodélico hace referencia a un estado mental o experiencia que expande, altera o intensifica la percepción, la conciencia y los procesos emocionales y cognitivos. Proviene del griego: “Psyche” = alma / mente, “Deloun” = manifestar / revelar.\n\nLa psilocibina al ingresar via oral a nuestro organismo es degradada en psilocina en nuestro cuerpo físico para poder obtener sus efectos, convirtiéndose en una molécula que, en su composición, es similar a la molécula de serotonina. La serotonina es un neurotransmisor y tiene una gran influencia en los procesos fisiológicos, de aprendizaje y emocionales.\n\nMICELIO VS NEURONAS\nDos redes invisibles que comparten un mismo principio: la vida ocurre en conexión.\nAmbas son redes descentralizadas y funcionan mediante impulsos eléctricos y químicos. Almacenan y transmiten información y muestran patrones repetitivos, fractales en distintas etapas.\n\nTienen un lenguaje compartido: la vida se organiza en red.\nLo que ocurre bajo la tierra y dentro de nuestro cerebro responde a un mismo diseño universal. El micelio es la tecnología de la naturaleza, posee una inteligencia vincular de la cual nosotros como humanos aún estamos aprendiendo.`,
       },
       {
-        id: "guia-basica",
-        title: "Cómo tomar microdosis: Guía básica",
-        category: "Educación",
-        readTime: "12 min",
-        image: "/images/article-guia-microdosis.jpg",
-        excerpt:
-          "Una introducción responsable a las microdosis: qué son, protocolos comunes y consideraciones importantes.",
-        content: `Las microdosis son dosis sub-perceptuales de sustancias psicodélicas, típicamente entre 1/10 y 1/20 de una dosis completa. A estas cantidades, no se experimentan efectos psicodélicos evidentes, pero muchas personas reportan beneficios sutiles en creatividad, enfoque y bienestar emocional.
-
-PROTOCOLOS COMUNES:
-
-1. Protocolo Fadiman: Una microdosis cada tres días (día 1: dosis, día 2-3: descanso).
-
-2. Protocolo Stamets: Cuatro días seguidos, tres días de descanso.
-
-3. Cada segundo día: Alternar días con y sin microdosis.
-
-CONSIDERACIONES IMPORTANTES:
-
-- Comienza con dosis muy bajas y ajusta según tu experiencia.
-- Mantén un diario para registrar efectos y observaciones.
-- Las microdosis no son para todos; consulta con profesionales.
-- La legalidad varía según el país; infórmate sobre tu jurisdicción.
-- El contexto y la intención son fundamentales para la experiencia.
-
-Este contenido es educativo y no constituye consejo médico.`,
-      },
-      {
-        id: "curiosos",
-        title: "Para los más curiosos: Historia de la Psilocibina",
-        category: "Historia",
-        readTime: "15 min",
-        image: "/images/article-historia.jpg",
-        excerpt:
-          "Un viaje por la historia de los hongos sagrados, desde las culturas ancestrales hasta la ciencia moderna.",
-        content: `Los hongos psilocibios han acompañado a la humanidad durante milenios. Evidencias arqueológicas sugieren su uso ritual desde hace al menos 6,000 años en diversas culturas alrededor del mundo.
-
-CULTURAS ANCESTRALES:
-
-En Mesoamérica, los aztecas los llamaban "teonanácatl" (carne de los dioses). Los mazatecos de Oaxaca mantuvieron tradiciones ceremoniales con hongos hasta nuestros días, gracias a curanderas como María Sabina.
-
-REDESCUBRIMIENTO OCCIDENTAL:
-
-En 1957, el banquero R. Gordon Wasson publicó su experiencia con María Sabina en la revista Life, introduciendo los hongos sagrados a Occidente. Albert Hofmann, creador del LSD, aisló la psilocibina poco después.
-
-LA ERA DE LA INVESTIGACIÓN:
-
-Tras décadas de prohibición, la investigación científica ha resurgido. Universidades como Johns Hopkins, Imperial College London y NYU estudian la psilocibina para depresión, adicciones y cuidados paliativos.
-
-Los resultados son prometedores: en algunos estudios, una sola sesión asistida con psilocibina produjo mejoras significativas y duraderas en pacientes con depresión resistente al tratamiento.
-
-Estamos en los albores de una nueva era en la comprensión y uso responsable de estas sustancias sagradas.`,
-      },
-      {
-        id: "neurociencia",
-        title: "Neurociencia de los Psicodélicos",
-        category: "Ciencia",
+        id: "historia-hongos",
+        title: "Los hongos: testigos y protagonistas de la historia humana",
+        category: "Educativo",
         readTime: "10 min",
+        image: "/images/article-historia.jpg",
+        excerpt: "Un recorrido por la historia de los hongos, desde las pinturas rupestres hasta la investigación científica contemporánea.",
+        content: `Los hongos son organismos del reino Fungi, distintos de plantas, animales y bacterias. No realizan fotosíntesis y se alimentan por absorción. Son uno de los organismos más antiguos del planeta. Aparecieron hace al menos 1.000 millones de años.\n\nDesde las pinturas rupestres de hace 6.000 años hasta los avances científicos actuales, los hongos han acompañado a la humanidad en cada etapa. Son nuestros aliados invisibles en la evolución cultural y alimentaria. Fueron esenciales en rituales espirituales, inspiraron mitos y hasta jugaron un papel clave en la fermentación de alimentos como el queso y el vino hace más de 7.000 años.\n\nDesde los rituales chamánicos hasta la investigación científica, los hongos psicodélicos tejen una conexión profunda entre el pasado, el presente y el futuro.\nLa sabiduría ancestral y la exploración contemporánea se entrelazan, ofreciendo nuevas perspectivas para la salud y la expansión de la consciencia.\n\nExperimentar con hongos psicodélicos es una gran forma de explorar nuestras búsquedas terapéuticas y espirituales, pero para que la práctica nos enriquezca y sea de valor es importante abordar su consumo con responsabilidad. Esto es lo que comúnmente se conoce como “reducción de daños”, que no es más ni menos que prácticas de autoconocimiento, autocuidado y un marco cultural adecuado.`,
+      },
+      {
+        id: "hongos-adaptogenos",
+        title: "Más que alimento, más que medicina - Hongos adaptógenos",
+        category: "Educativo",
+        readTime: "12 min",
+        image: "/images/medicina-naturaleza.jpg",
+        excerpt: "Conoce qué son los hongos adaptógenos y cómo ayudan a nuestro cuerpo a restaurar su funcionalidad y resistencia máxima.",
+        content: `Los hongos no solo han acompañado al ser humano en su evolución: han sido protagonistas de momentos clave. Su poder simbiótico, curativo y transformador sugiere que no son meros organismos del subsuelo, sino puentes entre mundos: el de la ciencia y el del misterio, la vida y la descomposición, lo visible y lo invisible.\n\nHONGOS ADAPTÓGENOS\nLos hongos son los organismos vivos más longevos de la tierra, debido a que en cada generación han logrado sintetizar sustancias que se transmiten sucesivamente a generaciones posteriores con propiedades adaptógenas.\n\nEl término adaptógeno hace referencia a una sustancia generada específicamente con el objetivo de aumentar el estado de resistencia contra estímulos que provocan el desencadenamiento de estrés en un momento determinado, es decir que protegen al cuerpo del estrés estabilizando y optimizando sus funciones fisiológicas.\n\nEJEMPLOS DE HONGOS ADAPTÓGENOS:\n1. Reishi (Ganoderma lucidum): Reduce el estrés y la ansiedad. Refuerza el sistema inmunológico. Promueve el sueño reparador.\n2. Cordyceps: Mejora la energía y la resistencia física. Apoya la función respiratoria.\n3. Lion’s Mane (Hericium erinaceus): Mejora la memoria y la concentración. Estimula el crecimiento de neuronas.\n4. Chaga: Potente antioxidante. Apoya el sistema inmune.\n5. Maitake: Regula el azúcar en la sangre. Refuerza el sistema inmunológico.`,
+      },
+      {
+        id: "guia-microdosis",
+        title: "Microdosis: Guía Básica",
+        category: "Informativo",
+        readTime: "7 min",
+        image: "/images/article-guia-microdosis.jpg",
+        excerpt: "Aprende qué es una microdosis, cómo funciona a nivel neurobiológico, emocional y creativo para reconectar con tu interior.",
+        content: `Una microdosis es una dosis muy pequeña (sub-perceptual) de una sustancia psicodélica, que no produce efectos alucinógenos ni alteraciones perceptibles del estado de conciencia, pero se utiliza con fines terapéuticos, cognitivos o emocionales.\nLa psilocibina, en dosis sub perceptuales, no distorsiona, sino que estimula.\n\nSU IMPACTO EN DISTINTOS NIVELES:\nA nivel neurobiológico activa la neuroplasticidad facilitando nuevas rutas entre las neuronas.\nA nivel emocional permite acercarnos y conectarnos con nuestra sensibilidad. Recuperar la sensibilidad es un gran poder de regeneración.\nA nivel creativo hay nuevas puertas que se abren ya que la microdosis nutre la curiosidad y la apertura mental.\n\nLa microdosis no anestesia ni te lleva a un trance. Más bien, te ayuda a habitar tu mundo interior con mayor claridad. Puede acompañar procesos terapéuticos, duelos, transiciones de vida, o simplemente momentos donde necesitas volver a tu centro. Apoya la autoobservación sin juicio, la conexión integrada de cuerpo–mente–emoción y la introspección sin disociación.\n\n“No vas profundo para perderte. Vas para encontrarte.”`,
+      },
+      {
+        id: "bibliografia",
+        title: "Bibliografía y Más Info",
+        category: "Informativo",
+        readTime: "5 min",
         image: "/images/article-neurociencia.jpg",
-        excerpt: "Cómo la psilocibina afecta el cerebro: neuroplasticidad, redes neuronales y consciencia.",
-        content: `La psilocibina actúa principalmente sobre los receptores de serotonina 5-HT2A, generando cambios profundos en la actividad cerebral. La neurociencia moderna nos está revelando los mecanismos detrás de las experiencias psicodélicas.
-
-RED DE MODO POR DEFECTO (DMN):
-
-Los psicodélicos reducen la actividad de la DMN, la red cerebral asociada con el ego y el pensamiento autorreferencial. Esta reducción permite nuevos patrones de conectividad entre áreas cerebrales que normalmente no se comunican.
-
-NEUROPLASTICIDAD:
-
-Estudios recientes demuestran que la psilocibina promueve la neuroplasticidad: la capacidad del cerebro para formar nuevas conexiones sinápticas. Esto puede explicar los cambios duraderos que muchas personas experimentan.
-
-ENTROPÍA CEREBRAL:
-
-La teoría del cerebro entrópico sugiere que los psicodélicos aumentan temporalmente la entropía (desorden) en la actividad cerebral, permitiendo la reorganización de patrones mentales rígidos.
-
-Esta investigación nos ayuda a comprender por qué las experiencias psicodélicas pueden ser tan transformadoras y por qué requieren un contexto adecuado de preparación e integración.`,
+        excerpt: "Recopilación de estudios científicos, papers y artículos para profundizar en el mundo de la microdosificación y la neurociencia.",
+        content: `Un estudio sistemático de la microdosificación de psicodélicos\nEste artículo te permitirá comprender los efectos reportados de la microdosificación en el funcionamiento psicológico (estado de ánimo, estrés, atención) a partir de un estudio sistemático y observacional, así como las expectativas preexistentes de los usuarios.\n\nLa ciencia emergente de la microdosificación\nUna revisión sistemática de la investigación sobre psicodélicos en dosis bajas (1955-2021) y recomendaciones para el campo.\n\nEl principio de energía libre: ¿una teoría unificada del cerebro?\nEste documento te introducirá al principio de la energía libre como una posible teoría unificada del cerebro.\n\nRed Neuronal por Defecto\nEste artículo discute la Red Neuronal por Defecto (DMN), una red cerebral activa en estados de reposo, y su posible modulación por sustancias psicodélicas.\n\nSerotonina y Función Cerebral - Una historia de dos receptores\nExplora el papel de la serotonina y sus receptores, especialmente el 5-HT2A, en la función cerebral.`,
       },
     ],
   },
@@ -839,111 +800,67 @@ Esta investigación nos ayuda a comprender por qué las experiencias psicodélic
       noResults: "No results found",
     },
     quickLinks: {
-      title: "Quick links",
+      title: "Categories",
       items: [
-        { title: "The Mycelial Network", href: "#red-miceliar" },
-        { title: "How to take microdoses? Basic guide", href: "#guia-basica" },
-        { title: "Info for the curious", href: "#curiosos" },
+        { title: "Educational", href: "#Educativo" },
+        { title: "Informative", href: "#Informativo" },
       ],
+    },
+    newsletter: {
+      title: "Did you like the article?",
+      description: "Leave your email to receive more news and valuable information.",
+      placeholder: "Your email address",
+      button: "Subscribe"
     },
     articles: [
       {
-        id: "red-miceliar",
-        title: "The Mycelial Network: The Forest's Internet",
-        category: "Science",
+        id: "psilocibina-ninos-santos",
+        title: "Psilocybin Mushrooms - Holy Children",
+        category: "Educativo",
         readTime: "8 min",
         image: "/images/article-red-miceliar.jpg",
-        excerpt:
-          "Discover how mushrooms form an underground communication network that connects and nourishes the entire forest.",
-        content: `The mycelial network is one of the most fascinating discoveries in modern biology. Beneath our feet, there exists a vast network of fungal filaments called hyphae that connect the trees and plants of a forest, allowing them to share nutrients, water, and even information.
-
-This network, often called the "Wood Wide Web" or the forest's internet, demonstrates that ecosystems are not collections of competing individuals, but deeply interconnected cooperative communities.
-
-Fungi act as intermediaries, facilitating exchange between plants. A mother tree can send nutrients to her seedlings through this network. Trees of different species share resources according to each other's needs.
-
-This vision of the forest as a cooperative network invites us to reconsider our own relationship with nature and with each other. We are part of a living web, interconnected and mutually dependent.`,
+        excerpt: "Discover what psilocybin is, its connection to serotonin, and the amazing parallel between mycelium and our neural networks.",
+        content: `PSILOCYBIN MUSHROOMS\nPsilocybin is the psychoactive compound of psychedelic mushrooms called Psylocibe Cubensis. The term psychedelic refers to a mental state or experience that expands, alters, or intensifies perception, consciousness, and emotional and cognitive processes. It comes from Greek: "Psyche" = soul / mind, "Deloun" = to manifest / reveal.\n\nWhen psilocybin enters our organism orally, it is degraded into psilocin in our physical body to obtain its effects, becoming a molecule that is structurally similar to the serotonin molecule. Serotonin is a neurotransmitter and has a great influence on physiological, learning, and emotional processes.\n\nMYCELIUM VS NEURONS\nTwo invisible networks that share the same principle: life happens in connection.\nBoth are decentralized networks that operate through electrical and chemical impulses. They store and transmit information and show repetitive, fractal patterns at different stages.\n\nThey have a shared language: life organizes itself in a network.\nWhat happens underground and inside our brains responds to the same universal design. Mycelium is nature's technology; it possesses a relational intelligence that we as humans are still learning from.`,
       },
       {
-        id: "guia-basica",
-        title: "How to take microdoses: Basic guide",
-        category: "Education",
-        readTime: "12 min",
-        image: "/images/article-guia-microdosis.jpg",
-        excerpt:
-          "A responsible introduction to microdosing: what they are, common protocols, and important considerations.",
-        content: `Microdoses are sub-perceptual doses of psychedelic substances, typically between 1/10 and 1/20 of a full dose. At these amounts, no obvious psychedelic effects are experienced, but many people report subtle benefits in creativity, focus, and emotional well-being.
-
-COMMON PROTOCOLS:
-
-1. Fadiman Protocol: One microdose every three days (day 1: dose, days 2-3: rest).
-
-2. Stamets Protocol: Four consecutive days, three days of rest.
-
-3. Every other day: Alternate days with and without microdoses.
-
-IMPORTANT CONSIDERATIONS:
-
-- Start with very low doses and adjust based on your experience.
-- Keep a journal to record effects and observations.
-- Microdoses are not for everyone; consult with professionals.
-- Legality varies by country; inform yourself about your jurisdiction.
-- Context and intention are fundamental to the experience.
-
-This content is educational and does not constitute medical advice.`,
-      },
-      {
-        id: "curiosos",
-        title: "For the curious: History of Psilocybin",
-        category: "History",
-        readTime: "15 min",
-        image: "/images/article-historia.jpg",
-        excerpt:
-          "A journey through the history of sacred mushrooms, from ancestral cultures to modern science.",
-        content: `Psilocybin mushrooms have accompanied humanity for millennia. Archaeological evidence suggests their ritual use for at least 6,000 years in various cultures around the world.
-
-ANCESTRAL CULTURES:
-
-In Mesoamerica, the Aztecs called them "teonanácatl" (flesh of the gods). The Mazatecs of Oaxaca maintained ceremonial traditions with mushrooms to this day, thanks to healers like María Sabina.
-
-WESTERN REDISCOVERY:
-
-In 1957, banker R. Gordon Wasson published his experience with María Sabina in Life magazine, introducing sacred mushrooms to the West. Albert Hofmann, creator of LSD, isolated psilocybin shortly after.
-
-THE ERA OF RESEARCH:
-
-After decades of prohibition, scientific research has resurged. Universities like Johns Hopkins, Imperial College London, and NYU study psilocybin for depression, addictions, and palliative care.
-
-Results are promising: in some studies, a single psilocybin-assisted session produced significant and lasting improvements in patients with treatment-resistant depression.
-
-We are at the dawn of a new era in the understanding and responsible use of these sacred substances.`,
-      },
-      {
-        id: "neurociencia",
-        title: "Neuroscience of Psychedelics",
-        category: "Science",
+        id: "historia-hongos",
+        title: "Mushrooms: witnesses and protagonists of human history",
+        category: "Educativo",
         readTime: "10 min",
+        image: "/images/article-historia.jpg",
+        excerpt: "A journey through the history of mushrooms, from cave paintings to contemporary scientific research.",
+        content: `Mushrooms are organisms of the Fungi kingdom, distinct from plants, animals, and bacteria. They do not photosynthesize and feed by absorption. They are one of the oldest organisms on the planet, appearing at least 1 billion years ago.\n\nFrom cave paintings 6,000 years ago to current scientific advances, mushrooms have accompanied humanity at every stage. They are our invisible allies in cultural and dietary evolution. They were essential in spiritual rituals, inspired myths, and even played a key role in the fermentation of foods like cheese and wine over 7,000 years ago.\n\nFrom shamanic rituals to scientific research, psychedelic mushrooms weave a deep connection between the past, present, and future.\nAncestral wisdom and contemporary exploration intertwine, offering new perspectives for health and the expansion of consciousness.\n\nExperimenting with psychedelic mushrooms is a great way to explore our therapeutic and spiritual pursuits, but for the practice to enrich us and be valuable, it is important to approach its consumption with responsibility. This is what is commonly known as "harm reduction," which is nothing more than practices of self-knowledge, self-care, and an adequate cultural framework.`,
+      },
+      {
+        id: "hongos-adaptogenos",
+        title: "More than food, more than medicine - Adaptogenic mushrooms",
+        category: "Educativo",
+        readTime: "12 min",
+        image: "/images/medicina-naturaleza.jpg",
+        excerpt: "Learn what adaptogenic mushrooms are and how they help our body restore its functionality and maximum resistance.",
+        content: `Mushrooms have not only accompanied humans in their evolution: they have been protagonists of key moments. Their symbiotic, healing, and transformative power suggests they are not mere underground organisms, but bridges between worlds: science and mystery, life and decomposition, the visible and the invisible.\n\nADAPTOGENIC MUSHROOMS\nMushrooms are the longest-living organisms on earth because, in each generation, they have managed to synthesize substances with adaptogenic properties that are transmitted to subsequent generations.\n\nThe term adaptogen refers to a substance generated specifically to increase the state of resistance against stimuli that trigger stress at a given time, meaning they protect the body from stress by stabilizing and optimizing its physiological functions.\n\nEXAMPLES OF ADAPTOGENIC MUSHROOMS:\n1. Reishi (Ganoderma lucidum): Reduces stress and anxiety. Boosts the immune system. Promotes restful sleep.\n2. Cordyceps: Improves energy and physical endurance. Supports respiratory function.\n3. Lion's Mane (Hericium erinaceus): Improves memory and concentration. Stimulates neuron growth.\n4. Chaga: Powerful antioxidant. Supports the immune system.\n5. Maitake: Regulates blood sugar. Boosts the immune system.`,
+      },
+      {
+        id: "guia-microdosis",
+        title: "Microdosing: Basic Guide",
+        category: "Informativo",
+        readTime: "7 min",
+        image: "/images/article-guia-microdosis.jpg",
+        excerpt: "Learn what a microdose is, how it works on a neurobiological, emotional, and creative level to reconnect with your inner self.",
+        content: `A microdose is a very small (sub-perceptual) dose of a psychedelic substance that does not produce hallucinogenic effects or noticeable alterations in the state of consciousness but is used for therapeutic, cognitive, or emotional purposes.\nPsilocybin, in sub-perceptual doses, does not distort; it stimulates.\n\nITS IMPACT AT DIFFERENT LEVELS:\nAt a neurobiological level, it activates neuroplasticity, facilitating new pathways between neurons.\nAt an emotional level, it allows us to approach and connect with our sensitivity. Recovering sensitivity is a great power of regeneration.\nAt a creative level, new doors open as microdosing nourishes curiosity and mental openness.\n\nMicrodosing does not anesthetize or put you in a trance. Rather, it helps you inhabit your inner world with greater clarity. It can accompany therapeutic processes, grief, life transitions, or simply moments where you need to return to your center. It supports non-judgmental self-observation, the integrated mind-body-emotion connection, and introspection without dissociation.\n\n"You don't go deep to lose yourself. You go to find yourself."`,
+      },
+      {
+        id: "bibliografia",
+        title: "Bibliography and More Info",
+        category: "Informativo",
+        readTime: "5 min",
         image: "/images/article-neurociencia.jpg",
-        excerpt: "How psilocybin affects the brain: neuroplasticity, neural networks, and consciousness.",
-        content: `Psilocybin acts primarily on serotonin 5-HT2A receptors, generating profound changes in brain activity. Modern neuroscience is revealing the mechanisms behind psychedelic experiences.
-
-DEFAULT MODE NETWORK (DMN):
-
-Psychedelics reduce DMN activity, the brain network associated with the ego and self-referential thinking. This reduction allows new connectivity patterns between brain areas that normally don't communicate.
-
-NEUROPLASTICITY:
-
-Recent studies demonstrate that psilocybin promotes neuroplasticity: the brain's ability to form new synaptic connections. This may explain the lasting changes many people experience.
-
-BRAIN ENTROPY:
-
-The entropic brain theory suggests that psychedelics temporarily increase entropy (disorder) in brain activity, allowing the reorganization of rigid mental patterns.
-
-This research helps us understand why psychedelic experiences can be so transformative and why they require an appropriate context of preparation and integration.`,
+        excerpt: "A collection of scientific studies, papers, and articles to delve into the world of microdosing and neuroscience.",
+        content: `A systematic study of psychedelic microdosing\nThis article will allow you to understand the reported effects of microdosing on psychological functioning (mood, stress, attention) based on a systematic and observational study, as well as users' pre-existing expectations.\n\nThe emerging science of microdosing\nA systematic review of research on low-dose psychedelics (1955-2021) and recommendations for the field.\n\nThe free-energy principle: a unified brain theory?\nThis document will introduce you to the free-energy principle as a possible unified theory of the brain.\n\nDefault Mode Network\nThis article discusses the Default Mode Network (DMN), an active brain network in resting states, and its possible modulation by psychedelic substances.\n\nSerotonin and Brain Function - A tale of two receptors\nExplores the role of serotonin and its receptors, especially 5-HT2A, in brain function.`,
       },
     ],
   },
 };
-
 // ============================================
 // FOOTER
 // ============================================

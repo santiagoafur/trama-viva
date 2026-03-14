@@ -170,7 +170,7 @@ export default function RetirosPage() {
                     {retreat.includes.length > 0 && (
                       <div className="mt-6">
                         <p className="text-xs uppercase tracking-wider text-foreground/50 mb-3">
-                          Incluye:
+                          {locale === "es" ? "Incluye:" : "Includes:"}
                         </p>
                         <ul className="space-y-2">
                           {retreat.includes.slice(0, 4).map((item, i) => (
