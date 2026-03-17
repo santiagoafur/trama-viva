@@ -167,6 +167,12 @@ export default function RetiroUruguayLanding() {
                 </div>
               ))}
             </div>
+            <div className="mt-4 w-full h-48 rounded-2xl overflow-hidden shadow-md">
+              <iframe 
+                src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3289.8631424548694!2d-55.233169399999994!3d-34.455621799999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x950ab177377ecc73%3A0xee36e9436bfc4ab8!2sEl%20Abrazo%20de%20las%20Sierras!5e0!3m2!1ses-419!2sar!4v1773778545474!5m2!1ses-419!2sar'
+                width="100%" height="100%" style={{ border: 0 }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
           </div>
         </div>
       </section>
@@ -284,7 +290,7 @@ export default function RetiroUruguayLanding() {
               back={<p className="text-sm leading-relaxed">Coach Ontológica especializada en regulación del Sistema Nervioso y abordaje del trauma. Facilitadora en respiración consciente, crioterapia y acompañamiento en procesos con terapias asistidas con psicodélicos.</p>}
             />
             <FlipCard 
-              frontImage="/images/fer.jpg" // Asegurate de agregar la foto de Fer
+              frontImage="/images/foto-fer.jpg" // Asegurate de agregar la foto de Fer
               front={<h3 className="text-2xl font-bold font-serif">Fer</h3>}
               back={<p className="text-sm leading-relaxed">Facilitador de espacios de sanación y transformación. (Acá podés agregar la biografía completa de Fer cuando la tengas disponible).</p>}
             />
