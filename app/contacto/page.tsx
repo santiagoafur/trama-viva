@@ -66,8 +66,8 @@ export default function ContactoPage() {
           title={locale === "es" ? "Contacto" : "Contact"}
           subtitle={
             locale === "es"
-              ? "Estamos aquí para acompañarte en tu camino"
-              : "We are here to accompany you on your journey"
+              ? ""
+              : ""
           }
           backgroundImage="/images/contact-section.jpg" // Asegurate de que esta prop coincida con tu componente PageHero (puede ser 'image' o 'backgroundImage')
         />

@@ -15,20 +15,30 @@ export function AboutSection() {
   return (
     <SectionWrapper id="que-es" variant="alt">
       <div className="grid lg:grid-cols-2 gap-16 items-center">
+        {/* Columna Izquierda: Texto */}
         <motion.div
           initial={{ opacity: 0, x: -30 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
+          className="flex flex-col justify-center h-full" 
         >
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-foreground text-balance">
-            {content.title}
-          </h2>
-          <p className="mt-8 text-lg text-foreground/70 leading-relaxed">
+          {content.title && (
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-foreground text-balance">
+              {content.title}
+            </h2>
+          )}
+          
+          {/* Tamaño de texto reducido a algo mucho más sutil y proporcionado */}
+          <p 
+            className={`font-serif text-foreground/90 leading-relaxed text-balance
+              ${content.title ? 'mt-8 text-lg' : 'text-xl md:text-2xl'}`}
+          >
             {content.description}
           </p>
         </motion.div>
 
+        {/* Columna Derecha: Tarjetas con Iconos */}
         <div className="grid gap-6">
           {content.features.map((feature, index) => {
             const Icon = icons[index];

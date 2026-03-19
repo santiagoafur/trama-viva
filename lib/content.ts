@@ -43,9 +43,12 @@ export const homePage = {
       backgroundImage: "/images/hero-home.jpg",
     },
     about: {
-      title: "¿Qué es Trama Viva?",
+      title: "",
       description:
-        "Trama Viva es un espacio de acompañamiento integral donde confluyen la sabiduría ancestral y las prácticas contemporáneas de bienestar. Facilitamos experiencias transformadoras que conectan cuerpo, mente y espíritu a través de retiros, ceremonias y procesos de microdosis guiados por profesionales comprometidos con tu evolución personal.",
+        `Trama Viva es un espacio terapéutico orientado al autoconocimiento y la transformación personal.
+Surge como un llamado a la inteligencia que se manifiesta al vincularnos con la naturaleza de la realidad.
+Desde una mirada integrativa, la invitación es explorar nuestra naturaleza humana para aprender nuevas formas de relacionarnos y aplicar sistemas basados en lo único que es sostenible: el amor.
+`,
       features: [
         {
           title: "Conexión Profunda",
@@ -62,41 +65,50 @@ export const homePage = {
       ],
     },
     eli: {
-      title: "Sobre Eli",
+      title: "Sobre mi",
       name: "Eliana Martínez",
-      subtitle: "Coach Ontológica, PNL, Facilitadora de Bienestar",
       image: "/images/eli-portrait.jpg",
-      quote:
-        "La tierra nos habla a través de los hongos, nos invita a recordar que somos parte de una red invisible que sostiene toda la vida. Mi camino es acompañarte a escuchar ese mensaje, a reconectar con tu sabiduría interior y a despertar la inteligencia que yace dormida en tus vínculos.",
-      bio: "Con más de 15 años de experiencia en desarrollo personal y bienestar holístico, Eliana ha acompañado a cientos de personas en su proceso de transformación. Certificada en Coaching Ontológico, PNL, y diversas modalidades de trabajo corporal y ceremonial, integra conocimientos ancestrales con técnicas contemporáneas para crear experiencias profundas y significativas.",
+      bio: `Soy Eli, apasionada por los procesos de desarrollo humano y de la vida en la naturaleza. Busco acompañar a las personas en sus búsquedas de integración y procesos de aprendizaje, construyendo vínculos que permitan una nueva mirada.
+Mi trabajo se basa en una perspectiva sistémica: la vida es una red interconectada que si aprendemos a escuchar, nutrir y cuidar tiene la capacidad por sí sola de regenerarse
+y crear nuevas redes de conexión.
+Hoy siento que camino acompañada por una red amplia y comprometida de personas que estamos creando un nuevo paradigma: la unión de la medicina de la naturaleza con nuestra humanidad para la sanación y la regeneración de la experiencia humana en la tierra.
+Este camino me dio mucho. Por eso siento un profundo compromiso de devolver.
+No creo en una salvación, creo en un camino. Y no hay nada más placentero que sentir que estás en el tuyo: ahí, incluso los desafíos se vuelven regalos, porque son propios.`,
+      credentials: [
+        "Coach Ontológica esp en PNL y Sistema Nervioso",
+        "Terapias asistidas con psicodélicos.",
+        "Facilitadora de respiración método Heart Breath y crioterapia.",
+        "Instructora de yoga y meditación",
+      
+      ]
     },
     caminos: {
       title: "Caminos",
-      subtitle: "Elige el sendero que resuena contigo",
+      subtitle: "",
       cards: [
         {
           type: "Presencial",
-          title: "Retiro Micelar",
-          description: "Sumérgete en una experiencia transformadora de varios días en la naturaleza.",
+          title: "Retiro",
+          description: "Sumérgete en una experiencia transformadora de 4 días en la naturaleza.",
           image: "/images/camino-retiro.jpg",
           href: "/retiros",
           cta: "Explorar retiros",
         },
         {
-          type: "Remoto",
-          title: "Proceso con Microdosis",
-          description: "Acompañamiento individual para integrar microdosis en tu vida cotidiana.",
+          type: "Online",
+          title: "Acompañamiento con Microdosis",
+          description: "Acompañamientos individuales y grupales para integrar la microdosis en tu proceso personal.",
           image: "/images/camino-microdosis.jpg",
           href: "/microdosis",
           cta: "Conocer más",
         },
         {
-          type: "Blog",
-          title: "Data",
-          description: "Información basada en evidencia sobre hongos, psilocibina y bienestar.",
-          image: "/images/camino-data.jpg",
-          href: "/data",
-          cta: "Leer artículos",
+          type: "Presencial",
+          title: "Ceremonias",
+          description: "Una experiencia para vivir el poder transformador de la medicina de los hongos bajo el contexto de terapias asistidas.",
+          image: "/images/ceremonias/hero-ceremonia-2.jpg",
+          href: "/ceremonias",
+          cta: "Conocer más",
         },
       ],
     },
@@ -105,33 +117,38 @@ export const homePage = {
       subtitle: "Experiencias de transformación",
       items: [
         {
-          name: "Martina - Argentina",
-          role: "Participante de Retiro 2024",
-          image: "/images/testimonios/martina.png",
+          name: "Julia - Argentina",
+          role: "",
+          image: "/images/testimonios/julia.png",
           quote:
-            `Volví y hablé como nunca con mi papá, pude agradecerle por todo su esfuerzo y decirle que lo amo.
-          Abrace mucho también.
-          Gracias por tanto amor que me compartieron 🤍 
-          Fue un viaje maravilloso y transformador.`,
+            `Amé el proceso. Me sentí muy acompañada todo el tiempo. Eli me ayudó a traer claridad sobre lo que las micro me estaban mostrando. Una experiencia de mucho crecimiento. 
+            Se lo recomiendo a cualquier persona que desee conocerse más a sí misma y esté dispuesta a volverse más creativa.`,
         },
         {
-          name: "Octavia - Chile",
-          role: "Proceso de Microdosis",
-          image: "/images/testimonios/octavia.png",
-          quote:`La experiencia vivida en el programa produce la sinergia entre la amorosa guía de Eli, la gran calidad humana del grupo y el trabajo "silencioso", pero profundo de la medicina. 
-    Lo anterior se potencia por el hecho de haber sostenido un trabajo semanal durante 2 meses, que me permitió adquirir nuevos hábitos de conexión y autoconocimiento de forma duradera.
-Realmente muy agradecida de la experiencia!`
+          name: "Estefania - Argentina",
+          role: "",
+          image: "/images/testimonios/estefania.png",
+          quote:`Gracias, Eli, por tu apoyo. La energía que transmites es realmente hermosa, y me sentí tan segura que pude sumergirme por completo en la experiencia. 
+          No hubo ni un solo segundo en el que supiera que todo estaría bien, pasara lo que pasara, y eso fue gracias a lo que me transmitiste. 
+          Nunca me había rendido tan rápido y tan fácilmente a una experiencia tan poderosa como esta. Simplemente, gracias.`
             ,
         },
         {
-          name: "Fiorella - Perú",
-          role: "Participante de Ceremonias",
-          image: "/images/testimonios/fiorella.jpg",
-          quote:`Este retiro fue como un sueño. Cada detalle lo sentí con mucho amor. Desde el acompañamiento de Eli, la comida deliciosa, hasta el amor de los honguitos para mostrarme que la vida es más simple de lo que pienso.
-Claramente afloró el amor en todo mi ser, lo sentí por las personas que se me acercaron post retiro y por el amor y compasión de cómo me veo y veo a otras personas.
-Ahora estoy más convencida de que esta medicina me recuerda lo maravillosos que somos, con todas nuestras experiencias de vida. Todos estamos conectados, así lo sentí todo el tiempo.
-Me encantó el servicio y la apertura de todos los que participamos. Esta experiencia me la llevo en el corazón.
-Recomiendo mucho este espacio con la guía de este maravilloso equipo`
+          name: "Francisco - Ecuador",
+          role: "",
+          image: "/images/testimonios/francisco.jpg",
+          quote:`Lleno de gratitud, amor y sobretodo mayor perspectiva y claridad mental después de una experiencia realmente mágica!!!
+          Gracias por tu compañía y cariño!!!
+          Me sentí muy seguro, cuidado, guiado y querido!!! Gracias, gracias, gracias!!!
+          `
+            ,
+        },
+        {
+          name: "Dagmar - República Checa",
+          role: "",
+          image: "/images/testimonios/dagmar.jpg",
+          quote:`Estar en un ambiente cuidadísimo, con alguien que no pretende juzgarte y te acepta como sos y te acompaña en tu camino. 
+          Se requiere ser un alma de mucho viaje por el Universo para poder hacerlo.  Gracias 🤍🙏`
             ,
         },
       ],
@@ -161,7 +178,7 @@ Recomiendo mucho este espacio con la guía de este maravilloso equipo`
       backgroundImage: "/images/hero-home.jpg",
     },
     about: {
-      title: "What is Trama Viva?",
+      title: "",
       description:
         "Trama Viva is a comprehensive wellness space where ancestral wisdom and contemporary wellbeing practices converge. We facilitate transformative experiences that connect body, mind, and spirit through retreats, ceremonies, and microdosing processes guided by professionals committed to your personal evolution.",
       features: [
@@ -180,41 +197,52 @@ Recomiendo mucho este espacio con la guía de este maravilloso equipo`
       ],
     },
     eli: {
-      title: "About Eli",
+      title: "About me",
       name: "Eliana Martínez",
-      subtitle: "Ontological Coach, NLP, Wellness Facilitator",
       image: "/images/eli-portrait.jpg",
-      quote:
-        "The earth speaks to us through mushrooms, inviting us to remember that we are part of an invisible network that sustains all life. My path is to accompany you in listening to that message, to reconnect with your inner wisdom and awaken the intelligence that lies dormant in your bonds.",
-      bio: "With over 15 years of experience in personal development and holistic wellness, Eliana has accompanied hundreds of people in their transformation process. Certified in Ontological Coaching, NLP, and various modalities of bodywork and ceremonial practice, she integrates ancestral knowledge with contemporary techniques to create profound and meaningful experiences.",
+      bio: `I am Eli, passionate about human development processes and life in nature. I seek to accompany people in their search for integration and learning, building connections that allow for a new perspective.
+
+My work is rooted in a systemic perspective: life is an interconnected web that, if we learn to listen to, nurture, and care for it, has the innate capacity to regenerate itself and create new networks of connection.
+
+Today, I feel I walk alongside a broad and committed network of people who are creating a new paradigm: the union of nature's medicine with our humanity for the healing and regeneration of the human experience on Earth.
+
+This path has given me so much. That is why I feel a profound commitment to giving back.
+
+I don't believe in salvation; I believe in a path. And there is nothing more fulfilling than feeling you are on yours: there, even challenges become gifts, because they are truly your own.`,
+      credentials: [
+        "Ontological Coach, NLP & Nervous System Specialist",
+        "Psychedelic-Assisted Therapies.",
+        "Heart Breath Method Breathwork and Cryotherapy Facilitator",
+        "Yoga and Meditation Instructor",
+      ]
     },
     caminos: {
       title: "Pathways",
-      subtitle: "Choose the path that resonates with you",
+      subtitle: "",
       cards: [
         {
           type: "In-Person",
-          title: "Mycelial Retreat",
-          description: "Immerse yourself in a transformative multi-day experience in nature.",
+          title: "Retreats",
+          description: "Immerse yourself in a transformative four days experience in nature.",
           image: "/images/camino-retiro.jpg",
           href: "/retiros",
           cta: "Explore retreats",
         },
         {
-          type: "Remote",
-          title: "Microdosing Process",
-          description: "Individual accompaniment to integrate microdosing into your daily life.",
+          type: "Online",
+          title: "Microdosing Support",
+          description: "Individual and group support to integrate microdosing into your personal journey.",
           image: "/images/camino-microdosis.jpg",
           href: "/microdosis",
           cta: "Learn more",
         },
         {
-          type: "Blog",
-          title: "Data",
-          description: "Evidence-based information about mushrooms, psilocybin, and wellness.",
-          image: "/images/camino-data.jpg",
-          href: "/data",
-          cta: "Read articles",
+          type: "In-Person",
+          title: "Ceremonies",
+          description: "An experience to discover the transformative power of mushroom medicine within the context of assisted therapies.",
+          image: "/images/ceremonias/hero-ceremonia-2.jpg",
+          href: "/ceremonias",
+          cta: "Learn More",
         },
       ],
     },
@@ -223,25 +251,39 @@ Recomiendo mucho este espacio con la guía de este maravilloso equipo`
       subtitle: "Transformation experiences",
       items: [
         {
-          name: "Martina Lazzaro",
-          role: "2024 Retreat Participant",
-          image: "/images/testimonial-martina.jpg",
+          name: "Julia - Argentina",
+          role: "",
+          image: "/images/testimonios/julia.png",
           quote:
-            "The retreat with Eli was an experience that marked a before and after in my life. The combination of somatic practices, ceremony, and professional support allowed me to access parts of myself I didn't know existed.",
+            `I loved the process. I felt very supported the entire time. Eli helped me bring clarity to what the micros were showing me. An experience of immense growth. 
+            I recommend it to anyone who wants to know themselves better and is willing to become more creative.`,
         },
         {
-          name: "Julia Vennera",
-          role: "Microdosing Process",
-          image: "/images/testimonial-julia.jpg",
-          quote:
-            "The accompaniment during my microdosing process was fundamental. Eli guided me with professionalism and warmth, helping me integrate each experience into my daily life.",
+          name: "Estefania - Argentina",
+          role: "",
+          image: "/images/testimonios/estefania.png",
+          quote:`Thank you, Eli, for your support. The energy you transmit is truly beautiful, and I felt so safe that I was able to fully immerse myself in the experience. 
+          There wasn't a single second where I didn't know everything would be okay, no matter what happened, and that was thanks to what you transmitted to me. 
+          I had never surrendered so quickly and so easily to such a powerful experience. Simply, thank you.`
+            ,
         },
         {
-          name: "Fiorella Burnuy",
-          role: "Ceremony Participant",
-          image: "/images/testimonial-fiorella.jpg",
-          quote:
-            "The ceremonies facilitated by Trama Viva are sacred spaces where I could reconnect with my essence. The preparation, setting, and closing are impeccable.",
+          name: "Francisco - Ecuador",
+          role: "",
+          image: "/images/testimonios/francisco.jpg",
+          quote:`Filled with gratitude, love, and above all, greater perspective and mental clarity after a truly magical experience!!!
+          Thank you for your companionship and affection!!!
+          I felt very safe, cared for, guided, and loved!!! Thank you, thank you, thank you!!!
+          `
+            ,
+        },
+        {
+          name: "Dagmar - Czech Republic",
+          role: "",
+          image: "/images/testimonios/dagmar.jpg",
+          quote:`Being in a meticulously cared-for environment, with someone who doesn't try to judge you, accepts you as you are, and accompanies you on your path. 
+          It takes a soul that has traveled a lot through the Universe to be able to do so. Thank you 🤍🙏`
+            ,
         },
       ],
     },
@@ -275,15 +317,18 @@ export const retirosPage = {
       backgroundImage: "/images/retiros-hero.jpg",
     },
     intro: {
-      title: "¿Qué es un retiro micelar?",
-      description:
-        "Los retiros micelares son experiencias inmersivas de varios días donde nos sumergimos en la naturaleza para reconectar con nosotros mismos y con la red de vida que nos sostiene. Como la red miceliar subterránea que conecta los árboles del bosque, estos retiros nos invitan a experimentar nuestra interconexión fundamental con todo lo vivo.",
+      title: "",
+      description: `Un retiro de conexión somática micelar es una vivencia diseñada para reconectar con el cuerpo y el estado de presencia, inspirado en la forma en que funciona el micelio en la naturaleza: una red subterránea de hongos que conecta, nutre y comunica a todo el bosque.
+Con prácticas que invitan a escuchar, habitar y reconectar con el cuerpo y nuestra inteligencia interoceptiva. 
+Con un enfoque en Terapias Asistidas cada retiro es único porque participan distintos facilitadores que aportan sus talentos, creando un espacio vivo de intercambio, confianza y colaboración.
+`,
       features: [
-        "Prácticas somáticas y de movimiento consciente",
-        "Ceremonias guiadas con medicina natural",
-        "Integración profesional y acompañamiento",
-        "Alimentación consciente y nutritiva",
-        "Comunidad reducida y espacio seguro",
+        "Ceremonia Macro de Psilocibina",
+        "Actividades psicoterapéuticas",
+        "Prácticas Somáticas ",
+        "Grupos íntimos y espacios seguros",
+        "Acompañamiento y guía",
+        "Alimentación nutritiva y saludable"
       ],
     },
     retreats: [
@@ -358,15 +403,17 @@ export const retirosPage = {
       backgroundImage: "/images/retiros-hero.jpg",
     },
     intro: {
-      title: "What is a mycelial retreat?",
-      description:
-        "Mycelial retreats are immersive multi-day experiences where we dive into nature to reconnect with ourselves and with the web of life that sustains us. Like the underground mycelial network that connects forest trees, these retreats invite us to experience our fundamental interconnection with all living things.",
+      title: "",
+      description:`A somatic mycelial connection retreat is an experience designed to reconnect with the body and the state of presence, inspired by the way mycelium works in nature: an underground network of fungi that connects, nourishes, and communicates with the entire forest.
+With practices that invite us to listen to, inhabit, and reconnect with the body and our interoceptive intelligence.
+With a focus on Assisted Therapies, each retreat is unique because different facilitators participate, bringing their talents to create a living space of exchange, trust, and collaboration.`,
       features: [
-        "Somatic and conscious movement practices",
-        "Guided ceremonies with natural medicine",
-        "Professional integration and accompaniment",
-        "Conscious and nutritious food",
-        "Small community and safe space",
+        "Macro Psilocybin Ceremony",
+        "Psychotherapeutic activities",
+        "Somatic Practices",
+        "Intimate groups and safe spaces",
+        "Support and guidance",
+        "Nutritious and healthy food",
       ],
     },
     retreats: [

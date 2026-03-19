@@ -7,7 +7,6 @@ import Link from "next/link";
 import {
   MapPin,
   Calendar,
-  DollarSign,
   Check,
   ArrowRight,
   Bell,
@@ -43,40 +42,50 @@ export default function RetirosPage() {
         backgroundImage={content.hero.backgroundImage}
       />
 
-      {/* Intro Section */}
+      {/* Intro Section - MODIFICADA PARA QUE RESPIRE */}
       <SectionWrapper variant="default">
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-foreground"
-          >
-            {content.intro.title}
-          </motion.h2>
+        {/* Cambiamos max-w-4xl por max-w-6xl para darle mucho más ancho al texto */}
+        <div className="max-w-6xl mx-auto text-center px-4 md:px-8">
+          {content.intro.title && (
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-foreground"
+            >
+              {content.intro.title}
+            </motion.h2>
+          )}
+
+          {/* Sacamos el text-balance y achicamos la fuente */}
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="mt-6 text-lg text-foreground/70 leading-relaxed"
+            className={`text-foreground/80 leading-relaxed mx-auto max-w-5xl ${
+              content.intro.title 
+                ? "mt-6 text-lg" 
+                : "font-serif text-lg md:text-xl whitespace-pre-line"
+            }`}
           >
             {content.intro.description}
           </motion.p>
+          
           <motion.ul
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="mt-10 grid md:grid-cols-2 lg:grid-cols-3 gap-4 text-left max-w-3xl mx-auto"
+            className="mt-12 grid md:grid-cols-2 lg:grid-cols-3 gap-4 text-left max-w-4xl mx-auto"
           >
             {content.intro.features.map((feature, index) => (
               <li
                 key={index}
-                className="flex items-start gap-3 text-foreground/70"
+                className="flex items-start gap-3 text-foreground/80"
               >
                 <Check className="flex-shrink-0 mt-0.5 text-secondary" size={18} />
-                <span className="text-sm">{feature}</span>
+                <span className="text-sm font-medium">{feature}</span>
               </li>
             ))}
           </motion.ul>
@@ -278,7 +287,6 @@ export default function RetirosPage() {
                     {selectedRetreatData.date}
                   </span>
                   <span className="flex items-center gap-2">
-                    {/* <DollarSign size={14} /> */}
                     {selectedRetreatData.price}
                   </span>
                 </div>
@@ -287,14 +295,14 @@ export default function RetirosPage() {
                   {selectedRetreatData.name}
                 </h2>
 
-                <p className="mt-6 text-foreground/70 leading-relaxed">
+                <p className="mt-6 text-foreground/70 leading-relaxed whitespace-pre-line">
                   {selectedRetreatData.backDescription}
                 </p>
 
                 {selectedRetreatData.includes.length > 0 && (
                   <div className="mt-8">
                     <h3 className="text-lg font-semibold text-foreground mb-4">
-                      Incluye:
+                      {locale === "es" ? "Incluye:" : "Includes:"}
                     </h3>
                     <ul className="grid md:grid-cols-2 gap-3">
                       {selectedRetreatData.includes.map((item, i) => (

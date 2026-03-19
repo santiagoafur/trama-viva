@@ -48,30 +48,23 @@ export function EliSection() {
           <h2 className="mt-4 text-4xl md:text-5xl font-bold tracking-tight text-foreground">
             {content.name}
           </h2>
-          <p className="mt-2 text-foreground/60 text-lg">{content.subtitle}</p>
 
-          {/* Quote */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="mt-8 relative"
-          >
-            <Quote
-              className="absolute -top-4 -left-2 text-secondary/30"
-              size={48}
-            />
-            <blockquote className="pl-8 border-l-2 border-secondary/40">
-              <p className="text-lg md:text-xl text-foreground/80 italic leading-relaxed">
-                {content.quote}
-              </p>
-            </blockquote>
-          </motion.div>
-
+          {/* Bio */}
           <p className="mt-8 text-foreground/60 leading-relaxed">
             {content.bio}
           </p>
+
+          {/* Credentials List (Acá se inyecta la lista) */}
+          {content.credentials && (
+            <ul className="mt-6 space-y-3">
+              {content.credentials.map((item: string, index: number) => (
+                <li key={index} className="flex items-start gap-3 text-foreground/80">
+                  <span className="text-secondary mt-1 font-bold">•</span>
+                  <span className="leading-relaxed">{item}</span>
+                </li>
+              ))}
+            </ul>
+          )}
         </motion.div>
       </div>
     </SectionWrapper>
