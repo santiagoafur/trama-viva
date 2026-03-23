@@ -18,6 +18,7 @@ export default function Home() {
       <EliSection />
       <CaminosSection />
       <TestimonialsSection />
+      <ContactoPage />
     </main>
   );
 }
