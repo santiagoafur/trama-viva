@@ -46,10 +46,11 @@ export default function RetirosPage() {
   );
 
   const carouselImages = [
-    "/images/retiros-hero.jpg", 
-    "/images/ceremonias-hero.jpg",
-    "/images/microdosis-hero.jpg",
-    "/images/medicina-naturaleza.jpg"
+    "/images/land-retiros/.webp", 
+    "/images/land-retiros/.webp",
+    "/images/land-retiros/.webp",
+    "/images/land-retiros/.webp",
+    "/images/land-retiros/.webp",
   ];
 
   // Datos de los testimonios con condicional de idioma

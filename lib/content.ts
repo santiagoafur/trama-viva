@@ -40,7 +40,7 @@ export const homePage = {
       title: "Trama Viva",
       slogan: "Despertar la inteligencia vincular",
       cta: "Comienza tu camino",
-      backgroundImage: "/images/hero-home.jpg",
+      backgroundImage: "/images/DSC07141.jpg",
     },
     about: {
       title: "",
@@ -88,9 +88,9 @@ No creo en una salvación, creo en un camino. Y no hay nada más placentero que 
       cards: [
         {
           type: "Presencial",
-          title: "Retiro",
+          title: "Retiros",
           description: "Sumérgete en una experiencia transformadora de 4 días en la naturaleza.",
-          image: "/images/camino-retiro.jpg",
+          image: "/images/land-retiros/image00028 1.webp",
           href: "/retiros",
           cta: "Explorar retiros",
         },
@@ -314,7 +314,7 @@ export const retirosPage = {
     hero: {
       title: "Retiro de conexión Somática-Miceliar",
       subtitle: "Experiencias inmersivas de transformación profunda",
-      backgroundImage: "/images/retiros-hero.jpg",
+      backgroundImage: "/images/land-retiros/DSC06858 1.webp",
     },
     intro: {
       title: "",
