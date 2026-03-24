@@ -331,20 +331,25 @@ Con un enfoque en Terapias Asistidas cada retiro es único porque participan dis
         "Alimentación nutritiva y saludable"
       ],
     },
+    quoteDivider: {
+      image: "/images/banner-nature.jpg", // Cambiá por el nombre de la foto de naturaleza que elijas
+      quote: "“Solo cuando la compasión esté presente,\nlas personas se permitirán la verdad.”",
+      author: "A. H. Almaas (2023)"
+    },
     retreats: [
       {
         id: "within",
-        name: "Within",
-        location: "Costa Rica",
-        date: "15-20 Mayo 2026",
+        name: "WITHIN",
+        location: "Santa Teresa, Costa Rica",
+        date: "25-28 Junio, 2026",
         price: "$1000 USD",
         image: "/images/retiro-costarica.jpg",
         status: "available",
-        frontDescription: "Sumérgete en la selva tropical para una experiencia de reconexión profunda.",
+        frontDescription: "Una experiencia en la selva tropical para un viaje de reconexión profunda.",
         backDescription:
-          "El retiro Within en Costa Rica ofrece 5 días de inmersión total en la naturaleza. Incluye alojamiento, alimentación orgánica, prácticas diarias de yoga y meditación, una ceremonia con medicina natural, y sesiones de integración. El espacio está limitado a 12 participantes para garantizar una experiencia íntima y personalizada.",
+          "El retiro Within en Costa Rica ofrece 3 días de inmersión total en la naturaleza. Incluye alojamiento, alimentación orgánica, prácticas diarias de yoga y meditación, una ceremonia con medicina natural, y sesiones de integración. El espacio está limitado a 12 participantes para garantizar una experiencia íntima y personalizada.",
         includes: [
-          "Alojamiento 5 noches",
+          "Alojamiento 3 noches",
           "Alimentación orgánica completa",
           "Prácticas diarias (yoga, meditación, breathwork)",
           "Ceremonia con medicina natural",
@@ -354,17 +359,17 @@ Con un enfoque en Terapias Asistidas cada retiro es único porque participan dis
       },
       {
         id: "union",
-        name: "Unión",
+        name: "UNIÓN",
         location: "Córdoba, Argentina",
-        date: "8-12 Julio 2026",
+        date: "10-13 Septiembre 2026",
         price: "$1000 USD",
         image: "/images/retiro-cordoba.jpg",
         status: "available",
-        frontDescription: "Conecta con las sierras y la sabiduría de la tierra argentina.",
+        frontDescription: "Una invitación a la unión en las sierras argentinas, donde juntos abrimos espacio para crear nuevos caminos posibles.",
         backDescription:
           "El retiro Unión en las sierras de Córdoba combina la potencia del paisaje serrano con prácticas ancestrales y contemporáneas. Durante 4 días exploraremos la conexión cuerpo-mente-espíritu en un entorno natural protegido, con un grupo reducido de máximo 10 participantes.",
         includes: [
-          "Alojamiento 4 noches",
+          "Alojamiento 3 noches",
           "Alimentación vegetariana orgánica",
           "Prácticas diarias de movimiento",
           "Ceremonia de medicina",
@@ -374,13 +379,13 @@ Con un enfoque en Terapias Asistidas cada retiro es único porque participan dis
       },
       {
         id: "red_viva",
-        name: "Red Viva",
+        name: "RED VIVA",
         location: "Minas, Uruguay",
         date: "1-4 Octubre 2026",
         price: "$1000 USD",
         image: "/images/retiro-uruguay.jpg",
         status: "available",
-        frontDescription: "Retiro de Conexión somática miceliar. Una invitación a recordar la sabiduría de la tierra.",
+        frontDescription: "Un encuentro para recordar en nuestros corazones la sabiduría de expandirnos en red.",
         backDescription: "Una invitación a recordar la sabiduría del micelio. A reunirnos como la Red Viva que ya somos, donde nuestras experiencias se entrelazan y nos permiten reconocernos parte de un mismo tejido mediante Terapia Asistida por Psicodélicos.",
         includes: [
           "Alojamiento en entorno natural",
@@ -419,9 +424,9 @@ With a focus on Assisted Therapies, each retreat is unique because different fac
     retreats: [
       {
         id: "within",
-        name: "Within",
-        location: "Costa Rica",
-        date: "May 15-20, 2026",
+        name: "WITHIN",
+        location: "Santa Teresa, Costa Rica",
+        date: "June 25-28, 2026",
         price: "$1000 USD",
         image: "/images/retiro-costarica.jpg",
         status: "available",
@@ -439,9 +444,9 @@ With a focus on Assisted Therapies, each retreat is unique because different fac
       },
       {
         id: "union",
-        name: "Unión",
+        name: "UNIÓN",
         location: "Córdoba, Argentina",
-        date: "July 8-12, 2026",
+        date: "September 10-13, 2026",
         price: "$1000 USD",
         image: "/images/retiro-cordoba.jpg",
         status: "available",
@@ -459,9 +464,9 @@ With a focus on Assisted Therapies, each retreat is unique because different fac
       },
       {
         id: "uruguay",
-        name: "Uruguay",
+        name: "RED VIVA",
         location: "Minas, Uruguay",
-        date: "October 1-4. 2026",
+        date: "October 1-4, 2026",
         price: "$1000 USD",
         image: "/images/retiro-uruguay.jpg",
         status: "available",
