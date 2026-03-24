@@ -46,9 +46,9 @@ export default function RetirosPage() {
   );
 
   const carouselImages = [
-    "/images/land-retiros/.webp", 
-    "/images/land-retiros/.webp",
-    "/images/land-retiros/.webp",
+    "/images/land-retiros/image00028 1.webp", 
+    "/images/land-retiros/image00004 1.webp",
+    "/images/land-retiros/NE8A7832 1.webp",
     "/images/land-retiros/.webp",
     "/images/land-retiros/.webp",
   ];

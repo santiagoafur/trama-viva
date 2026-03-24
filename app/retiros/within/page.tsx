@@ -292,69 +292,7 @@ export default function RetiroLanding() {
         </div>
       </section>
 
-      {/* 3. HOJA DE RUTA */}
-      <section className="py-24 bg-[#292E17] text-[#E8DCC4] px-4 overflow-hidden">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-5xl font-bold font-serif text-center mb-16">
-            {locale === "es" ? "Tu Camino Hacia el Retiro" : "Your Path to the Retreat"}
-          </h2>
-          
-          <div className="relative">
-            <div className="hidden lg:block absolute top-[24px] left-[12%] right-[12%] h-0.5 bg-[#868859]/30 z-0" />
-
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-6 relative z-10">
-              {/* Paso 1 */}
-              <div className="flex flex-col items-center">
-                <div className="w-12 h-12 rounded-full bg-[#E8DCC4] border-4 border-[#868859] text-[#292E17] flex items-center justify-center font-bold font-serif text-xl mb-6 shadow-lg relative z-10">01</div>
-                <div className="w-full">
-                  <FlipCard 
-                    frontImage="/images/VERDE CLARO.png"
-                    front={<><h3 className="text-xl font-bold font-serif">{locale === "es" ? "Inscripción" : "Registration"}</h3></>}
-                    back={<p className="text-sm leading-relaxed">{locale === "es" ? "Para inscribirte te enviamos un formulario con preguntas específicas para conocerte mejor." : "To register, we send you a form with specific questions to get to know you better."}</p>}
-                  />
-                </div>
-              </div>
-
-              {/* Paso 2 */}
-              <div className="flex flex-col items-center">
-                <div className="w-12 h-12 rounded-full bg-[#E8DCC4] border-4 border-[#868859] text-[#292E17] flex items-center justify-center font-bold font-serif text-xl mb-6 shadow-lg relative z-10">02</div>
-                <div className="w-full">
-                  <FlipCard 
-                    frontImage="/images/VERDE CLARO.png"
-                    front={<><h3 className="text-xl font-bold font-serif">{locale === "es" ? "Entrevista" : "Interview"}</h3></>}
-                    back={<p className="text-sm leading-relaxed">{locale === "es" ? "Coordinamos un encuentro online de 30 minutos para despejar cualquier duda o consulta." : "We coordinate a 30-minute online meeting to clear up any doubts or questions."}</p>}
-                  />
-                </div>
-              </div>
-
-              {/* Paso 3 */}
-              <div className="flex flex-col items-center">
-                <div className="w-12 h-12 rounded-full bg-[#E8DCC4] border-4 border-[#868859] text-[#292E17] flex items-center justify-center font-bold font-serif text-xl mb-6 shadow-lg relative z-10">03</div>
-                <div className="w-full">
-                  <FlipCard 
-                    frontImage="/images/VERDE CLARO.png"
-                    front={<><h3 className="text-xl font-bold font-serif">{locale === "es" ? "Preparación" : "Preparation"}</h3></>}
-                    back={<p className="text-sm leading-relaxed">{locale === "es" ? "Una semana antes tendremos un encuentro online grupal para conocernos, brindar herramientas, sugerencias para preparar el cuerpo y despejar dudas." : "A week before we will have an online group meeting to get to know each other, provide tools, suggestions to prepare the body and answer questions."}</p>}
-                  />
-                </div>
-              </div>
-
-              {/* Paso 4 */}
-              <div className="flex flex-col items-center">
-                <div className="w-12 h-12 rounded-full bg-[#E8DCC4] border-4 border-[#868859] text-[#292E17] flex items-center justify-center font-bold font-serif text-xl mb-6 shadow-lg relative z-10">04</div>
-                <div className="w-full">
-                  <FlipCard 
-                    frontImage="/images/VERDE CLARO.png"
-                    front={<><h3 className="text-xl font-bold font-serif">{locale === "es" ? "Integración" : "Integration"}</h3></>}
-                    back={<p className="text-sm leading-relaxed">{locale === "es" ? "Dos semanas después del retiro nos reencontramos online para optimizar la integración y capitalizar los aprendizajes obtenidos." : "Two weeks after the retreat we meet online again to optimize integration and capitalize on the learning obtained."}</p>}
-                  />
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </div>
-      </section>
+      
 
       {/* 4. LAS COMIDAS */}
       <section className="py-20 px-4 max-w-7xl mx-auto">
@@ -559,6 +497,70 @@ export default function RetiroLanding() {
               <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform"/>
             </Link>
         </motion.div>
+      </section>
+
+      {/* 3. HOJA DE RUTA */}
+      <section className="py-24 bg-[#292E17] text-[#E8DCC4] px-4 overflow-hidden">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl md:text-5xl font-bold font-serif text-center mb-16">
+            {locale === "es" ? "Como inscribirte" : "How to subscribe"}
+          </h2>
+          
+          <div className="relative">
+            <div className="hidden lg:block absolute top-[24px] left-[12%] right-[12%] h-0.5 bg-[#868859]/30 z-0" />
+
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-6 relative z-10">
+              {/* Paso 1 */}
+              <div className="flex flex-col items-center">
+                <div className="w-12 h-12 rounded-full bg-[#E8DCC4] border-4 border-[#868859] text-[#292E17] flex items-center justify-center font-bold font-serif text-xl mb-6 shadow-lg relative z-10">01</div>
+                <div className="w-full">
+                  <FlipCard 
+                    frontImage="/images/VERDE CLARO.png"
+                    front={<><h3 className="text-xl font-bold font-serif">{locale === "es" ? "Inscripción" : "Registration"}</h3></>}
+                    back={<p className="text-sm leading-relaxed">{locale === "es" ? "Para inscribirte te enviamos un formulario con preguntas específicas para conocerte mejor." : "To register, we send you a form with specific questions to get to know you better."}</p>}
+                  />
+                </div>
+              </div>
+
+              {/* Paso 2 */}
+              <div className="flex flex-col items-center">
+                <div className="w-12 h-12 rounded-full bg-[#E8DCC4] border-4 border-[#868859] text-[#292E17] flex items-center justify-center font-bold font-serif text-xl mb-6 shadow-lg relative z-10">02</div>
+                <div className="w-full">
+                  <FlipCard 
+                    frontImage="/images/VERDE CLARO.png"
+                    front={<><h3 className="text-xl font-bold font-serif">{locale === "es" ? "Entrevista" : "Interview"}</h3></>}
+                    back={<p className="text-sm leading-relaxed">{locale === "es" ? "Coordinamos un encuentro online de 30 minutos para despejar cualquier duda o consulta." : "We coordinate a 30-minute online meeting to clear up any doubts or questions."}</p>}
+                  />
+                </div>
+              </div>
+
+              {/* Paso 3 */}
+              <div className="flex flex-col items-center">
+                <div className="w-12 h-12 rounded-full bg-[#E8DCC4] border-4 border-[#868859] text-[#292E17] flex items-center justify-center font-bold font-serif text-xl mb-6 shadow-lg relative z-10">03</div>
+                <div className="w-full">
+                  <FlipCard 
+                    frontImage="/images/VERDE CLARO.png"
+                    front={<><h3 className="text-xl font-bold font-serif">{locale === "es" ? "Preparación" : "Preparation"}</h3></>}
+                    back={<p className="text-sm leading-relaxed">{locale === "es" ? "Una semana antes tendremos un encuentro online grupal para conocernos, brindar herramientas, sugerencias para preparar el cuerpo y despejar dudas." : "A week before we will have an online group meeting to get to know each other, provide tools, suggestions to prepare the body and answer questions."}</p>}
+                  />
+                </div>
+              </div>
+
+              {/* Paso 4 */}
+              <div className="flex flex-col items-center">
+                <div className="w-12 h-12 rounded-full bg-[#E8DCC4] border-4 border-[#868859] text-[#292E17] flex items-center justify-center font-bold font-serif text-xl mb-6 shadow-lg relative z-10">04</div>
+                <div className="w-full">
+                  <FlipCard 
+                    frontImage="/images/VERDE CLARO.png"
+                    front={<><h3 className="text-xl font-bold font-serif">{locale === "es" ? "Integración" : "Integration"}</h3></>}
+                    back={<p className="text-sm leading-relaxed">{locale === "es" ? "Dos semanas después del retiro nos reencontramos online para optimizar la integración y capitalizar los aprendizajes obtenidos." : "Two weeks after the retreat we meet online again to optimize integration and capitalize on the learning obtained."}</p>}
+                  />
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* 7. TESTIMONIOS (CARRUSEL) */}

@@ -37,15 +37,15 @@ export const navigation = {
 export const homePage = {
   es: {
     hero: {
-      title: "Trama Viva",
+      title: "Trama Viva", // Espacio terapéutico orientado al autoconocimiento y la transformación personal
       slogan: "Despertar la inteligencia vincular",
       cta: "Comienza tu camino",
       backgroundImage: "/images/DSC07141.jpg",
     },
     about: {
-      title: "",
+      title: "Trama Viva:",
       description:
-        `Trama Viva es un espacio terapéutico orientado al autoconocimiento y la transformación personal.
+        `
 Surge como un llamado a la inteligencia que se manifiesta al vincularnos con la naturaleza de la realidad.
 Desde una mirada integrativa, la invitación es explorar nuestra naturaleza humana para aprender nuevas formas de relacionarnos y aplicar sistemas basados en lo único que es sostenible: el amor.
 `,
@@ -64,10 +64,11 @@ Desde una mirada integrativa, la invitación es explorar nuestra naturaleza huma
         },
       ],
     },
+    
     eli: {
       title: "Sobre mi",
       name: "Eliana Martínez",
-      image: "/images/eli-portrait.jpg",
+      image: "/images/ELLI.png",
       bio: `Soy Eli, apasionada por los procesos de desarrollo humano y de la vida en la naturaleza. Busco acompañar a las personas en sus búsquedas de integración y procesos de aprendizaje, construyendo vínculos que permitan una nueva mirada.
 Mi trabajo se basa en una perspectiva sistémica: la vida es una red interconectada que si aprendemos a escuchar, nutrir y cuidar tiene la capacidad por sí sola de regenerarse
 y crear nuevas redes de conexión.
@@ -87,7 +88,7 @@ No creo en una salvación, creo en un camino. Y no hay nada más placentero que 
       subtitle: "",
       cards: [
         {
-          type: "Presencial",
+          type: "Presencial", //modificar font o colocar label
           title: "Retiros",
           description: "Sumérgete en una experiencia transformadora de 4 días en la naturaleza.",
           image: "/images/land-retiros/image00028 1.webp",
@@ -95,7 +96,7 @@ No creo en una salvación, creo en un camino. Y no hay nada más placentero que 
           cta: "Explorar retiros",
         },
         {
-          type: "Online",
+          type: "Online", //modificar font o colocar label
           title: "Acompañamiento con Microdosis",
           description: "Acompañamientos individuales y grupales para integrar la microdosis en tu proceso personal.",
           image: "/images/camino-microdosis.jpg",
@@ -103,7 +104,7 @@ No creo en una salvación, creo en un camino. Y no hay nada más placentero que 
           cta: "Conocer más",
         },
         {
-          type: "Presencial",
+          type: "Presencial", //modificar font o colocar label
           title: "Ceremonias",
           description: "Una experiencia para vivir el poder transformador de la medicina de los hongos bajo el contexto de terapias asistidas.",
           image: "/images/ceremonias/hero-ceremonia-2.jpg",
@@ -314,6 +315,7 @@ export const retirosPage = {
     hero: {
       title: "Retiro de conexión Somática-Miceliar",
       subtitle: "Experiencias inmersivas de transformación profunda",
+      location: "Argentina - Costa Rica - Uruguay", //agregar
       backgroundImage: "/images/land-retiros/DSC06858 1.webp",
     },
     intro: {
