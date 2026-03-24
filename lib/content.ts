@@ -605,16 +605,15 @@ export const ceremoniasPage = {
 export const microdosisPage = {
   es: {
     hero: {
-      title: "Acompañamiento individual para el uso de Microdosis",
+      title: "Acompañamiento para el uso de Microdosis",
       subtitle: "Un proceso integral, seguro y educativo",
-      backgroundImage: "/images/microdosis-hero.jpg",
+      backgroundImage: "/images/microdosis/hero-microdosis.webp",
     },
     intro: {
-      description:
-        "El acompañamiento con microdosis es un proceso personalizado donde te guiamos en la integración responsable de microdosis en tu vida cotidiana. No es un servicio médico ni reemplaza tratamientos profesionales; es un espacio educativo y de desarrollo personal.",
+      description: "Mi servicio de acompañamiento con microdosis se basa en un enfoque integral, seguro y respetuoso de cada proceso individual, donde el protagonismo está siempre en la persona y su propio ritmo.\nNo promuevo el uso de sustancias ni realizo indicaciones médicas, sino que ofrezco contención, orientación y educación para quienes ya han decidido explorar esta práctica desde su autonomía y responsabilidad personal.",
     },
     considerations: {
-      title: "A tener en cuenta",
+      title: "Desde dónde acompaño",
       items: [
         {
           icon: "sparkles",
@@ -639,39 +638,50 @@ export const microdosisPage = {
     targetAudience: {
       title: "¿A quiénes está dirigido?",
       items: [
-        "Personas buscando expandir su autoconocimiento",
-        "Quienes desean mejorar su creatividad y enfoque",
-        "Personas interesadas en explorar su mundo interior de forma segura",
-        "Quienes buscan herramientas para la regulación emocional",
-        "Personas en procesos de crecimiento personal y espiritual",
+        "Quienes busquen profundizar en sus emociones y transformar conductas limitantes.",
+        "Quienes busquen despertar su creatividad, reconectando con la inspiración y el juego interior.",
+        "Quienes busquen despertar su pasión y crear espacios donde su energía vital fluye con autenticidad.",
+        "Quienes busquen vivir un proceso consciente, respetuoso y acompañado, que les permita cultivar presencia, orden y coherencia interior.",
       ],
     },
     benefits: {
       title: "Potenciales beneficios",
       cards: [
         {
-          frontTitle: "Autoconocimiento",
+          frontTitle: "Mayor autoconocimiento y claridad interna",
           frontIcon: "eye",
-          backContent:
-            "Las microdosis pueden facilitar una mayor consciencia de patrones de pensamiento, emociones y comportamientos, permitiendo un autoconocimiento más profundo.",
+          image: "/images/microdosis/potenciales-beneficios-1.webp",
+          backContent: "Las microdosis facilitan una mayor consciencia de patrones de pensamiento, emociones y comportamientos, abriendo camino hacia un autoconocimiento más profundo y genuino.",
         },
         {
-          frontTitle: "Liberación Nerviosa",
-          frontIcon: "zap",
-          backContent:
-            "Muchas personas reportan una reducción en la tensión y estrés, experimentando mayor calma y claridad mental durante el proceso.",
-        },
-        {
-          frontTitle: "Recuperación",
-          frontIcon: "refresh-cw",
-          backContent:
-            "El proceso puede apoyar la recuperación de energía vital, motivación y conexión con uno mismo después de períodos difíciles.",
-        },
-        {
-          frontTitle: "Regulación Emocional",
+          frontTitle: "Regulación emocional y seguridad corporal",
           frontIcon: "heart",
-          backContent:
-            "Las microdosis pueden ayudar a desarrollar una mayor capacidad de observar y regular las emociones de forma consciente.",
+          image: "/images/microdosis/potenciales-beneficios-2.webp",
+          backContent: "Muchas personas reportan mayor calma y estabilidad emocional, desarrollando una sensación de seguridad en el cuerpo que les permite atravesar la vida con más ecuanimidad.",
+        },
+        {
+          frontTitle: "Escuchar el cuerpo como fuente de sabiduría",
+          frontIcon: "refresh-cw",
+          image: "/images/microdosis/potenciales-beneficios-3.webp",
+          backContent: "El proceso invita a reconectar con las señales del cuerpo, aprendiendo a leerlas como mensajes valiosos en lugar de obstáculos a superar.",
+        },
+        {
+          frontTitle: "Mayor neuroplasticidad y nuevos caminos adaptativos",
+          frontIcon: "zap",
+          image: "/images/microdosis/potenciales-beneficios-1.webp",
+          backContent: "Las microdosis pueden potenciar la capacidad del cerebro para crear nuevas conexiones, facilitando la apertura a perspectivas y respuestas más adaptativas.",
+        },
+        {
+          frontTitle: "Liberación de tensiones y patrones limitantes",
+          frontIcon: "zap",
+          image: "/images/microdosis/potenciales-beneficios-2.webp",
+          backContent: "El trabajo con microdosis puede ayudar a soltar bloqueos físicos, emocionales o mentales que ya no son funcionales, abriendo espacio para nuevas formas de ser y estar.",
+        },
+        {
+          frontTitle: "Relación más amable contigo mismo y con los demás",
+          frontIcon: "heart",
+          image: "/images/microdosis/potenciales-beneficios-3.webp",
+          backContent: "Muchas personas reportan un aumento en la autocompasión y en la calidad de sus vínculos, encontrando formas más amorosas de relacionarse consigo mismas y con su entorno.",
         },
       ],
     },
@@ -685,14 +695,13 @@ export const microdosisPage = {
     hero: {
       title: "Individual accompaniment for Microdosing",
       subtitle: "A comprehensive, safe, and educational process",
-      backgroundImage: "/images/microdosis-hero.jpg",
+      backgroundImage: "/images/microdosis/hero-microdosis.webp",
     },
     intro: {
-      description:
-        "Microdosing accompaniment is a personalized process where we guide you in the responsible integration of microdosing into your daily life. It is not a medical service nor does it replace professional treatments; it is an educational and personal development space.",
+      description: "My microdosis accompaniment service is based on a comprehensive, safe and respectful approach to each individual process, where the focus is always on the person and their own rhythm.\nI do not promote the use of substances or provide medical guidance, but rather offer support, orientation and education for those who have already decided to explore this practice from their own autonomy and personal responsibility.",
     },
     considerations: {
-      title: "Keep in mind",
+      title: "Where I stand as a guide",
       items: [
         {
           icon: "sparkles",
@@ -717,39 +726,50 @@ export const microdosisPage = {
     targetAudience: {
       title: "Who is it for?",
       items: [
-        "People seeking to expand their self-knowledge",
-        "Those who want to improve their creativity and focus",
-        "People interested in exploring their inner world safely",
-        "Those seeking tools for emotional regulation",
-        "People in personal and spiritual growth processes",
+        "Those seeking to deepen their emotions and transform limiting behaviors.",
+        "Those seeking to awake their creativity, reconnecting with inspiration and inner play.",
+        "Those seeking to awake their passion and create spaces where their vital energy flows authentically.",
+        "Those seeking to live a conscious, respectful and supported process that allows them to cultivate presence, order and inner coherence.",
       ],
     },
     benefits: {
       title: "Potential benefits",
       cards: [
         {
-          frontTitle: "Self-knowledge",
+          frontTitle: "Greater self-knowledge and inner clarity",
           frontIcon: "eye",
-          backContent:
-            "Microdoses can facilitate greater awareness of thought patterns, emotions, and behaviors, allowing for deeper self-knowledge.",
+          image: "/images/microdosis/potenciales-beneficios-1.webp",
+          backContent: "Microdoses facilitate greater awareness of thought patterns, emotions and behaviors, opening the way to deeper and more genuine self-knowledge.",
         },
         {
-          frontTitle: "Nervous Release",
-          frontIcon: "zap",
-          backContent:
-            "Many people report a reduction in tension and stress, experiencing greater calm and mental clarity during the process.",
-        },
-        {
-          frontTitle: "Recovery",
-          frontIcon: "refresh-cw",
-          backContent:
-            "The process can support the recovery of vital energy, motivation, and connection with oneself after difficult periods.",
-        },
-        {
-          frontTitle: "Emotional Regulation",
+          frontTitle: "Emotional regulation and body safety",
           frontIcon: "heart",
-          backContent:
-            "Microdoses can help develop a greater capacity to observe and regulate emotions consciously.",
+          image: "/images/microdosis/potenciales-beneficios-2.webp",
+          backContent: "Many people report greater calm and emotional stability, developing a sense of safety in the body that allows them to move through life with more equanimity.",
+        },
+        {
+          frontTitle: "Listening to the body as a source of wisdom",
+          frontIcon: "refresh-cw",
+          image: "/images/microdosis/potenciales-beneficios-3.webp",
+          backContent: "The process invites reconnecting with the body's signals, learning to read them as valuable messages rather than obstacles to overcome.",
+        },
+        {
+          frontTitle: "Greater neuroplasticity and new adaptive pathways",
+          frontIcon: "zap",
+          image: "/images/microdosis/potenciales-beneficios-1.webp",
+          backContent: "Microdoses can enhance the brain's ability to create new connections, facilitating openness to more adaptive perspectives and responses.",
+        },
+        {
+          frontTitle: "Release of tensions and limiting patterns",
+          frontIcon: "zap",
+          image: "/images/microdosis/potenciales-beneficios-2.webp",
+          backContent: "Working with microdoses can help release physical, emotional or mental blocks that are no longer functional, making space for new ways of being.",
+        },
+        {
+          frontTitle: "A kinder relationship with yourself and others",
+          frontIcon: "heart",
+          image: "/images/microdosis/potenciales-beneficios-3.webp",
+          backContent: "Many people report an increase in self-compassion and the quality of their bonds, finding more loving ways to relate to themselves and their environment.",
         },
       ],
     },
