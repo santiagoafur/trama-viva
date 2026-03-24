@@ -47,8 +47,8 @@ export default function ContactoPage() {
     {
       icon: Instagram,
       label: "Instagram",
-      value: "@tramaviva",
-      href: "https://www.instagram.com/eli.mar.lov/",
+      value: "@tramaviva.red",
+      href: "https://www.instagram.com/tramaviva.red/",
     },
     {
       icon: MapPin,
@@ -69,7 +69,7 @@ export default function ContactoPage() {
               ? ""
               : ""
           }
-          backgroundImage="/images/contact-section.jpg" // Asegurate de que esta prop coincida con tu componente PageHero (puede ser 'image' o 'backgroundImage')
+          backgroundImage="/images/contacto-hero.webp" // Asegurate de que esta prop coincida con tu componente PageHero (puede ser 'image' o 'backgroundImage')
         />
 
         <section className="py-20 md:py-32 px-4 max-w-7xl mx-auto">
