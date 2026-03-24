@@ -29,6 +29,10 @@ export const metadata: Metadata = {
     locale: "es_AR",
     type: "website",
   },
+  icons: {
+    icon: "/favicon.png",
+    apple: "/favicon.png",
+  },
   twitter: {
     card: "summary_large_image",
     title: "Trama Viva | Despertar la inteligencia vincular",
