@@ -17,23 +17,23 @@ export function Navbar() {
   const ui = commonUI[locale];
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
-    };
+    const handleScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "unset";
-    }
-    return () => {
-      document.body.style.overflow = "unset";
-    };
+    document.body.style.overflow = isOpen ? "hidden" : "unset";
+    return () => { document.body.style.overflow = "unset"; };
   }, [isOpen]);
+
+  const isScrolled = scrolled || isOpen;
+
+  const mobileLogoSrc = isOpen
+    ? "/images/logo_secundario_rojo.webp"
+    : isScrolled
+    ? "/images/logo_secundario_rojo.webp"
+    : "/images/logo_secundario_crema.webp";
 
   return (
     <>
@@ -41,20 +41,17 @@ export function Navbar() {
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
-        // ACÁ ESTÁ LA MAGIA: Fondo crema fijo (#E8DCC4) y solo agregamos sombra al scrollear
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-[#E8DCC4] ${
-          scrolled ? "shadow-md border-b border-[#3B1B0E]/10" : "border-b border-transparent"
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+          isScrolled
+            ? "bg-[#E8DCC4] shadow-sm border-b border-[#3B1B0E]/10"
+            : "bg-transparent border-b border-transparent"
         }`}
       >
         <nav className="container mx-auto px-6 lg:px-12">
-          {/* Contenedor más alto para darle espacio al logo gigante */}
-          <div className="flex items-center justify-between h-24 lg:h-32">
-            
-            {/* Logo Desktop & Mobile */}
-            <Link
-              href="/"
-              className="relative z-50 flex items-center"
-            >
+          <div className="flex items-center justify-between h-20 lg:h-24">
+
+            {/* Logo */}
+            <Link href="/" className="relative z-50 flex items-center">
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -62,29 +59,28 @@ export function Navbar() {
                 className="flex items-center"
               >
                 {/* Logo Desktop */}
-                <Image 
-                  src="/images/logo_secundario_rojo.png"
+                <Image
+                  src={isScrolled ? "/images/logo_secundario_rojo.webp" : "/images/logo_secundario_crema.webp"}
                   alt="Trama Viva Logo"
-                  width={600} 
-                  height={200} 
-                  className="hidden md:block w-auto h-20 lg:h-28 object-contain"
+                  width={600}
+                  height={200}
+                  className="hidden md:block w-auto h-7 lg:h-8 object-contain transition-all duration-300"
                   priority
                 />
-                
                 {/* Logo Mobile */}
-                <Image 
-                  src="/images/ROJO.png"
+                <Image
+                  src={mobileLogoSrc}
                   alt="Trama Viva Logo"
-                  width={300} 
-                  height={100} 
-                  className="block md:hidden w-auto h-16 object-contain"
+                  width={300}
+                  height={100}
+                  className="block md:hidden w-auto h-6 object-contain transition-all duration-300"
                   priority
                 />
               </motion.div>
             </Link>
 
             {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center gap-10">
+            <div className="hidden md:flex items-center gap-8">
               {content.items.map((item, index) => (
                 <motion.div
                   key={item.href}
@@ -94,10 +90,16 @@ export function Navbar() {
                 >
                   <Link
                     href={item.href}
-                    className="relative text-[#3B1B0E]/80 hover:text-[#7E2625] transition-colors duration-300 text-sm tracking-wide uppercase font-bold group"
+                    className={`relative text-sm tracking-wide uppercase font-bold transition-colors duration-300 group ${
+                      isScrolled
+                        ? "text-[#3B1B0E]/80 hover:text-[#7E2625]"
+                        : "text-[#E8DCC4]/90 hover:text-[#E8DCC4]"
+                    }`}
                   >
                     {item.label}
-                    <span className="absolute -bottom-1 left-0 w-0 h-px bg-[#7E2625] transition-all duration-300 group-hover:w-full" />
+                    <span className={`absolute -bottom-1 left-0 w-0 h-px transition-all duration-300 group-hover:w-full ${
+                      isScrolled ? "bg-[#7E2625]" : "bg-[#E8DCC4]"
+                    }`} />
                   </Link>
                 </motion.div>
               ))}
@@ -108,9 +110,13 @@ export function Navbar() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.6 }}
                 onClick={toggleLocale}
-                className="ml-4 flex items-center gap-2 px-3 py-1.5 border border-[#3B1B0E]/30 text-[#3B1B0E] hover:bg-[#3B1B0E]/10 hover:border-[#3B1B0E] rounded-full text-sm tracking-wider uppercase font-bold transition-all duration-300"
+                className={`ml-2 flex items-center gap-2 px-3 py-1.5 rounded-full text-sm tracking-wider uppercase font-bold transition-all duration-300 ${
+                  isScrolled
+                    ? "border border-[#3B1B0E]/30 text-[#3B1B0E] hover:bg-[#3B1B0E]/10"
+                    : "border border-[#E8DCC4]/50 text-[#E8DCC4] hover:bg-[#E8DCC4]/10"
+                }`}
               >
-                <Globe size={16} className="opacity-80" />
+                <Globe size={14} className="opacity-80" />
                 <span>{ui.languageToggle}</span>
               </motion.button>
             </div>
@@ -118,10 +124,12 @@ export function Navbar() {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="md:hidden relative z-50 p-2 text-[#3B1B0E]"
+              className={`md:hidden relative z-50 p-2 transition-colors duration-300 ${
+                isScrolled || isOpen ? "text-[#3B1B0E]" : "text-[#E8DCC4]"
+              }`}
               aria-label={isOpen ? "Close menu" : "Open menu"}
             >
-              {isOpen ? <X size={28} /> : <Menu size={28} />}
+              {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
         </nav>
@@ -137,7 +145,6 @@ export function Navbar() {
             transition={{ duration: 0.3 }}
             className="fixed inset-0 z-40 md:hidden"
           >
-            {/* Backdrop */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -145,8 +152,6 @@ export function Navbar() {
               className="absolute inset-0 bg-[#E8DCC4]"
               onClick={() => setIsOpen(false)}
             />
-
-            {/* Menu Content */}
             <motion.nav
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -177,10 +182,7 @@ export function Navbar() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: 20 }}
                 transition={{ delay: 0.6 }}
-                onClick={() => {
-                  toggleLocale();
-                  setIsOpen(false);
-                }}
+                onClick={() => { toggleLocale(); setIsOpen(false); }}
                 className="mt-8 flex items-center gap-3 px-6 py-3 border border-[#3B1B0E]/50 text-[#3B1B0E] font-bold rounded-full text-lg tracking-wider uppercase transition-all duration-300 hover:bg-[#3B1B0E]/10"
               >
                 <Globe size={20} />
