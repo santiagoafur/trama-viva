@@ -127,3 +127,7 @@
     color: #E8DCC4;
   }
 }
+
+button, a, [role="button"] {
+  cursor: pointer;
+}
