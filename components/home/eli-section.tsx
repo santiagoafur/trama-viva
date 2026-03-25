@@ -12,7 +12,7 @@ export function EliSection() {
   const content = homePage[locale].eli;
 
   return (
-    <SectionWrapper variant="default">
+    <SectionWrapper variant="default" id="about">
       <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
         {/* Image */}
         <motion.div

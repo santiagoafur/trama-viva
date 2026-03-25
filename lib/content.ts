@@ -37,7 +37,7 @@ export const navigation = {
 export const homePage = {
   es: {
     hero: {
-      title: "Espacio terapéutico orientado al autoconocimiento y la transformación personal",      slogan: "Despertar la inteligencia vincular",
+      title: "Despertar la inteligencia vincular",      slogan: "Espacio terapeutico orientado al autoconocimiento y transformacion personal y colectiva",
       cta: "Comienza tu camino",
       backgroundImage: "/images/hero-home.webp",
     },
@@ -172,7 +172,7 @@ No creo en una salvación, creo en un camino. Y no hay nada más placentero que 
   },
   en: {
     hero: {
-      title: "Therapeutic space oriented towards self-knowledge and personal transformation",      slogan: "Awakening relational intelligence",
+      title: "Awakening relational intelligence",      slogan: "Therapeutic space oriented towards self-knowledge and personal and collective transformation",
       cta: "Begin your journey",
       backgroundImage: "/images/hero-home.webp",
     },
