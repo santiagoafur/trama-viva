@@ -49,8 +49,7 @@ export function AboutSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.15 }}
-                className="flex gap-5 p-6 bg-background rounded-sm border border-border/50 hover:border-secondary transition-colors duration-300"
-              >
+                className="flex gap-5 p-6 bg-background rounded-2xl border border-border/50 hover:border-secondary transition-colors duration-300"              >
                 <div className="flex-shrink-0 w-12 h-12 bg-secondary/20 rounded-sm flex items-center justify-center">
                   <Icon className="text-secondary" size={24} />
                 </div>

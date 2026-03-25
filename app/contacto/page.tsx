@@ -62,16 +62,6 @@ export default function ContactoPage() {
     <>
       <Navbar />
       <main className="bg-[#E8DCC4] text-[#3B1B0E] min-h-screen font-sans">
-        <PageHero
-          title={locale === "es" ? "Contacto" : "Contact"}
-          subtitle={
-            locale === "es"
-              ? ""
-              : ""
-          }
-          backgroundImage="/images/contacto-hero.webp" // Asegurate de que esta prop coincida con tu componente PageHero (puede ser 'image' o 'backgroundImage')
-        />
-
         <section className="py-20 md:py-32 px-4 max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-16 items-start">
             

@@ -37,10 +37,9 @@ export const navigation = {
 export const homePage = {
   es: {
     hero: {
-      title: "Trama Viva", // Espacio terapéutico orientado al autoconocimiento y la transformación personal
-      slogan: "Despertar la inteligencia vincular",
+      title: "Espacio terapéutico orientado al autoconocimiento y la transformación personal",      slogan: "Despertar la inteligencia vincular",
       cta: "Comienza tu camino",
-      backgroundImage: "/images/DSC07141.jpg",
+      backgroundImage: "/images/hero-home.webp",
     },
     about: {
       title: "Trama Viva:",
@@ -88,26 +87,26 @@ No creo en una salvación, creo en un camino. Y no hay nada más placentero que 
       subtitle: "",
       cards: [
         {
-          type: "Presencial", //modificar font o colocar label
+          type: "Presencial",
           title: "Retiros",
           description: "Sumérgete en una experiencia transformadora de 4 días en la naturaleza.",
-          image: "/images/land-retiros/image00028 1.webp",
+          image: "/images/camino-retreats.webp",
           href: "/retiros",
           cta: "Explorar retiros",
         },
         {
-          type: "Online", //modificar font o colocar label
+          type: "Online",
           title: "Acompañamiento con Microdosis",
           description: "Acompañamientos individuales y grupales para integrar la microdosis en tu proceso personal.",
-          image: "/images/camino-microdosis.jpg",
+          image: "/images/camino-microdosis.webp",
           href: "/microdosis",
           cta: "Conocer más",
         },
         {
-          type: "Presencial", //modificar font o colocar label
+          type: "Presencial",
           title: "Ceremonias",
           description: "Una experiencia para vivir el poder transformador de la medicina de los hongos bajo el contexto de terapias asistidas.",
-          image: "/images/ceremonias/hero-ceremonia-2.jpg",
+          image: "/images/camino-ceremonias.webp",
           href: "/ceremonias",
           cta: "Conocer más",
         },
@@ -173,15 +172,14 @@ No creo en una salvación, creo en un camino. Y no hay nada más placentero que 
   },
   en: {
     hero: {
-      title: "Trama Viva",
-      slogan: "Awakening relational intelligence",
+      title: "Therapeutic space oriented towards self-knowledge and personal transformation",      slogan: "Awakening relational intelligence",
       cta: "Begin your journey",
-      backgroundImage: "/images/hero-home.jpg",
+      backgroundImage: "/images/hero-home.webp",
     },
     about: {
-      title: "",
+      title: "Trama Viva:",
       description:
-        "Trama Viva is a comprehensive wellness space where ancestral wisdom and contemporary wellbeing practices converge. We facilitate transformative experiences that connect body, mind, and spirit through retreats, ceremonies, and microdosing processes guided by professionals committed to your personal evolution.",
+        "Is a comprehensive wellness space where ancestral wisdom and contemporary wellbeing practices converge. We facilitate transformative experiences that connect body, mind, and spirit through retreats, ceremonies, and microdosing processes guided by professionals committed to your personal evolution.",
       features: [
         {
           title: "Deep Connection",
@@ -225,7 +223,7 @@ I don't believe in salvation; I believe in a path. And there is nothing more ful
           type: "In-Person",
           title: "Retreats",
           description: "Immerse yourself in a transformative four days experience in nature.",
-          image: "/images/camino-retiro.jpg",
+          image: "/images/camino-retreats.webp",
           href: "/retiros",
           cta: "Explore retreats",
         },
@@ -233,7 +231,7 @@ I don't believe in salvation; I believe in a path. And there is nothing more ful
           type: "Online",
           title: "Microdosing Support",
           description: "Individual and group support to integrate microdosing into your personal journey.",
-          image: "/images/camino-microdosis.jpg",
+          image: "/images/camino-microdosis.webp",
           href: "/microdosis",
           cta: "Learn more",
         },
@@ -241,7 +239,7 @@ I don't believe in salvation; I believe in a path. And there is nothing more ful
           type: "In-Person",
           title: "Ceremonies",
           description: "An experience to discover the transformative power of mushroom medicine within the context of assisted therapies.",
-          image: "/images/ceremonias/hero-ceremonia-2.jpg",
+          image: "/images/camino-ceremonias.webp",
           href: "/ceremonias",
           cta: "Learn More",
         },
@@ -959,8 +957,8 @@ export const footer = {
     },
     contact: {
       title: "Contacto",
-      email: "hola@tramaviva.com",
-      instagram: "@tramaviva",
+      email: "hola@trama-viva.com",
+      instagram: "@tramaviva.red",
     },
     copyright: "© 2026 Trama Viva. Todos los derechos reservados.",
     designBy: "Diseño por Whitespacez",
@@ -985,8 +983,8 @@ export const footer = {
     },
     contact: {
       title: "Contact",
-      email: "hola@tramaviva.com",
-      instagram: "@tramaviva",
+      email: "hola@trama-viva.com",
+      instagram: "@tramaviva.red",
     },
     copyright: "© 6 Trama Viva. All rights reserved.",
     designBy: "Design by Whitespacez",

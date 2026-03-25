@@ -37,7 +37,7 @@ export function CaminosSection() {
             transition={{ duration: 0.6, delay: index * 0.15 }}
           >
             <Link href={card.href} className="group block">
-              <div className="relative aspect-[4/5] overflow-hidden rounded-sm">
+              <div className="relative aspect-[4/5] overflow-hidden rounded-2xl">
                 <Image
                   src={card.image}
                   alt={card.title}
@@ -49,7 +49,7 @@ export function CaminosSection() {
 
                 {/* Content overlay */}
                 <div className="absolute inset-0 flex flex-col justify-end p-6 lg:p-8">
-                  <span className="text-primary-foreground/70 text-xs uppercase tracking-widest">
+                  <span className="inline-flex items-center bg-primary-foreground/15 backdrop-blur-sm border border-primary-foreground/30 text-primary-foreground text-xs font-semibold tracking-widest uppercase px-3 py-1 rounded-full w-fit">
                     {card.type}
                   </span>
                   <h3 className="mt-2 text-2xl lg:text-3xl font-bold text-primary-foreground">

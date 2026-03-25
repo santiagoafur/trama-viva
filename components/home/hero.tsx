@@ -35,8 +35,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-5xl md:text-7xl lg:text-9xl font-bold text-primary-foreground tracking-tight"
-          >
+            className="text-3xl md:text-4xl lg:text-6xl font-bold text-primary-foreground tracking-tight"          >
             {content.title}
           </motion.h1>
 
@@ -49,23 +48,26 @@ export function Hero() {
             {content.slogan}
           </motion.p>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
-            className="mt-10 lg:mt-14"
-          >
-            <Link
-              href="#caminos"
-              className="inline-flex items-center gap-3 px-8 py-4 bg-accent text-accent-foreground font-medium tracking-wide uppercase text-sm hover:bg-accent/90 transition-all duration-300 group"
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.8 }}
+              className="mt-10 lg:mt-14 flex flex-col sm:flex-row items-center justify-center gap-4"
             >
-              {content.cta}
-              <ArrowRight
-                size={18}
-                className="group-hover:translate-x-1 transition-transform"
-              />
-            </Link>
-          </motion.div>
+              <Link
+                href="#caminos"
+                className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-accent text-accent-foreground rounded-full font-bold hover:bg-accent/90 transition-all shadow-lg hover:shadow-xl hover:-translate-y-1"
+              >
+                {content.cta}
+                <ArrowRight size={18} />
+              </Link>
+              <Link
+                href="#about"
+                className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-transparent border border-primary-foreground/50 text-primary-foreground rounded-full font-bold hover:bg-primary-foreground/10 transition-all"
+              >
+                {locale === "es" ? "Conocer más" : "Learn more"}
+              </Link>
+            </motion.div>
         </motion.div>
       </div>
 
