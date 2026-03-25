@@ -138,7 +138,7 @@ No creo en una salvación, creo en un camino. Y no hay nada más placentero que 
           role: "",
           image: "/images/testimonios/francisco.jpg",
           quote:`Lleno de gratitud, amor y sobretodo mayor perspectiva y claridad mental después de una experiencia realmente mágica!!!
-          Gracias por tu compañía y cariño!!!
+          Gracias por tu compañía y cariño!!
           Me sentí muy seguro, cuidado, guiado y querido!!! Gracias, gracias, gracias!!!
           `
             
