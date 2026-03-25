@@ -119,7 +119,7 @@ No creo en una salvación, creo en un camino. Y no hay nada más placentero que 
         {
           name: "Julia - Argentina",
           role: "",
-          image: "/images/testimonios/julia.png",
+          image: "/images/testimonios/julia-testimonio.webp",
           quote:
             `Amé el proceso. Me sentí muy acompañada todo el tiempo. Eli me ayudó a traer claridad sobre lo que las micro me estaban mostrando. Una experiencia de mucho crecimiento. 
             Se lo recomiendo a cualquier persona que desee conocerse más a sí misma y esté dispuesta a volverse más creativa.`,
@@ -127,7 +127,7 @@ No creo en una salvación, creo en un camino. Y no hay nada más placentero que 
         {
           name: "Estefania - Argentina",
           role: "",
-          image: "/images/testimonios/estefania.png",
+          image: "/images/testimonios/estefania-testimonio.webp",
           quote:`Gracias, Eli, por tu apoyo. La energía que transmites es realmente hermosa, y me sentí tan segura que pude sumergirme por completo en la experiencia. 
           No hubo ni un solo segundo en el que supiera que todo estaría bien, pasara lo que pasara, y eso fue gracias a lo que me transmitiste. 
           Nunca me había rendido tan rápido y tan fácilmente a una experiencia tan poderosa como esta. Simplemente, gracias.`
@@ -141,12 +141,12 @@ No creo en una salvación, creo en un camino. Y no hay nada más placentero que 
           Gracias por tu compañía y cariño!!!
           Me sentí muy seguro, cuidado, guiado y querido!!! Gracias, gracias, gracias!!!
           `
-            ,
+            
         },
         {
           name: "Dagmar - República Checa",
           role: "",
-          image: "/images/testimonios/dagmar.jpg",
+          image: "/images/testimonios/dagmar-testimonio.webp",
           quote:`Estar en un ambiente cuidadísimo, con alguien que no pretende juzgarte y te acepta como sos y te acompaña en tu camino. 
           Se requiere ser un alma de mucho viaje por el Universo para poder hacerlo.  Gracias 🤍🙏`
             ,
@@ -252,7 +252,7 @@ I don't believe in salvation; I believe in a path. And there is nothing more ful
         {
           name: "Julia - Argentina",
           role: "",
-          image: "/images/testimonios/julia.png",
+          image: "/images/testimonios/julia-testimonio.webp",
           quote:
             `I loved the process. I felt very supported the entire time. Eli helped me bring clarity to what the micros were showing me. An experience of immense growth. 
             I recommend it to anyone who wants to know themselves better and is willing to become more creative.`,
@@ -260,7 +260,7 @@ I don't believe in salvation; I believe in a path. And there is nothing more ful
         {
           name: "Estefania - Argentina",
           role: "",
-          image: "/images/testimonios/estefania.png",
+          image: "/images/testimonios/estefania-testimonio.webp",
           quote:`Thank you, Eli, for your support. The energy you transmit is truly beautiful, and I felt so safe that I was able to fully immerse myself in the experience. 
           There wasn't a single second where I didn't know everything would be okay, no matter what happened, and that was thanks to what you transmitted to me. 
           I had never surrendered so quickly and so easily to such a powerful experience. Simply, thank you.`
@@ -279,7 +279,7 @@ I don't believe in salvation; I believe in a path. And there is nothing more ful
         {
           name: "Dagmar - Czech Republic",
           role: "",
-          image: "/images/testimonios/dagmar.jpg",
+          image: "/images/testimonios/dagmar-testimonio.webp",
           quote:`Being in a meticulously cared-for environment, with someone who doesn't try to judge you, accepts you as you are, and accompanies you on your path. 
           It takes a soul that has traveled a lot through the Universe to be able to do so. Thank you 🤍🙏`
             ,
