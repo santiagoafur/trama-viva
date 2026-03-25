@@ -314,7 +314,7 @@ export const retirosPage = {
       title: "Retiro de conexión Somática-Miceliar",
       subtitle: "Experiencias inmersivas de transformación profunda",
       location: "Argentina - Costa Rica - Uruguay", //agregar
-      backgroundImage: "/images/land-retiros/DSC06858 1.webp",
+      backgroundImage: "/images/land-retiros/retiros-hero.webp",
     },
     intro: {
       title: "",
@@ -343,7 +343,7 @@ Con un enfoque en Terapias Asistidas cada retiro es único porque participan dis
         location: "Santa Teresa, Costa Rica",
         date: "25-28 Junio, 2026",
         price: "$1000 USD",
-        image: "/images/retiro-costarica.jpg",
+        image: "/images/land-retiros/retiro-costarica.webp",
         status: "available",
         frontDescription: "Una experiencia en la selva tropical para un viaje de reconexión profunda.",
         backDescription:
@@ -363,7 +363,7 @@ Con un enfoque en Terapias Asistidas cada retiro es único porque participan dis
         location: "Córdoba, Argentina",
         date: "10-13 Septiembre 2026",
         price: "$1000 USD",
-        image: "/images/retiro-cordoba.jpg",
+        image: "/images/land-retiros/retiro-cordoba.webp",
         status: "available",
         frontDescription: "Una invitación a la unión en las sierras argentinas, donde juntos abrimos espacio para crear nuevos caminos posibles.",
         backDescription:
@@ -383,7 +383,7 @@ Con un enfoque en Terapias Asistidas cada retiro es único porque participan dis
         location: "Minas, Uruguay",
         date: "1-4 Octubre 2026",
         price: "$1000 USD",
-        image: "/images/retiro-uruguay.jpg",
+        image: "/images/land-retiros/retiro-uruguay.webp",
         status: "available",
         frontDescription: "Un encuentro para recordar en nuestros corazones la sabiduría de expandirnos en red.",
         backDescription: "Una invitación a recordar la sabiduría del micelio. A reunirnos como la Red Viva que ya somos, donde nuestras experiencias se entrelazan y nos permiten reconocernos parte de un mismo tejido mediante Terapia Asistida por Psicodélicos.",
@@ -405,7 +405,7 @@ Con un enfoque en Terapias Asistidas cada retiro es único porque participan dis
     hero: {
       title: "Somatic-Mycelial Connection Retreat",
       subtitle: "Immersive experiences of deep transformation",
-      backgroundImage: "/images/retiros-hero.jpg",
+      backgroundImage: "/images/land-retiros/retiros-hero.webp",
     },
     intro: {
       title: "",
@@ -428,7 +428,7 @@ With a focus on Assisted Therapies, each retreat is unique because different fac
         location: "Santa Teresa, Costa Rica",
         date: "June 25-28, 2026",
         price: "$1000 USD",
-        image: "/images/retiro-costarica.jpg",
+        image: "/images/land-retiros/retiro-costarica.webp",
         status: "available",
         frontDescription: "Immerse yourself in the tropical rainforest for a deep reconnection experience.",
         backDescription:
@@ -448,7 +448,7 @@ With a focus on Assisted Therapies, each retreat is unique because different fac
         location: "Córdoba, Argentina",
         date: "September 10-13, 2026",
         price: "$1000 USD",
-        image: "/images/retiro-cordoba.jpg",
+        image: "/images/land-retiros/retiro-cordoba.webp",
         status: "available",
         frontDescription: "Connect with the mountains and wisdom of the Argentine land.",
         backDescription:
@@ -468,7 +468,7 @@ With a focus on Assisted Therapies, each retreat is unique because different fac
         location: "Minas, Uruguay",
         date: "October 1-4, 2026",
         price: "$1000 USD",
-        image: "/images/retiro-uruguay.jpg",
+        image: "/images/land-retiros/retiro-uruguay.webp",
         status: "available",
         frontDescription: "Somatic-mycelial connection retreat. An invitation to remember the wisdom of the earth.",
         backDescription: "An invitation to remember the wisdom of the mycelium. To gather as the Living Network we already are, where our experiences intertwine and allow us to recognize ourselves as part of the same fabric through Psychedelic-Assisted Therapy.",

@@ -24,6 +24,30 @@ import { retirosPage } from "@/lib/content";
 
 import { RetreatCarousel } from "@/components/retreat-carousel";
 
+const CHAR_LIMIT = 280;
+
+function TestimonialText({ text }: { text: string }) {
+  const [expanded, setExpanded] = useState(false);
+  const isLong = text.length > CHAR_LIMIT;
+  const displayed = expanded || !isLong ? text : text.slice(0, CHAR_LIMIT).trimEnd() + "…";
+
+  return (
+    <div className="flex flex-col items-center gap-3">
+      <p className="text-base md:text-lg italic font-serif leading-relaxed text-[#3B1B0E]/90 whitespace-pre-line">
+        "{displayed}"
+      </p>
+      {isLong && (
+        <button
+          onClick={() => setExpanded(!expanded)}
+          className="text-xs font-semibold tracking-widest uppercase text-[#868859] hover:text-[#292E17] transition-colors border-b border-[#868859]/40 hover:border-[#292E17] pb-0.5"
+        >
+          {expanded ? "Ver menos" : "Ver más"}
+        </button>
+      )}
+    </div>
+  );
+}
+
 export default function RetirosPage() {
   const { locale } = useLanguage();
   const content = retirosPage[locale];
@@ -46,11 +70,15 @@ export default function RetirosPage() {
   );
 
   const carouselImages = [
-    "/images/land-retiros/image00028 1.webp", 
-    "/images/land-retiros/image00004 1.webp",
-    "/images/land-retiros/NE8A7832 1.webp",
-    "/images/land-retiros/.webp",
-    "/images/land-retiros/.webp",
+    "/images/land-retiros/carrusel-1.webp", 
+    "/images/land-retiros/carrusel-2.webp",
+    "/images/land-retiros/carrusel-3.webp",
+    "/images/land-retiros/carrusel-4.webp",
+    "/images/land-retiros/carrusel-5.webp",
+    "/images/land-retiros/carrusel-6.webp",
+    "/images/land-retiros/carrusel-7.webp",
+    "/images/land-retiros/carrusel-8.webp",
+    "/images/land-retiros/carrusel-9.webp",
   ];
 
   // Datos de los testimonios con condicional de idioma
@@ -58,7 +86,7 @@ export default function RetirosPage() {
     {
       name: "José Gonzalez",
       location: "Costa Rica",
-      image: "/images/testimonios/jose.jpg", // Recordá subir esta foto o cambiar la ruta
+      image: "/images/testimonios/jose-testimonio.webp", // Recordá subir esta foto o cambiar la ruta
       text: locale === "es" 
         ? "Tuve un viaje realmente poderoso y transformador con esta medicina sagrada de plantas. La intención que establecí fue 'renacimiento' y recibí más de lo que nunca podría haber imaginado. Integrar esta experiencia fue muy enriquecedor para mi vida. ¡Muchas gracias Eli y Jona por crear este hermoso espacio, sostenerlo y guiarnos en este mágico viaje! Me siento profundamente agradecido por haber podido vivir esta experiencia!"
         : "I had a truly powerful and transformative journey with this sacred plant medicine. The intention I set was 'rebirth' and I received more than I could have ever imagined. Integrating this experience was very enriching for my life. Thank you so much Eli and Jona for creating this beautiful space, holding it, and guiding us on this magical journey! I feel deeply grateful to have been able to live this experience!"
@@ -66,7 +94,7 @@ export default function RetirosPage() {
     {
       name: "Facundo Saad",
       location: "Argentina",
-      image: "/images/testimonios/facundo.jpg", // Recordá subir esta foto o cambiar la ruta
+      image: "/images/testimonios/facundo-testimonio.webp", // Recordá subir esta foto o cambiar la ruta
       text: locale === "es"
         ? "La verdad que fue una experiencia muy enriquecedora. Fue mi segunda vez utilizando la medicina con fines terapéuticos y realmente pude notar como cambia cuando se hace en grupo y en forma de retiro. Es un portal hacia adentro para seguir profundizando sobre el autoconocimiento y sin dudas que la integración posterior es igual de importante. Por eso me gusto tanto, porque no es solo el día de la ceremonia sino el pre y el post que lo hace tan especial. Lo volvería a hacer de nuevo sin dudarlo con plena confianza."
         : "The truth is it was a very enriching experience. It was my second time using the medicine for therapeutic purposes and I could really notice how it changes when done in a group and in a retreat format. It is an inward portal to continue deepening self-knowledge and without a doubt, the subsequent integration is just as important. That's why I liked it so much, because it's not just the day of the ceremony but the pre and post that makes it so special. I would do it again without hesitation and with full confidence."
@@ -74,7 +102,7 @@ export default function RetirosPage() {
     {
       name: "Lucrecia Piovessano",
       location: "Argentina",
-      image: "/images/testimonios/lucrecia.jpg", // Recordá subir esta foto o cambiar la ruta
+      image: "/images/testimonios/lucrecia-testimonio.webp", // Recordá subir esta foto o cambiar la ruta
       text: locale === "es"
         ? "Fue mi primer retiro y me marcó sin dudas. El ambiente físico hermoso y el humano mucho más. La asistencia puntualmente durante la ceremonia fue constante y amorosa, las explicaciones previas muy claras y las charlas en todo momento muy enriquecedoras. Un placer coincidir y regalarme esta experiencia."
         : "It was my first retreat and it undoubtedly left a mark on me. The physical environment was beautiful and the human one even more so. The assistance specifically during the ceremony was constant and loving, the prior explanations very clear, and the conversations at all times very enriching. A pleasure to cross paths and gift myself this experience."
@@ -97,6 +125,7 @@ export default function RetirosPage() {
         title={content.hero.title}
         subtitle={content.hero.subtitle}
         backgroundImage={content.hero.backgroundImage}
+        locations={["Costa Rica", "Argentina", "Uruguay"]}
       />
 
       {/* Intro Section */}
@@ -158,40 +187,55 @@ export default function RetirosPage() {
         </motion.div>
       </SectionWrapper>
 
-      {/* SLICE DE FRASE + IMAGEN DE FONDO */}
-      {safeContent.quoteDivider && (
-        <section className="w-full relative min-h-[50vh] flex items-center justify-center overflow-hidden">
-          <Image
-            src={safeContent.quoteDivider.image}
-            alt="Naturaleza Trama Viva"
-            fill
-            className="object-cover z-0"
-            sizes="100vw"
-          />
-          <div className="absolute inset-0 bg-black/50 z-10" />
-          <div className="max-w-4xl mx-auto px-8 py-16 text-center z-20 relative">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.5 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-            >
-              <p className="font-serif text-[#E8DCC4] text-3xl md:text-4xl lg:text-5xl font-medium leading-snug tracking-wide whitespace-pre-line">
-                {safeContent.quoteDivider.quote}
-              </p>
-              {safeContent.quoteDivider.author && (
-                <p className="mt-8 text-[#E8DCC4]/80 text-lg md:text-xl font-light tracking-wider">
-                  {safeContent.quoteDivider.author}
-                </p>
-              )}
-            </motion.div>
-          </div>
-        </section>
-      )}
+      {/* Quote con imagen de fondo */}
+      <section className="relative w-full min-h-[500px] flex items-center justify-center overflow-hidden">
+  
+        {/* Imagen de fondo */}
+        <Image
+          src="/images/land-retiros/quote-bg.webp"
+          alt="Fondo frase microdosis"
+          fill
+          className="object-cover object-center"
+          priority
+        />
+
+        {/* Overlay oscuro para legibilidad */}
+        <div className="absolute inset-0 bg-[#292E17]/60" />
+
+        {/* Contenido */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="relative z-10 max-w-3xl mx-auto px-8 py-24 text-center"
+        >
+        <Quote size={48} className="text-[#E8DCC4]/40 mx-auto mb-8" />
+          <p className="text-2xl md:text-4xl font-serif italic text-[#E8DCC4] leading-relaxed">
+          {locale === "es"
+            ? "Solo cuando la compasión este presente, las personas se permitirán la verdad."
+            : "Only when compassion is present will people allow themselves to face the truth."}
+          </p>
+        </motion.div>
+
+      </section>
 
       {/* Retreats Grid */}
-      <SectionWrapper variant="alt">
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <SectionWrapper variant="alt">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <p className="text-xs font-bold tracking-widest uppercase text-[#868859] mb-3">
+              {locale === "es" ? "Calendario 2026" : "2026 Calendar"}
+            </p>
+            <h2 className="text-3xl md:text-5xl font-bold font-serif text-foreground">
+              {locale === "es" ? "Próximos retiros" : "Upcoming retreats"}
+            </h2>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {content.retreats.map((retreat, index) => (
             <motion.div
               key={retreat.id}
@@ -214,9 +258,9 @@ export default function RetirosPage() {
               >
                 {/* Front */}
                 <div
-                  className="absolute inset-0 rounded-sm overflow-hidden"
+                  className="absolute inset-0 rounded-2xl overflow-hidden"
                   style={{ backfaceVisibility: "hidden" }}
-                >
+                  >
                   <Image
                     src={retreat.image}
                     alt={retreat.name}
@@ -232,34 +276,31 @@ export default function RetirosPage() {
                       {retreat.date}
                     </div>
                   )}
-
-                  <div className="absolute inset-0 flex flex-col justify-end p-6 lg:p-8">
-                    <span className="text-primary-foreground/70 text-xs uppercase tracking-widest flex items-center gap-2">
-                      <MapPin size={14} />
+                </div>
+                <div className="absolute inset-0 flex flex-col justify-end p-6 lg:p-8">
+                  {/* Labels */}
+                  <div className="flex flex-wrap gap-2 mb-3">
+                    <span className="inline-flex items-center gap-1.5 bg-primary-foreground/15 backdrop-blur-sm border border-primary-foreground/30 text-primary-foreground text-xs font-semibold tracking-wide px-3 py-1 rounded-full">
+                      <MapPin size={10} />
                       {retreat.location}
                     </span>
-                    <h3 className="mt-2 text-2xl lg:text-3xl font-bold text-primary-foreground">
-                      {retreat.name}
-                    </h3>
-                    <p className="mt-3 text-primary-foreground/80 text-sm leading-relaxed">
-                      {retreat.frontDescription}
-                    </p>
-                    
-                    <div className="mt-6 flex items-center gap-6 text-primary-foreground/70 text-sm">
-                      <span className="flex items-center gap-2">
-                        <Calendar size={14} />
-                        {retreat.date}
-                      </span>
-                      <span className="flex items-center gap-2">
-                        {retreat.price}
-                      </span>
-                    </div>
+                    <span className="inline-flex items-center gap-1.5 bg-primary-foreground/15 backdrop-blur-sm border border-primary-foreground/30 text-primary-foreground text-xs font-semibold tracking-wide px-3 py-1 rounded-full">
+                      <Calendar size={10} />
+                      {retreat.date}
+                    </span>
                   </div>
+
+                  <h3 className="text-2xl lg:text-3xl font-bold text-primary-foreground">
+                    {retreat.name}
+                  </h3>
+                  <p className="mt-3 text-primary-foreground/80 text-sm leading-relaxed">
+                    {retreat.frontDescription}
+                  </p>
                 </div>
 
                 {/* Back */}
                 <div
-                  className="absolute inset-0 rounded-sm overflow-hidden bg-card border border-border"
+                  className="absolute inset-0 rounded-2xl overflow-hidden bg-card border border-border"
                   style={{
                     backfaceVisibility: "hidden",
                     transform: "rotateY(180deg)",
@@ -339,128 +380,223 @@ export default function RetirosPage() {
         </div>
       </SectionWrapper>
 
-      {/* SLICE: MEDICINA DE LA NATURALEZA */}
-      {safeContent.natureMedicine && (
-        <SectionWrapper variant="default">
-          <div className="max-w-4xl mx-auto text-center px-4 md:px-8">
-            <motion.h2
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-widest text-foreground uppercase"
-            >
-              {safeContent.natureMedicine.title}
-            </motion.h2>
-            
+      {/* Medicina de la Naturaleza */}
+      <section className="w-full bg-[#E8DCC4] py-16 md:py-24">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+
+            {/* Columna izquierda — Texto */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-              className="mt-10 space-y-8 text-foreground/80 leading-relaxed text-lg md:text-xl font-serif text-balance mx-auto"
-            >
-              {/* @ts-ignore */}
-              {safeContent.natureMedicine.paragraphs.map((p, i) => (
-                <p key={i}>{p}</p>
-              ))}
-            </motion.div>
-          </div>
-        </SectionWrapper>
-      )}
-
-      {/* SLICE: SET & SETTING */}
-      <SectionWrapper variant="alt">
-        <div className="max-w-5xl mx-auto px-4 md:px-8">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-widest text-foreground uppercase text-center"
-          >
-            SET & SETTING
-          </motion.h2>
-
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-            className="mt-8 text-foreground/80 leading-relaxed text-lg text-center max-w-3xl mx-auto font-serif"
-          >
-            {locale === "es"
-              ? "El enfoque terapéutico en Terapias asistidas contempla la importancia del Set & Setting ya que influyen directamente en la calidad, seguridad y profundidad de la experiencia."
-              : "The therapeutic approach in assisted therapies contemplates the importance of Set & Setting as they directly influence the quality, safety, and depth of the experience."}
-          </motion.p>
-
-          <div className="grid md:grid-cols-2 gap-10 mt-12">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
+              initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
-              className="bg-background p-8 rounded-2xl border border-border/50 shadow-sm"
+              className="flex flex-col gap-6"
             >
-              <h3 className="text-xl font-bold mb-4 tracking-wide border-b border-border pb-2 inline-block">SET</h3>
-              <p className="text-foreground/80 leading-relaxed">
-                {locale === "es"
-                  ? "Es la mentalidad y estado interno de la persona: hace referencia al estado emocional, expectativas, intención y preparación de la persona. Un set adecuado reduce ansiedad y favorece la apertura, confianza y claridad."
-                  : "It is the person's mindset and internal state: it refers to their emotional state, expectations, intention, and preparation. A proper set reduces anxiety and promotes openness, trust, and clarity."}
-              </p>
-              <p className="mt-4 text-foreground/60 italic text-sm">
-                {locale === "es"
-                  ? "Por eso enviamos un formulario previo, para conocer mejor a la persona y asegurarnos de reducir riesgos y daños."
-                  : "That is why we send a preliminary form, to get to know the person better and ensure we reduce risks and harms."}
-              </p>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold font-serif text-[#292E17] leading-tight">
+                {locale === "es" ? "Medicina de la Naturaleza" : "Nature's Medicine"}
+              </h2>
+              <div className="space-y-4 text-[#3B1B0E]/70 text-lg leading-relaxed">
+                <p>
+                  {locale === "es"
+                    ? "La psilocibina no es un atajo mágico. Es la medicina que nos ofrece la naturaleza para nuestra humanidad como una herramienta adaptógena que ayuda a regular al sistema nervioso despertando la inteligencia intuitiva del organismo, y así promover un estado de salud natural."
+                    : "Psilocybin is not a magic shortcut. It is the medicine that nature offers us for our humanity as an adaptogenic tool that helps regulate the nervous system by awakening the intuitive intelligence of the organism, thus promoting a state of natural health."}
+                </p>
+                <p>
+                  {locale === "es"
+                    ? "El enfoque Terapéutico en Terapias asistidas contempla un proceso integrado, guiado y acompañado de preparación previa e integración posterior con la intención de capitalizar la experiencia y el aprendizaje a nuestra vida diaria."
+                    : "The Therapeutic approach in Assisted Therapies contemplates an integrated process, guided and accompanied by prior preparation and subsequent integration with the intention of capitalizing on the experience and learning in our daily lives."}
+                </p>
+              </div>
             </motion.div>
 
+            {/* Columna derecha — Fotos verticales */}
             <motion.div
-              initial={{ opacity: 0, x: 20 }}
+              initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: 0.3 }}
-              className="bg-background p-8 rounded-2xl border border-border/50 shadow-sm"
+              className="grid grid-cols-2 gap-4"
             >
-              <h3 className="text-xl font-bold mb-4 tracking-wide border-b border-border pb-2 inline-block">SETTING</h3>
-              <p className="text-foreground/80 leading-relaxed">
-                {locale === "es"
-                  ? "Es el entorno externo donde se lleva a cabo la experiencia: el lugar, la atmósfera, la música, y la presencia de facilitadores de confianza. Un setting cuidado brinda seguridad, contención y apoyo."
-                  : "It is the external environment where the experience takes place: the location, the atmosphere, the music, and the presence of trusted facilitators. A carefully curated setting provides safety, containment, and support."}
-              </p>
-              <p className="mt-4 text-foreground/60 italic text-sm">
-                {locale === "es"
-                  ? "Por eso elegimos espacios en la naturaleza, alejados de interferencias y ruidos."
-                  : "That is why we choose spaces in nature, away from interference and noise."}
-              </p>
+              <div className="aspect-[2/3] relative rounded-2xl overflow-hidden shadow-xl">
+                <Image
+                  src="/images/land-retiros/medicina-naturaleza-1.webp"
+                  alt="Medicina de la naturaleza"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 50vw, 25vw"
+                />
+              </div>
+              <div className="aspect-[2/3] relative rounded-2xl overflow-hidden shadow-xl mt-12">
+                <Image
+                  src="/images/land-retiros/medicina-naturaleza-2.webp"
+                  alt="Medicina de la naturaleza"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 50vw, 25vw"
+                />
+              </div>
             </motion.div>
-          </div>
 
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.4 }}
-            className="mt-12 text-foreground/80 leading-relaxed text-lg text-center max-w-3xl mx-auto font-serif"
-          >
-            {locale === "es"
-              ? "En conjunto, set y setting crean las condiciones óptimas para que la experiencia psicodélica sea terapéutica, minimizando riesgos y potenciando la integración de los aprendizajes."
-              : "Together, set and setting create the optimal conditions for the psychedelic experience to be therapeutic, minimizing risks and enhancing the integration of insights."}
-          </motion.p>
+          </div>
         </div>
-      </SectionWrapper>
+      </section>
 
-      {/* NUEVO SLICE: TESTIMONIOS (Estilo Carrusel Centralizado) */}
+      {/* Set & Setting */}
+      <section className="w-full bg-[#292E17] py-16 md:py-24 px-6 lg:px-12">
+        <div className="max-w-7xl mx-auto">
+
+          {/* Header */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <p className="text-xs font-bold tracking-widest uppercase text-[#868859] mb-4">
+              {locale === "es" ? "Metodología" : "Methodology"}
+            </p>
+            <h2 className="text-3xl md:text-5xl font-bold font-serif text-[#E8DCC4] mb-6">
+              Set & Setting
+            </h2>
+            <p className="text-[#E8DCC4]/60 text-lg max-w-2xl mx-auto leading-relaxed">
+              {locale === "es"
+                ? "El enfoque terapéutico en Terapias asistidas contempla la importancia del Set & Setting ya que influyen directamente en la calidad, seguridad y profundidad de la experiencia."
+                : "The therapeutic approach in Assisted Therapies contemplates the importance of Set & Setting as they directly influence the quality, safety and depth of the experience."}
+            </p>
+          </motion.div>
+
+          {/* Grid SET / SETTING */}
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
+
+            {/* SET */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="flex flex-col gap-6"
+            >
+              <div>
+                <span className="inline-flex items-center bg-[#E8DCC4]/10 border border-[#E8DCC4]/20 text-[#E8DCC4] text-xs font-bold tracking-widest uppercase px-4 py-2 rounded-full mb-4">
+                  Set
+                </span>
+                <h3 className="text-2xl md:text-3xl font-bold font-serif text-[#E8DCC4]">
+                  {locale === "es" ? "Mentalidad y estado interno" : "Mindset and inner state"}
+                </h3>
+              </div>
+              <div className="space-y-4 text-[#E8DCC4]/65 leading-relaxed">
+                <p>
+                  {locale === "es"
+                    ? "Hace referencia al estado emocional, expectativas, intención y preparación de la persona. Un set adecuado reduce ansiedad y favorece la apertura, confianza y claridad."
+                    : "It refers to the emotional state, expectations, intention and preparation of the person. An adequate set reduces anxiety and favors openness, confidence and clarity."}
+                </p>
+                <p>
+                  {locale === "es"
+                    ? "Por eso enviamos un formulario previo, para conocer mejor a la persona y asegurarnos de reducir riesgos y daños."
+                    : "That is why we send a prior form, to get to know the person better and make sure we reduce risks and harm."}
+                </p>
+              </div>
+              <div className="grid grid-cols-2 gap-4 mt-2">
+                <div className="aspect-[2/3] relative rounded-2xl overflow-hidden">
+                  <Image
+                    src="/images/land-retiros/set-setting-1.webp"
+                    alt="Set - mentalidad"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 1024px) 50vw, 25vw"
+                  />
+                </div>
+                <div className="aspect-[2/3] relative rounded-2xl overflow-hidden mt-10">
+                  <Image
+                    src="/images/land-retiros/set-setting-2.webp"
+                    alt="Set - preparación"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 1024px) 50vw, 25vw"
+                  />
+                </div>
+              </div>
+            </motion.div>
+
+            {/* SETTING */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="flex flex-col gap-6"
+            >
+              <div>
+                <span className="inline-flex items-center bg-[#E8DCC4]/10 border border-[#E8DCC4]/20 text-[#E8DCC4] text-xs font-bold tracking-widest uppercase px-4 py-2 rounded-full mb-4">
+                  Setting
+                </span>
+                <h3 className="text-2xl md:text-3xl font-bold font-serif text-[#E8DCC4]">
+                  {locale === "es" ? "Entorno externo" : "External environment"}
+                </h3>
+              </div>
+              <div className="space-y-4 text-[#E8DCC4]/65 leading-relaxed">
+                <p>
+                  {locale === "es"
+                    ? "El lugar, la atmósfera, la música, y la presencia de facilitadores de confianza. Un setting cuidado brinda seguridad, contención y apoyo."
+                    : "The place, the atmosphere, the music, and the presence of trusted facilitators. A carefully curated setting provides security, containment and support."}
+                </p>
+                <p>
+                  {locale === "es"
+                    ? "Por eso elegimos espacios en la naturaleza y alejados de interferencias y ruidos."
+                    : "That is why we choose spaces in nature, away from interference and noise."}
+                </p>
+              </div>
+              <div className="grid grid-cols-2 gap-4 mt-2">
+                <div className="aspect-[2/3] relative rounded-2xl overflow-hidden">
+                  <Image
+                    src="/images/land-retiros/set-setting-3.webp"
+                    alt="Setting - entorno"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 1024px) 50vw, 25vw"
+                  />
+                </div>
+                <div className="aspect-[2/3] relative rounded-2xl overflow-hidden mt-10">
+                  <Image
+                    src="/images/land-retiros/set-setting-4.webp"
+                    alt="Setting - naturaleza"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 1024px) 50vw, 25vw"
+                  />
+                </div>
+              </div>
+            </motion.div>
+
+          </div>
+
+          {/* Frase de cierre */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mt-20 pt-12 border-t border-[#E8DCC4]/10 text-center max-w-3xl mx-auto"
+          >
+            <p className="text-lg font-serif italic text-[#E8DCC4]/50 leading-relaxed">
+              {locale === "es"
+                ? "En conjunto, set y setting crean las condiciones óptimas para que la experiencia psicodélica sea terapéutica, minimizando riesgos y potenciando la integración de los aprendizajes."
+                : "Together, set and setting create the optimal conditions for the psychedelic experience to be therapeutic, minimizing risks and enhancing the integration of learnings."}
+            </p>
+          </motion.div>
+
+        </div>
+      </section>
+
+      {/* Testimonios */}
       <section className="py-24 bg-[#E8DCC4] text-[#3B1B0E] px-4 border-t border-[#868859]/20">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-6xl font-bold font-serif mb-4 text-[#292E17]">
             {locale === "es" ? "Testimonios" : "Testimonials"}
           </h2>
-          <p className="text-lg opacity-80 mb-16 text-[#7E2625]">
+          <p className="text-base opacity-80 mb-16 text-[#7E2625]">
             {locale === "es" ? "Experiencias de Retiros" : "Retreat Experiences"}
           </p>
 
-          <div className="relative min-h-[450px] md:min-h-[350px] flex flex-col items-center justify-center">
-            <Quote className="text-[#868859]/40 mb-8" size={64} />
-            
+          <div className="relative flex flex-col items-center justify-start min-h-[380px]">
+            <Quote className="text-[#868859]/40 mb-8" size={48} />
+
             <AnimatePresence mode="wait">
               <motion.div
                 key={currentTestimonial}
@@ -468,49 +604,56 @@ export default function RetirosPage() {
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -20 }}
                 transition={{ duration: 0.3 }}
-                className="flex flex-col items-center"
+                className="flex flex-col items-center w-full"
               >
-                <p className="text-xl md:text-2xl lg:text-3xl italic font-serif leading-relaxed mb-10 text-[#3B1B0E]/90">
-                  "{testimoniosRetiro[currentTestimonial].text}"
-                </p>
-                
-                <div className="flex flex-col items-center gap-4">
-                  <div className="w-16 h-16 relative rounded-full overflow-hidden border-2 border-[#868859]">
-                    <Image 
-                      src={testimoniosRetiro[currentTestimonial].image} 
+                <TestimonialText text={testimoniosRetiro[currentTestimonial].text} />
+
+                <div className="flex flex-col items-center gap-4 mt-8">
+                  <div className="w-14 h-14 relative rounded-full overflow-hidden border-2 border-[#868859]">
+                    <Image
+                      src={testimoniosRetiro[currentTestimonial].image}
                       alt={testimoniosRetiro[currentTestimonial].name}
                       fill
                       className="object-cover"
                     />
                   </div>
                   <div>
-                    <h4 className="font-bold text-lg text-[#292E17]">{testimoniosRetiro[currentTestimonial].name}</h4>
-                    <p className="text-sm text-[#7E2625] uppercase tracking-wider mt-1">{testimoniosRetiro[currentTestimonial].location}</p>
+                    <h4 className="font-bold text-base text-[#292E17]">
+                      {testimoniosRetiro[currentTestimonial].name}
+                    </h4>
+                    <p className="text-sm text-[#7E2625]">
+                      {testimoniosRetiro[currentTestimonial].location}
+                    </p>
                   </div>
                 </div>
               </motion.div>
             </AnimatePresence>
           </div>
 
+          {/* Navegación */}
           <div className="flex items-center justify-center gap-6 mt-12">
-            <button 
+            <button
               onClick={prevTestimonial}
               className="w-12 h-12 rounded-full border border-[#868859] flex items-center justify-center text-[#868859] hover:bg-[#868859] hover:text-[#E8DCC4] transition-all"
             >
               <ChevronLeft size={24} />
             </button>
-            
+
             <div className="flex gap-2">
               {testimoniosRetiro.map((_, index) => (
                 <button
                   key={index}
                   onClick={() => setCurrentTestimonial(index)}
-                  className={`h-2 rounded-full transition-all ${currentTestimonial === index ? 'w-8 bg-[#868859]' : 'w-2 bg-[#868859]/30'}`}
+                  className={`h-2 rounded-full transition-all ${
+                    currentTestimonial === index
+                      ? "w-8 bg-[#868859]"
+                      : "w-2 bg-[#868859]/30"
+                  }`}
                 />
               ))}
             </div>
 
-            <button 
+            <button
               onClick={nextTestimonial}
               className="w-12 h-12 rounded-full border border-[#868859] flex items-center justify-center text-[#868859] hover:bg-[#868859] hover:text-[#E8DCC4] transition-all"
             >
