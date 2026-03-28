@@ -244,7 +244,7 @@ export default function RetirosPage() {
               viewport={{ once: true }}
               transition={{ delay: index * 0.15 }}
               className="relative w-full aspect-[3/4] cursor-pointer group"
-              style={{ perspective: "1000px" }}
+              style={{ minHeight: flippedCards[retreat.id] ? 'auto' : undefined }}
               onClick={() => toggleCard(retreat.id)}
               onKeyDown={(e) => e.key === "Enter" && toggleCard(retreat.id)}
               tabIndex={0}
@@ -300,7 +300,7 @@ export default function RetirosPage() {
 
                 {/* Back */}
                 <div
-                  className="absolute inset-0 rounded-2xl overflow-hidden bg-card border border-border"
+                  className="absolute inset-0 rounded-2xl overflow-hidden bg-card border border-border overflow-y-auto"
                   style={{
                     backfaceVisibility: "hidden",
                     transform: "rotateY(180deg)",
@@ -310,7 +310,7 @@ export default function RetirosPage() {
                     <h3 className="text-xl font-bold text-foreground">
                       {retreat.name}
                     </h3>
-                    <p className="mt-4 text-sm text-foreground/70 leading-relaxed flex-grow overflow-y-auto">
+                    <p className="mt-4 text-sm text-foreground/70 leading-relaxed flex-grow overflow-y-auto hidden md:block">
                       {retreat.backDescription}
                     </p>
 
@@ -320,7 +320,7 @@ export default function RetirosPage() {
                           {locale === "es" ? "Incluye:" : "Includes:"}
                         </p>
                         <ul className="space-y-2">
-                          {retreat.includes.slice(0, 4).map((item, i) => (
+                        {retreat.includes.map((item, i) => (
                             <li
                               key={i}
                               className="flex items-start gap-2 text-sm text-foreground/70"

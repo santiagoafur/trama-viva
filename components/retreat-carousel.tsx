@@ -49,7 +49,7 @@ export function RetreatCarousel({ images }: RetreatCarouselProps) {
   if (!images || images.length === 0) return null;
 
   return (
-    <div className="relative w-full max-w-5xl mx-auto aspect-[16/10] md:aspect-[21/9] rounded-2xl overflow-hidden bg-foreground/5 group">
+    <div className="relative w-full max-w-6xl mx-auto aspect-[4/3] md:aspect-[16/9] rounded-2xl overflow-hidden bg-foreground/5 group">
       <AnimatePresence initial={false} custom={direction}>
         <motion.div
           key={currentIndex}

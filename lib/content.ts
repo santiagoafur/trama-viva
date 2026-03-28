@@ -311,7 +311,7 @@ I don't believe in salvation; I believe in a path. And there is nothing more ful
 export const retirosPage = {
   es: {
     hero: {
-      title: "Retiro de conexión Somática-Miceliar",
+      title: "Retiros de conexión Somática-Miceliar",
       subtitle: "Experiencias inmersivas de transformación profunda",
       location: "Argentina - Costa Rica - Uruguay", //agregar
       backgroundImage: "/images/land-retiros/retiros-hero.webp",
@@ -345,16 +345,18 @@ Con un enfoque en Terapias Asistidas cada retiro es único porque participan dis
         price: "$1000 USD",
         image: "/images/land-retiros/retiro-costarica.webp",
         status: "available",
-        frontDescription: "Una experiencia en la selva tropical para un viaje de reconexión profunda.",
+        frontDescription: "Una experiencia en la selva tropical para un viaje de reconexión profunda de 4 días.",        
         backDescription:
-          "El retiro Within en Costa Rica ofrece 3 días de inmersión total en la naturaleza. Incluye alojamiento, alimentación orgánica, prácticas diarias de yoga y meditación, una ceremonia con medicina natural, y sesiones de integración. El espacio está limitado a 12 participantes para garantizar una experiencia íntima y personalizada.",
+          "El retiro Within en Costa Rica ofrece 4 días de inmersión total en la naturaleza. Incluye alojamiento, alimentación orgánica, prácticas diarias de yoga y meditación, una ceremonia con medicina natural, y sesiones de integración. Los cupos son limitados para cuidar y garantizar una experiencia íntima y personalizada.",
         includes: [
-          "Alojamiento 3 noches",
-          "Alimentación orgánica completa",
-          "Prácticas diarias (yoga, meditación, breathwork)",
-          "Ceremonia con medicina natural",
-          "Sesiones de integración grupal e individual",
-          "Traslados desde San José",
+          "3 noches de alojamiento",
+          "Todas las comidas",
+          "Yoga, actividades somáticas y psicoterapéuticas",
+          "Ice bath y sauna",
+          "1 ceremonia macro de Psilocibina",
+          "Acompañamiento de preparación e integración",
+          "2 encuentros online",
+          "Protocolo de dosis personalizado",
         ],
       },
       {
@@ -367,14 +369,15 @@ Con un enfoque en Terapias Asistidas cada retiro es único porque participan dis
         status: "available",
         frontDescription: "Una invitación a la unión en las sierras argentinas, donde juntos abrimos espacio para crear nuevos caminos posibles.",
         backDescription:
-          "El retiro Unión en las sierras de Córdoba combina la potencia del paisaje serrano con prácticas ancestrales y contemporáneas. Durante 4 días exploraremos la conexión cuerpo-mente-espíritu en un entorno natural protegido, con un grupo reducido de máximo 10 participantes.",
+          "El retiro Unión en las sierras de Córdoba combina la potencia del paisaje serrano con prácticas ancestrales y contemporáneas. Durante 4 días exploraremos la conexión cuerpo-mente-espíritu en un entorno natural protegido, con un grupo íntimo para garantizar una experiencia segura y cuidada.",
         includes: [
-          "Alojamiento 3 noches",
-          "Alimentación vegetariana orgánica",
-          "Prácticas diarias de movimiento",
-          "Ceremonia de medicina",
-          "Caminatas conscientes",
-          "Círculos de integración",
+          "3 noches de alojamiento",
+          "Todas las comidas",
+          "Prácticas somáticas (yoga, meditación, Breathwork)",
+          "1 ceremonia macro de Psilocibina",
+          "Acompañamiento de preparación e integración",
+          "2 encuentros online",
+          "Protocolo de dosis personalizado",
         ],
       },
       {
@@ -386,13 +389,16 @@ Con un enfoque en Terapias Asistidas cada retiro es único porque participan dis
         image: "/images/land-retiros/retiro-uruguay.webp",
         status: "available",
         frontDescription: "Un encuentro para recordar en nuestros corazones la sabiduría de expandirnos en red.",
-        backDescription: "Una invitación a recordar la sabiduría del micelio. A reunirnos como la Red Viva que ya somos, donde nuestras experiencias se entrelazan y nos permiten reconocernos parte de un mismo tejido mediante Terapia Asistida por Psicodélicos.",
+        backDescription: "Una invitación a recordar la sabiduría del Micelio y escuchar tu naturaleza esencial. Un espacio cuidado y seguro donde podrás explorar tu mundo interno acompañado de un equipo humano comprometido y presente. Porque cuando nos encontramos desde lo real algo mágico sucede: la red crece, se expande y con ella nuevas formas de habitar la vida.",
         includes: [
-          "Alojamiento en entorno natural",
-          "Alimentación consciente",
-          "Proceso completo de T.A.P.",
-          "Facilitación por Eli y Fer"
-        ]
+          "3 noches de alojamiento",
+          "Todas las comidas",
+          "Prácticas psicoterapéuticas y somáticas",
+          "1 ceremonia macro de Psilocibina",
+          "Acompañamiento de preparación e integración",
+          "2 encuentros online",
+          "Protocolo de dosis personalizado",
+        ],
       },
     ],
     ctas: {
@@ -403,7 +409,7 @@ Con un enfoque en Terapias Asistidas cada retiro es único porque participan dis
   },
   en: {
     hero: {
-      title: "Somatic-Mycelial Connection Retreat",
+      title: "Somatic-Mycelial Connection Retreats",
       subtitle: "Immersive experiences of deep transformation",
       backgroundImage: "/images/land-retiros/retiros-hero.webp",
     },
@@ -430,16 +436,18 @@ With a focus on Assisted Therapies, each retreat is unique because different fac
         price: "$1000 USD",
         image: "/images/land-retiros/retiro-costarica.webp",
         status: "available",
-        frontDescription: "Immerse yourself in the tropical rainforest for a deep reconnection experience.",
+        frontDescription: "A tropical jungle experience for a 4-day deep reconnection journey.",
         backDescription:
-          "The Within retreat in Costa Rica offers 5 days of total immersion in nature. Includes accommodation, organic food, daily yoga and meditation practices, a ceremony with natural medicine, and integration sessions. Space is limited to 12 participants to ensure an intimate and personalized experience.",
+          "The Within retreat in Costa Rica offers 4 days of total immersion in nature. Includes accommodation, organic food, daily yoga and meditation practices, a ceremony with natural medicine, and integration sessions. Spots are limited to ensure an intimate and personalized experience.",
         includes: [
-          "5 nights accommodation",
-          "Complete organic meals",
-          "Daily practices (yoga, meditation, breathwork)",
-          "Natural medicine ceremony",
-          "Group and individual integration sessions",
-          "Transfers from San José",
+          "3 nights accommodation",
+          "All meals",
+          "Yoga, somatic and psychotherapeutic activities",
+          "Ice bath and sauna",
+          "1 macro Psilocybin ceremony",
+          "Preparation and integration support",
+          "2 online meetings",
+          "Personalized dosage protocol",
         ],
       },
       {
@@ -452,14 +460,15 @@ With a focus on Assisted Therapies, each retreat is unique because different fac
         status: "available",
         frontDescription: "Connect with the mountains and wisdom of the Argentine land.",
         backDescription:
-          "The Unión retreat in the Córdoba mountains combines the power of the mountain landscape with ancestral and contemporary practices. For 4 days we will explore the body-mind-spirit connection in a protected natural environment, with a small group of maximum 10 participants.",
+          "The Unión retreat in the Córdoba mountains combines the power of the mountain landscape with ancestral and contemporary practices. For 4 days we will explore the body-mind-spirit connection in a protected natural environment, with an intimate group to guarantee a safe and caring experience.",
         includes: [
-          "4 nights accommodation",
-          "Organic vegetarian meals",
-          "Daily movement practices",
-          "Medicine ceremony",
-          "Conscious walks",
-          "Integration circles",
+          "3 nights accommodation",
+          "All meals",
+          "Somatic practices (yoga, meditation, Breathwork)",
+          "1 macro Psilocybin ceremony",
+          "Preparation and integration support",
+          "2 online meetings",
+          "Personalized dosage protocol",
         ],
       },
       {
@@ -471,13 +480,16 @@ With a focus on Assisted Therapies, each retreat is unique because different fac
         image: "/images/land-retiros/retiro-uruguay.webp",
         status: "available",
         frontDescription: "Somatic-mycelial connection retreat. An invitation to remember the wisdom of the earth.",
-        backDescription: "An invitation to remember the wisdom of the mycelium. To gather as the Living Network we already are, where our experiences intertwine and allow us to recognize ourselves as part of the same fabric through Psychedelic-Assisted Therapy.",
+        backDescription: "An invitation to remember the wisdom of the Mycelium and listen to your essential nature. A safe and caring space where you can explore your inner world accompanied by a committed and present human team. Because when we meet from what is real, something magical happens: the network grows, expands, and with it new ways of inhabiting life.",
         includes: [
-          "Accommodation in a natural environment",
-          "Conscious meals",
-          "Complete P.A.T. process",
-          "Facilitation by Eli and Fer"
-        ]
+          "3 nights accommodation",
+          "All meals",
+          "Psychotherapeutic and somatic practices",
+          "1 macro Psilocybin ceremony",
+          "Preparation and integration support",
+          "2 online meetings",
+          "Personalized dosage protocol",
+        ],
       },
     ],
     ctas: {
