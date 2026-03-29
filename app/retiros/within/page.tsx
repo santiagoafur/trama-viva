@@ -36,7 +36,7 @@ function TestimonialText({ text }: { text: string }) {
   );
 }
 
-const GOOGLE_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSen9p_yBBDlvtSLLz3xoaA-vOZGgeE01Eq8_xsWqSUU4LQfLQ/viewform";
+const GOOGLE_FORM_URL = "https://forms.gle/8zYixuET9tg3vvVZ8";
 
 // Fecha límite Early Bird — 14 días desde hoy
 const EARLY_BIRD_DEADLINE = new Date();
@@ -132,17 +132,49 @@ export default function WithinPage() {
 
   const schedule = locale === "es"
     ? [
-        { day: "Día 1", title: "Llegada y bienvenida", items: ["Recepción y acomodación", "Presentación del equipo y del grupo", "Círculo de apertura e intenciones", "Cena de bienvenida"] },
-        { day: "Día 2", title: "Preparación", items: ["Práctica de yoga matutina", "Taller psicoterapéutico y somático", "Preparación para la ceremonia", "Ice bath y sauna"] },
-        { day: "Día 3", title: "Ceremonia", items: ["Práctica de movimiento consciente", "Ceremonia macro de Psilocibina", "Acompañamiento y sostén durante toda la noche", "Descanso y cuidado post-ceremonia"] },
-        { day: "Día 4", title: "Integración y cierre", items: ["Círculo de integración grupal", "Práctica restaurativa de yoga", "Almuerzo de cierre", "Partida"] },
-      ]
-    : [
-        { day: "Day 1", title: "Arrival and welcome", items: ["Reception and accommodation", "Team and group introduction", "Opening circle and intentions", "Welcome dinner"] },
-        { day: "Day 2", title: "Preparation", items: ["Morning yoga practice", "Psychotherapeutic and somatic workshop", "Ceremony preparation", "Ice bath and sauna"] },
-        { day: "Day 3", title: "Ceremony", items: ["Conscious movement practice", "Macro Psilocybin ceremony", "Support and care throughout the night", "Rest and post-ceremony care"] },
-        { day: "Day 4", title: "Integration and closing", items: ["Group integration circle", "Restorative yoga practice", "Closing lunch", "Departure"] },
-      ];
+      {
+        day: "Día 1",
+        title: "Bienvenida y preparación",
+        items: ["Recepción y acomodación", "Círculo de bienvenida y acuerdos", "Merienda", "Charla de preparación", "Cena"],
+      },
+      {
+        day: "Día 2",
+        title: "Preparación y Ceremonia",
+        items: ["Meditación y yoga", "Desayuno", "Actividad psicoterapéutica", "Brunch y tiempo libre", "Ceremonia", "Cena"],
+      },
+      {
+        day: "Día 3",
+        title: "Integración",
+        items: ["Meditación y Yoga", "Desayuno", "Actividad de integración", "Almuerzo", "Tiempo libre", "Ice Bath y Sauna", "Actividad de integración", "Merienda", "Actividad de integración", "Cena"],
+      },
+      {
+        day: "Día 4",
+        title: "Cierre y despedida",
+        items: ["Meditación y Yoga", "Desayuno", "Actividad de cierre", "Brunch", "Despedida"],
+      },
+    ]
+  : [
+      {
+        day: "Day 1",
+        title: "Welcome and preparation",
+        items: ["Reception and accommodation", "Welcome circle and agreements", "Snack", "Preparation talk", "Dinner"],
+      },
+      {
+        day: "Day 2",
+        title: "Preparation and Ceremony",
+        items: ["Meditation and yoga", "Breakfast", "Psychotherapeutic activity", "Brunch and free time", "Ceremony", "Dinner"],
+      },
+      {
+        day: "Day 3",
+        title: "Integration",
+        items: ["Meditation and Yoga", "Breakfast", "Integration activity", "Lunch", "Free time", "Ice Bath and Sauna", "Integration activity", "Snack", "Integration activity", "Dinner"],
+      },
+      {
+        day: "Day 4",
+        title: "Closing and farewell",
+        items: ["Meditation and Yoga", "Breakfast", "Closing activity", "Brunch", "Farewell"],
+      },
+    ]
 
   const mealSchedule = locale === "es"
     ? [
@@ -238,14 +270,14 @@ export default function WithinPage() {
           >
             <p className="text-2xl md:text-3xl lg:text-4xl font-serif text-[#292E17] leading-relaxed">
               {locale === "es"
-                ? "¿Sentís que necesitás un espacio solo para vos, lejos del ruido, para reconectar con quien realmente sos?"
-                : "Do you feel like you need a space just for yourself, away from the noise, to reconnect with who you truly are?"}
+                ? "¿Sentís que necesitás un espacio íntimo y seguro, lejos del ruido, donde tengas la posibilidad de reconectar con vos mismo?"
+                : "Do you feel you need an intimate and safe space, away from the noise, where you have the possibility to reconnect with yourself?"}
             </p>
             <div className="w-12 h-0.5 bg-[#868859]/50 mx-auto" />
             <p className="text-lg md:text-xl text-[#3B1B0E]/70 leading-relaxed">
               {locale === "es"
-                ? "WITHIN es ese espacio. Un retiro de 4 días en la selva tropical de Costa Rica, donde la medicina de los hongos, las prácticas somáticas y un equipo humano comprometido te acompañan en un viaje hacia tu interior."
-                : "WITHIN is that space. A 4-day retreat in the tropical jungle of Costa Rica, where mushroom medicine, somatic practices and a committed human team accompany you on a journey inward."}
+                ? "WITHIN es un retiro de 4 días en la selva tropical de Costa Rica para ir al encuentro de nuestra naturaleza humana acompañados de la medicina de los hongos y de prácticas que nos ayuden a reconectarnos. El enfoque que brindamos es terapéutico y medicinal lo cual implica que vas a contar con un contexto y un acompañamiento adecuado para que vivas una experiencia significativa que aporte valor y calidad a tu vida."
+                : "WITHIN is a 4-day retreat in the tropical jungle of Costa Rica to go in search of our human nature accompanied by mushroom medicine and practices that help us reconnect. The approach we provide is therapeutic and medicinal, which means you will have an appropriate context and support to live a meaningful experience that adds value and quality to your life."}
             </p>
           </motion.div>
         </div>
@@ -260,27 +292,22 @@ export default function WithinPage() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <p className="text-xs font-bold tracking-widest uppercase text-[#868859] mb-4">
-              {locale === "es" ? "Este retiro es para vos si..." : "This retreat is for you if..."}
-            </p>
             <h2 className="text-3xl md:text-5xl font-bold font-serif text-[#292E17] mb-10">
-              {locale === "es" ? "¿Para quién es?" : "Who is it for?"}
+              {locale === "es" ? "Este retiro es para vos si..." : "This retreat is for you if..."}
             </h2>
             <ul className="space-y-5">
               {(locale === "es"
                 ? [
-                    "Sentís que necesitás un espacio de regulación emocional y reconexión con vos mismo.",
-                    "Querés generar mayor presencia, claridad y conexión en tu vida cotidiana.",
-                    "Buscás aumentar tu creatividad y salir de patrones que ya no te sirven.",
-                    "Estás listo para encontrar un sentido más profundo a tu vida.",
-                    "No hace falta experiencia previa con la medicina.",
+                    "Sentís que necesitás un espacio de regulación emocional y reconexión.",
+                    "Querés cultivar un estado de mayor presencia, claridad y conexión con tu vida.",
+                    "Buscás aumentar tu creatividad y transformar conductas que dejaron de ser funcionales.",
+                    "Estás en la búsqueda de un sentido más profundo en tu vida y de mayor propósito personal.",
                   ]
                 : [
-                    "You feel you need a space for emotional regulation and reconnection with yourself.",
-                    "You want to generate greater presence, clarity and connection in your daily life.",
-                    "You're looking to increase your creativity and break out of patterns that no longer serve you.",
-                    "You're ready to find a deeper meaning in your life.",
-                    "No prior experience with the medicine is necessary.",
+                    "You feel you need a space for emotional regulation and reconnection.",
+                    "You want to cultivate a state of greater presence, clarity and connection with your life.",
+                    "You're looking to increase your creativity and transform behaviors that are no longer functional.",
+                    "You are in search of a deeper meaning in your life and greater personal purpose.",
                   ]
               ).map((item, i) => (
                 <motion.li
@@ -437,9 +464,6 @@ export default function WithinPage() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <p className="text-xs font-bold tracking-widest uppercase text-[#868859] mb-4">
-              {locale === "es" ? "Todo incluido" : "All inclusive"}
-            </p>
             <h2 className="text-3xl md:text-5xl font-bold font-serif text-[#292E17] mb-12">
               {locale === "es" ? "¿Qué incluye?" : "What's included?"}
             </h2>
@@ -469,6 +493,11 @@ export default function WithinPage() {
               {locale === "es" ? "Reservar mi lugar" : "Reserve my spot"}
               <ArrowRight size={18} />
             </Link>
+            <p className="mt-4 text-xs text-[#3B1B0E]/50 font-medium tracking-wide uppercase">
+              {locale === "es"
+                ? "No incluye pasajes aéreos, seguro médico ni transporte"
+                : "Does not include flights, medical insurance or transportation"}
+            </p>
           </motion.div>
 
           {/* Columna derecha — Foto grande */}
@@ -495,7 +524,9 @@ export default function WithinPage() {
         <div className="max-w-7xl mx-auto">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-16">
             <p className="text-xs font-bold tracking-widest uppercase text-[#868859] mb-4">{locale === "es" ? "4 días" : "4 days"}</p>
-            <h2 className="text-3xl md:text-5xl font-bold font-serif text-[#E8DCC4]">{locale === "es" ? "El programa" : "The program"}</h2>
+            <h2 className="text-3xl md:text-5xl font-bold font-serif text-[#E8DCC4]">
+              {locale === "es" ? "Nuestro cronograma" : "Our schedule"}
+            </h2>
           </motion.div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {schedule.map((item, i) => (
