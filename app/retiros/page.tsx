@@ -74,9 +74,11 @@ export default function RetirosPage() {
     "/images/land-retiros/carrusel-2.webp",
     "/images/land-retiros/carrusel-3.webp",
     "/images/land-retiros/carrusel-4.webp",
-    "/images/land-retiros/carrusel-5.webp",
     "/images/land-retiros/carrusel-6.webp",
     "/images/land-retiros/carrusel-7.webp",
+    "/images/land-retiros/carrusel-10.webp",
+    "/images/land-retiros/carrusel-11.webp",
+    "/images/land-retiros/carrusel-12.webp",
     "/images/land-retiros/carrusel-8.webp",
     "/images/land-retiros/carrusel-9.webp",
   ];
@@ -306,14 +308,10 @@ export default function RetirosPage() {
                     transform: "rotateY(180deg)",
                   }}
                 >
-                  <div className="h-full p-6 lg:p-8 flex flex-col">
+                  <div className="h-full p-6 lg:p-8 flex flex-col justify-between">
                     <h3 className="text-xl font-bold text-foreground">
                       {retreat.name}
                     </h3>
-                    <p className="mt-4 text-sm text-foreground/70 leading-relaxed flex-grow overflow-y-auto hidden md:block">
-                      {retreat.backDescription}
-                    </p>
-
                     {retreat.includes.length > 0 && (
                       <div className="mt-6">
                         <p className="text-xs uppercase tracking-wider text-foreground/50 mb-3">
