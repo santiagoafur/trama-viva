@@ -7,7 +7,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import {
   MapPin, Calendar, Check, ChevronLeft, ChevronRight,
   Quote, ArrowRight, Plus, Minus, Users, CreditCard,
-  ShieldCheck, HeartHandshake, Info, Utensils,
+  ShieldCheck, HeartHandshake, Info, Utensils, Brain,
+  Activity, Eye, Sparkles, Heart,
 } from "lucide-react";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
@@ -415,49 +416,59 @@ export default function WithinPage() {
               {locale === "es" ? "Transformación" : "Transformation"}
             </p>
             <h2 className="text-3xl md:text-5xl font-bold font-serif text-[#E8DCC4]">
-              {locale === "es" ? "¿Qué vas a lograr?" : "What will you achieve?"}
+              {locale === "es" ? "Lo que cambia en vos" : "What changes in you"}
             </h2>
-            <p className="mt-6 text-[#E8DCC4]/60 max-w-xl mx-auto leading-relaxed">
+            <p className="mt-6 text-[#E8DCC4]/60 max-w-2xl mx-auto leading-relaxed">
               {locale === "es"
-                ? "Cada persona vive una experiencia única. Estos son algunos de los cambios que nuestros participantes reportan."
-                : "Each person lives a unique experience. These are some of the changes our participants report."}
+                ? "Cada persona vive una experiencia única. Estos son algunos de los cambios que manifiestan las personas que participaron."
+                : "Each person lives a unique experience. These are some of the changes reported by people who have participated."}
             </p>
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {(locale === "es"
               ? [
-                  { title: "Mayor claridad interna", desc: "Placeholder — Eli completará este texto con su voz auténtica." },
-                  { title: "Regulación emocional", desc: "Placeholder — Eli completará este texto con su voz auténtica." },
-                  { title: "Reconexión con tu cuerpo", desc: "Placeholder — Eli completará este texto con su voz auténtica." },
-                  { title: "Nuevas perspectivas", desc: "Placeholder — Eli completará este texto con su voz auténtica." },
-                  { title: "Vínculos más auténticos", desc: "Placeholder — Eli completará este texto con su voz auténtica." },
-                  { title: "Amor propio", desc: "Placeholder — Eli completará este texto con su voz auténtica." },
+                  { title: "Mayor claridad interna", desc: "Una comprensión más profunda de sus emociones, pensamientos y decisiones, que les permite sentirse más alineadas consigo mismas y con su camino.", icon: "brain" },
+                  { title: "Regulación emocional", desc: "Una mayor capacidad para reconocer, sostener y gestionar sus emociones sin sentirse abrumadas, respondiendo con más calma, presencia y equilibrio ante lo que la vida presenta.", icon: "heart" },
+                  { title: "Reconexión con tu cuerpo", desc: "Un regreso a la escucha interna, habitando el cuerpo con más presencia y sensibilidad, reconociendo sus necesidades y recuperando la conexión con el sentir.", icon: "activity" },
+                  { title: "Nuevas perspectivas", desc: "Una apertura a ver la vida desde otros ángulos, ampliando la comprensión de sus experiencias y encontrando nuevas formas de interpretar y transitar lo que viven.", icon: "eye" },
+                  { title: "Vínculos más auténticos", desc: "Relaciones más honestas y conscientes, donde pueden mostrarse con mayor verdad, expresar lo que sienten y conectar desde un lugar más genuino y profundo.", icon: "users" },
+                  { title: "Amor propio", desc: "Una relación más amorosa y compasiva consigo mismo, donde hay reconocimiento, valoración y cuidado con mayor conciencia y respeto.", icon: "sparkles" },
                 ]
               : [
-                  { title: "Greater inner clarity", desc: "Placeholder — Eli will complete this text with her authentic voice." },
-                  { title: "Emotional regulation", desc: "Placeholder — Eli will complete this text with her authentic voice." },
-                  { title: "Reconnection with your body", desc: "Placeholder — Eli will complete this text with her authentic voice." },
-                  { title: "New perspectives", desc: "Placeholder — Eli will complete this text with her authentic voice." },
-                  { title: "More authentic bonds", desc: "Placeholder — Eli will complete this text with her authentic voice." },
-                  { title: "Self-love", desc: "Placeholder — Eli will complete this text with her authentic voice." },
+                  { title: "Greater inner clarity", desc: "A deeper understanding of their emotions, thoughts and decisions, allowing them to feel more aligned with themselves and their path.", icon: "brain" },
+                  { title: "Emotional regulation", desc: "A greater capacity to recognize, hold and manage their emotions without feeling overwhelmed, responding with more calm, presence and balance.", icon: "heart" },
+                  { title: "Reconnection with your body", desc: "A return to inner listening, inhabiting the body with more presence and sensitivity, recognizing its needs and recovering the connection with feeling.", icon: "activity" },
+                  { title: "New perspectives", desc: "An openness to see life from other angles, broadening the understanding of their experiences and finding new ways to interpret and navigate what they live.", icon: "eye" },
+                  { title: "More authentic bonds", desc: "More honest and conscious relationships, where they can show up with greater truth, express what they feel and connect from a more genuine and profound place.", icon: "users" },
+                  { title: "Self-love", desc: "A more loving and compassionate relationship with oneself, where there is recognition, appreciation and care with greater awareness and respect.", icon: "sparkles" },
                 ]
-            ).map((item, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.08 }}
-                className="bg-[#E8DCC4]/5 border border-[#E8DCC4]/10 rounded-2xl p-8 flex flex-col gap-3 hover:bg-[#E8DCC4]/10 transition-colors"
-              >
-                <div className="w-10 h-10 rounded-full bg-[#868859]/20 flex items-center justify-center flex-shrink-0">
-                  <Check size={18} className="text-[#868859]" />
-                </div>
-                <h3 className="text-xl font-bold font-serif text-[#E8DCC4]">{item.title}</h3>
-                <p className="text-sm text-[#E8DCC4]/50 leading-relaxed">{item.desc}</p>
-              </motion.div>
-            ))}
+            ).map((item, i) => {
+              const icons: Record<string, React.ReactNode> = {
+                brain: <Brain size={20} className="text-[#868859]" />,
+                heart: <Heart size={20} className="text-[#868859]" />,
+                activity: <Activity size={20} className="text-[#868859]" />,
+                eye: <Eye size={20} className="text-[#868859]" />,
+                users: <Users size={20} className="text-[#868859]" />,
+                sparkles: <Sparkles size={20} className="text-[#868859]" />,
+              };
+              return (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.08 }}
+                  className="bg-[#E8DCC4]/5 border border-[#E8DCC4]/10 rounded-2xl p-8 flex flex-col gap-3 hover:bg-[#E8DCC4]/10 transition-colors"
+                >
+                  <div className="w-10 h-10 rounded-full bg-[#868859]/20 flex items-center justify-center flex-shrink-0">
+                    {icons[item.icon]}
+                  </div>
+                  <h3 className="text-xl font-bold font-serif text-[#E8DCC4]">{item.title}</h3>
+                  <p className="text-sm text-[#E8DCC4]/50 leading-relaxed">{item.desc}</p>
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -630,7 +641,7 @@ export default function WithinPage() {
               className="flex gap-4 overflow-x-auto snap-x snap-mandatory scroll-smooth scroll-hide"
               style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
             >
-              {[1,2,3,4,5,6,7,8,9].map((n) => (
+              {[1,2,3,4,5,6,7].map((n) => (
                 <div
                   key={n}
                   className="min-w-[85vw] sm:min-w-[55vw] lg:min-w-[40vw] aspect-[4/3] relative snap-center rounded-2xl overflow-hidden flex-shrink-0"
