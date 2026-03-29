@@ -302,12 +302,20 @@ export default function WithinPage() {
                     "Querés cultivar un estado de mayor presencia, claridad y conexión con tu vida.",
                     "Buscás aumentar tu creatividad y transformar conductas que dejaron de ser funcionales.",
                     "Estás en la búsqueda de un sentido más profundo en tu vida y de mayor propósito personal.",
+                    "Valorás la conexión con la naturaleza, el silencio y la simplicidad como caminos de transformación.",
+                    "Querés tener un primer acercamiento con la medicina de los hongos desde la consciencia, el compromiso y el respeto por estas sustancias.",
+                    "Buscás ampliar tu perspectiva y abrirte a nuevas miradas sobre la realidad.",
+                    "Necesitás un cambio y un espacio donde permitirte abrir el corazón y dejarte sostener.",
                   ]
                 : [
                     "You feel you need a space for emotional regulation and reconnection.",
                     "You want to cultivate a state of greater presence, clarity and connection with your life.",
                     "You're looking to increase your creativity and transform behaviors that are no longer functional.",
                     "You are in search of a deeper meaning in your life and greater personal purpose.",
+                    "You value connection with nature, silence and simplicity as paths of transformation.",
+                    "You want to have a first encounter with mushroom medicine from a place of consciousness, commitment and respect for these substances.",
+                    "You're seeking to broaden your perspective and open yourself to new ways of seeing reality.",
+                    "You need a change and a space where you can allow yourself to open your heart and be held.",
                   ]
               ).map((item, i) => (
                 <motion.li
