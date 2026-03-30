@@ -1122,7 +1122,7 @@ export default function WithinPage() {
       {/* 13. CTA FINAL */}
       <section className="relative py-32 px-6 overflow-hidden bg-[#292E17]">
         <div className="absolute inset-0">
-          <Image src="/images/within/hos-4.webp" alt="Within CTA" fill className="object-cover opacity-20" />
+          <Image src="/images/within/pre-footer.webp" alt="Within CTA" fill className="object-cover opacity-20" />
         </div>
         <div className="relative z-10 max-w-4xl mx-auto text-center">
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="space-y-8">
