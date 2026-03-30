@@ -40,8 +40,7 @@ function TestimonialText({ text }: { text: string }) {
 const GOOGLE_FORM_URL = "https://forms.gle/8zYixuET9tg3vvVZ8";
 
 // Fecha límite Early Bird — 14 días desde hoy
-const EARLY_BIRD_DEADLINE = new Date();
-EARLY_BIRD_DEADLINE.setDate(EARLY_BIRD_DEADLINE.getDate() + 14);
+const EARLY_BIRD_DEADLINE = new Date("2026-04-30T23:59:59");
 
 function CountdownTimer({ locale }: { locale: string }) {
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
@@ -197,7 +196,7 @@ export default function WithinPage() {
         { q: "¿Cómo es el proceso de inscripción?", a: "Completás el formulario de pre-selección, luego coordinamos una entrevista online de 30 minutos para conocernos, responder tus preguntas y confirmar que el retiro es adecuado para vos." },
         { q: "¿El retiro es seguro?", a: "Sí. Trabajamos con grupos pequeños e íntimos, con facilitadores certificados y experiencia comprobada. Cada persona pasa por una evaluación previa y contamos con protocolos de contención para toda la experiencia." },
         { q: "¿Qué pasa después del retiro?", a: "La integración es parte fundamental del proceso. Contás con un encuentro online post-retiro y acompañamiento para integrar la experiencia a tu vida cotidiana." },
-        { q: "¿Qué debo llevar?", a: "Ropa cómoda, elementos de higiene personal, ropa de abrigo para la noche y una intención clara. Una vez confirmada tu inscripción te enviamos una guía detallada de preparación." },
+        { q: "¿Qué debo llevar?", a: "Ropa cómoda, elementos de higiene personal, cuaderno de journaling personal y un corazón y mente abiertos. Una vez confirmada tu inscripción te enviamos una guía detallada de preparación." },
         { q: "¿Puedo ir solo/a?", a: "Sí, la mayoría de los participantes llegan solos. El grupo se convierte en parte fundamental de la experiencia." },
       ]
     : [
@@ -205,7 +204,7 @@ export default function WithinPage() {
         { q: "What is the registration process?", a: "You complete the pre-selection form, then we coordinate a 30-minute online interview to meet, answer your questions, and confirm the retreat is right for you." },
         { q: "Is the retreat safe?", a: "Yes. We work with small intimate groups, certified facilitators and proven experience. Each person goes through a prior evaluation and we have containment protocols for the entire experience." },
         { q: "What happens after the retreat?", a: "Integration is a fundamental part of the process. You have a post-retreat online meeting and support to integrate the experience into your daily life." },
-        { q: "What should I bring?", a: "Comfortable clothing, personal hygiene items, warm clothing for the night, and a clear intention. Once your registration is confirmed we send you a detailed preparation guide." },
+        { q: "What should I bring?", a: "Comfortable clothing, personal hygiene items, a personal journaling notebook and an open heart and mind. Once your registration is confirmed we send you a detailed preparation guide." },
         { q: "Can I go alone?", a: "Yes, most participants arrive alone. The group becomes a fundamental part of the experience." },
       ];
 
@@ -739,6 +738,46 @@ export default function WithinPage() {
           </motion.div>
 
           <div className="grid md:grid-cols-2 gap-8 mb-12">
+            {/* Early Bird con countdown */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="bg-white rounded-3xl p-10 border-2 border-[#7E2625] text-center flex flex-col justify-between relative overflow-hidden transform md:scale-105"
+            >
+              <div className="absolute top-0 left-0 w-full h-1.5 bg-[#7E2625]" />
+
+              {/* Badge */}
+              <div className="inline-flex items-center justify-center gap-2 bg-[#7E2625]/10 text-[#7E2625] text-xs font-bold tracking-widest uppercase px-4 py-2 rounded-full mb-4 mx-auto">
+                <span className="w-2 h-2 rounded-full bg-[#7E2625] animate-pulse" />
+                {locale === "es" ? "Oferta por tiempo limitado" : "Limited time offer"}
+              </div>
+
+              <div className="space-y-3">
+                <h3 className="text-xl uppercase tracking-widest font-bold text-[#7E2625]">
+                  {locale === "es" ? "Early Bird Abril" : "April Early Bird"}
+                </h3>
+                <p className="text-6xl font-bold font-serif text-[#7E2625]">
+                  $971 <span className="text-xl text-[#7E2625]/60 font-sans">USD</span>
+                </p>
+                <p className="text-sm text-[#3B1B0E]/50">
+                  {locale === "es" ? "Ahorrás $138 USD" : "You save $138 USD"}
+                </p>
+              </div>
+
+              {/* Countdown */}
+              <CountdownTimer locale={locale} />
+
+              <Link
+                href={GOOGLE_FORM_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block w-full mt-6 py-4 bg-[#7E2625] text-[#E8DCC4] rounded-full font-bold hover:bg-[#3B1B0E] transition-all hover:-translate-y-1"
+              >
+                {locale === "es" ? "Aprovechar descuento" : "Claim discount"}
+              </Link>
+            </motion.div>
 
             {/* Regular */}
             <motion.div
@@ -774,47 +813,6 @@ export default function WithinPage() {
                 className="block w-full mt-10 py-4 bg-[#3B1B0E] text-[#E8DCC4] rounded-full font-bold hover:bg-[#292E17] transition-all hover:-translate-y-1"
               >
                 {locale === "es" ? "Iniciar inscripción" : "Start registration"}
-              </Link>
-            </motion.div>
-
-            {/* Early Bird con countdown */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-              className="bg-white rounded-3xl p-10 border-2 border-[#7E2625] text-center flex flex-col justify-between relative overflow-hidden transform md:scale-105"
-            >
-              <div className="absolute top-0 left-0 w-full h-1.5 bg-[#7E2625]" />
-
-              {/* Badge */}
-              <div className="inline-flex items-center justify-center gap-2 bg-[#7E2625]/10 text-[#7E2625] text-xs font-bold tracking-widest uppercase px-4 py-2 rounded-full mb-4 mx-auto">
-                <span className="w-2 h-2 rounded-full bg-[#7E2625] animate-pulse" />
-                {locale === "es" ? "Oferta por tiempo limitado" : "Limited time offer"}
-              </div>
-
-              <div className="space-y-3">
-                <h3 className="text-xl uppercase tracking-widest font-bold text-[#7E2625]">
-                  {locale === "es" ? "Early Bird Abril" : "April Early Bird"}
-                </h3>
-                <p className="text-6xl font-bold font-serif text-[#7E2625]">
-                  $985 <span className="text-xl text-[#7E2625]/60 font-sans">USD</span>
-                </p>
-                <p className="text-sm text-[#3B1B0E]/50">
-                  {locale === "es" ? "Ahorrás $124 USD" : "You save $124 USD"}
-                </p>
-              </div>
-
-              {/* Countdown */}
-              <CountdownTimer locale={locale} />
-
-              <Link
-                href={GOOGLE_FORM_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block w-full mt-6 py-4 bg-[#7E2625] text-[#E8DCC4] rounded-full font-bold hover:bg-[#3B1B0E] transition-all hover:-translate-y-1"
-              >
-                {locale === "es" ? "Aprovechar descuento" : "Claim discount"}
               </Link>
             </motion.div>
           </div>
