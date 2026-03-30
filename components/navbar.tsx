@@ -172,16 +172,9 @@ export function Navbar() {
                                 <span className="font-bold text-[#292E17] group-hover:text-[#7E2625] transition-colors">
                                   {retreat.name}
                                 </span>
-                                <div className="flex items-center gap-3 mt-1">
-                                  <span className="flex items-center gap-1 text-xs text-[#3B1B0E]/50">
-                                    <MapPin size={10} />
-                                    {retreat.location}
-                                  </span>
-                                  <span className="flex items-center gap-1 text-xs text-[#3B1B0E]/50">
-                                    <Calendar size={10} />
-                                    {retreat.date[locale as "es" | "en"]}
-                                  </span>
-                                </div>
+                                <span className="text-xs text-[#3B1B0E]/50 mt-1">
+                                  {retreat.location}
+                                </span>
                               </Link>
                             ))}
                           </motion.div>
@@ -312,8 +305,7 @@ export function Navbar() {
                                 <span className="text-lg font-bold text-[#292E17] hover:text-[#7E2625]">
                                   {retreat.name}
                                 </span>
-                                <span className="text-xs text-[#3B1B0E]/50 flex items-center gap-1 mt-0.5">
-                                  <MapPin size={10} />
+                                <span className="text-xs text-[#3B1B0E]/50 mt-0.5">
                                   {retreat.location}
                                 </span>
                               </Link>
