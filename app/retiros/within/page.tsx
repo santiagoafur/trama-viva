@@ -890,6 +890,44 @@ export default function WithinPage() {
         </div>
       </section>
 
+      {/* CARRUSEL INFINITO */}
+      <section className="py-16 bg-[#E8DCC4] overflow-hidden">
+        <style>{`
+          @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+          }
+          .marquee-track {
+            animation: marquee 40s linear infinite;
+            display: flex;
+            width: max-content;
+          }
+          .marquee-track:hover {
+            animation-play-state: paused;
+          }
+        `}</style>
+
+        <div className="marquee-track">
+          {[...Array(15)].concat([...Array(15)]).map((_, i) => {
+            const num = (i % 15) + 1;
+            return (
+              <div
+                key={i}
+                className="flex-shrink-0 w-72 md:w-96 aspect-[3/4] relative rounded-2xl overflow-hidden mx-2"
+              >
+                <Image
+                  src={`/images/within/carrusel-within-${num}.webp`}
+                  alt={`Within ${num}`}
+                  fill
+                  className="object-cover"
+                  sizes="384px"
+                />
+              </div>
+            );
+          })}
+        </div>
+      </section>
+
       {/* 10. PROCESO */}
       <section className="py-28 md:py-36 px-6 lg:px-12 bg-[#F4EDE0]">
         <div className="max-w-4xl mx-auto">
