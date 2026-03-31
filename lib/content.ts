@@ -630,7 +630,7 @@ export const microdosisPage = {
       description: "Mi servicio de acompañamiento con microdosis se basa en un enfoque integral, seguro y respetuoso de cada proceso individual, donde el protagonismo está siempre en la persona y su propio ritmo.\nNo promuevo el uso de sustancias ni realizo indicaciones médicas, sino que ofrezco contención, orientación y educación para quienes ya han decidido explorar esta práctica desde su autonomía y responsabilidad personal.",
     },
     considerations: {
-      title: "Desde dónde acompaño",
+      title: "Encuadre de acompañamiento",
       items: [
         {
           icon: "sparkles",
@@ -718,7 +718,7 @@ export const microdosisPage = {
       description: "My microdosis accompaniment service is based on a comprehensive, safe and respectful approach to each individual process, where the focus is always on the person and their own rhythm.\nI do not promote the use of substances or provide medical guidance, but rather offer support, orientation and education for those who have already decided to explore this practice from their own autonomy and personal responsibility.",
     },
     considerations: {
-      title: "Where I stand as a guide",
+      title: "Accompaniment framework",
       items: [
         {
           icon: "sparkles",
@@ -744,8 +744,8 @@ export const microdosisPage = {
       title: "Who is it for?",
       items: [
         "Those seeking to deepen their emotions and transform limiting behaviors.",
-        "Those seeking to awake their creativity, reconnecting with inspiration and inner play.",
-        "Those seeking to awake their passion and create spaces where their vital energy flows authentically.",
+        "Those seeking to awaken their creativity, reconnecting with inspiration and inner play.",
+        "Those seeking to awaken their passion and create spaces where their vital energy flows authentically.",
         "Those seeking to live a conscious, respectful and supported process that allows them to cultivate presence, order and inner coherence.",
       ],
     },

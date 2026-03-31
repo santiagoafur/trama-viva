@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { useLanguage } from "@/lib/language-context";
 import { homePage } from "@/lib/content";
@@ -11,85 +12,70 @@ export function Hero() {
   const content = homePage[locale].hero;
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image */}
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: `url(${content.backgroundImage})`,
-        }}
-      >
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-primary/60" />
-      </div>
+    <section className="relative min-h-screen w-full flex items-end overflow-hidden">
 
-      {/* Content */}
-      <div className="relative z-10 container mx-auto px-6 lg:px-12 text-center">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="max-w-4xl mx-auto"
-        >
-          <motion.h1
+      {/* Imagen de fondo */}
+      <Image
+        src={content.backgroundImage}
+        alt="Trama Viva"
+        fill
+        className="object-cover object-center"
+        priority
+      />
+
+      {/* Gradient de abajo hacia arriba */}
+      <div className="absolute inset-0 bg-gradient-to-t from-[#292E17]/90 via-[#292E17]/30 to-transparent" />
+
+      {/* Contenido — abajo a la izquierda */}
+      <div className="relative z-10 w-full px-6 lg:px-12 pb-16 md:pb-24">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-3xl md:text-4xl lg:text-6xl font-bold text-primary-foreground tracking-tight"          >
-            {content.title}
-          </motion.h1>
-
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="mt-6 lg:mt-8 text-xl md:text-2xl lg:text-3xl text-primary-foreground/90 font-light tracking-wide"
+            transition={{ duration: 0.8 }}
           >
-            {content.slogan}
-          </motion.p>
+            <motion.h1
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="text-5xl md:text-7xl lg:text-8xl font-bold font-serif text-[#E8DCC4] mb-6 leading-tight"
+            >
+              {content.title}
+            </motion.h1>
+
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="text-lg md:text-xl text-[#E8DCC4]/80 max-w-2xl leading-relaxed mb-8"
+            >
+              {content.slogan}
+            </motion.p>
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.8 }}
-              className="mt-10 lg:mt-14 flex flex-col sm:flex-row items-center justify-center gap-4"
+              transition={{ duration: 0.8, delay: 0.6 }}
+              className="flex flex-col sm:flex-row gap-4 items-start"
             >
               <Link
                 href="#caminos"
-                className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-accent text-accent-foreground rounded-full font-bold hover:bg-accent/90 transition-all shadow-lg hover:shadow-xl hover:-translate-y-1"
+                className="inline-flex items-center gap-3 px-8 py-4 bg-[#7E2625] text-[#E8DCC4] font-bold rounded-full hover:bg-[#7E2625]/90 transition-all hover:-translate-y-1 shadow-lg"
               >
                 {content.cta}
                 <ArrowRight size={18} />
               </Link>
               <Link
                 href="#about"
-                className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-transparent border border-primary-foreground/50 text-primary-foreground rounded-full font-bold hover:bg-primary-foreground/10 transition-all"
+                className="inline-flex items-center gap-3 px-8 py-4 border border-[#E8DCC4]/40 text-[#E8DCC4] font-bold rounded-full hover:bg-[#E8DCC4]/10 transition-all"
               >
                 {locale === "es" ? "Conocer más" : "Learn more"}
               </Link>
             </motion.div>
-        </motion.div>
+          </motion.div>
+        </div>
       </div>
 
-      {/* Scroll Indicator */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.2 }}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2"
-      >
-        <motion.div
-          animate={{ y: [0, 10, 0] }}
-          transition={{ repeat: Infinity, duration: 2 }}
-          className="w-6 h-10 border-2 border-primary-foreground/50 rounded-full flex items-start justify-center p-1"
-        >
-          <motion.div
-            animate={{ y: [0, 16, 0] }}
-            transition={{ repeat: Infinity, duration: 2 }}
-            className="w-1.5 h-3 bg-primary-foreground/50 rounded-full"
-          />
-        </motion.div>
-      </motion.div>
     </section>
   );
 }

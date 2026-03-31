@@ -154,14 +154,55 @@ export default function MicrodosisPage() {
   return (
     <main>
       <Navbar />
-      <PageHero
-        title={content.hero.title}
-        subtitle={content.hero.subtitle}
-        backgroundImage={content.hero.backgroundImage}
-      />
+      {/* HERO */}
+      <section className="relative h-screen w-full flex items-end overflow-hidden">
+        <Image
+          src={content.hero.backgroundImage}
+          alt="Microdosis - Trama Viva"
+          fill
+          className="object-cover object-center"
+          priority
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#292E17]/90 via-[#292E17]/30 to-transparent" />
+
+        <div className="relative z-10 w-full px-6 lg:px-12 pb-16 md:pb-24">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <span className="inline-flex items-center bg-[#E8DCC4]/15 backdrop-blur-sm border border-[#E8DCC4]/30 text-[#E8DCC4] text-xs font-bold tracking-widest uppercase px-4 py-2 rounded-full mb-6">
+                {locale === "es" ? "Programa de acompañamiento" : "Accompaniment program"}
+              </span>
+              <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold font-serif text-[#E8DCC4] mb-6 leading-tight">
+                {content.hero.title}
+              </h1>
+              <p className="text-lg md:text-xl text-[#E8DCC4]/80 max-w-2xl leading-relaxed mb-8">
+                {content.hero.subtitle}
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link
+                  href="#calendly"
+                  className="inline-flex items-center gap-3 px-8 py-4 bg-[#7E2625] text-[#E8DCC4] font-bold rounded-full hover:bg-[#7E2625]/90 transition-all hover:-translate-y-1 shadow-lg"
+                >
+                  {locale === "es" ? "Agendar consulta gratuita" : "Book free consultation"}
+                  <ArrowRight size={18} />
+                </Link>
+                <Link
+                  href="#sobre-microdosis"
+                  className="inline-flex items-center gap-3 px-8 py-4 border border-[#E8DCC4]/40 text-[#E8DCC4] font-bold rounded-full hover:bg-[#E8DCC4]/10 transition-all"
+                >
+                  {locale === "es" ? "Saber más" : "Learn more"}
+                </Link>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
 
       {/* Intro con Imagen */}
-      <SectionWrapper variant="default">
+      <SectionWrapper id="sobre-microdosis" variant="default">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center px-4">
           
           {/* Columna de Imagen */}
@@ -169,7 +210,7 @@ export default function MicrodosisPage() {
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="relative w-full aspect-square md:aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl"
+            className="relative w-full aspect-square rounded-3xl overflow-hidden shadow-2xl"
           >
             <Image
               src="/images/microdosis/primer-hongo.jpg" 
@@ -187,9 +228,6 @@ export default function MicrodosisPage() {
             viewport={{ once: true }}
             className="space-y-6 lg:pl-8"
           >
-            <h2 className="text-3xl md:text-5xl font-bold font-serif text-[#292E17]">
-              Un proceso a tu propio ritmo
-            </h2>
             <div className="text-lg md:text-xl text-foreground/80 leading-relaxed space-y-4 font-medium">
               <p className="whitespace-pre-line">
                 {content.intro.description}
@@ -280,7 +318,7 @@ export default function MicrodosisPage() {
             ? "Reconocer mis propios límites como acompañante, derivando a profesionales de salud o realizando interconsultas cuando sea necesario."
             : "Recognizing my own limits as a guide, referring to health professionals or seeking consultation when necessary.",
         ].map((item, i) => (
-          <li key={i} className="flex items-start gap-3 text-foreground/70 text-sm leading-relaxed">
+          <li key={i} className="flex items-start gap-3 text-foreground/70 text-base leading-relaxed">
             <Check size={16} className="flex-shrink-0 mt-0.5 text-[#292E17]" />
             {item}
           </li>
@@ -322,7 +360,7 @@ export default function MicrodosisPage() {
             ? "Promover un vínculo basado en confianza, compromiso y responsabilidad."
             : "Promote a bond based on trust, commitment and responsibility.",
         ].map((item, i) => (
-          <li key={i} className="flex items-start gap-3 text-foreground/70 text-sm leading-relaxed">
+          <li key={i} className="flex items-start gap-3 text-foreground/70 text-base leading-relaxed">
             <Check size={16} className="flex-shrink-0 mt-0.5 text-[#7E2625]" />
             {item}
           </li>
@@ -364,41 +402,68 @@ export default function MicrodosisPage() {
   </div>
 </SectionWrapper>
 
-      {/* Target Audience */}
-      <SectionWrapper variant="default">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+      {/* PARA QUIÉN ES */}
+      <section className="py-28 md:py-36 px-6 lg:px-12 bg-[#F4EDE0]">
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-foreground">
-              {content.targetAudience.title}
+            <h2 className="text-3xl md:text-5xl font-bold font-serif text-[#292E17] mb-10">
+              {locale === "es" ? "Este programa es para vos si..." : "This program is for you if..."}
             </h2>
+            <ul className="space-y-5">
+              {(locale === "es"
+                ? [
+                    "Buscás profundizar en tus emociones y transformar conductas limitantes.",
+                    "Querés despertar tu creatividad, reconectando con la inspiración y el juego interior.",
+                    "Buscás despertar tu pasión y crear espacios donde tu energía vital fluya con autenticidad.",
+                    "Querés vivir un proceso consciente, respetuoso y acompañado, que te permita cultivar presencia, orden y coherencia interior.",
+                  ]
+                : [
+                    "You seek to deepen your emotions and transform limiting behaviors.",
+                    "You want to awaken your creativity, reconnecting with inspiration and inner play.",
+                    "You seek to awaken your passion and create spaces where your vital energy flows authentically.",
+                    "You want to live a conscious, respectful and supported process that allows you to cultivate presence, order and inner coherence.",
+                  ]
+              ).map((item, i) => (
+                <motion.li
+                  key={i}
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.08 }}
+                  className="flex items-start gap-4 text-lg text-[#3B1B0E]/80 border-b border-[#868859]/15 pb-5 last:border-0 last:pb-0"
+                >
+                  <div className="w-6 h-6 rounded-full bg-[#7E2625] flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <Check size={12} className="text-[#E8DCC4]" />
+                  </div>
+                  {item}
+                </motion.li>
+              ))}
+            </ul>
           </motion.div>
 
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="space-y-4"
+            className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl"
           >
-            {content.targetAudience.items.map((item, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="flex items-start gap-4 p-4 bg-card rounded-sm border-l-4 border-secondary hover:border-accent transition-colors"
-              >
-                <Check className="flex-shrink-0 mt-0.5 text-secondary" size={20} />
-                <span className="text-foreground/80">{item}</span>
-              </motion.div>
-            ))}
+            <Image
+              src="/images/within/carrusel-within-13.webp"
+              alt="¿Para quién es el programa de microdosis?"
+              fill
+              className="object-cover"
+              sizes="(max-width: 1024px) 100vw, 50vw"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#292E17]/40 to-transparent" />
           </motion.div>
+
         </div>
-      </SectionWrapper>
+      </section>
 
       {/* Benefits */}
       <SectionWrapper variant="alt">
@@ -508,7 +573,7 @@ export default function MicrodosisPage() {
       </SectionWrapper>
 
       {/* Calendly */}
-      <section className="py-16 md:py-24 px-4 w-full bg-[#E8DCC4]">
+      <section id="calendly" className="py-16 md:py-24 px-4 w-full bg-[#E8DCC4]">
         <div className="max-w-7xl mx-auto">
 
           {/* Header */}

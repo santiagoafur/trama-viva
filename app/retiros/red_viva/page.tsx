@@ -452,29 +452,21 @@ export default function UnionPage() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-5xl font-bold font-serif text-[#292E17] mb-10">
-              {locale === "es" ? "Este retiro es para vos si..." : "This retreat is for you if..."}
+              {locale === "es" ? "Este programa es para vos si..." : "This program is for you if..."}
             </h2>
             <ul className="space-y-5">
               {(locale === "es"
                 ? [
-                    "Sentís que necesitás un espacio de regulación emocional y reconexión.",
-                    "Querés cultivar un estado de mayor presencia, claridad y conexión con tu vida.",
-                    "Buscás aumentar tu creatividad y transformar conductas que dejaron de ser funcionales.",
-                    "Estás en la búsqueda de un sentido más profundo en tu vida y de mayor propósito personal.",
-                    "Valorás la conexión con la naturaleza, el silencio y la simplicidad como caminos de transformación.",
-                    "Querés tener un primer acercamiento con la medicina de los hongos desde la consciencia, el compromiso y el respeto por estas sustancias.",
-                    "Buscás ampliar tu perspectiva y abrirte a nuevas miradas sobre la realidad.",
-                    "Necesitás un cambio y un espacio donde permitirte abrir el corazón y dejarte sostener.",
+                    "Buscás profundizar en tus emociones y transformar conductas limitantes.",
+                    "Querés despertar tu creatividad, reconectando con la inspiración y el juego interior.",
+                    "Buscás despertar tu pasión y crear espacios donde tu energía vital fluya con autenticidad.",
+                    "Querés vivir un proceso consciente, respetuoso y acompañado, que te permita cultivar presencia, orden y coherencia interior.",
                   ]
                 : [
-                    "You feel you need a space for emotional regulation and reconnection.",
-                    "You want to cultivate a state of greater presence, clarity and connection with your life.",
-                    "You're looking to increase your creativity and transform behaviors that are no longer functional.",
-                    "You are in search of a deeper meaning in your life and greater personal purpose.",
-                    "You value connection with nature, silence and simplicity as paths of transformation.",
-                    "You want to have a first encounter with mushroom medicine from a place of consciousness, commitment and respect for these substances.",
-                    "You're seeking to broaden your perspective and open yourself to new ways of seeing reality.",
-                    "You need a change and a space where you can allow yourself to open your heart and be held.",
+                    "You seek to deepen your emotions and transform limiting behaviors.",
+                    "You want to awaken your creativity, reconnecting with inspiration and inner play.",
+                    "You seek to awaken your passion and create spaces where your vital energy flows authentically.",
+                    "You want to live a conscious, respectful and supported process that allows you to cultivate presence, order and inner coherence.",
                   ]
               ).map((item, i) => (
                 <motion.li
@@ -501,8 +493,8 @@ export default function UnionPage() {
             className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl"
           >
             <Image
-              src="/images/within/para-quien.webp"
-              alt="¿Para quién es Within?"
+              src="/images/within/eli-facilitador-1.webp"
+              alt="¿Para quién es el programa de microdosis?"
               fill
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 50vw"
