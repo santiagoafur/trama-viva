@@ -472,6 +472,60 @@ export default function WithinPage() {
         </div>
       </section>
 
+            {/* TERAPIA ASISTIDA CON PSICODÉLICOS */}
+            <section className="py-28 md:py-36 px-6 lg:px-12 bg-[#292E17]">
+              <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+      
+                {/* Foto izquierda */}
+                <motion.div
+                  initial={{ opacity: 0, x: -30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  className="relative aspect-square rounded-2xl overflow-hidden shadow-2xl"
+                >
+                  <Image
+                    src="/images/union/terapia-asistida-psicodelicos.webp"
+                    alt="Terapia Asistida con Psicodélicos"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                  />
+                </motion.div>
+      
+                {/* Texto derecha */}
+                <motion.div
+                  initial={{ opacity: 0, x: 30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  className="flex flex-col gap-8"
+                >
+                  <div>
+                    <p className="text-xs font-bold tracking-widest uppercase text-[#868859] mb-4">
+                      {locale === "es" ? "Metodología" : "Methodology"}
+                    </p>
+                    <h2 className="text-3xl md:text-4xl font-bold font-serif text-[#E8DCC4] leading-tight">
+                      {locale === "es"
+                        ? "¿Qué es la Terapia Asistida con Psicodélicos?"
+                        : "What is Psychedelic-Assisted Therapy?"}
+                    </h2>
+                  </div>
+                  <div className="space-y-6 text-[#E8DCC4]/70 text-lg leading-relaxed">
+                    <p>
+                      {locale === "es"
+                        ? "La terapia asistida por psicodélicos se nutre de la sabiduría ancestral desarrollada por distintas culturas a lo largo de miles de años, y lo integra con la ciencia y los enfoques terapéuticos más efectivos para la humanidad del mundo de hoy. Ofrece un encuadre de preparación, cuidado e integración, priorizando siempre criterios de seguridad."
+                        : "Psychedelic-assisted therapy draws on ancestral wisdom developed by different cultures over thousands of years, integrating it with science and the most effective therapeutic approaches for humanity today. It offers a framework of preparation, care and integration, always prioritizing safety criteria."}
+                    </p>
+                    <p>
+                      {locale === "es"
+                        ? "Los estados ampliados de conciencia, habitados en contextos seguros, son un puente hacia procesos profundos de autoconocimiento, regulación emocional y reconexión con la vida."
+                        : "Expanded states of consciousness, inhabited in safe contexts, are a bridge to deep processes of self-knowledge, emotional regulation and reconnection with life."}
+                    </p>
+                  </div>
+                </motion.div>
+      
+              </div>
+            </section>
+
       {/* 4. QUÉ INCLUYE */}
       <section className="py-28 md:py-36 px-6 lg:px-12 bg-[#E8DCC4]">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
@@ -1166,7 +1220,9 @@ export default function WithinPage() {
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="space-y-8">
             <p className="text-xs font-bold tracking-widest uppercase text-[#868859]">{locale === "es" ? "Los cupos son limitados" : "Spots are limited"}</p>
             <h2 className="text-4xl md:text-6xl font-bold font-serif text-[#E8DCC4] leading-tight">
-              {locale === "es" ? "Tu próximo capítulo empieza acá" : "Your next chapter starts here"}
+              {locale === "es"
+                ? "Si sentís el llamado de la medicina, este viaje es para vos."
+                : "If you feel the call of the medicine, this journey is for you."}
             </h2>
             <p className="text-lg text-[#E8DCC4]/70 max-w-xl mx-auto leading-relaxed">
               {locale === "es"
