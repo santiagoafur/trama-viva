@@ -214,7 +214,7 @@ export default function UnionPage() {
     ? [
         { day: "Día 1", title: "Bienvenida y preparación", items: ["Recepción y acomodación", "Círculo de bienvenida y acuerdos", "Merienda", "Charla de preparación", "Cena"] },
         { day: "Día 2", title: "Preparación y Ceremonia", items: ["Meditación y yoga", "Desayuno", "Actividad psicoterapéutica", "Brunch y tiempo libre", "Ceremonia", "Cena"] },
-        { day: "Día 3", title: "Integración", items: ["Meditación y Yoga", "Desayuno", "Actividad de integración", "Almuerzo", "Tiempo libre", "Actividad de integración", "Merienda", "Actividad de integración", "Cena"] },
+        { day: "Día 3", title: "Integración", items: ["Meditación y Yoga", "Desayuno", "Actividad de integración", "Almuerzo", "Tiempo libre", "Merienda", "Actividad de integración", "Cena"] },
         { day: "Día 4", title: "Cierre y despedida", items: ["Meditación y Yoga", "Desayuno", "Actividad de cierre", "Brunch", "Despedida"] },
       ]
     : [
@@ -289,6 +289,9 @@ export default function UnionPage() {
         { q: "¿Qué pasa después del retiro?", a: "La integración es parte fundamental del proceso. Contás con un encuentro online post-retiro y acompañamiento para integrar la experiencia a tu vida cotidiana." },
         { q: "¿Qué debo llevar?", a: "Ropa cómoda, elementos de higiene personal, cuaderno de journaling personal y un corazón y mente abiertos. Una vez confirmada tu inscripción te enviamos una guía detallada de preparación." },
         { q: "¿Puedo ir solo/a?", a: "Sí, la mayoría de los participantes llegan solos. El grupo se convierte en parte fundamental de la experiencia." },
+        { q: "¿Existen contraindicaciones médicas para realizar la ceremonia de Psilocibina?", a: `Sí, es importante evaluarlas con responsabilidad. Por eso enviamos un formulario previo para descartar cualquier posible riesgo.
+              Algunas contraindicaciones incluyen ciertos estados de salud mental, así como el uso de medicación antidepresiva o antipsicótica. No recomendamos suspender ningún tratamiento sin supervisión médica.
+              También es importante tener especial cuidado en casos de problemas cardíacos, condiciones neurológicas, embarazo o lactancia. Por supuesto que todo esto será evaluado en la entrevista previa.`}
       ]
     : [
         { q: "Do I need prior experience with psilocybin?", a: "No. The retreat is designed for both people who have never had contact with the medicine and those with experience. We adapt to each individual process." },
@@ -297,6 +300,9 @@ export default function UnionPage() {
         { q: "What happens after the retreat?", a: "Integration is a fundamental part of the process. You have a post-retreat online meeting and support to integrate the experience into your daily life." },
         { q: "What should I bring?", a: "Comfortable clothing, personal hygiene items, a personal journaling notebook and an open heart and mind. Once your registration is confirmed we send you a detailed preparation guide." },
         { q: "Can I go alone?", a: "Yes, most participants arrive alone. The group becomes a fundamental part of the experience." },
+        { q: "Are there medical contraindications for the Psilocybin ceremony?", a: `Yes, it is important to evaluate them responsibly. That is why we send a prior form to rule out any possible risk. 
+          Some contraindications include certain mental health conditions, as well as the use of antidepressant or antipsychotic medication. We do not recommend discontinuing any treatment without medical supervision.
+          It is also important to take special care in cases of heart issues, neurological conditions, pregnancy, or breastfeeding. Naturally, all of these factors will be evaluated during the initial interview.` }
       ];
 
   const galleryImages = [
@@ -312,14 +318,14 @@ export default function UnionPage() {
 
       {/* 1. HERO */}
       <section className="relative h-screen w-full flex items-end overflow-hidden">
-        <Image src="/images/union/hero-union-desktop.webp" alt="Retiro Unión - Córdoba Argentina" fill className="object-cover object-center hidden md:block" priority />
+        <Image src="/images/union/new_photos/DSC07113 1.webp" alt="Retiro Unión - Córdoba Argentina" fill className="object-cover object-center hidden md:block" priority />
         <Image src="/images/union/hero-union-mobile.webp" alt="Retiro Unión - Córdoba Argentina" fill className="object-cover object-center block md:hidden" priority />
         <div className="absolute inset-0 bg-gradient-to-t from-[#292E17]/90 via-[#292E17]/30 to-transparent" />
         <div className="relative z-10 w-full px-6 lg:px-12 pb-16 md:pb-24">
           <div className="max-w-7xl mx-auto">
             <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
               <span className="inline-flex items-center bg-[#E8DCC4]/15 backdrop-blur-sm border border-[#E8DCC4]/30 text-[#E8DCC4] text-xs font-bold tracking-widest uppercase px-4 py-2 rounded-full mb-6">
-                {locale === "es" ? "Retiro de Conexión Somática Micelar" : "Micellar Somatic Connection Retreat"}
+                {locale === "es" ? "Retiro de Conexión Somática Micelial" : "Micellal Somatic Connection Retreat"}
               </span>
               <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold font-serif text-[#E8DCC4] mb-6">UNIÓN</h1>
               <div className="flex flex-wrap gap-4 mb-8">
@@ -386,9 +392,9 @@ export default function UnionPage() {
                     "Buscás aumentar tu creatividad y transformar conductas que dejaron de ser funcionales.",
                     "Estás en la búsqueda de un sentido más profundo en tu vida y de mayor propósito personal.",
                     "Valorás la conexión con la naturaleza, el silencio y la simplicidad como caminos de transformación.",
-                    "Querés tener un primer acercamiento con la medicina de los hongos desde la consciencia, el compromiso y el respeto por estas sustancias.",
+                    "Querés tener un acercamiento con la medicina de los hongos desde la consciencia, el compromiso y el respeto por estas sustancias.",
                     "Buscás ampliar tu perspectiva y abrirte a nuevas miradas sobre la realidad.",
-                    "Necesitás un cambio y un espacio donde permitirte abrir el corazón y dejarte sostener.",
+                    "Buscás un espacio donde permitirte abrir el corazón y dejarte sostener.",
                   ]
                 : [
                     "You feel you need a space for emotional regulation and reconnection.",
@@ -396,9 +402,9 @@ export default function UnionPage() {
                     "You're looking to increase your creativity and transform behaviors that are no longer functional.",
                     "You are in search of a deeper meaning in your life and greater personal purpose.",
                     "You value connection with nature, silence and simplicity as paths of transformation.",
-                    "You want to have a first encounter with mushroom medicine from a place of consciousness, commitment and respect for these substances.",
+                    "You want to have a encounter with mushroom medicine from a place of consciousness, commitment and respect for these substances.",
                     "You're seeking to broaden your perspective and open yourself to new ways of seeing reality.",
-                    "You need a change and a space where you can allow yourself to open your heart and be held.",
+                    "You look for a space where you can allow yourself to open your heart and be held.",
                   ]
               ).map((item, i) => (
                 <motion.li
@@ -425,7 +431,7 @@ export default function UnionPage() {
             className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl"
           >
             <Image
-              src="/images/within/para-quien.webp"
+              src="/images/union/new_photos/image00068 1.webp"
               alt="¿Para quién es Within?"
               fill
               className="object-cover"
@@ -470,7 +476,7 @@ export default function UnionPage() {
               {locale === "es" ? "Transformación" : "Transformation"}
             </p>
             <h2 className="text-3xl md:text-5xl font-bold font-serif text-[#E8DCC4]">
-              {locale === "es" ? "Lo que cambia en vos" : "What changes in you"}
+              {locale === "es" ? "Posibilidad de cambio" : "Possibility for change"}
             </h2>
             <p className="mt-6 text-[#E8DCC4]/60 max-w-2xl mx-auto leading-relaxed">
               {locale === "es"
@@ -635,7 +641,7 @@ export default function UnionPage() {
             className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl"
           >
             <Image
-              src="/images/within/within-incluye.webp"
+              src="/images/union/new_photos/IMG_3145_Original 1.webp"
               alt="Retiro Within"
               fill
               className="object-cover"
@@ -800,7 +806,7 @@ export default function UnionPage() {
               {locale === "es" ? "El equipo" : "The team"}
             </p>
             <h2 className="text-3xl md:text-5xl font-bold font-serif text-[#E8DCC4]">
-              {locale === "es" ? "Tu facilitadora" : "Your facilitator"}
+              {locale === "es" ? "Facilitadores" : "Facilitators"}
             </h2>
           </motion.div>
 
@@ -1061,7 +1067,8 @@ export default function UnionPage() {
                   { num: "03", title: "Firma de consentimiento informado", desc: "Firma digital que confirma la comprensión y aceptación de la información, autorizando tu participación voluntaria en el retiro." },
                   { num: "04", title: "Pago primera cuota", desc: "Tu confirmación queda efectiva con el pago de la primera cuota. A partir de ahí sos parte del grupo." },
                   { num: "05", title: "Encuentro online grupal I", desc: "Una semana antes del retiro nos encontramos online con el grupo completo para conocerse, recibir herramientas de preparación y despejar cualquier consulta." },
-                  { num: "06", title: "Encuentro online grupal II", desc: "Dos semanas después del retiro nos volvemos a encontrar online para optimizar la integración y capitalizar los aprendizajes obtenidos." },
+                  { num: "06", title: "RETIRO", desc: "Tu experiencia en Unión" },
+                  { num: "07", title: "Encuentro online grupal II", desc: "Dos semanas después del retiro nos volvemos a encontrar online para optimizar la integración y capitalizar los aprendizajes obtenidos." },
                 ]
               : [
                   { num: "01", title: "Initial form", desc: "To register, we send you a form with specific questions to get to know you better: your history, motivations and intentions." },
@@ -1069,11 +1076,12 @@ export default function UnionPage() {
                   { num: "03", title: "Informed consent signature", desc: "Digital signature confirming the understanding and acceptance of the information, authorizing your voluntary participation in the retreat." },
                   { num: "04", title: "First installment payment", desc: "Your confirmation is effective with the payment of the first installment. From that point on, you are part of the group." },
                   { num: "05", title: "Group online meeting I", desc: "One week before the retreat we meet online with the full group to get to know each other, receive preparation tools, and address any questions." },
-                  { num: "06", title: "Group online meeting II", desc: "Two weeks after the retreat we meet online again to optimize integration and capitalize on the learnings obtained." },
+                  { num: "06", title: "RETREAT", desc: "Your experience at Union" },
+                  { num: "07", title: "Group online meeting II", desc: "Two weeks after the retreat we meet online again to optimize integration and capitalize on the learnings obtained." },
                 ]
             ).map((step, i) => (
               <motion.div key={i} initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} className="relative flex gap-8 pb-12 last:pb-0">
-                {i < 5 && <div className="absolute left-6 top-14 bottom-0 w-px bg-[#868859]/20" />}
+                {i < 6 && <div className="absolute left-6 top-14 bottom-0 w-px bg-[#868859]/20" />}
                 <div className="flex-shrink-0 w-12 h-12 rounded-full bg-[#292E17] text-[#E8DCC4] flex items-center justify-center font-bold font-serif text-lg z-10">{step.num}</div>
                 <div className="pt-2 pb-4">
                   <h3 className="text-xl md:text-2xl font-bold font-serif text-[#292E17] mb-3">{step.title}</h3>

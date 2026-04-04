@@ -212,7 +212,7 @@ export default function UnionPage() {
     ? [
         { day: "Día 1", title: "Bienvenida y preparación", items: ["Recepción y acomodación", "Círculo de bienvenida y acuerdos", "Merienda", "Charla de preparación", "Cena"] },
         { day: "Día 2", title: "Preparación y Ceremonia", items: ["Meditación y yoga", "Desayuno", "Actividad psicoterapéutica", "Brunch y tiempo libre", "Ceremonia", "Cena"] },
-        { day: "Día 3", title: "Integración", items: ["Meditación y Yoga", "Desayuno", "Actividad de integración", "Almuerzo", "Tiempo libre", "Actividad de integración", "Merienda", "Actividad de integración", "Cena"] },
+        { day: "Día 3", title: "Integración", items: ["Meditación y Yoga", "Desayuno", "Actividad de integración", "Almuerzo", "Tiempo libre", "Merienda", "Actividad de integración", "Cena"] },
         { day: "Día 4", title: "Cierre y despedida", items: ["Meditación y Yoga", "Desayuno", "Actividad de cierre", "Brunch", "Despedida"] },
       ]
     : [
@@ -443,118 +443,75 @@ export default function UnionPage() {
       </section>
 
       {/* PARA QUIÉN ES */}
-      <section className="py-28 md:py-36 px-6 lg:px-12 bg-[#F4EDE0]">
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
-
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl md:text-5xl font-bold font-serif text-[#292E17] mb-10">
-              {locale === "es" ? "Este programa es para vos si..." : "This program is for you if..."}
-            </h2>
-            <ul className="space-y-5">
-              {(locale === "es"
-                ? [
-                    "Buscás profundizar en tus emociones y transformar conductas limitantes.",
-                    "Querés despertar tu creatividad, reconectando con la inspiración y el juego interior.",
-                    "Buscás despertar tu pasión y crear espacios donde tu energía vital fluya con autenticidad.",
-                    "Querés vivir un proceso consciente, respetuoso y acompañado, que te permita cultivar presencia, orden y coherencia interior.",
-                  ]
-                : [
-                    "You seek to deepen your emotions and transform limiting behaviors.",
-                    "You want to awaken your creativity, reconnecting with inspiration and inner play.",
-                    "You seek to awaken your passion and create spaces where your vital energy flows authentically.",
-                    "You want to live a conscious, respectful and supported process that allows you to cultivate presence, order and inner coherence.",
-                  ]
-              ).map((item, i) => (
-                <motion.li
-                  key={i}
-                  initial={{ opacity: 0, x: -20 }}
+            <section className="py-28 md:py-36 px-6 lg:px-12 bg-[#F4EDE0]">
+              <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+      
+                <motion.div
+                  initial={{ opacity: 0, x: -30 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
-                  transition={{ delay: i * 0.08 }}
-                  className="flex items-start gap-4 text-lg text-[#3B1B0E]/80 border-b border-[#868859]/15 pb-5 last:border-0 last:pb-0"
                 >
-                  <div className="w-6 h-6 rounded-full bg-[#7E2625] flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <Check size={12} className="text-[#E8DCC4]" />
-                  </div>
-                  {item}
-                </motion.li>
-              ))}
-            </ul>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl"
-          >
-            <Image
-              src="/images/within/eli-facilitador-1.webp"
-              alt="¿Para quién es el programa de microdosis?"
-              fill
-              className="object-cover"
-              sizes="(max-width: 1024px) 100vw, 50vw"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#292E17]/40 to-transparent" />
-          </motion.div>
-
-        </div>
-      </section>
-
-      {/* 3. ASÍ SE VIVE */}
-      <section className="py-28 md:py-36 bg-[#292E17] px-6 lg:px-12">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <p className="text-xs font-bold tracking-widest uppercase text-[#868859] mb-4">
-              {locale === "es" ? "El retiro" : "The retreat"}
-            </p>
-            <h2 className="text-3xl md:text-5xl font-bold font-serif text-[#E8DCC4]">
-              {locale === "es" ? "Así se vive" : "What it looks like"}
-            </h2>
-          </motion.div>
-
-          <div className="grid md:grid-cols-2 gap-6">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="relative aspect-[4/3] rounded-2xl overflow-hidden"
-            >
-              <Image
-                src="/images/red-viva/foto-aspiracional-1.webp"
-                alt="Red Viva experiencia"
-                fill
-                className="object-cover"
-                sizes="(max-width: 768px) 100vw, 50vw"
-              />
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-              className="relative aspect-[4/3] rounded-2xl overflow-hidden md:mt-12"
-            >
-              <Image
-                src="/images/red-viva/foto-aspiracional-2.webp"
-                alt="Red Viva experiencia"
-                fill
-                className="object-cover"
-                sizes="(max-width: 768px) 100vw, 50vw"
-              />
-            </motion.div>
-          </div>
-        </div>
-      </section>
+                  <h2 className="text-3xl md:text-5xl font-bold font-serif text-[#292E17] mb-10">
+                    {locale === "es" ? "Este retiro es para vos si..." : "This retreat is for you if..."}
+                  </h2>
+                  <ul className="space-y-5">
+                    {(locale === "es"
+                      ? [
+                          "Sentís que necesitás un espacio de regulación emocional y reconexión.",
+                          "Querés cultivar un estado de mayor presencia, claridad y conexión con tu vida.",
+                          "Buscás aumentar tu creatividad y transformar conductas que dejaron de ser funcionales.",
+                          "Estás en la búsqueda de un sentido más profundo en tu vida y de mayor propósito personal.",
+                          "Valorás la conexión con la naturaleza, el silencio y la simplicidad como caminos de transformación.",
+                          "Querés tener un acercamiento con la medicina de los hongos desde la consciencia, el compromiso y el respeto por estas sustancias.",
+                          "Buscás ampliar tu perspectiva y abrirte a nuevas miradas sobre la realidad.",
+                          "Buscás un espacio donde permitirte abrir el corazón y dejarte sostener.",
+                        ]
+                      : [
+                          "You feel you need a space for emotional regulation and reconnection.",
+                          "You want to cultivate a state of greater presence, clarity and connection with your life.",
+                          "You're looking to increase your creativity and transform behaviors that are no longer functional.",
+                          "You are in search of a deeper meaning in your life and greater personal purpose.",
+                          "You value connection with nature, silence and simplicity as paths of transformation.",
+                          "You want to have a encounter with mushroom medicine from a place of consciousness, commitment and respect for these substances.",
+                          "You're seeking to broaden your perspective and open yourself to new ways of seeing reality.",
+                          "You look for a space where you can allow yourself to open your heart and be held.",
+                        ]
+                    ).map((item, i) => (
+                      <motion.li
+                        key={i}
+                        initial={{ opacity: 0, x: -20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: i * 0.08 }}
+                        className="flex items-start gap-4 text-lg text-[#3B1B0E]/80 border-b border-[#868859]/15 pb-5 last:border-0 last:pb-0"
+                      >
+                        <div className="w-6 h-6 rounded-full bg-[#7E2625] flex items-center justify-center flex-shrink-0 mt-0.5">
+                          <Check size={12} className="text-[#E8DCC4]" />
+                        </div>
+                        {item}
+                      </motion.li>
+                    ))}
+                  </ul>
+                </motion.div>
+      
+                <motion.div
+                  initial={{ opacity: 0, x: 30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl"
+                >
+                  <Image
+                    src="/images/union/new_photos/FEED ABRAZO (19) 1.webp"
+                    alt="¿Para quién es Within?"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#292E17]/40 to-transparent" />
+                </motion.div>
+      
+              </div>
+            </section>
 
       {/* QUÉ VAS A LOGRAR */}
       <section className="py-28 md:py-36 px-6 lg:px-12 bg-[#292E17]">
@@ -569,7 +526,7 @@ export default function UnionPage() {
               {locale === "es" ? "Transformación" : "Transformation"}
             </p>
             <h2 className="text-3xl md:text-5xl font-bold font-serif text-[#E8DCC4]">
-              {locale === "es" ? "Lo que cambia en vos" : "What changes in you"}
+              {locale === "es" ? "Posibilidad de cambio" : "Possibility of change"}
             </h2>
             <p className="mt-6 text-[#E8DCC4]/60 max-w-2xl mx-auto leading-relaxed">
               {locale === "es"
@@ -942,8 +899,10 @@ export default function UnionPage() {
             <div className="w-10 h-0.5 bg-[#868859]/40 mx-auto" />
             <p className="text-lg text-[#E8DCC4]/60 font-serif italic leading-relaxed">
               {locale === "es"
-                ? "Cada retiro lo facilitamos junto a profesionales que admiramos y en quienes confiamos. Así, cada retiro es único, diverso y enriquecido por la colaboración y los saberes compartidos."
-                : "We facilitate each retreat alongside professionals we admire and trust. Each retreat is unique, diverse and enriched by collaboration and shared knowledge."}
+                ? `Sostenemos este espacio con presencia, experiencia y profundo respeto por cada proceso individual.
+                    Acompañamos desde la escucha, el cuidado y la responsabilidad, creando un entorno seguro donde cada persona puede explorar su interior a su propio ritmo, en conexión con la naturaleza, el silencio y la sabiduría colectiva.`
+                : `We hold this space with presence, experience, and a profound respect for each individual process.
+                    We offer support through active listening, care, and responsibility, creating a safe environment where everyone can explore their inner self at their own pace, in connection with nature, silence, and collective wisdom.`}
             </p>
           </motion.div>
 
@@ -963,7 +922,7 @@ export default function UnionPage() {
               {locale === "es" ? "Inversión" : "Investment"}
             </p>
             <h2 className="text-3xl md:text-5xl font-bold font-serif text-[#292E17]">
-              {locale === "es" ? "Precio" : "Price"}
+              {locale === "es" ? "Intercambio" : "Exchange"}
             </h2>
             <p className="mt-4 text-lg text-[#7E2625] font-medium">
               {locale === "es"
@@ -1140,7 +1099,8 @@ export default function UnionPage() {
                   { num: "03", title: "Firma de consentimiento informado", desc: "Firma digital que confirma la comprensión y aceptación de la información, autorizando tu participación voluntaria en el retiro." },
                   { num: "04", title: "Pago primera cuota", desc: "Tu confirmación queda efectiva con el pago de la primera cuota. A partir de ahí sos parte del grupo." },
                   { num: "05", title: "Encuentro online grupal I", desc: "Una semana antes del retiro nos encontramos online con el grupo completo para conocerse, recibir herramientas de preparación y despejar cualquier consulta." },
-                  { num: "06", title: "Encuentro online grupal II", desc: "Dos semanas después del retiro nos volvemos a encontrar online para optimizar la integración y capitalizar los aprendizajes obtenidos." },
+                  { num: "06", title: "RETIRO", desc: "Tu experiencia en Red Viva" },
+                  { num: "07", title: "Encuentro online grupal II", desc: "Dos semanas después del retiro nos volvemos a encontrar online para optimizar la integración y capitalizar los aprendizajes obtenidos." },
                 ]
               : [
                   { num: "01", title: "Initial form", desc: "To register, we send you a form with specific questions to get to know you better: your history, motivations and intentions." },
@@ -1148,11 +1108,12 @@ export default function UnionPage() {
                   { num: "03", title: "Informed consent signature", desc: "Digital signature confirming the understanding and acceptance of the information, authorizing your voluntary participation in the retreat." },
                   { num: "04", title: "First installment payment", desc: "Your confirmation is effective with the payment of the first installment. From that point on, you are part of the group." },
                   { num: "05", title: "Group online meeting I", desc: "One week before the retreat we meet online with the full group to get to know each other, receive preparation tools, and address any questions." },
-                  { num: "06", title: "Group online meeting II", desc: "Two weeks after the retreat we meet online again to optimize integration and capitalize on the learnings obtained." },
+                  { num: "06", title: "RETREAT", desc: "Your experience at Red Viva" },
+                  { num: "07", title: "Group online meeting II", desc: "Two weeks after the retreat we meet online again to optimize integration and capitalize on the learnings obtained." },
                 ]
             ).map((step, i) => (
               <motion.div key={i} initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} className="relative flex gap-8 pb-12 last:pb-0">
-                {i < 5 && <div className="absolute left-6 top-14 bottom-0 w-px bg-[#868859]/20" />}
+                {i < 6 && <div className="absolute left-6 top-14 bottom-0 w-px bg-[#868859]/20" />}
                 <div className="flex-shrink-0 w-12 h-12 rounded-full bg-[#292E17] text-[#E8DCC4] flex items-center justify-center font-bold font-serif text-lg z-10">{step.num}</div>
                 <div className="pt-2 pb-4">
                   <h3 className="text-xl md:text-2xl font-bold font-serif text-[#292E17] mb-3">{step.title}</h3>
