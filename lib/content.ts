@@ -970,9 +970,7 @@ export const footer = {
     legal: {
       title: "Legal",
       items: [
-        { label: "Política de privacidad", href: "/privacidad" },
-        { label: "Términos de servicio", href: "/terminos" },
-        { label: "Aviso legal", href: "/aviso-legal" },
+        { label: "Política de Seguridad", href: "/politicas-seguridad" },
       ],
     },
     contact: {
@@ -996,9 +994,7 @@ export const footer = {
     legal: {
       title: "Legal",
       items: [
-        { label: "Privacy Policy", href: "/privacidad" },
-        { label: "Terms of Service", href: "/terminos" },
-        { label: "Legal Notice", href: "/aviso-legal" },
+        { label: "Safety Policy", href: "/politicas-seguridad" },
       ],
     },
     contact: {
