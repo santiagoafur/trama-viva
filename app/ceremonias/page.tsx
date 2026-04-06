@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 import { useLanguage } from "@/lib/language-context";
 import {
   Heart,
@@ -14,7 +15,8 @@ import {
   AlertTriangle,
   Quote,
   ChevronLeft,
-  ChevronRight
+  ChevronRight,
+  ArrowRight,
 } from "lucide-react";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
@@ -174,30 +176,48 @@ export default function CeremoniasPage() {
       <Navbar />
 
       {/* 1. HERO */}
-      <section className="relative h-[80vh] w-full flex items-center justify-center overflow-hidden">
+      <section className="relative h-screen w-full flex items-end overflow-hidden">
         <Image
-          src="/images/ceremonias/ceremonias-hero.webp" 
+          src="/images/ceremonias/ceremonias-hero.webp"
           alt="Ceremonias Trama Viva"
           fill
-          className="object-cover"
+          className="object-cover object-center"
           priority
         />
-        <div className="absolute inset-0 bg-[#3B1B0E]/50" /> 
-        
-        <div className="relative z-10 text-center text-[#E8DCC4] px-4">
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold font-serif mb-4 drop-shadow-lg">
-            {locale === "es"
-              ? "Ceremonia de Macrodosis de Medicina Sagrada"
-              : "Macrodose Sacred Medicine Ceremony"}
-          </h1>
-          <p className="text-lg md:text-2xl font-serif italic text-[#E8DCC4]/80 mb-4">
-            {locale === "es"
-              ? "En el contexto de terapias asistidas"
-              : "In the context of assisted therapies"}
-          </p>
-          <p className="text-sm md:text-base font-medium tracking-widest uppercase text-[#E8DCC4]/60">
-            Santa Teresa · Costa Rica
-          </p>
+        <div className="absolute inset-0 bg-gradient-to-t from-[#292E17]/90 via-[#292E17]/30 to-transparent" />
+
+        <div className="relative z-10 w-full px-6 lg:px-12 pb-16 md:pb-24">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <span className="inline-flex items-center bg-[#E8DCC4]/15 backdrop-blur-sm border border-[#E8DCC4]/30 text-[#E8DCC4] text-xs font-bold tracking-widest uppercase px-4 py-2 rounded-full mb-6">
+                Santa Teresa · Costa Rica
+              </span>
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold font-serif text-[#E8DCC4] mb-6 leading-tight">
+                {locale === "es"
+                  ? "Ceremonia de Macrodosis de Psilocibina. La verdadera medicina es recordar quién sos."
+                  : "Macrodose Psilocybin Ceremony. The true medicine is remembering who you are."}
+              </h1>
+              <div className="flex flex-col sm:flex-row gap-4 items-start">
+                <Link
+                  href="#ceremonia-info"
+                  className="inline-flex items-center gap-3 px-8 py-4 bg-[#7E2625] text-[#E8DCC4] font-bold rounded-full hover:bg-[#7E2625]/90 transition-all hover:-translate-y-1 shadow-lg"
+                >
+                  {locale === "es" ? "Quiero saber más" : "I want to know more"}
+                  <ArrowRight size={18} />
+                </Link>
+                <Link
+                  href="#facilitadores"
+                  className="inline-flex items-center gap-3 px-8 py-4 border border-[#E8DCC4]/40 text-[#E8DCC4] font-bold rounded-full hover:bg-[#E8DCC4]/10 transition-all"
+                >
+                  {locale === "es" ? "Conocer el equipo" : "Meet the team"}
+                </Link>
+              </div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
@@ -250,22 +270,30 @@ export default function CeremoniasPage() {
       </section>
 
       {/* 3. ¿PARA QUIÉN ES? Y PROPÓSITO */}
-      <section className="py-16 px-4 max-w-7xl mx-auto">
+      <section id="ceremonia-info" className="py-16 px-4 max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-24">
           <div className="relative aspect-square md:aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl">
-            <Image src="/images/ceremonias/hero-ceremonia-2.jpg" alt="Para quien es la ceremonia" fill className="object-cover" />
+            <Image src="/images/ceremonias/para-quien-ceremonias.webp" alt="Para quien es la ceremonia" fill className="object-cover" />
           </div>
           <div className="space-y-6 lg:pl-8">
-            <h2 className="text-4xl md:text-5xl font-bold font-serif text-[#292E17]">¿Para quién es esta experiencia?</h2>
+            <h2 className="text-4xl md:text-5xl font-bold font-serif text-[#292E17]">
+              {locale === "es" ? "¿Para quién es esta experiencia?" : "Who is this experience for?"}
+            </h2>
             <p className="text-lg opacity-90 leading-relaxed">
-              Esta experiencia está dirigida a personas que sienten la voluntad a profundizar en su autoconocimiento, sanar, despertar su sensibilidad y reconectar con su parte esencial.
+              {locale === "es"
+                ? "Esta experiencia está dirigida a personas que sienten la voluntad a profundizar en su autoconocimiento, sanar, despertar su sensibilidad y reconectar con su parte esencial."
+                : "This experience is aimed at people who feel the willingness to deepen their self-knowledge, heal, awaken their sensitivity and reconnect with their essential self."}
             </p>
             <p className="text-lg opacity-90 leading-relaxed">
-              También para quienes buscan abrirse a una nueva comprensión de la vida y de sus conductas repetitivas, expandir su conciencia y cultivar una relación más auténtica consigo mismos, con los demás y con la naturaleza.
+              {locale === "es"
+                ? "También para quienes buscan abrirse a una nueva comprensión de la vida y de sus conductas repetitivas, expandir su conciencia y cultivar una relación más auténtica consigo mismos, con los demás y con la naturaleza."
+                : "Also for those seeking to open themselves to a new understanding of life and their repetitive behaviors, expand their consciousness and cultivate a more authentic relationship with themselves, others and nature."}
             </p>
             <div className="bg-[#868859]/10 border-l-4 border-[#7E2625] p-6 rounded-r-2xl mt-6">
               <p className="text-lg font-medium text-[#7E2625]">
-                No se trata de una experiencia recreativa, sino de un espacio de introspección, conexión y transformación personal, guiado con respeto, cuidado y amor.
+                {locale === "es"
+                  ? "No se trata de una experiencia recreativa, sino de un espacio de introspección, conexión y transformación personal, guiado con respeto, cuidado y amor bajo el contexto de terapias asistidas."
+                  : "This is not a recreational experience, but a space of introspection, connection and personal transformation, guided with respect, care and love within the context of assisted therapies."}
               </p>
             </div>
           </div>
@@ -275,7 +303,9 @@ export default function CeremoniasPage() {
         <div className="max-w-4xl mx-auto bg-[#292E17] text-[#E8DCC4] p-10 md:p-16 rounded-3xl text-center shadow-xl">
           <Heart className="mx-auto mb-6 text-[#7E2625]" size={40} />
           <h3 className="text-2xl md:text-3xl font-serif italic leading-relaxed">
-            "Nuestro propósito es generar un entorno seguro y sostenido, donde cada participante pueda entregarse al proceso con confianza. Creemos que sentirse cuidado y acompañado es lo que permite que la transformación ocurra con profundidad y amor."
+            {locale === "es"
+              ? "\"Nuestro propósito es generar un entorno seguro y sostenido, donde cada participante pueda entregarse al proceso con confianza. Creemos que sentirse cuidado y acompañado es lo que permite que la transformación ocurra con profundidad y amor.\""
+              : "\"Our purpose is to create a safe and held environment where each participant can surrender to the process with confidence. We believe that feeling cared for and accompanied is what allows transformation to occur with depth and love.\""}
           </h3>
         </div>
       </section>
@@ -364,43 +394,47 @@ export default function CeremoniasPage() {
         </div>
       </section>
 
-      {/* 5. PREPARACIÓN PREVIA (TIMELINE TRACKING) */}
-      <section className="py-24 px-4 max-w-5xl mx-auto">
-        <div className="text-center mb-16 space-y-4">
-          <h2 className="text-4xl md:text-5xl font-bold font-serif text-[#3B1B0E]">Preparación Previa</h2>
-          <p className="text-[#7E2625] font-medium tracking-wide">( De 1 semana a 3 días antes )</p>
-          <p className="max-w-2xl mx-auto text-lg opacity-80">
-            La preparación es una parte esencial del proceso. Nos permite llegar a la experiencia con claridad, apertura y mayor presencia.
-          </p>
-        </div>
+      {/* Quote con foto — variación side by side */}
+      <section className="relative w-full overflow-hidden bg-[#292E17]">
+        <div className="grid lg:grid-cols-2 min-h-[500px]">
 
-        <div className="relative border-l-2 border-[#868859]/30 ml-4 md:ml-12 space-y-12 pb-8">
-          {[
-            { title: "Crear Espacio", text: "Si te surgen dudas/miedos/consultas dales lugar. Siéntete libre de compartirlo. Crear espacio a lo que surge es una forma de entrar en la experiencia." },
-            { title: "Registro", text: "Permite observar con curiosidad sensaciones, pensamientos y situaciones de la cotidianidad." },
-            { title: "Intención", text: "Tomate un tiempo para reflexionar sobre lo que deseas explorar. Podés escribirlo o simplemente sentirlo en tu corazón." },
-            { title: "Alimentación", text: "Opta por comidas ligeras y nutritivas. Evitá carnes rojas, alcohol, alimentos procesados y exceso de cafeína. Mantén hidratación." },
-            { title: "Cuerpo", text: "Incorpora prácticas suaves como yoga, caminatas conscientes o estiramientos. Descansa." },
-            { title: "Mente", text: "Reducí el consumo de redes sociales o noticias. Permite momentos de silencio, escritura o meditación." },
-            { title: "Medicamentos", text: "Si estás bajo tratamiento médico o psicológico, es importante conversar previamente con el equipo facilitador." },
-          ].map((item, index) => (
-            <div key={index} className="relative pl-8 md:pl-12">
-              <div className="absolute -left-[11px] top-1 w-5 h-5 rounded-full bg-[#E8DCC4] border-4 border-[#868859]" />
-              <h3 className="text-2xl font-bold text-[#292E17] mb-2">{item.title}</h3>
-              <p className="text-[#3B1B0E]/80 text-lg leading-relaxed">{item.text}</p>
-            </div>
-          ))}
-        </div>
+          {/* Imagen */}
+          <div className="relative w-full min-h-[350px] lg:min-h-full">
+            <Image
+              src="/images/ceremonias/quote-2.webp"
+              alt="Los hongos te tejen de nuevo a la realidad"
+              fill
+              className="object-cover object-center"
+            />
+            <div className="absolute inset-0 bg-[#292E17]/30" />
+          </div>
 
-        <div className="mt-16 bg-[#292E17] text-[#E8DCC4] p-8 rounded-2xl text-center shadow-lg max-w-3xl mx-auto">
-          <p className="text-xl italic font-serif">
-            "La preparación previa no busca perfección, sino presencia. Llegar a la ceremonia con una mente más tranquila y un cuerpo más liviano facilita que la medicina actúe de forma más clara y amorosa."
-          </p>
+          {/* Frase */}
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="flex flex-col justify-center px-10 py-16 lg:px-16"
+          >
+            <Quote size={40} className="text-[#868859]/50 mb-8" />
+            <p className="text-2xl md:text-3xl font-serif italic text-[#E8DCC4] leading-relaxed mb-6">
+              {locale === "es"
+                ? "Los hongos te tejen de nuevo a la realidad."
+                : "Mushrooms weave you back into reality."}
+            </p>
+            <p className="text-lg font-serif text-[#E8DCC4]/70 leading-relaxed">
+              {locale === "es"
+                ? "Como una red silenciosa, empieza a unir los hilos que alguna vez se cortaron: los del cuerpo, la mente, el sentir y el entorno."
+                : "Like a silent network, it begins to reconnect the threads that were once severed: those of the body, the mind, feeling and the world around you."}
+            </p>
+            <div className="mt-10 w-12 h-0.5 bg-[#868859]/50" />
+          </motion.div>
+
         </div>
       </section>
 
       {/* 6. FACILITADORES RECICLADOS */}
-      <section className="py-20 bg-[#F4EDE0] px-4">
+      <section id="facilitadores" className="py-20 bg-[#F4EDE0] px-4">
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-3xl md:text-5xl font-bold font-serif mb-12 text-[#292E17]">Facilitadores</h2>
           {/* Centramos las cards limitando el ancho máximo ya que son solo dos */}
@@ -496,6 +530,41 @@ export default function CeremoniasPage() {
         </p>
       </section>
 
+      {/* 5. PREPARACIÓN PREVIA (TIMELINE TRACKING) */}
+      <section className="py-24 px-4 max-w-5xl mx-auto">
+        <div className="text-center mb-16 space-y-4">
+          <h2 className="text-4xl md:text-5xl font-bold font-serif text-[#3B1B0E]">Preparación Previa</h2>
+          <p className="text-[#7E2625] font-medium tracking-wide">( De 1 semana a 3 días antes )</p>
+          <p className="max-w-2xl mx-auto text-lg opacity-80">
+            La preparación es una parte esencial del proceso. Nos permite llegar a la experiencia con claridad, apertura y mayor presencia.
+          </p>
+        </div>
+
+        <div className="relative border-l-2 border-[#868859]/30 ml-4 md:ml-12 space-y-12 pb-8">
+          {[
+            { title: "Crear Espacio", text: "Si te surgen dudas/miedos/consultas dales lugar. Siéntete libre de compartirlo. Crear espacio a lo que surge es una forma de entrar en la experiencia." },
+            { title: "Registro", text: "Permite observar con curiosidad sensaciones, pensamientos y situaciones de la cotidianidad." },
+            { title: "Intención", text: "Tomate un tiempo para reflexionar sobre lo que deseas explorar. Podés escribirlo o simplemente sentirlo en tu corazón." },
+            { title: "Alimentación", text: "Opta por comidas ligeras y nutritivas. Evitá carnes rojas, alcohol, alimentos procesados y exceso de cafeína. Mantén hidratación." },
+            { title: "Cuerpo", text: "Incorpora prácticas suaves como yoga, caminatas conscientes o estiramientos. Descansa." },
+            { title: "Mente", text: "Reducí el consumo de redes sociales o noticias. Permite momentos de silencio, escritura o meditación." },
+            { title: "Medicamentos", text: "Si estás bajo tratamiento médico o psicológico, es importante conversar previamente con el equipo facilitador." },
+          ].map((item, index) => (
+            <div key={index} className="relative pl-8 md:pl-12">
+              <div className="absolute -left-[11px] top-1 w-5 h-5 rounded-full bg-[#E8DCC4] border-4 border-[#868859]" />
+              <h3 className="text-2xl font-bold text-[#292E17] mb-2">{item.title}</h3>
+              <p className="text-[#3B1B0E]/80 text-lg leading-relaxed">{item.text}</p>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-16 bg-[#292E17] text-[#E8DCC4] p-8 rounded-2xl text-center shadow-lg max-w-3xl mx-auto">
+          <p className="text-xl italic font-serif">
+            "La preparación previa no busca perfección, sino presencia. Llegar a la ceremonia con una mente más tranquila y un cuerpo más liviano facilita que la medicina actúe de forma más clara y amorosa."
+          </p>
+        </div>
+      </section>
+
       {/* Testimonios */}
       <section className="py-24 bg-[#E8DCC4] text-[#3B1B0E] px-4 border-t border-[#868859]/20">
         <div className="max-w-4xl mx-auto text-center">
@@ -584,6 +653,52 @@ export default function CeremoniasPage() {
           </div>
         </div>
       </section>
+
+      {/* CTA FINAL */}
+      <section className="relative py-32 px-6 overflow-hidden bg-[#292E17]">
+        <div className="absolute inset-0">
+          <Image
+            src="/images/ceremonias/ceremonias-pre-footer.webp"
+            alt="Ceremonias Trama Viva"
+            fill
+            className="object-cover opacity-20"
+          />
+        </div>
+        <div className="relative z-10 max-w-6xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="space-y-8"
+          >
+            <p className="text-xs font-bold tracking-widest uppercase text-[#868859]">
+              {locale === "es" ? "Ceremonias · Trama Viva" : "Ceremonies · Trama Viva"}
+            </p>
+            <h2 className="text-4xl md:text-6xl font-bold font-serif text-[#E8DCC4] leading-tight">
+              {locale === "es"
+                ? "Cada experiencia es única y tiene el potencial de devolvernos a lo único que es sostenible, real y eterno: EL AMOR."
+                : "Each experience is unique and has the potential to return us to the only thing that is sustainable, real and eternal: LOVE."}
+            </h2>
+            <p className="text-lg text-[#E8DCC4]/70 max-w-xl mx-auto leading-relaxed">
+              {locale === "es"
+                ? "Si lo sentís, es un placer para nosotros acompañarte en este viaje de regreso a tu naturaleza."
+                : "If you feel it, it is our pleasure to accompany you on this journey back to your nature."}
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="https://wa.me/50661912861"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-[#7E2625] text-[#E8DCC4] font-bold text-lg rounded-full hover:bg-[#7E2625]/90 transition-all hover:-translate-y-1 shadow-xl"
+              >
+                {locale === "es" ? "Quiero sumarme" : "I want to join"}
+                <ArrowRight size={20} />
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       <Footer />
     </main>
   );
