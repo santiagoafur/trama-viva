@@ -83,7 +83,7 @@ function CountdownTimer({ locale }: { locale: string }) {
 
 function LugarSlider() {
   const [current, setCurrent] = useState(0);
-  const total = 5;
+  const total = 6;
 
   return (
     <div className="relative">
@@ -290,8 +290,8 @@ export default function UnionPage() {
         { q: "¿Qué debo llevar?", a: "Ropa cómoda, elementos de higiene personal, cuaderno de journaling personal y un corazón y mente abiertos. Una vez confirmada tu inscripción te enviamos una guía detallada de preparación." },
         { q: "¿Puedo ir solo/a?", a: "Sí, la mayoría de los participantes llegan solos. El grupo se convierte en parte fundamental de la experiencia." },
         { q: "¿Existen contraindicaciones médicas para realizar la ceremonia de Psilocibina?", a: `Sí, es importante evaluarlas con responsabilidad. Por eso enviamos un formulario previo para descartar cualquier posible riesgo.
-              Algunas contraindicaciones incluyen ciertos estados de salud mental, así como el uso de medicación antidepresiva o antipsicótica. No recomendamos suspender ningún tratamiento sin supervisión médica.
-              También es importante tener especial cuidado en casos de problemas cardíacos, condiciones neurológicas, embarazo o lactancia. Por supuesto que todo esto será evaluado en la entrevista previa.`}
+        Algunas contraindicaciones incluyen ciertos estados de salud mental, así como el uso de medicación antidepresiva o antipsicótica. No recomendamos suspender ningún tratamiento sin supervisión médica.
+        También es importante tener especial cuidado en casos de problemas cardíacos, condiciones neurológicas, embarazo o lactancia. Por supuesto que todo esto será evaluado en la entrevista previa.`},
       ]
     : [
         { q: "Do I need prior experience with psilocybin?", a: "No. The retreat is designed for both people who have never had contact with the medicine and those with experience. We adapt to each individual process." },
@@ -301,8 +301,8 @@ export default function UnionPage() {
         { q: "What should I bring?", a: "Comfortable clothing, personal hygiene items, a personal journaling notebook and an open heart and mind. Once your registration is confirmed we send you a detailed preparation guide." },
         { q: "Can I go alone?", a: "Yes, most participants arrive alone. The group becomes a fundamental part of the experience." },
         { q: "Are there medical contraindications for the Psilocybin ceremony?", a: `Yes, it is important to evaluate them responsibly. That is why we send a prior form to rule out any possible risk. 
-          Some contraindications include certain mental health conditions, as well as the use of antidepressant or antipsychotic medication. We do not recommend discontinuing any treatment without medical supervision.
-          It is also important to take special care in cases of heart issues, neurological conditions, pregnancy, or breastfeeding. Naturally, all of these factors will be evaluated during the initial interview.` }
+        Some contraindications include certain mental health conditions, as well as the use of antidepressant or antipsychotic medication. We do not recommend discontinuing any treatment without medical supervision.
+        It is also important to take special care in cases of heart issues, neurological conditions, pregnancy, or breastfeeding. Naturally, all of these factors will be evaluated during the initial interview.` },
       ];
 
   const galleryImages = [
@@ -404,7 +404,7 @@ export default function UnionPage() {
                     "You value connection with nature, silence and simplicity as paths of transformation.",
                     "You want to have a encounter with mushroom medicine from a place of consciousness, commitment and respect for these substances.",
                     "You're seeking to broaden your perspective and open yourself to new ways of seeing reality.",
-                    "You look for a space where you can allow yourself to open your heart and be held.",
+                    "You're looking for a space where you can allow yourself to open your heart and be held.",
                   ]
               ).map((item, i) => (
                 <motion.li
@@ -887,7 +887,7 @@ export default function UnionPage() {
               {locale === "es" ? "Inversión" : "Investment"}
             </p>
             <h2 className="text-3xl md:text-5xl font-bold font-serif text-[#292E17]">
-              {locale === "es" ? "Precio" : "Price"}
+              {locale === "es" ? "Intercambio" : "Exchange"}
             </h2>
             <p className="mt-4 text-lg text-[#7E2625] font-medium">
               {locale === "es"

@@ -279,6 +279,7 @@ export default function UnionPage() {
         { q: "¿Qué pasa después del retiro?", a: "La integración es parte fundamental del proceso. Contás con un encuentro online post-retiro y acompañamiento para integrar la experiencia a tu vida cotidiana." },
         { q: "¿Qué debo llevar?", a: "Ropa cómoda, elementos de higiene personal, cuaderno de journaling personal y un corazón y mente abiertos. Una vez confirmada tu inscripción te enviamos una guía detallada de preparación." },
         { q: "¿Puedo ir solo/a?", a: "Sí, la mayoría de los participantes llegan solos. El grupo se convierte en parte fundamental de la experiencia." },
+        { q: "¿Existen contraindicaciones médicas para realizar la ceremonia de Psilocibina?", a: "Sí, es importante evaluarlas con responsabilidad. Por eso enviamos un formulario previo para descartar cualquier posible riesgo. Algunas contraindicaciones incluyen ciertos estados de salud mental, así como el uso de medicación antidepresiva o antipsicótica. No recomendamos suspender ningún tratamiento sin supervisión médica. También es importante tener especial cuidado en casos de problemas cardíacos, condiciones neurológicas, embarazo o lactancia. Todo esto será evaluado en la entrevista previa." },
       ]
     : [
         { q: "Do I need prior experience with psilocybin?", a: "No. The retreat is designed for both people who have never had contact with the medicine and those with experience. We adapt to each individual process." },
@@ -287,6 +288,7 @@ export default function UnionPage() {
         { q: "What happens after the retreat?", a: "Integration is a fundamental part of the process. You have a post-retreat online meeting and support to integrate the experience into your daily life." },
         { q: "What should I bring?", a: "Comfortable clothing, personal hygiene items, a personal journaling notebook and an open heart and mind. Once your registration is confirmed we send you a detailed preparation guide." },
         { q: "Can I go alone?", a: "Yes, most participants arrive alone. The group becomes a fundamental part of the experience." },
+        { q: "Are there medical contraindications for the Psilocybin ceremony?", a: "Yes, it is important to evaluate them responsibly. That is why we send a prior form to rule out any possible risk. Some contraindications include certain mental health conditions, as well as the use of antidepressant or antipsychotic medication. We do not recommend suspending any treatment without medical supervision. It is also important to take special care in cases of heart problems, neurological conditions, pregnancy or breastfeeding. All of this will be evaluated in the prior interview." },
       ];
 
   const galleryImages = [
@@ -474,7 +476,7 @@ export default function UnionPage() {
                           "You value connection with nature, silence and simplicity as paths of transformation.",
                           "You want to have a encounter with mushroom medicine from a place of consciousness, commitment and respect for these substances.",
                           "You're seeking to broaden your perspective and open yourself to new ways of seeing reality.",
-                          "You look for a space where you can allow yourself to open your heart and be held.",
+                          "You're looking for a space where you can allow yourself to open your heart and be held.",
                         ]
                     ).map((item, i) => (
                       <motion.li
@@ -637,8 +639,8 @@ export default function UnionPage() {
             className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl"
           >
             <Image
-              src="/images/within/within-incluye.webp"
-              alt="Retiro Within"
+              src="/images/red-viva/red-viva-que-incluye.webp"
+              alt="Retiro Red Viva"
               fill
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 50vw"

@@ -198,6 +198,7 @@ export default function WithinPage() {
         { q: "¿Qué pasa después del retiro?", a: "La integración es parte fundamental del proceso. Contás con un encuentro online post-retiro y acompañamiento para integrar la experiencia a tu vida cotidiana." },
         { q: "¿Qué debo llevar?", a: "Ropa cómoda, elementos de higiene personal, cuaderno de journaling personal y un corazón y mente abiertos. Una vez confirmada tu inscripción te enviamos una guía detallada de preparación." },
         { q: "¿Puedo ir solo/a?", a: "Sí, la mayoría de los participantes llegan solos. El grupo se convierte en parte fundamental de la experiencia." },
+        { q: "¿Existen contraindicaciones médicas para realizar la ceremonia de Psilocibina?", a: "Sí, es importante evaluarlas con responsabilidad. Por eso enviamos un formulario previo para descartar cualquier posible riesgo. Algunas contraindicaciones incluyen ciertos estados de salud mental, así como el uso de medicación antidepresiva o antipsicótica. No recomendamos suspender ningún tratamiento sin supervisión médica. También es importante tener especial cuidado en casos de problemas cardíacos, condiciones neurológicas, embarazo o lactancia. Todo esto será evaluado en la entrevista previa." },
       ]
     : [
         { q: "Do I need prior experience with psilocybin?", a: "No. The retreat is designed for both people who have never had contact with the medicine and those with experience. We adapt to each individual process." },
@@ -206,6 +207,7 @@ export default function WithinPage() {
         { q: "What happens after the retreat?", a: "Integration is a fundamental part of the process. You have a post-retreat online meeting and support to integrate the experience into your daily life." },
         { q: "What should I bring?", a: "Comfortable clothing, personal hygiene items, a personal journaling notebook and an open heart and mind. Once your registration is confirmed we send you a detailed preparation guide." },
         { q: "Can I go alone?", a: "Yes, most participants arrive alone. The group becomes a fundamental part of the experience." },
+        { q: "Are there medical contraindications for the Psilocybin ceremony?", a: "Yes, it is important to evaluate them responsibly. That is why we send a prior form to rule out any possible risk. Some contraindications include certain mental health conditions, as well as the use of antidepressant or antipsychotic medication. We do not recommend suspending any treatment without medical supervision. It is also important to take special care in cases of heart problems, neurological conditions, pregnancy or breastfeeding. All of this will be evaluated in the prior interview." },
       ];
 
   const galleryImages = [
@@ -303,9 +305,9 @@ export default function WithinPage() {
                     "Buscás aumentar tu creatividad y transformar conductas que dejaron de ser funcionales.",
                     "Estás en la búsqueda de un sentido más profundo en tu vida y de mayor propósito personal.",
                     "Valorás la conexión con la naturaleza, el silencio y la simplicidad como caminos de transformación.",
-                    "Querés tener un primer acercamiento con la medicina de los hongos desde la consciencia, el compromiso y el respeto por estas sustancias.",
+                    "Querés tener un acercamiento con la medicina de los hongos desde la consciencia, el compromiso y el respeto por estas sustancias.",
                     "Buscás ampliar tu perspectiva y abrirte a nuevas miradas sobre la realidad.",
-                    "Necesitás un cambio y un espacio donde permitirte abrir el corazón y dejarte sostener.",
+                    "Buscás un espacio donde permitirte abrir el corazón y dejarte sostener.",
                   ]
                 : [
                     "You feel you need a space for emotional regulation and reconnection.",
@@ -313,9 +315,9 @@ export default function WithinPage() {
                     "You're looking to increase your creativity and transform behaviors that are no longer functional.",
                     "You are in search of a deeper meaning in your life and greater personal purpose.",
                     "You value connection with nature, silence and simplicity as paths of transformation.",
-                    "You want to have a first encounter with mushroom medicine from a place of consciousness, commitment and respect for these substances.",
+                    "You want to have an encounter with mushroom medicine from a place of consciousness, commitment and respect for these substances.",
                     "You're seeking to broaden your perspective and open yourself to new ways of seeing reality.",
-                    "You need a change and a space where you can allow yourself to open your heart and be held.",
+                    "You're looking for a space where you can allow yourself to open your heart and be held.",
                   ]
               ).map((item, i) => (
                 <motion.li
@@ -415,7 +417,7 @@ export default function WithinPage() {
               {locale === "es" ? "Transformación" : "Transformation"}
             </p>
             <h2 className="text-3xl md:text-5xl font-bold font-serif text-[#E8DCC4]">
-              {locale === "es" ? "Lo que cambia en vos" : "What changes in you"}
+              {locale === "es" ? "Posibilidad de cambio" : "Possibility for change"}
             </h2>
             <p className="mt-6 text-[#E8DCC4]/60 max-w-2xl mx-auto leading-relaxed">
               {locale === "es"
@@ -782,7 +784,7 @@ export default function WithinPage() {
               {locale === "es" ? "Inversión" : "Investment"}
             </p>
             <h2 className="text-3xl md:text-5xl font-bold font-serif text-[#292E17]">
-              {locale === "es" ? "Precio" : "Price"}
+              {locale === "es" ? "Intercambio" : "Exchange"}
             </h2>
             <p className="mt-4 text-lg text-[#7E2625] font-medium">
               {locale === "es"
@@ -1032,8 +1034,13 @@ export default function WithinPage() {
                     title: "Encuentro online grupal I",
                     desc: "Una semana antes del retiro nos encontramos online con el grupo completo para conocerse, recibir herramientas de preparación corporal y mental, y despejar cualquier consulta.",
                   },
-                  {
+                  { 
                     num: "06",
+                    title: "RETIRO",
+                    desc: "Tu experiencia en Within" 
+                  },
+                  {
+                    num: "07",
                     title: "Encuentro online grupal II",
                     desc: "Dos semanas después del retiro nos volvemos a encontrar online para optimizar la integración y capitalizar los aprendizajes obtenidos durante la experiencia.",
                   },
@@ -1064,8 +1071,13 @@ export default function WithinPage() {
                     title: "Group online meeting I",
                     desc: "One week before the retreat we meet online with the full group to get to know each other, receive body and mental preparation tools, and address any questions.",
                   },
-                  {
+                  { 
                     num: "06",
+                    title: "RETREAT",
+                    desc: "Your experience in Within" 
+                  },
+                  {
+                    num: "07",
                     title: "Group online meeting II",
                     desc: "Two weeks after the retreat we meet online again to optimize integration and capitalize on the learnings obtained during the experience.",
                   },
@@ -1080,7 +1092,7 @@ export default function WithinPage() {
                 className="relative flex gap-8 pb-12 last:pb-0"
               >
                 {/* Línea vertical */}
-                {i < 5 && (
+                {i < 6 && (
                   <div className="absolute left-6 top-14 bottom-0 w-px bg-[#868859]/20" />
                 )}
 
