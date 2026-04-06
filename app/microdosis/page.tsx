@@ -213,7 +213,7 @@ export default function MicrodosisPage() {
             className="relative w-full aspect-square rounded-3xl overflow-hidden shadow-2xl"
           >
             <Image
-              src="/images/microdosis/primer-hongo.jpg" 
+              src="/images/microdosis/microdosis-explicacion.webp" 
               alt="Acompañamiento con Microdosis"
               width={800}
               height={500}
@@ -421,12 +421,20 @@ export default function MicrodosisPage() {
                     "Querés despertar tu creatividad, reconectando con la inspiración y el juego interior.",
                     "Buscás despertar tu pasión y crear espacios donde tu energía vital fluya con autenticidad.",
                     "Querés vivir un proceso consciente, respetuoso y acompañado, que te permita cultivar presencia, orden y coherencia interior.",
+                    "Te interesa explorar nuevas formas de conexión con vos mismo/a, desde un lugar seguro y acompañado.",
+                    "Estás buscando mejorar tu enfoque, creatividad o energía en el día a día.",
+                    "Deseás integrar hábitos más alineados con tu crecimiento personal.",
+                    "Valorás un espacio de contención donde puedas habitar tu proceso sin juicio.",
                   ]
                 : [
                     "You seek to deepen your emotions and transform limiting behaviors.",
                     "You want to awaken your creativity, reconnecting with inspiration and inner play.",
                     "You seek to awaken your passion and create spaces where your vital energy flows authentically.",
                     "You want to live a conscious, respectful and supported process that allows you to cultivate presence, order and inner coherence.",
+                    "You're interested in exploring new ways of connecting with yourself, from a safe and supported place.",
+                    "You're looking to improve your focus, creativity or energy in your daily life.",
+                    "You wish to integrate habits more aligned with your personal growth.",
+                    "You value a space of containment where you can inhabit your process without judgment.",
                   ]
               ).map((item, i) => (
                 <motion.li
@@ -453,7 +461,7 @@ export default function MicrodosisPage() {
             className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl"
           >
             <Image
-              src="/images/within/carrusel-within-13.webp"
+              src="/images/microdosis/microdosis-paravos.webp"
               alt="¿Para quién es el programa de microdosis?"
               fill
               className="object-cover"
@@ -708,7 +716,7 @@ export default function MicrodosisPage() {
             </div>
 
             <a
-              href="/docs/guia-microdosis.pdf"
+              href="/docs/guia-basica-microdosis.pdf"
               download="Guia_Microdosis_TramaViva.pdf"
               target="_blank"
               rel="noopener noreferrer"
@@ -852,6 +860,95 @@ export default function MicrodosisPage() {
             />
             <div className="absolute inset-0 bg-gradient-to-r from-[#E8DCC4] via-transparent to-transparent lg:block hidden" />
           </div>
+        </div>
+      </section>
+
+      {/* Microdosis y Respiración */}
+      <section className="w-full bg-[#292E17] py-16 md:py-24">
+        <div className="grid lg:grid-cols-2 min-h-[600px]">
+
+          {/* Columna izquierda — Imagen */}
+          <div className="relative min-h-[350px] lg:min-h-full order-2 lg:order-1">
+            <Image
+              src="/images/microdosis/actividad-presencial-microdosis.webp"
+              alt="Microdosis y Respiración"
+              fill
+              className="object-cover object-center"
+              sizes="(max-width: 1024px) 100vw, 50vw"
+            />
+            <div className="absolute inset-0 bg-gradient-to-l from-[#292E17] via-transparent to-transparent lg:block hidden" />
+          </div>
+
+          {/* Columna derecha — Contenido */}
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="px-8 py-16 md:px-16 md:py-24 flex flex-col gap-6 justify-center order-1 lg:order-2"
+          >
+            {/* Tag */}
+            <div className="flex items-center gap-2 bg-[#E8DCC4]/10 border border-[#E8DCC4]/20 text-[#E8DCC4] text-xs font-semibold tracking-widest uppercase px-4 py-2 rounded-full w-fit">
+              {locale === "es" ? "Actividad presencial" : "In-person activity"}
+            </div>
+
+            {/* Título */}
+            <h2 className="text-3xl md:text-4xl font-bold font-serif text-[#E8DCC4] leading-tight">
+              {locale === "es" ? "Microdosis y Respiración" : "Microdosing and Breathwork"}
+            </h2>
+
+            {/* Descripción */}
+            <div className="space-y-4 text-[#E8DCC4]/70 text-base leading-relaxed">
+              <p>
+                {locale === "es"
+                  ? "Un espacio de exploración consciente que combina microdosis y trabajo de respiración para favorecer la conexión interna, la regulación emocional y la claridad mental."
+                  : "A space of conscious exploration that combines microdosing and breathwork to foster internal connection, emotional regulation and mental clarity."}
+              </p>
+              <p>
+                {locale === "es"
+                  ? "A través de una práctica guiada, abrimos un terreno seguro para habitar el cuerpo, observar la mente y permitir que emerjan nuevas formas de sentir y percibir."
+                  : "Through a guided practice, we open a safe ground to inhabit the body, observe the mind and allow new ways of feeling and perceiving to emerge."}
+              </p>
+            </div>
+
+            {/* Capacidad */}
+            <div className="flex gap-4">
+              <div className="flex items-center gap-3 bg-[#E8DCC4]/5 border border-[#E8DCC4]/10 px-4 py-3 rounded-xl">
+                <Users size={16} className="text-[#868859]" />
+                <div>
+                  <span className="block text-xs uppercase tracking-wider text-[#E8DCC4]/40">
+                    {locale === "es" ? "Mínimo" : "Minimum"}
+                  </span>
+                  <span className="text-[#E8DCC4] font-bold">3 PAX</span>
+                </div>
+              </div>
+              <div className="flex items-center gap-3 bg-[#E8DCC4]/5 border border-[#E8DCC4]/10 px-4 py-3 rounded-xl">
+                <Users size={16} className="text-[#868859]" />
+                <div>
+                  <span className="block text-xs uppercase tracking-wider text-[#E8DCC4]/40">
+                    {locale === "es" ? "Máximo" : "Maximum"}
+                  </span>
+                  <span className="text-[#E8DCC4] font-bold">10 PAX</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="w-full h-px bg-[#E8DCC4]/10" />
+
+            {/* CTA WhatsApp */}
+            <a
+              href="https://wa.me/50661912861"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-3 bg-[#E8DCC4] text-[#292E17] text-sm font-bold px-6 py-3 rounded-full w-fit hover:bg-white transition-all"
+            >
+              <svg viewBox="0 0 24 24" className="w-4 h-4 fill-[#292E17]" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+                <path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.533 5.856L.057 23.243a.75.75 0 0 0 .922.899l5.233-1.53A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.9 0-3.678-.524-5.2-1.433l-.374-.223-3.865 1.131 1.086-3.966-.243-.386A9.96 9.96 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" />
+              </svg>
+              {locale === "es" ? "Escribime para más información" : "Message me for more information"}
+            </a>
+          </motion.div>
+
         </div>
       </section>
 

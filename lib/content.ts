@@ -655,10 +655,14 @@ export const microdosisPage = {
     targetAudience: {
       title: "¿A quiénes está dirigido?",
       items: [
-        "Quienes busquen profundizar en sus emociones y transformar conductas limitantes.",
-        "Quienes busquen despertar su creatividad, reconectando con la inspiración y el juego interior.",
-        "Quienes busquen despertar su pasión y crear espacios donde su energía vital fluye con autenticidad.",
-        "Quienes busquen vivir un proceso consciente, respetuoso y acompañado, que les permita cultivar presencia, orden y coherencia interior.",
+        "Buscás profundizar en tus emociones y transformar conductas limitantes.",
+        "Querés despertar tu creatividad, reconectando con la inspiración y el juego interior.",
+        "Buscás despertar tu pasión y crear espacios donde tu energía vital fluya con autenticidad.",
+        "Querés vivir un proceso consciente, respetuoso y acompañado, que te permita cultivar presencia, orden y coherencia interior.",
+        "Te interesa explorar nuevas formas de conexión con vos mismo/a, desde un lugar seguro y acompañado.",
+        "Estás buscando mejorar tu enfoque, creatividad o energía en el día a día.",
+        "Deseás integrar hábitos más alineados con tu crecimiento personal.",
+        "Valorás un espacio de contención donde puedas habitar tu proceso sin juicio.",
       ],
     },
     benefits: {
@@ -685,19 +689,19 @@ export const microdosisPage = {
         {
           frontTitle: "Mayor neuroplasticidad y nuevos caminos adaptativos",
           frontIcon: "zap",
-          image: "/images/microdosis/potenciales-beneficios-1.webp",
+          image: "/images/microdosis/potenciales-beneficios-4.webp",
           backContent: "Las microdosis pueden potenciar la capacidad del cerebro para crear nuevas conexiones, facilitando la apertura a perspectivas y respuestas más adaptativas.",
         },
         {
           frontTitle: "Liberación de tensiones y patrones limitantes",
           frontIcon: "zap",
-          image: "/images/microdosis/potenciales-beneficios-2.webp",
+          image: "/images/microdosis/potenciales-beneficios-5.webp",
           backContent: "El trabajo con microdosis puede ayudar a soltar bloqueos físicos, emocionales o mentales que ya no son funcionales, abriendo espacio para nuevas formas de ser y estar.",
         },
         {
           frontTitle: "Relación más amable contigo mismo y con los demás",
           frontIcon: "heart",
-          image: "/images/microdosis/potenciales-beneficios-3.webp",
+          image: "/images/microdosis/potenciales-beneficios-6.webp",
           backContent: "Muchas personas reportan un aumento en la autocompasión y en la calidad de sus vínculos, encontrando formas más amorosas de relacionarse consigo mismas y con su entorno.",
         },
       ],
@@ -743,10 +747,14 @@ export const microdosisPage = {
     targetAudience: {
       title: "Who is it for?",
       items: [
-        "Those seeking to deepen their emotions and transform limiting behaviors.",
-        "Those seeking to awaken their creativity, reconnecting with inspiration and inner play.",
-        "Those seeking to awaken their passion and create spaces where their vital energy flows authentically.",
-        "Those seeking to live a conscious, respectful and supported process that allows them to cultivate presence, order and inner coherence.",
+        "You seek to deepen your emotions and transform limiting behaviors.",
+        "You want to awaken your creativity, reconnecting with inspiration and inner play.",
+        "You seek to awaken your passion and create spaces where your vital energy flows authentically.",
+        "You want to live a conscious, respectful and supported process that allows you to cultivate presence, order and inner coherence.",
+        "You're interested in exploring new ways of connecting with yourself, from a safe and supported place.",
+        "You're looking to improve your focus, creativity or energy in your daily life.",
+        "You wish to integrate habits more aligned with your personal growth.",
+        "You value a space of containment where you can inhabit your process without judgment.",
       ],
     },
     benefits: {
@@ -773,19 +781,19 @@ export const microdosisPage = {
         {
           frontTitle: "Greater neuroplasticity and new adaptive pathways",
           frontIcon: "zap",
-          image: "/images/microdosis/potenciales-beneficios-1.webp",
+          image: "/images/microdosis/potenciales-beneficios-4.webp",
           backContent: "Microdoses can enhance the brain's ability to create new connections, facilitating openness to more adaptive perspectives and responses.",
         },
         {
           frontTitle: "Release of tensions and limiting patterns",
           frontIcon: "zap",
-          image: "/images/microdosis/potenciales-beneficios-2.webp",
+          image: "/images/microdosis/potenciales-beneficios-5.webp",
           backContent: "Working with microdoses can help release physical, emotional or mental blocks that are no longer functional, making space for new ways of being.",
         },
         {
           frontTitle: "A kinder relationship with yourself and others",
           frontIcon: "heart",
-          image: "/images/microdosis/potenciales-beneficios-3.webp",
+          image: "/images/microdosis/potenciales-beneficios-6.webp",
           backContent: "Many people report an increase in self-compassion and the quality of their bonds, finding more loving ways to relate to themselves and their environment.",
         },
       ],

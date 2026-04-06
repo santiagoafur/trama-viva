@@ -1184,8 +1184,8 @@ export default function UnionPage() {
         `}</style>
 
         <div className="marquee-track">
-          {[...Array(15)].concat([...Array(15)]).map((_, i) => {
-            const num = (i % 15) + 1;
+          {[...Array(12)].concat([...Array(12)]).map((_, i) => {
+            const num = (i % 12) + 1;
             return (
               <div
                 key={i}
@@ -1193,7 +1193,7 @@ export default function UnionPage() {
               >
                 <Image
                   src={`/images/union/carrusel-union-${num}.webp`}
-                  alt={`Within ${num}`}
+                  alt={`Retiro Union ${num}`}
                   fill
                   className="object-cover"
                   sizes="384px"

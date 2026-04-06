@@ -658,10 +658,10 @@ export default function WithinPage() {
           </motion.div>
           <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="grid grid-cols-2 gap-4">
             <div className="aspect-[4/5] relative rounded-2xl overflow-hidden">
-              <Image src="/images/comida-1.jpg" alt="Comida 1" fill className="object-cover" />
+              <Image src="/images/within/carrusel-within-6.webp" alt="Comida 1" fill className="object-cover" />
             </div>
             <div className="aspect-[4/5] relative rounded-2xl overflow-hidden mt-10">
-              <Image src="/images/comida-2.jpg" alt="Comida 2" fill className="object-cover" />
+              <Image src="/images/within/carrusel-within-11.webp" alt="Comida 2" fill className="object-cover" />
             </div>
           </motion.div>
         </div>
