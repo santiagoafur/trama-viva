@@ -815,10 +815,10 @@ export default function WithinPage() {
                   {locale === "es" ? "Early Bird Abril" : "April Early Bird"}
                 </h3>
                 <p className="text-6xl font-bold font-serif text-[#7E2625]">
-                  $971 <span className="text-xl text-[#7E2625]/60 font-sans">USD</span>
+                  $893 <span className="text-xl text-[#7E2625]/60 font-sans">USD</span>
                 </p>
                 <p className="text-sm text-[#3B1B0E]/50">
-                  {locale === "es" ? "Ahorrás $138 USD" : "You save $138 USD"}
+                  {locale === "es" ? "Ahorrás $257 USD" : "You save $257 USD"}
                 </p>
               </div>
 
@@ -848,7 +848,7 @@ export default function WithinPage() {
                   {locale === "es" ? "Precio Regular" : "Regular Price"}
                 </h3>
                 <p className="text-6xl font-bold font-serif text-[#3B1B0E]">
-                  $1109 <span className="text-xl text-[#3B1B0E]/50 font-sans">USD</span>
+                  $1150 <span className="text-xl text-[#3B1B0E]/50 font-sans">USD</span>
                 </p>
               </div>
 
