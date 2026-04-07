@@ -15,7 +15,6 @@ export default function ContactoPage() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    phone: "",
     subject: "",
     message: "",
   });
@@ -30,12 +29,16 @@ export default function ContactoPage() {
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({ ...formData, locale }),
       });
 
       if (res.ok) {
         setSubmitted(true);
-        setFormData({ name: "", email: "", phone: "", subject: "", message: "" });
+        setFormData({ name: "", email: "", subject: "", message: "" });
+      } else {
+        alert(locale === "es"
+          ? "Hubo un error al enviar el mensaje. Intentá de nuevo."
+          : "There was an error sending the message. Please try again.");
       }
     } catch (error) {
       console.error("Error:", error);

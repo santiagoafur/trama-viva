@@ -4,44 +4,66 @@ import { LanguageProvider } from "@/lib/language-context";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Trama Viva | Despertar la inteligencia vincular",
-  description:
-    "Espacio de bienestar holístico. Retiros, microdosis y ceremonias para tu transformación personal. Acompañamiento profesional con Eliana Martínez.",
-  keywords: [
-    "retiros",
-    "microdosis",
-    "ceremonias",
-    "bienestar",
-    "transformación personal",
-    "coaching ontológico",
-    "psilocibina",
-    "wellness",
-    "mindfulness",
-  ],
-  authors: [{ name: "Trama Viva" }],
-  creator: "Whitespacez",
-  openGraph: {
-    title: "Trama Viva | Despertar la inteligencia vincular",
-    description:
-      "Espacio de bienestar holístico. Retiros, microdosis y ceremonias para tu transformación personal.",
-    url: "https://tramaviva.com",
-    siteName: "Trama Viva",
-    locale: "es_AR",
-    type: "website",
+  metadataBase: new URL("https://trama-viva.com"),
+  title: {
+    default: "Trama Viva | Retiros de Psilocibina y Microdosis",
+    template: "%s | Trama Viva",
   },
-  icons: {
-    icon: "/favicon.png",
-    apple: "/favicon.png",
+  description:
+    "Trama Viva es un espacio terapéutico orientado al autoconocimiento y transformación personal. Ofrecemos retiros de psilocibina, acompañamiento en microdosis y ceremonias en Costa Rica, Argentina y Uruguay.",
+  keywords: [
+    "retiros psilocibina",
+    "microdosis acompañamiento",
+    "terapia asistida psicodélicos",
+    "retiro Costa Rica",
+    "retiro Córdoba Argentina",
+    "retiro Uruguay",
+    "transformación personal",
+    "autoconocimiento",
+    "medicina sagrada",
+    "trama viva",
+  ],
+  authors: [{ name: "Trama Viva", url: "https://trama-viva.com" }],
+  creator: "Trama Viva",
+  openGraph: {
+    type: "website",
+    locale: "es_AR",
+    alternateLocale: "en_US",
+    url: "https://trama-viva.com",
+    siteName: "Trama Viva",
+    title: "Trama Viva | Retiros de Psilocibina y Microdosis",
+    description:
+      "Espacio terapéutico orientado al autoconocimiento y transformación personal a través de retiros de psilocibina, microdosis y ceremonias.",
+    images: [
+      {
+        url: "/images/og-image.webp",
+        width: 1200,
+        height: 630,
+        alt: "Trama Viva — Retiros de Psilocibina y Microdosis",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Trama Viva | Despertar la inteligencia vincular",
+    title: "Trama Viva | Retiros de Psilocibina y Microdosis",
     description:
-      "Espacio de bienestar holístico. Retiros, microdosis y ceremonias para tu transformación personal.",
+      "Espacio terapéutico orientado al autoconocimiento y transformación personal.",
+    images: ["/images/og-image.webp"],
   },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  icons: {
+    icon: "/images/favicon.png",
+    shortcut: "/images/favicon.png",
+    apple: "/images/favicon.png",
   },
 };
 
@@ -67,6 +89,7 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600&display=swap"
           rel="stylesheet"
         />
+        <meta name="google-site-verification" content="pGmZE86Q-ZxHx5PX7x6lsCGXJnsDYOSVsYuGZC4yYo0" />
       </head>
       <body className="font-sans antialiased">
         <LanguageProvider>{children}</LanguageProvider>
