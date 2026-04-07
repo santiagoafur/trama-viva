@@ -10,7 +10,7 @@ export async function POST(req: NextRequest) {
     // Email a Eli
     await resend.emails.send({
       from: "Trama Viva <noreply@trama-viva.com>",
-      to: ["afur.santiago29@gmail.com"],
+      to: ["elianamarti89@gmail.com"],
       subject: `Nuevo mensaje de contacto — ${name}`,
       html: `
         <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto; color: #3B1B0E;">

@@ -51,8 +51,8 @@ export default function ContactoPage() {
     {
       icon: Mail,
       label: "Email",
-      value: "hola@tramaviva.com",
-      href: "mailto:hola@tramaviva.com",
+      value: "elianamarti89@gmail.com",
+      href: "mailto:elianamarti89@gmail.com",
     },
     {
       icon: Phone,
