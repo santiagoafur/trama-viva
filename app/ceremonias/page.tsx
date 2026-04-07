@@ -196,11 +196,16 @@ export default function CeremoniasPage() {
               <span className="inline-flex items-center bg-[#E8DCC4]/15 backdrop-blur-sm border border-[#E8DCC4]/30 text-[#E8DCC4] text-xs font-bold tracking-widest uppercase px-4 py-2 rounded-full mb-6">
                 Santa Teresa · Costa Rica
               </span>
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold font-serif text-[#E8DCC4] mb-6 leading-tight">
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold font-serif text-[#E8DCC4] mb-4 leading-tight">
                 {locale === "es"
-                  ? "Ceremonia de Macrodosis de Psilocibina. La verdadera medicina es recordar quién sos."
-                  : "Macrodose Psilocybin Ceremony. The true medicine is remembering who you are."}
+                  ? "Ceremonia de Macrodosis de Psilocibina"
+                  : "Macrodose Psilocybin Ceremony"}
               </h1>
+              <p className="text-lg md:text-xl text-[#E8DCC4]/80 max-w-2xl leading-relaxed mb-8">
+                {locale === "es"
+                  ? "La verdadera medicina es recordar quién sos."
+                  : "The true medicine is remembering who you are."}
+              </p>
               <div className="flex flex-col sm:flex-row gap-4 items-start">
                 <Link
                   href="#ceremonia-info"
