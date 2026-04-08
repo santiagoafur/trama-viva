@@ -975,7 +975,7 @@ export const footer = {
     },
     contact: {
       title: "Contacto",
-      email: "elianamarti89@gmail.com",
+      email: "tramaviva.red@gmail.com",
       instagram: "@tramaviva.red",
     },
     copyright: "© 2026 Trama Viva. Todos los derechos reservados.",
@@ -999,7 +999,7 @@ export const footer = {
     },
     contact: {
       title: "Contact",
-      email: "elianamarti89@gmail.com",
+      email: "tramaviva.red@gmail.com",
       instagram: "@tramaviva.red",
     },
     copyright: "© 6 Trama Viva. All rights reserved.",
