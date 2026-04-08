@@ -235,16 +235,24 @@ export default function CeremoniasPage() {
           className="space-y-6 text-lg md:text-xl text-[#3B1B0E]/80 leading-relaxed font-medium"
         >
           <p>
-            Una experiencia psicodélica es algo único y profundamente sagrado, con un inmenso potencial para transformarnos.
+            {locale === "es"
+              ? "Una experiencia psicodélica es algo único y profundamente sagrado, con un inmenso potencial para transformarnos."
+              : "A psychedelic experience is something unique and profoundly sacred, with an immense potential to transform us."}
           </p>
           <p>
-            Puede revelarnos aspectos esenciales de nosotros mismos y de la realidad que habitamos en un breve lapso de tiempo, ayudándonos a reconectar con nuestro potencial de crecimiento y desarrollo como seres humanos.
+            {locale === "es"
+              ? "Puede revelarnos aspectos esenciales de nosotros mismos y de la realidad que habitamos en un breve lapso de tiempo, ayudándonos a reconectar con nuestro potencial de crecimiento y desarrollo como seres humanos."
+              : "It can reveal essential aspects of ourselves and the reality we inhabit in a brief period of time, helping us reconnect with our potential for growth and development as human beings."}
           </p>
           <p>
-            La intención de esta experiencia es ir al encuentro íntimo con nosotros mismos, acompañados por la medicina de los hongos, dentro de un contexto seguro y con un acompañamiento adecuado.
+            {locale === "es"
+              ? "La intención de esta experiencia es ir al encuentro íntimo con nosotros mismos, acompañados por la medicina de los hongos, dentro de un contexto seguro y con un acompañamiento adecuado."
+              : "The intention of this experience is to go on an intimate encounter with ourselves, accompanied by mushroom medicine, within a safe context and with adequate support."}
           </p>
           <p>
-            El espacio donde realizaremos la ceremonia es cuidado, cómodo y seguro para que puedas vivir un momento significativo que aporte profundidad, claridad y valor a tu vida.
+            {locale === "es"
+              ? "El espacio donde realizaremos la ceremonia es cuidado, cómodo y seguro para que puedas vivir un momento significativo que aporte profundidad, claridad y valor a tu vida."
+              : "The space where we will hold the ceremony is caring, comfortable and safe so that you can live a meaningful moment that brings depth, clarity and value to your life."}
           </p>
         </motion.div>
       </section>
@@ -327,21 +335,43 @@ export default function CeremoniasPage() {
             <div className="grid md:grid-cols-3 gap-8">
               <div className="bg-white p-8 rounded-3xl shadow-lg border border-[#868859]/20 text-center">
                 <div className="w-16 h-16 bg-[#868859]/20 rounded-full flex items-center justify-center mx-auto mb-6 text-[#292E17]"><Info size={32} /></div>
-                <h3 className="text-2xl font-bold mb-4">Inscripción</h3>
-                <p className="text-[#3B1B0E]/70">Formulario inicial y evaluación previa.</p>
+                <h3 className="text-2xl font-bold mb-4">
+                  {locale === "es" ? "Inscripción" : "Registration"}
+                </h3>
+                <p className="text-[#3B1B0E]/70">
+                  {locale === "es"
+                    ? "Formulario inicial y evaluación previa."
+                    : "Initial form and prior evaluation."}
+                </p>
               </div>
               <div className="bg-white p-8 rounded-3xl shadow-lg border border-[#7E2625]/20 text-center relative overflow-hidden">
                 <div className="absolute top-0 left-0 w-full h-2 bg-[#7E2625]" />
                 <div className="w-16 h-16 bg-[#7E2625]/10 rounded-full flex items-center justify-center mx-auto mb-6 text-[#7E2625]"><Clock size={32} /></div>
-                <h3 className="text-2xl font-bold mb-4">Ceremonia</h3>
-                <p className="text-[#3B1B0E]/70 mb-2">Medicina, acompañamiento y sostén.</p>
-                <p className="text-sm font-medium text-[#7E2625]">3:00 PM a 9:00 PM (6 HS)</p>
+                <h3 className="text-2xl font-bold mb-4">
+                  {locale === "es" ? "Ceremonia" : "Ceremony"}
+                </h3>
+                <p className="text-[#3B1B0E]/70 mb-2">
+                  {locale === "es"
+                    ? "Medicina, acompañamiento y sostén."
+                    : "Medicine, accompaniment and support."}
+                </p>
+                <p className="text-sm font-medium text-[#7E2625]">
+                  {locale === "es" ? "3:00 PM a 9:00 PM (6 HS)" : "3:00 PM to 9:00 PM (6 HRS)"}
+                </p>
               </div>
               <div className="bg-white p-8 rounded-3xl shadow-lg border border-[#868859]/20 text-center">
                 <div className="w-16 h-16 bg-[#868859]/20 rounded-full flex items-center justify-center mx-auto mb-6 text-[#292E17]"><Users size={32} /></div>
-                <h3 className="text-2xl font-bold mb-4">Integración</h3>
-                <p className="text-[#3B1B0E]/70 mb-2">Encuentro presencial OPCIONAL al siguiente día.</p>
-                <p className="text-sm font-medium text-[#292E17]">4:00 PM a 6:00 PM (2 HS)</p>
+                <h3 className="text-2xl font-bold mb-4">
+                  {locale === "es" ? "Integración" : "Integration"}
+                </h3>
+                <p className="text-[#3B1B0E]/70 mb-2">
+                  {locale === "es"
+                    ? "Encuentro presencial OPCIONAL al siguiente día."
+                    : "OPTIONAL in-person meeting the following day."}
+                </p>
+                <p className="text-sm font-medium text-[#292E17]">
+                  {locale === "es" ? "4:00 PM a 6:00 PM (2 HS)" : "4:00 PM to 6:00 PM (2 HRS)"}
+                </p>
               </div>
             </div>
           </div>
@@ -349,51 +379,41 @@ export default function CeremoniasPage() {
           {/* El Lugar */}
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
-              <span className="text-[#7E2625] font-bold tracking-widest uppercase text-sm">El Lugar</span>
-              <h2 className="text-4xl md:text-5xl font-bold font-serif text-[#292E17]">Santuario House of Shakti</h2>
+              <span className="text-[#7E2625] font-bold tracking-widest uppercase text-sm">
+                {locale === "es" ? "El Lugar" : "The Location"}
+              </span>
+              <h2 className="text-4xl md:text-5xl font-bold font-serif text-[#292E17]">
+                {locale === "es" ? "Santuario House of Shakti" : "House of Shakti Sanctuary"}
+              </h2>
               <p className="text-lg opacity-90 leading-relaxed">
-                Un refugio tranquilo y lujoso ubicado en el corazón de la naturaleza, diseñado para inspirar conexión, transformación y regeneración.
+                {locale === "es"
+                  ? "Un refugio tranquilo y lujoso ubicado en el corazón de la naturaleza, diseñado para inspirar conexión, transformación y regeneración."
+                  : "A peaceful and luxurious retreat located in the heart of nature, designed to inspire connection, transformation and regeneration."}
               </p>
               <p className="text-lg opacity-90 leading-relaxed">
-                Escondido en la cima de una serena colina, este lugar íntimo ofrece total privacidad y vistas impresionantes de la jungla, a solo cinco minutos en auto de Playa Hermosa, Santa Teresa.
+                {locale === "es"
+                  ? "Escondido en la cima de una serena colina, este lugar íntimo ofrece total privacidad y vistas impresionantes de la jungla, a solo cinco minutos en auto de Playa Hermosa, Santa Teresa."
+                  : "Tucked away on top of a serene hill, this intimate venue offers total privacy and breathtaking jungle views, just a five-minute drive from Playa Hermosa, Santa Teresa."}
               </p>
               <p className="text-lg opacity-90 leading-relaxed font-medium bg-[#868859]/10 p-4 rounded-xl">
-                La ceremonia se realiza en estudio privado con las comodidades necesarias para que puedas relajarte en un entorno natural y al mismo tiempo permitirte entrar en conexión.
+                {locale === "es"
+                  ? "La ceremonia se realiza en estudio privado con las comodidades necesarias para que puedas relajarte en un entorno natural y al mismo tiempo permitirte entrar en conexión."
+                  : "The ceremony takes place in a private studio with all the necessary comforts so you can relax in a natural setting while allowing yourself to enter into connection."}
               </p>
             </div>
             <div className="flex flex-col gap-4">
-            {/* Las 2 verticales */}
-            <div className="grid grid-cols-2 gap-4">
-              <div className="aspect-[4/5] relative rounded-3xl overflow-hidden shadow-xl">
-                <Image
-                  src="/images/ceremonias/hos-1.webp"
-                  alt="House of Shakti 1"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 1024px) 50vw, 25vw"
-                />
+              <div className="grid grid-cols-2 gap-4">
+                <div className="aspect-[4/5] relative rounded-3xl overflow-hidden shadow-xl">
+                  <Image src="/images/ceremonias/hos-1.webp" alt="House of Shakti 1" fill className="object-cover" sizes="(max-width: 1024px) 50vw, 25vw" />
+                </div>
+                <div className="aspect-[4/5] relative rounded-3xl overflow-hidden shadow-xl">
+                  <Image src="/images/ceremonias/hos-2.webp" alt="House of Shakti 2" fill className="object-cover" sizes="(max-width: 1024px) 50vw, 25vw" />
+                </div>
               </div>
-              <div className="aspect-[4/5] relative rounded-3xl overflow-hidden shadow-xl">
-                <Image
-                  src="/images/ceremonias/hos-2.webp"
-                  alt="House of Shakti 2"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 1024px) 50vw, 25vw"
-                />
+              <div className="aspect-[16/7] relative rounded-3xl overflow-hidden shadow-xl">
+                <Image src="/images/ceremonias/hos-3.webp" alt="House of Shakti 3" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 50vw" />
               </div>
             </div>
-            {/* La horizontal abajo */}
-            <div className="aspect-[16/7] relative rounded-3xl overflow-hidden shadow-xl">
-              <Image
-                src="/images/ceremonias/hos-3.webp"
-                alt="House of Shakti 3"
-                fill
-                className="object-cover"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-              />
-            </div>
-          </div>
           </div>
 
         </div>
@@ -438,13 +458,14 @@ export default function CeremoniasPage() {
         </div>
       </section>
 
-      {/* 6. FACILITADORES RECICLADOS */}
+      {/* 6. FACILITADORES */}
       <section id="facilitadores" className="py-20 bg-[#F4EDE0] px-4">
         <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-3xl md:text-5xl font-bold font-serif mb-12 text-[#292E17]">Facilitadores</h2>
-          {/* Centramos las cards limitando el ancho máximo ya que son solo dos */}
+          <h2 className="text-3xl md:text-5xl font-bold font-serif mb-12 text-[#292E17]">
+            {locale === "es" ? "Facilitadores" : "Facilitators"}
+          </h2>
           <div className="grid sm:grid-cols-2 gap-8 max-w-3xl mx-auto mb-16">
-            <FlipCard 
+            <FlipCard
               frontImage="/images/ceremonias/eli-ceremonias.webp"
               front={
                 <>
@@ -452,9 +473,15 @@ export default function CeremoniasPage() {
                   <p className="text-sm mt-1 opacity-80">@eli.mar.lov</p>
                 </>
               }
-              back={<p className="text-sm leading-relaxed">Coach Ontológica - PNL y Sistema Nervioso - Terapias Asistidas con Psicodélicos - Facilitadora de Respiración y Crioterapia - Instructora de Yoga y Meditación</p>}
+              back={
+                <p className="text-sm leading-relaxed">
+                  {locale === "es"
+                    ? "Coach Ontológica - PNL y Sistema Nervioso - Terapias Asistidas con Psicodélicos - Facilitadora de Respiración y Crioterapia - Instructora de Yoga y Meditación"
+                    : "Ontological Coach - NLP and Nervous System - Psychedelic Assisted Therapies - Breathwork and Cryotherapy Facilitator - Yoga and Meditation Instructor"}
+                </p>
+              }
             />
-            <FlipCard 
+            <FlipCard
               frontImage="/images/ceremonias/jonatan-ceremonias.webp"
               front={
                 <>
@@ -462,22 +489,46 @@ export default function CeremoniasPage() {
                   <p className="text-sm mt-1 opacity-80">@jonamerla</p>
                 </>
               }
-              back={<p className="text-sm leading-relaxed">Facilitador de espacios de sanación y crecimiento personal. Facilitador de respiración e instructor de yoga.</p>}
+              back={
+                <p className="text-sm leading-relaxed">
+                  {locale === "es"
+                    ? "Facilitador de espacios de sanación y crecimiento personal. Facilitador de respiración e instructor de yoga."
+                    : "Facilitator of healing and personal growth spaces. Breathwork facilitator and yoga instructor."}
+                </p>
+              }
             />
           </div>
 
-          {/* Aclaración Importante (Reubicada abajo de los facilitadores) */}
+          {/* Aclaración Importante */}
           <div className="bg-[#E8DCC4] border border-[#7E2625]/30 p-8 md:p-10 rounded-3xl text-left max-w-4xl mx-auto shadow-md">
             <div className="flex items-center gap-4 mb-6 text-[#7E2625]">
               <AlertTriangle size={32} />
-              <h3 className="text-2xl font-bold">Aclaración Importante</h3>
+              <h3 className="text-2xl font-bold">
+                {locale === "es" ? "Aclaración Importante" : "Important Disclaimer"}
+              </h3>
             </div>
             <div className="space-y-4 text-lg text-[#3B1B0E]/90 leading-relaxed">
-              <p>Esta experiencia no es recreativa y no sustituye ni reemplaza la importancia de un proceso terapéutico individual y completo.</p>
-              <p>Es un enfoque terapéutico asistido con psicodélicos para un profundo crecimiento interior y la responsabilidad sobre tu proceso personal es tuya.</p>
+              <p>
+                {locale === "es"
+                  ? "Esta experiencia no es recreativa y no sustituye ni reemplaza la importancia de un proceso terapéutico individual y completo."
+                  : "This experience is not recreational and does not substitute or replace the importance of a complete individual therapeutic process."}
+              </p>
+              <p>
+                {locale === "es"
+                  ? "Es un enfoque terapéutico asistido con psicodélicos para un profundo crecimiento interior y la responsabilidad sobre tu proceso personal es tuya."
+                  : "It is a psychedelic-assisted therapeutic approach for deep inner growth and responsibility for your personal process is yours."}
+              </p>
               <ul className="list-disc list-inside mt-4 space-y-2 font-medium">
-                <li>No hace falta tener experiencia previa.</li>
-                <li>Los cupos son muy limitados para asegurar el cuidado y la intimidad de la energía del grupo.</li>
+                <li>
+                  {locale === "es"
+                    ? "No hace falta tener experiencia previa."
+                    : "No prior experience is necessary."}
+                </li>
+                <li>
+                  {locale === "es"
+                    ? "Los cupos son muy limitados para asegurar el cuidado y la intimidad de la energía del grupo."
+                    : "Spots are very limited to ensure the care and intimacy of the group energy."}
+                </li>
               </ul>
             </div>
           </div>
@@ -487,74 +538,138 @@ export default function CeremoniasPage() {
       {/* 7. PRECIOS */}
       <section className="py-24 px-4 max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold font-serif text-[#3B1B0E]">Precios</h2>
-          <p className="mt-4 text-lg opacity-80">Los precios varían dependiendo la cantidad de personas.</p>
+          <h2 className="text-4xl md:text-5xl font-bold font-serif text-[#3B1B0E]">
+            {locale === "es" ? "Precios" : "Pricing"}
+          </h2>
+          <p className="mt-4 text-lg opacity-80">
+            {locale === "es"
+              ? "Los precios varían dependiendo la cantidad de personas."
+              : "Prices vary depending on the number of people."}
+          </p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8 mb-12">
+
           {/* Grupal */}
           <div className="bg-white rounded-3xl p-8 shadow-xl border border-[#868859]/20 text-center flex flex-col justify-between">
             <div>
               <Users className="mx-auto mb-4 text-[#868859]" size={32} />
-              <h3 className="text-xl font-bold text-[#292E17] mb-2">Ceremonia Grupal</h3>
-              <p className="text-sm text-[#3B1B0E]/60 mb-6">5 a 8 Personas</p>
+              <h3 className="text-xl font-bold text-[#292E17] mb-2">
+                {locale === "es" ? "Ceremonia Grupal" : "Group Ceremony"}
+              </h3>
+              <p className="text-sm text-[#3B1B0E]/60 mb-6">
+                {locale === "es" ? "5 a 8 Personas" : "5 to 8 People"}
+              </p>
             </div>
             <div>
               <p className="text-4xl font-bold font-serif text-[#7E2625] mb-6">$200 <span className="text-sm text-[#3B1B0E]/50 font-sans">USD</span></p>
-              <button className="w-full py-3 bg-[#292E17] text-[#E8DCC4] rounded-full font-bold hover:bg-[#3B1B0E] transition-all">Consultar</button>
+              <a
+                href="https://wa.me/50661912861"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block w-full py-3 bg-[#292E17] text-[#E8DCC4] rounded-full font-bold hover:bg-[#3B1B0E] transition-all text-center"
+              >
+                {locale === "es" ? "Consultar" : "Inquire"}
+              </a>
             </div>
           </div>
+
           {/* Íntima */}
           <div className="bg-white rounded-3xl p-8 shadow-2xl border-2 border-[#868859] text-center relative flex flex-col justify-between transform md:-translate-y-4">
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 bg-[#868859] text-[#E8DCC4] px-4 py-1 rounded-b-xl text-xs font-bold tracking-wider">MÁS ELEGIDA</div>
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 bg-[#868859] text-[#E8DCC4] px-4 py-1 rounded-b-xl text-xs font-bold tracking-wider">
+              {locale === "es" ? "MÁS ELEGIDA" : "MOST POPULAR"}
+            </div>
             <div className="mt-4">
               <User className="mx-auto mb-4 text-[#868859]" size={32} />
-              <h3 className="text-xl font-bold text-[#292E17] mb-2">Ceremonia Íntima</h3>
-              <p className="text-sm text-[#3B1B0E]/60 mb-6">2 a 4 Personas</p>
+              <h3 className="text-xl font-bold text-[#292E17] mb-2">
+                {locale === "es" ? "Ceremonia Íntima" : "Intimate Ceremony"}
+              </h3>
+              <p className="text-sm text-[#3B1B0E]/60 mb-6">
+                {locale === "es" ? "2 a 4 Personas" : "2 to 4 People"}
+              </p>
             </div>
             <div>
               <p className="text-5xl font-bold font-serif text-[#7E2625] mb-6">$250 <span className="text-sm text-[#3B1B0E]/50 font-sans">USD</span></p>
-              <button className="w-full py-4 bg-[#868859] text-[#E8DCC4] rounded-full font-bold hover:bg-[#292E17] transition-all">Consultar</button>
+              <a
+                href="https://wa.me/50661912861"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block w-full py-4 bg-[#868859] text-[#E8DCC4] rounded-full font-bold hover:bg-[#292E17] transition-all text-center"
+              >
+                {locale === "es" ? "Consultar" : "Inquire"}
+              </a>
             </div>
           </div>
+
           {/* Individual */}
           <div className="bg-white rounded-3xl p-8 shadow-xl border border-[#868859]/20 text-center flex flex-col justify-between">
             <div>
               <User className="mx-auto mb-4 text-[#868859]" size={32} />
-              <h3 className="text-xl font-bold text-[#292E17] mb-2">Ceremonia Individual</h3>
-              <p className="text-sm text-[#3B1B0E]/60 mb-6">1 Persona</p>
+              <h3 className="text-xl font-bold text-[#292E17] mb-2">
+                {locale === "es" ? "Ceremonia Individual" : "Individual Ceremony"}
+              </h3>
+              <p className="text-sm text-[#3B1B0E]/60 mb-6">
+                {locale === "es" ? "1 Persona" : "1 Person"}
+              </p>
             </div>
             <div>
               <p className="text-4xl font-bold font-serif text-[#7E2625] mb-6">$500 <span className="text-sm text-[#3B1B0E]/50 font-sans">USD</span></p>
-              <button className="w-full py-3 bg-[#292E17] text-[#E8DCC4] rounded-full font-bold hover:bg-[#3B1B0E] transition-all">Consultar</button>
+              <a
+                href="https://wa.me/50661912861"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block w-full py-3 bg-[#292E17] text-[#E8DCC4] rounded-full font-bold hover:bg-[#3B1B0E] transition-all text-center"
+              >
+                {locale === "es" ? "Consultar" : "Inquire"}
+              </a>
             </div>
           </div>
+
         </div>
+
         <p className="text-center font-medium text-[#7E2625] flex items-center justify-center gap-2">
-          <CheckCircle2 size={18} /> Contamos con facilidades de pago.
+          <CheckCircle2 size={18} />
+          {locale === "es" ? "Contamos con facilidades de pago." : "Payment facilities available."}
         </p>
       </section>
 
-      {/* 5. PREPARACIÓN PREVIA (TIMELINE TRACKING) */}
+      {/* 5. PREPARACIÓN PREVIA */}
       <section className="py-24 px-4 max-w-5xl mx-auto">
         <div className="text-center mb-16 space-y-4">
-          <h2 className="text-4xl md:text-5xl font-bold font-serif text-[#3B1B0E]">Preparación Previa</h2>
-          <p className="text-[#7E2625] font-medium tracking-wide">( De 1 semana a 3 días antes )</p>
+          <h2 className="text-4xl md:text-5xl font-bold font-serif text-[#3B1B0E]">
+            {locale === "es" ? "Preparación Previa" : "Prior Preparation"}
+          </h2>
+          <p className="text-[#7E2625] font-medium tracking-wide">
+            {locale === "es" ? "( De 1 semana a 3 días antes )" : "( From 1 week to 3 days before )"}
+          </p>
           <p className="max-w-2xl mx-auto text-lg opacity-80">
-            La preparación es una parte esencial del proceso. Nos permite llegar a la experiencia con claridad, apertura y mayor presencia.
+            {locale === "es"
+              ? "La preparación es una parte esencial del proceso. Nos permite llegar a la experiencia con claridad, apertura y mayor presencia."
+              : "Preparation is an essential part of the process. It allows us to arrive at the experience with clarity, openness and greater presence."}
           </p>
         </div>
 
         <div className="relative border-l-2 border-[#868859]/30 ml-4 md:ml-12 space-y-12 pb-8">
-          {[
-            { title: "Crear Espacio", text: "Si te surgen dudas/miedos/consultas dales lugar. Siéntete libre de compartirlo. Crear espacio a lo que surge es una forma de entrar en la experiencia." },
-            { title: "Registro", text: "Permite observar con curiosidad sensaciones, pensamientos y situaciones de la cotidianidad." },
-            { title: "Intención", text: "Tomate un tiempo para reflexionar sobre lo que deseas explorar. Podés escribirlo o simplemente sentirlo en tu corazón." },
-            { title: "Alimentación", text: "Opta por comidas ligeras y nutritivas. Evitá carnes rojas, alcohol, alimentos procesados y exceso de cafeína. Mantén hidratación." },
-            { title: "Cuerpo", text: "Incorpora prácticas suaves como yoga, caminatas conscientes o estiramientos. Descansa." },
-            { title: "Mente", text: "Reducí el consumo de redes sociales o noticias. Permite momentos de silencio, escritura o meditación." },
-            { title: "Medicamentos", text: "Si estás bajo tratamiento médico o psicológico, es importante conversar previamente con el equipo facilitador." },
-          ].map((item, index) => (
+          {(locale === "es"
+            ? [
+                { title: "Crear Espacio", text: "Si te surgen dudas/miedos/consultas dales lugar. Siéntete libre de compartirlo. Crear espacio a lo que surge es una forma de entrar en la experiencia." },
+                { title: "Registro", text: "Permite observar con curiosidad sensaciones, pensamientos y situaciones de la cotidianidad." },
+                { title: "Intención", text: "Tomate un tiempo para reflexionar sobre lo que deseas explorar. Podés escribirlo o simplemente sentirlo en tu corazón." },
+                { title: "Alimentación", text: "Opta por comidas ligeras y nutritivas. Evitá carnes rojas, alcohol, alimentos procesados y exceso de cafeína. Mantén hidratación." },
+                { title: "Cuerpo", text: "Incorpora prácticas suaves como yoga, caminatas conscientes o estiramientos. Descansa." },
+                { title: "Mente", text: "Reducí el consumo de redes sociales o noticias. Permite momentos de silencio, escritura o meditación." },
+                { title: "Medicamentos", text: "Si estás bajo tratamiento médico o psicológico, es importante conversar previamente con el equipo facilitador." },
+              ]
+            : [
+                { title: "Creating Space", text: "If doubts, fears or questions arise, give them room. Feel free to share them. Creating space for what arises is a way of entering the experience." },
+                { title: "Journaling", text: "Allow yourself to observe with curiosity the sensations, thoughts and situations of daily life." },
+                { title: "Intention", text: "Take some time to reflect on what you wish to explore. You can write it down or simply feel it in your heart." },
+                { title: "Nutrition", text: "Opt for light and nutritious meals. Avoid red meat, alcohol, processed foods and excess caffeine. Stay hydrated." },
+                { title: "Body", text: "Incorporate gentle practices such as yoga, conscious walks or stretching. Rest." },
+                { title: "Mind", text: "Reduce consumption of social media or news. Allow moments of silence, writing or meditation." },
+                { title: "Medication", text: "If you are under medical or psychological treatment, it is important to discuss this with the facilitating team beforehand." },
+              ]
+          ).map((item, index) => (
             <div key={index} className="relative pl-8 md:pl-12">
               <div className="absolute -left-[11px] top-1 w-5 h-5 rounded-full bg-[#E8DCC4] border-4 border-[#868859]" />
               <h3 className="text-2xl font-bold text-[#292E17] mb-2">{item.title}</h3>
@@ -565,7 +680,9 @@ export default function CeremoniasPage() {
 
         <div className="mt-16 bg-[#292E17] text-[#E8DCC4] p-8 rounded-2xl text-center shadow-lg max-w-3xl mx-auto">
           <p className="text-xl italic font-serif">
-            "La preparación previa no busca perfección, sino presencia. Llegar a la ceremonia con una mente más tranquila y un cuerpo más liviano facilita que la medicina actúe de forma más clara y amorosa."
+            {locale === "es"
+              ? "\"La preparación previa no busca perfección, sino presencia. Llegar a la ceremonia con una mente más tranquila y un cuerpo más liviano facilita que la medicina actúe de forma más clara y amorosa.\""
+              : "\"Prior preparation does not seek perfection, but presence. Arriving at the ceremony with a calmer mind and a lighter body allows the medicine to act in a clearer and more loving way.\""}
           </p>
         </div>
       </section>
@@ -574,7 +691,7 @@ export default function CeremoniasPage() {
       <section className="py-24 bg-[#E8DCC4] text-[#3B1B0E] px-4 border-t border-[#868859]/20">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-6xl font-bold font-serif mb-4 text-[#292E17]">
-            Testimonios
+            {locale === "es" ? "Testimonios" : "Testimonials"}
           </h2>
           <p className="text-base opacity-80 mb-16 text-[#7E2625]">
             {locale === "es"
