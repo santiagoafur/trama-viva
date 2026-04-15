@@ -997,7 +997,7 @@ export default function WithinPage() {
               {locale === "es" ? "Paso a paso" : "Step by step"}
             </p>
             <h2 className="text-3xl md:text-5xl font-bold font-serif text-[#292E17]">
-              {locale === "es" ? "¿Cómo inscribirte?" : "How to register?"}
+              {locale === "es" ? "¿Cómo participar?" : "How to participate?"}
             </h2>
             <p className="mt-6 text-lg text-[#3B1B0E]/60 max-w-xl mx-auto leading-relaxed">
               {locale === "es"

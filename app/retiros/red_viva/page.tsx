@@ -833,7 +833,7 @@ export default function UnionPage() {
             {[
               {
                 name: "Fernanda Olivera",
-                ig: "@corazonlibre.fer",
+                ig: "@corazonlibre.uy",
                 image: "/images/red-viva/fer-facilitadora.webp",
                 role: locale === "es"
                   ? "Facilitadora de Terapia Psicodélica · Somática · Respiración Terapéutica · Coaching Ontológico · PNL"
@@ -949,7 +949,7 @@ export default function UnionPage() {
               </div>
               <div className="space-y-2">
                 <h3 className="text-xl uppercase tracking-widest font-bold text-[#7E2625]">
-                  {locale === "es" ? "Early Bird Abril / Mayo" : "April / May Early Bird"}
+                  {locale === "es" ? "Early Bird Mayo / Junio" : "May / June Early Bird"}
                 </h3>
                 <p className="text-6xl font-bold font-serif text-[#7E2625]">
                   $657 <span className="text-xl text-[#7E2625]/60 font-sans">USD</span>
@@ -1087,7 +1087,7 @@ export default function UnionPage() {
         <div className="max-w-4xl mx-auto">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-20">
             <p className="text-xs font-bold tracking-widest uppercase text-[#868859] mb-4">{locale === "es" ? "Paso a paso" : "Step by step"}</p>
-            <h2 className="text-3xl md:text-5xl font-bold font-serif text-[#292E17]">{locale === "es" ? "¿Cómo inscribirte?" : "How to register?"}</h2>
+            <h2 className="text-3xl md:text-5xl font-bold font-serif text-[#292E17]">{locale === "es" ? "¿Cómo participar?" : "How to participate?"}</h2>
             <p className="mt-6 text-lg text-[#3B1B0E]/60 max-w-xl mx-auto leading-relaxed">
               {locale === "es" ? "Cada etapa está diseñada para que llegues al retiro con claridad, apertura y confianza." : "Each stage is designed so you arrive at the retreat with clarity, openness and confidence."}
             </p>
