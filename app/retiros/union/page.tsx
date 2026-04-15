@@ -197,6 +197,7 @@ export default function UnionPage() {
       "3 noches de alojamiento en Buda Traslasierra",
       "Todas las comidas (Desayuno, Almuerzo, Merienda y Cena)",
       "Yoga · Prácticas psicoterapéuticas y somáticas · Caminatas",
+      "Ritual de cacao",
       "1 Ceremonia de Macrodosis de Psilocibina",
       "Acompañamiento de preparación e integración + 2 encuentros online",
       "Protocolo de dosis personalizado",
@@ -205,6 +206,7 @@ export default function UnionPage() {
       "3 nights accommodation at Buda Traslasierra",
       "All meals (Breakfast, Lunch, Snack and Dinner)",
       "Yoga · Psychotherapeutic and somatic practices · Hikes",
+      "Cacao ritual",
       "1 Macrodose Psilocybin Ceremony",
       "Preparation and integration support + 2 online meetings",
       "Personalized dosage protocol",
@@ -793,86 +795,99 @@ export default function UnionPage() {
         </div>
       </section>
 
-      {/* 8. FACILITADORES */}
-      <section className="py-28 md:py-36 px-6 lg:px-12 bg-[#292E17]">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <p className="text-xs font-bold tracking-widest uppercase text-[#868859] mb-4">
-              {locale === "es" ? "El equipo" : "The team"}
-            </p>
-            <h2 className="text-3xl md:text-5xl font-bold font-serif text-[#E8DCC4]">
-              {locale === "es" ? "Facilitadores" : "Facilitators"}
-            </h2>
-          </motion.div>
+{/* 8. FACILITADORES */}
+<section className="py-28 md:py-36 px-6 lg:px-12 bg-[#292E17]">
+  <div className="max-w-7xl mx-auto">
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      className="text-center mb-16"
+    >
+      <p className="text-xs font-bold tracking-widest uppercase text-[#868859] mb-4">
+        {locale === "es" ? "El equipo" : "The team"}
+      </p>
+      <h2 className="text-3xl md:text-5xl font-bold font-serif text-[#E8DCC4]">
+        {locale === "es" ? "Quiénes te acompañan" : "Who accompanies you"}
+      </h2>
+    </motion.div>
 
-          <div className="grid lg:grid-cols-2 gap-16 items-center max-w-5xl mx-auto">
-
-            {/* Foto */}
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="flex flex-col gap-4"
-            >
-              <div className="aspect-[3/4] relative rounded-2xl overflow-hidden">
-                <Image
-                  src="/images/within/eli-facilitador-1.webp"
-                  alt="Eliana Martínez"
-                  fill
-                  className="object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#292E17]/80 to-transparent" />
-                <div className="absolute bottom-0 left-0 right-0 p-4">
-                  <h3 className="text-lg font-bold font-serif text-[#E8DCC4]">Eliana Martínez</h3>
-                  <p className="text-xs text-[#868859]">@eli.mar.lov</p>
-                </div>
-              </div>
-              <p className="text-sm text-[#E8DCC4]/60 leading-relaxed text-center">
-                {locale === "es"
-                  ? "Coach Ontológica · Terapias Asistidas con Psicodélicos · Facilitadora de Respiración y Crioterapia · Instructora de Yoga y Meditación"
-                  : "Ontological Coach · Psychedelic Assisted Therapies · Breathwork and Cryotherapy Facilitator · Yoga and Meditation Instructor"}
-              </p>
-            </motion.div>
-
-            {/* Texto */}
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="flex flex-col gap-8 items-center text-center lg:items-start lg:text-left"
-            >
-              <div className="space-y-6 text-[#E8DCC4]/70 text-lg leading-relaxed">
-                <p>
-                  {locale === "es"
-                    ? "Cada retiro lo facilito junto a distintos profesionales que admiro y en quienes confío. Así, cada retiro es único, diverso y enriquecido por la colaboración y los saberes compartidos siendo parte de una misma red."
-                    : "I facilitate each retreat alongside different professionals I admire and trust. This way, each retreat is unique, diverse and enriched by collaboration and shared knowledge, all part of the same network."}
-                </p>
-                <p>
-                  {locale === "es"
-                    ? "Nuestro servicio se basa en abrir y sostener espacios de escucha compasiva para tu autoconocimiento, restauración emocional y la reconexión con tu energía vital."
-                    : "Our service is based on opening and holding spaces of compassionate listening for your self-knowledge, emotional restoration and reconnection with your vital energy."}
-                </p>
-              </div>
-
-              <Link
-                href={GOOGLE_FORM_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 px-8 py-4 bg-[#7E2625] text-[#E8DCC4] font-bold rounded-full hover:bg-[#7E2625]/90 transition-all hover:-translate-y-1 shadow-lg"
-              >
-                {locale === "es" ? "Reservar mi lugar" : "Reserve my spot"}
-                <ArrowRight size={18} />
-              </Link>
-            </motion.div>
-
+    <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+      {[
+        {
+          name: "Eliana Martínez",
+          ig: "@eli.mar.lov",
+          image: "/images/within/eli-facilitador-1.webp",
+          role: locale === "es"
+            ? "Coach Ontológica · Terapias Asistidas con Psicodélicos · Facilitadora de Respiración y Crioterapia · Instructora de Yoga y Meditación"
+            : "Ontological Coach · Psychedelic Assisted Therapies · Breathwork and Cryotherapy Facilitator · Yoga and Meditation Instructor",
+        },
+        {
+          name: "Julieta Analia Gramajo",
+          ig: "@hacia_dentro",
+          image: "/images/union/julieta-facilitadora.webp",
+          role: locale === "es"
+            ? "Instructora de Yoga y Meditación · Terapeuta transpersonal · Facilitadora en respiración"
+            : "Yoga and Meditation Instructor · Transpersonal Therapist · Breathwork Facilitator",
+        },
+        {
+          name: "Julia Camilleti",
+          ig: "@experienciando",
+          image: "/images/union/julia-camilleti-facilitadora.webp",
+          role: locale === "es"
+            ? "Terapeuta integrativa · Fitoterapia y etnobotánica · Terapia asistida con psicodélicos"
+            : "Integrative Therapist · Phytotherapy and Ethnobotany · Psychedelic Assisted Therapy",
+        },
+      ].map((f, i) => (
+        <motion.div
+          key={i}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: i * 0.1 }}
+          className="flex flex-col gap-4"
+        >
+          <div className="aspect-[3/4] relative rounded-2xl overflow-hidden">
+            <Image
+              src={f.image}
+              alt={f.name}
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 25vw"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#292E17]/80 to-transparent" />
+            <div className="absolute bottom-0 left-0 right-0 p-4">
+              <h3 className="text-lg font-bold font-serif text-[#E8DCC4]">{f.name}</h3>
+              <p className="text-xs text-[#868859]">{f.ig}</p>
+            </div>
           </div>
-        </div>
-      </section>
+          <p className="text-sm text-[#E8DCC4]/60 leading-relaxed px-1">{f.role}</p>
+        </motion.div>
+      ))}
+    </div>
+
+    {/* Texto de cierre */}
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      className="mt-16 max-w-3xl mx-auto text-center space-y-6"
+    >
+      <div className="w-10 h-0.5 bg-[#868859]/40 mx-auto" />
+      <p className="text-lg text-[#E8DCC4]/60 font-serif italic leading-relaxed">
+        {locale === "es"
+          ? "Cada retiro de Unión me doy el regalo de facilitar junto a distintos profesionales que admiro y en quienes confío. Así, cada retiro es único, diverso y enriquecido por la colaboración y los saberes compartidos siendo parte de una misma red."
+          : "With each Unión retreat I give myself the gift of facilitating alongside different professionals I admire and trust. This way, each retreat is unique, diverse and enriched by collaboration and shared knowledge, all part of the same network."}
+      </p>
+      <p className="text-lg text-[#E8DCC4]/60 leading-relaxed">
+        {locale === "es"
+          ? "Sostenemos este espacio con presencia, experiencia y profundo respeto por cada proceso individual. Acompañamos desde la escucha, el cuidado y la responsabilidad, creando un entorno seguro donde cada persona puede explorar su interior a su propio ritmo, en conexión con la naturaleza, el silencio y la sabiduría colectiva."
+          : "We hold this space with presence, experience and deep respect for each individual process. We accompany through listening, care and responsibility, creating a safe environment where each person can explore their inner self at their own pace, in connection with nature, silence and collective wisdom."}
+      </p>
+    </motion.div>
+
+  </div>
+</section>
 
       {/* 9. PRECIO */}
       <section className="py-28 md:py-36 px-6 lg:px-12 bg-[#E8DCC4]">
