@@ -327,7 +327,7 @@ export default function UnionPage() {
           <div className="max-w-7xl mx-auto">
             <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
               <span className="inline-flex items-center bg-[#E8DCC4]/15 backdrop-blur-sm border border-[#E8DCC4]/30 text-[#E8DCC4] text-xs font-bold tracking-widest uppercase px-4 py-2 rounded-full mb-6">
-                {locale === "es" ? "Retiro de Conexión Somática Micelial" : "Micellal Somatic Connection Retreat"}
+                {locale === "es" ? "Retiro de Conexión Somática Miceliar" : "Micellal Somatic Connection Retreat"}
               </span>
               <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold font-serif text-[#E8DCC4] mb-6">UNIÓN</h1>
               <div className="flex flex-wrap gap-4 mb-8">

@@ -6,11 +6,11 @@ export const metadata: Metadata = {
   canonical: "https://trama-viva.com/retiros/red_viva",
   },
   description:
-    "Retiro terapéutico de 4 días en Minas, Uruguay. Conexión somática y micelial. Ceremonia de macrodosis de psilocibina. Cupos limitados. 1-4 Octubre 2026.",
+    "Retiro terapéutico de 4 días en Minas, Uruguay. Conexión somática y miceliar. Ceremonia de macrodosis de psilocibina. Cupos limitados. 1-4 Octubre 2026.",
   openGraph: {
     title: "RED VIVA — Retiro de Psilocibina en Minas, Uruguay",
     description:
-      "Retiro terapéutico de 4 días en Minas, Uruguay. Conexión somática y micelial. Ceremonia de macrodosis de psilocibina. Cupos limitados.",
+      "Retiro terapéutico de 4 días en Minas, Uruguay. Conexión somática y miceliar. Ceremonia de macrodosis de psilocibina. Cupos limitados.",
     url: "https://trama-viva.com/retiros/red_viva",
     images: [
       {

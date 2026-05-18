@@ -324,7 +324,7 @@ export default function UnionPage() {
               </div>
 
               <span className="inline-flex items-center bg-[#E8DCC4]/15 backdrop-blur-sm border border-[#E8DCC4]/30 text-[#E8DCC4] text-xs font-bold tracking-widest uppercase px-4 py-2 rounded-full mb-6">
-                {locale === "es" ? "Conexión Somática · Micelial" : "Somatic · Mycelial Connection"}
+                {locale === "es" ? "Conexión Somática · Miceliar" : "Somatic · Mycelial Connection"}
               </span>
               <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold font-serif text-[#E8DCC4] mb-6">
                 RED VIVA
