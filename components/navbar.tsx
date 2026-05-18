@@ -295,6 +295,13 @@ export function Navbar() {
                             exit={{ opacity: 0, height: 0 }}
                             className="flex flex-col items-center gap-2 overflow-hidden"
                           >
+                            <Link
+                              href="/retiros"
+                              onClick={() => { setIsOpen(false); setMobileRetirosOpen(false); }}
+                              className="px-4 py-2 text-xs font-bold tracking-widest uppercase text-[#868859] hover:text-[#7E2625] transition-colors"
+                            >
+                              {locale === "es" ? "Ver todos los retiros" : "View all retreats"}
+                            </Link>
                             {retreatLinks.map((retreat) => (
                               <Link
                                 key={retreat.id}

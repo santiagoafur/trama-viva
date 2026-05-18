@@ -57,8 +57,8 @@ export default function ContactoPage() {
     {
       icon: Phone,
       label: "WhatsApp",
-      value: "+506 6191 2861",
-      href: "https://wa.me/+50661912861",
+      value: "+54 9 11 5325-8855",
+      href: "https://wa.me/5491153258855",
     },
     {
       icon: Instagram,
@@ -127,7 +127,7 @@ export default function ContactoPage() {
               {/* Quick Actions */}
               <div className="pt-6">
                 <a
-                  href="https://wa.me/+50661912861"
+                  href="https://wa.me/5491153258855"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-3 w-full sm:w-auto px-8 py-4 bg-[#292E17] text-[#E8DCC4] rounded-full font-bold hover:bg-[#3B1B0E] transition-all shadow-lg hover:shadow-xl hover:-translate-y-1"

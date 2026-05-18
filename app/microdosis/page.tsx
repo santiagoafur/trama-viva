@@ -836,7 +836,7 @@ export default function MicrodosisPage() {
 
             {/* CTA WhatsApp */}
             <a
-              href="https://wa.me/TUNUMERO"
+              href="https://wa.me/5491153258855"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-3 bg-[#292E17] text-[#E8DCC4] text-sm font-semibold px-6 py-3 rounded-full w-fit hover:bg-[#3a3d20] transition-all"
@@ -936,7 +936,7 @@ export default function MicrodosisPage() {
 
             {/* CTA WhatsApp */}
             <a
-              href="https://wa.me/50661912861"
+              href="https://wa.me/5491153258855"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-3 bg-[#E8DCC4] text-[#292E17] text-sm font-bold px-6 py-3 rounded-full w-fit hover:bg-white transition-all"

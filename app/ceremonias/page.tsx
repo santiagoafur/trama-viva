@@ -564,7 +564,7 @@ export default function CeremoniasPage() {
             <div>
               <p className="text-4xl font-bold font-serif text-[#7E2625] mb-6">$200 <span className="text-sm text-[#3B1B0E]/50 font-sans">USD</span></p>
               <a
-                href="https://wa.me/50661912861"
+                href="https://wa.me/5491153258855"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block w-full py-3 bg-[#292E17] text-[#E8DCC4] rounded-full font-bold hover:bg-[#3B1B0E] transition-all text-center"
@@ -591,7 +591,7 @@ export default function CeremoniasPage() {
             <div>
               <p className="text-5xl font-bold font-serif text-[#7E2625] mb-6">$250 <span className="text-sm text-[#3B1B0E]/50 font-sans">USD</span></p>
               <a
-                href="https://wa.me/50661912861"
+                href="https://wa.me/5491153258855"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block w-full py-4 bg-[#868859] text-[#E8DCC4] rounded-full font-bold hover:bg-[#292E17] transition-all text-center"
@@ -615,7 +615,7 @@ export default function CeremoniasPage() {
             <div>
               <p className="text-4xl font-bold font-serif text-[#7E2625] mb-6">$500 <span className="text-sm text-[#3B1B0E]/50 font-sans">USD</span></p>
               <a
-                href="https://wa.me/50661912861"
+                href="https://wa.me/5491153258855"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block w-full py-3 bg-[#292E17] text-[#E8DCC4] rounded-full font-bold hover:bg-[#3B1B0E] transition-all text-center"
@@ -808,7 +808,7 @@ export default function CeremoniasPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                href="https://wa.me/50661912861"
+                href="https://wa.me/5491153258855"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-[#7E2625] text-[#E8DCC4] font-bold text-lg rounded-full hover:bg-[#7E2625]/90 transition-all hover:-translate-y-1 shadow-xl"

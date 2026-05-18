@@ -1338,7 +1338,7 @@ export default function UnionPage() {
               <Link href={GOOGLE_FORM_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-[#7E2625] text-[#E8DCC4] font-bold text-lg rounded-full hover:bg-[#7E2625]/90 transition-all hover:-translate-y-1 shadow-xl">
                 {locale === "es" ? "Quiero reservar mi lugar" : "I want to reserve my spot"} <ArrowRight size={20} />
               </Link>
-              <Link href="https://wa.me/50661912861" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-3 px-10 py-5 border border-[#E8DCC4]/40 text-[#E8DCC4] font-bold text-lg rounded-full hover:bg-[#E8DCC4]/10 transition-all">
+              <Link href="https://wa.me/5491153258855" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-3 px-10 py-5 border border-[#E8DCC4]/40 text-[#E8DCC4] font-bold text-lg rounded-full hover:bg-[#E8DCC4]/10 transition-all">
                 {locale === "es" ? "Tengo una pregunta" : "I have a question"}
               </Link>
             </div>

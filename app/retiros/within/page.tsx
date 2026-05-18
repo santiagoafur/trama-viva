@@ -39,8 +39,8 @@ function TestimonialText({ text }: { text: string }) {
 
 const GOOGLE_FORM_URL = "https://forms.gle/8zYixuET9tg3vvVZ8";
 
-// Fecha límite Early Bird — 14 días desde hoy
-const EARLY_BIRD_DEADLINE = new Date("2026-04-30T23:59:59");
+// Fecha límite Early Bird Mayo
+const EARLY_BIRD_DEADLINE = new Date("2026-05-31T23:59:59");
 
 function CountdownTimer({ locale }: { locale: string }) {
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
@@ -812,13 +812,13 @@ export default function WithinPage() {
 
               <div className="space-y-3">
                 <h3 className="text-xl uppercase tracking-widest font-bold text-[#7E2625]">
-                  {locale === "es" ? "Early Bird Abril" : "April Early Bird"}
+                  {locale === "es" ? "Early Bird Mayo" : "May Early Bird"}
                 </h3>
                 <p className="text-6xl font-bold font-serif text-[#7E2625]">
-                  $893 <span className="text-xl text-[#7E2625]/60 font-sans">USD</span>
+                  $993 <span className="text-xl text-[#7E2625]/60 font-sans">USD</span>
                 </p>
                 <p className="text-sm text-[#3B1B0E]/50">
-                  {locale === "es" ? "Ahorrás $257 USD" : "You save $257 USD"}
+                  {locale === "es" ? "Ahorrás $157 USD" : "You save $157 USD"}
                 </p>
               </div>
 
@@ -1245,7 +1245,7 @@ export default function WithinPage() {
               <Link href={GOOGLE_FORM_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-[#7E2625] text-[#E8DCC4] font-bold text-lg rounded-full hover:bg-[#7E2625]/90 transition-all hover:-translate-y-1 shadow-xl">
                 {locale === "es" ? "Quiero reservar mi lugar" : "I want to reserve my spot"} <ArrowRight size={20} />
               </Link>
-              <Link href="https://wa.me/50661912861" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-3 px-10 py-5 border border-[#E8DCC4]/40 text-[#E8DCC4] font-bold text-lg rounded-full hover:bg-[#E8DCC4]/10 transition-all">
+              <Link href="https://wa.me/5491153258855" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-3 px-10 py-5 border border-[#E8DCC4]/40 text-[#E8DCC4] font-bold text-lg rounded-full hover:bg-[#E8DCC4]/10 transition-all">
                 {locale === "es" ? "Tengo una pregunta" : "I have a question"}
               </Link>
             </div>
