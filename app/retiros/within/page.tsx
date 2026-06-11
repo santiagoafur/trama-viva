@@ -746,14 +746,14 @@ export default function WithinPage() {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-8 mb-12">
+          <div className="flex flex-col md:flex-row md:items-start gap-6 mb-12">
             {/* Precio Especial (destacado) */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="bg-white rounded-3xl p-10 border-2 border-[#7E2625] text-center flex flex-col justify-between relative overflow-hidden transform md:scale-105"
+              className="flex-1 bg-white rounded-3xl p-10 border-2 border-[#7E2625] text-center relative overflow-hidden"
             >
               <div className="absolute top-0 left-0 w-full h-1.5 bg-[#7E2625]" />
 
@@ -766,33 +766,6 @@ export default function WithinPage() {
                 </p>
                 <p className="text-sm text-[#3B1B0E]/50">
                   {locale === "es" ? "Ahorrás $300 USD" : "You save $300 USD"}
-                </p>
-              </div>
-
-              <Link
-                href={GOOGLE_FORM_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block w-full mt-10 py-4 bg-[#7E2625] text-[#E8DCC4] rounded-full font-bold hover:bg-[#3B1B0E] transition-all hover:-translate-y-1"
-              >
-                {locale === "es" ? "Iniciar inscripción" : "Start registration"}
-              </Link>
-            </motion.div>
-
-            {/* Precio Regular */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="bg-white rounded-3xl p-10 border border-[#3B1B0E]/10 text-center flex flex-col justify-between relative overflow-hidden"
-            >
-              <div className="absolute top-0 left-0 w-full h-1.5 bg-[#868859]/30" />
-              <div className="space-y-3">
-                <h3 className="text-xl uppercase tracking-widest font-bold text-[#292E17]/70">
-                  {locale === "es" ? "Precio Regular" : "Regular Price"}
-                </h3>
-                <p className="text-6xl font-bold font-serif text-[#3B1B0E]">
-                  $1150 <span className="text-xl text-[#3B1B0E]/50 font-sans">USD</span>
                 </p>
               </div>
 
@@ -809,10 +782,26 @@ export default function WithinPage() {
                 href={GOOGLE_FORM_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block w-full mt-10 py-4 bg-[#3B1B0E] text-[#E8DCC4] rounded-full font-bold hover:bg-[#292E17] transition-all hover:-translate-y-1"
+                className="block w-full mt-10 py-4 bg-[#7E2625] text-[#E8DCC4] rounded-full font-bold hover:bg-[#3B1B0E] transition-all hover:-translate-y-1"
               >
                 {locale === "es" ? "Iniciar inscripción" : "Start registration"}
               </Link>
+            </motion.div>
+
+            {/* Precio Regular (referencia compacta, sin CTA) */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="md:w-56 bg-white/60 rounded-2xl p-6 border border-[#3B1B0E]/10 text-center relative overflow-hidden"
+            >
+              <div className="absolute top-0 left-0 w-full h-1 bg-[#868859]/30" />
+              <h4 className="text-xs uppercase tracking-widest font-bold text-[#292E17]/60 mb-2">
+                {locale === "es" ? "Precio Regular" : "Regular Price"}
+              </h4>
+              <p className="text-3xl font-bold font-serif text-[#3B1B0E]/70">
+                $1150 <span className="text-sm text-[#3B1B0E]/40 font-sans">USD</span>
+              </p>
             </motion.div>
           </div>
 
