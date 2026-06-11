@@ -39,51 +39,6 @@ function TestimonialText({ text }: { text: string }) {
 
 const GOOGLE_FORM_URL = "https://forms.gle/8zYixuET9tg3vvVZ8";
 
-// Fecha límite Early Bird Mayo
-const EARLY_BIRD_DEADLINE = new Date("2026-05-31T23:59:59");
-
-function CountdownTimer({ locale }: { locale: string }) {
-  const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
-
-  useEffect(() => {
-    const calc = () => {
-      const diff = EARLY_BIRD_DEADLINE.getTime() - new Date().getTime();
-      if (diff <= 0) return;
-      setTimeLeft({
-        days: Math.floor(diff / (1000 * 60 * 60 * 24)),
-        hours: Math.floor((diff / (1000 * 60 * 60)) % 24),
-        minutes: Math.floor((diff / (1000 * 60)) % 60),
-        seconds: Math.floor((diff / 1000) % 60),
-      });
-    };
-    calc();
-    const interval = setInterval(calc, 1000);
-    return () => clearInterval(interval);
-  }, []);
-
-  const labels = locale === "es"
-    ? ["días", "hs", "min", "seg"]
-    : ["days", "hrs", "min", "sec"];
-
-  return (
-    <div className="mt-6 bg-[#7E2625]/5 border border-[#7E2625]/20 rounded-2xl p-4">
-      <p className="text-xs text-[#7E2625] font-bold tracking-widest uppercase mb-3">
-        {locale === "es" ? "El precio Early Bird vence en" : "Early Bird price expires in"}
-      </p>
-      <div className="grid grid-cols-4 gap-2">
-        {[timeLeft.days, timeLeft.hours, timeLeft.minutes, timeLeft.seconds].map((val, i) => (
-          <div key={i} className="flex flex-col items-center bg-white rounded-xl py-2 px-1">
-            <span className="text-2xl font-bold font-serif text-[#7E2625]">
-              {String(val).padStart(2, "0")}
-            </span>
-            <span className="text-xs text-[#3B1B0E]/50 mt-0.5">{labels[i]}</span>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-}
-
 export default function WithinPage() {
   const { locale } = useLanguage();
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
@@ -787,14 +742,12 @@ export default function WithinPage() {
               {locale === "es" ? "Intercambio" : "Exchange"}
             </h2>
             <p className="mt-4 text-lg text-[#7E2625] font-medium">
-              {locale === "es"
-                ? "Asegurá tu lugar aprovechando los beneficios de inscripción temprana."
-                : "Secure your spot by taking advantage of early registration benefits."}
+              {locale === "es" ? "Asegurá tu lugar." : "Secure your spot."}
             </p>
           </motion.div>
 
           <div className="grid md:grid-cols-2 gap-8 mb-12">
-            {/* Early Bird con countdown */}
+            {/* Precio Especial (destacado) */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -804,38 +757,29 @@ export default function WithinPage() {
             >
               <div className="absolute top-0 left-0 w-full h-1.5 bg-[#7E2625]" />
 
-              {/* Badge */}
-              <div className="inline-flex items-center justify-center gap-2 bg-[#7E2625]/10 text-[#7E2625] text-xs font-bold tracking-widest uppercase px-4 py-2 rounded-full mb-4 mx-auto">
-                <span className="w-2 h-2 rounded-full bg-[#7E2625] animate-pulse" />
-                {locale === "es" ? "Oferta por tiempo limitado" : "Limited time offer"}
-              </div>
-
               <div className="space-y-3">
                 <h3 className="text-xl uppercase tracking-widest font-bold text-[#7E2625]">
-                  {locale === "es" ? "Early Bird Mayo" : "May Early Bird"}
+                  {locale === "es" ? "Precio Especial" : "Special Price"}
                 </h3>
                 <p className="text-6xl font-bold font-serif text-[#7E2625]">
-                  $993 <span className="text-xl text-[#7E2625]/60 font-sans">USD</span>
+                  $850 <span className="text-xl text-[#7E2625]/60 font-sans">USD</span>
                 </p>
                 <p className="text-sm text-[#3B1B0E]/50">
-                  {locale === "es" ? "Ahorrás $157 USD" : "You save $157 USD"}
+                  {locale === "es" ? "Ahorrás $300 USD" : "You save $300 USD"}
                 </p>
               </div>
-
-              {/* Countdown */}
-              <CountdownTimer locale={locale} />
 
               <Link
                 href={GOOGLE_FORM_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block w-full mt-6 py-4 bg-[#7E2625] text-[#E8DCC4] rounded-full font-bold hover:bg-[#3B1B0E] transition-all hover:-translate-y-1"
+                className="block w-full mt-10 py-4 bg-[#7E2625] text-[#E8DCC4] rounded-full font-bold hover:bg-[#3B1B0E] transition-all hover:-translate-y-1"
               >
-                {locale === "es" ? "Aprovechar descuento" : "Claim discount"}
+                {locale === "es" ? "Iniciar inscripción" : "Start registration"}
               </Link>
             </motion.div>
 
-            {/* Regular */}
+            {/* Precio Regular */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -852,7 +796,6 @@ export default function WithinPage() {
                 </p>
               </div>
 
-              {/* Incluye resumido */}
               <ul className="mt-8 space-y-3 text-left">
                 {includes.map((item, i) => (
                   <li key={i} className="flex items-center gap-3 text-sm text-[#3B1B0E]/60">
