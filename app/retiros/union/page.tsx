@@ -16,7 +16,7 @@ import { useLanguage } from "@/lib/language-context";
 
 const CHAR_LIMIT = 280;
 const GOOGLE_FORM_URL = "https://forms.gle/2bCtkwg6WRUzM4D4A";
-const EARLY_BIRD_DEADLINE = new Date("2026-05-31T23:59:59");
+const EARLY_BIRD_DEADLINE = new Date("2026-07-31T23:59:59");
 
 function TestimonialText({ text }: { text: string }) {
   const [expanded, setExpanded] = useState(false);
@@ -913,7 +913,7 @@ export default function UnionPage() {
 
           <div className="grid md:grid-cols-2 gap-6 mb-12">
 
-            {/* Early Bird Abril/Mayo */}
+            {/* Early Bird Junio/Julio */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -927,13 +927,13 @@ export default function UnionPage() {
               </div>
               <div className="space-y-2">
                 <h3 className="text-lg uppercase tracking-widest font-bold text-[#7E2625]">
-                  {locale === "es" ? "Early Bird Abril / Mayo" : "April / May Early Bird"}
+                  {locale === "es" ? "Early Bird Junio / Julio" : "June / July Early Bird"}
                 </h3>
                 <p className="text-5xl font-bold font-serif text-[#7E2625]">
-                  $652 <span className="text-lg text-[#7E2625]/60 font-sans">USD</span>
+                  $690 <span className="text-lg text-[#7E2625]/60 font-sans">USD</span>
                 </p>
                 <p className="text-sm text-[#3B1B0E]/50">
-                  {locale === "es" ? "Ahorrás $125 USD" : "You save $125 USD"}
+                  {locale === "es" ? "Ahorrás $87 USD" : "You save $87 USD"}
                 </p>
               </div>
               <CountdownTimer locale={locale} />

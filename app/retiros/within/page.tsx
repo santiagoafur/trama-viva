@@ -133,16 +133,16 @@ export default function WithinPage() {
 
   const mealSchedule = locale === "es"
     ? [
-        { day: "Día 1", meals: "Almuerzo · Merienda · Cena", note: "" },
-        { day: "Día 2", meals: "Desayuno · Merienda · Cena", note: "Sin almuerzo para respetar el ayuno previo a la ceremonia" },
-        { day: "Día 3", meals: "Desayuno · Almuerzo · Merienda · Cena", note: "" },
-        { day: "Día 4", meals: "Desayuno · Almuerzo", note: "" },
+        { day: "Día 1", meals: "Merienda · Cena", note: "" },
+        { day: "Día 2", meals: "Brunch · Cena", note: "" },
+        { day: "Día 3", meals: "Brunch · Merienda · Cena", note: "" },
+        { day: "Día 4", meals: "Brunch", note: "" },
       ]
     : [
-        { day: "Day 1", meals: "Lunch · Snack · Dinner", note: "" },
-        { day: "Day 2", meals: "Breakfast · Snack · Dinner", note: "No lunch to respect pre-ceremony fasting" },
-        { day: "Day 3", meals: "Breakfast · Lunch · Snack · Dinner", note: "" },
-        { day: "Day 4", meals: "Breakfast · Lunch", note: "" },
+        { day: "Day 1", meals: "Snack · Dinner", note: "" },
+        { day: "Day 2", meals: "Brunch · Dinner", note: "" },
+        { day: "Day 3", meals: "Brunch · Snack · Dinner", note: "" },
+        { day: "Day 4", meals: "Brunch", note: "" },
       ];
 
   const faqs = locale === "es"
@@ -205,7 +205,7 @@ export default function WithinPage() {
               <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold font-serif text-[#E8DCC4] mb-6">WITHIN</h1>
               <div className="flex flex-wrap gap-4 mb-8">
                 <span className="flex items-center gap-2 text-[#E8DCC4]/80 text-sm font-medium"><MapPin size={16} /> Santa Teresa, Costa Rica</span>
-                <span className="flex items-center gap-2 text-[#E8DCC4]/80 text-sm font-medium"><Calendar size={16} /> {locale === "es" ? "25-28 Junio 2026" : "June 25-28, 2026"}</span>
+                <span className="flex items-center gap-2 text-[#E8DCC4]/80 text-sm font-medium"><Calendar size={16} /> 2027</span>
                 <span className="flex items-center gap-2 text-[#E8DCC4]/80 text-sm font-medium"><Users size={16} /> {locale === "es" ? "Cupos limitados" : "Limited spots"}</span>
               </div>
               <Link href={GOOGLE_FORM_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 px-8 py-4 bg-[#7E2625] text-[#E8DCC4] font-bold rounded-full hover:bg-[#7E2625]/90 transition-all hover:-translate-y-1 shadow-lg">
@@ -703,11 +703,9 @@ export default function WithinPage() {
             <p className="text-xs font-bold tracking-widest uppercase text-[#868859] mb-4">{locale === "es" ? "El equipo" : "The team"}</p>
             <h2 className="text-3xl md:text-5xl font-bold font-serif text-[#E8DCC4]">{locale === "es" ? "Quiénes te acompañan" : "Who accompanies you"}</h2>
           </motion.div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
             {[
               { name: "Eliana Martínez", role: locale === "es" ? "Coach Ontológica · Terapias Asistidas · Yoga y Meditación" : "Ontological Coach · Assisted Therapies · Yoga & Meditation", image: "/images/within/eli-facilitador-1.webp", ig: "@eli.mar.lov" },
-              { name: "Jonathan Merla", role: locale === "es" ? "Facilitador de sanación · Breathwork · Yoga" : "Healing facilitator · Breathwork · Yoga", image: "/images/within/jonatan-facilitador.webp", ig: "@jonamerla" },
-              { name: "Nancy Goodfellow", role: locale === "es" ? "Tantra Vinyasa Yoga · Breathwork" : "Tantra Vinyasa Yoga · Breathwork", image: "/images/within/nancy-facilitador.webp", ig: "@wildheart.yogini" },
               { name: "Pedro Miguel", role: locale === "es" ? "Chef Holístico" : "Holistic Chef", image: "/images/within/pedro-facilitador.webp", ig: "@shivadrops" },
             ].map((f, i) => (
               <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} className="flex flex-col gap-4">

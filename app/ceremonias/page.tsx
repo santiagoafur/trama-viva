@@ -464,7 +464,7 @@ export default function CeremoniasPage() {
           <h2 className="text-3xl md:text-5xl font-bold font-serif mb-12 text-[#292E17]">
             {locale === "es" ? "Facilitadores" : "Facilitators"}
           </h2>
-          <div className="grid sm:grid-cols-2 gap-8 max-w-3xl mx-auto mb-16">
+          <div className="max-w-sm mx-auto mb-16">
             <FlipCard
               frontImage="/images/ceremonias/eli-ceremonias.webp"
               front={
@@ -478,22 +478,6 @@ export default function CeremoniasPage() {
                   {locale === "es"
                     ? "Coach Ontológica - PNL y Sistema Nervioso - Terapias Asistidas con Psicodélicos - Facilitadora de Respiración y Crioterapia - Instructora de Yoga y Meditación"
                     : "Ontological Coach - NLP and Nervous System - Psychedelic Assisted Therapies - Breathwork and Cryotherapy Facilitator - Yoga and Meditation Instructor"}
-                </p>
-              }
-            />
-            <FlipCard
-              frontImage="/images/ceremonias/jonatan-ceremonias.webp"
-              front={
-                <>
-                  <h3 className="text-2xl font-bold font-serif">Jonathan Merla</h3>
-                  <p className="text-sm mt-1 opacity-80">@jonamerla</p>
-                </>
-              }
-              back={
-                <p className="text-sm leading-relaxed">
-                  {locale === "es"
-                    ? "Facilitador de espacios de sanación y crecimiento personal. Facilitador de respiración e instructor de yoga."
-                    : "Facilitator of healing and personal growth spaces. Breathwork facilitator and yoga instructor."}
                 </p>
               }
             />
