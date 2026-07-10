@@ -16,7 +16,7 @@ import { useLanguage } from "@/lib/language-context";
 
 const CHAR_LIMIT = 280;
 const GOOGLE_FORM_URL = "https://forms.gle/a5uZHamGJdTaZZvv8";
-const EARLY_BIRD_DEADLINE = new Date("2026-05-31T23:59:59");
+const EARLY_BIRD_DEADLINE = new Date("2026-08-31T23:59:59");
 
 function TestimonialText({ text }: { text: string }) {
   const [expanded, setExpanded] = useState(false);
@@ -98,7 +98,7 @@ function LugarSlider() {
         >
           <Image
             src={`/images/red-viva/lugar-${current + 1}.webp`}
-            alt={`El Abrazo de las Sierras ${current + 1}`}
+            alt={`El Sabiá ${current + 1}`}
             fill
             className="object-cover"
             sizes="(max-width: 1024px) 100vw, 50vw"
@@ -192,48 +192,40 @@ export default function UnionPage() {
 
   const includes = locale === "es"
     ? [
-        "3 noches de alojamiento en El Abrazo de las Sierras",
-        "Todas las comidas (Desayuno, Almuerzo, Merienda y Cena)",
+        "1 noche de alojamiento en El Sabiá",
+        "2 comidas: Cena y Brunch",
         "Prácticas psicoterapéuticas y somáticas",
         "1 Ceremonia de Macrodosis de Psilocibina",
-        "Acompañamiento de preparación e integración + 2 encuentros online",
+        "Acompañamiento de preparación e integración (2 encuentros online)",
         "Protocolo de dosis personalizado",
       ]
     : [
-        "3 nights accommodation at El Abrazo de las Sierras",
-        "All meals (Breakfast, Lunch, Snack and Dinner)",
+        "1 night accommodation at El Sabiá",
+        "2 meals: Dinner and Brunch",
         "Psychotherapeutic and somatic practices",
         "1 Macrodose Psilocybin Ceremony",
-        "Preparation and integration support + 2 online meetings",
+        "Preparation and integration support (2 online meetings)",
         "Personalized dosage protocol",
       ];
 
   const schedule = locale === "es"
     ? [
-        { day: "Día 1", title: "Bienvenida y preparación", items: ["Recepción y acomodación", "Círculo de bienvenida y acuerdos", "Merienda", "Charla de preparación", "Cena"] },
-        { day: "Día 2", title: "Preparación y Ceremonia", items: ["Meditación y yoga", "Desayuno", "Actividad psicoterapéutica", "Brunch y tiempo libre", "Ceremonia", "Cena"] },
-        { day: "Día 3", title: "Integración", items: ["Meditación y Yoga", "Desayuno", "Actividad de integración", "Almuerzo", "Tiempo libre", "Merienda", "Actividad de integración", "Cena"] },
-        { day: "Día 4", title: "Cierre y despedida", items: ["Meditación y Yoga", "Desayuno", "Actividad de cierre", "Brunch", "Despedida"] },
+        { day: "Día 1", title: "Bienvenida y Ceremonia", items: ["Recepción y acomodación", "Charla de preparación y acuerdos", "Ceremonia de Macrodosis", "Cena"] },
+        { day: "Día 2", title: "Integración y cierre", items: ["Práctica Somática", "Círculo de palabra e integración", "Brunch", "Despedida"] },
       ]
     : [
-        { day: "Day 1", title: "Welcome and preparation", items: ["Reception and accommodation", "Welcome circle and agreements", "Snack", "Preparation talk", "Dinner"] },
-        { day: "Day 2", title: "Preparation and Ceremony", items: ["Meditation and yoga", "Breakfast", "Psychotherapeutic activity", "Brunch and free time", "Ceremony", "Dinner"] },
-        { day: "Day 3", title: "Integration", items: ["Meditation and Yoga", "Breakfast", "Integration activity", "Lunch", "Free time", "Integration activity", "Snack", "Dinner"] },
-        { day: "Day 4", title: "Closing and farewell", items: ["Meditation and Yoga", "Breakfast", "Closing activity", "Brunch", "Farewell"] },
+        { day: "Day 1", title: "Welcome and Ceremony", items: ["Reception and accommodation", "Preparation talk and agreements", "Macrodose Ceremony", "Dinner"] },
+        { day: "Day 2", title: "Integration and closing", items: ["Somatic Practice", "Sharing and integration circle", "Brunch", "Farewell"] },
       ];
 
   const mealSchedule = locale === "es"
     ? [
-        { day: "Día 1", meals: "Almuerzo · Merienda · Cena", note: "" },
-        { day: "Día 2", meals: "Desayuno · Merienda · Cena", note: "Sin almuerzo para respetar el ayuno previo a la ceremonia" },
-        { day: "Día 3", meals: "Desayuno · Almuerzo · Merienda · Cena", note: "" },
-        { day: "Día 4", meals: "Desayuno · Almuerzo", note: "" },
+        { day: "Día 1", meals: "Cena", note: "Sin almuerzo para respetar el ayuno previo a la ceremonia" },
+        { day: "Día 2", meals: "Brunch", note: "" },
       ]
     : [
-        { day: "Day 1", meals: "Lunch · Snack · Dinner", note: "" },
-        { day: "Day 2", meals: "Breakfast · Snack · Dinner", note: "No lunch to respect pre-ceremony fasting" },
-        { day: "Day 3", meals: "Breakfast · Lunch · Snack · Dinner", note: "" },
-        { day: "Day 4", meals: "Breakfast · Lunch", note: "" },
+        { day: "Day 1", meals: "Dinner", note: "No lunch to respect pre-ceremony fasting" },
+        { day: "Day 2", meals: "Brunch", note: "" },
       ];
 
     const testimonios = [
@@ -273,19 +265,19 @@ export default function UnionPage() {
 
   const faqs = locale === "es"
     ? [
-        { q: "¿Necesito experiencia previa con psilocibina?", a: "No. El retiro está diseñado tanto para personas que nunca han tenido contacto con la medicina como para quienes ya tienen experiencia. Nos adaptamos a cada proceso individual." },
-        { q: "¿Cómo es el proceso de inscripción?", a: "Completás el formulario de pre-selección, luego coordinamos una entrevista online de 30 minutos para conocernos, responder tus preguntas y confirmar que el retiro es adecuado para vos." },
-        { q: "¿El retiro es seguro?", a: "Sí. Trabajamos con grupos pequeños e íntimos, con facilitadores certificados y experiencia comprobada. Cada persona pasa por una evaluación previa y contamos con protocolos de contención para toda la experiencia." },
-        { q: "¿Qué pasa después del retiro?", a: "La integración es parte fundamental del proceso. Contás con un encuentro online post-retiro y acompañamiento para integrar la experiencia a tu vida cotidiana." },
+        { q: "¿Necesito experiencia previa con psilocibina?", a: "No. La experiencia está diseñada tanto para personas que nunca han tenido contacto con la medicina como para quienes ya tienen experiencia. Nos adaptamos a cada proceso individual." },
+        { q: "¿Cómo es el proceso de inscripción?", a: "Completás el formulario de pre-selección, luego coordinamos una entrevista online de 30 minutos para conocernos, responder tus preguntas y confirmar que la experiencia es adecuada para vos." },
+        { q: "¿La experiencia es segura?", a: "Sí. Trabajamos con grupos pequeños e íntimos, con facilitadores certificados y experiencia comprobada. Cada persona pasa por una evaluación previa y contamos con protocolos de contención para toda la experiencia." },
+        { q: "¿Qué pasa después de la experiencia?", a: "La integración es parte fundamental del proceso. Contás con un encuentro online post-experiencia y acompañamiento para integrar la experiencia a tu vida cotidiana." },
         { q: "¿Qué debo llevar?", a: "Ropa cómoda, elementos de higiene personal, cuaderno de journaling personal y un corazón y mente abiertos. Una vez confirmada tu inscripción te enviamos una guía detallada de preparación." },
         { q: "¿Puedo ir solo/a?", a: "Sí, la mayoría de los participantes llegan solos. El grupo se convierte en parte fundamental de la experiencia." },
         { q: "¿Existen contraindicaciones médicas para realizar la ceremonia de Psilocibina?", a: "Sí, es importante evaluarlas con responsabilidad. Por eso enviamos un formulario previo para descartar cualquier posible riesgo. Algunas contraindicaciones incluyen ciertos estados de salud mental, así como el uso de medicación antidepresiva o antipsicótica. No recomendamos suspender ningún tratamiento sin supervisión médica. También es importante tener especial cuidado en casos de problemas cardíacos, condiciones neurológicas, embarazo o lactancia. Todo esto será evaluado en la entrevista previa." },
       ]
     : [
-        { q: "Do I need prior experience with psilocybin?", a: "No. The retreat is designed for both people who have never had contact with the medicine and those with experience. We adapt to each individual process." },
-        { q: "What is the registration process?", a: "You complete the pre-selection form, then we coordinate a 30-minute online interview to meet, answer your questions, and confirm the retreat is right for you." },
-        { q: "Is the retreat safe?", a: "Yes. We work with small intimate groups, certified facilitators and proven experience. Each person goes through a prior evaluation and we have containment protocols for the entire experience." },
-        { q: "What happens after the retreat?", a: "Integration is a fundamental part of the process. You have a post-retreat online meeting and support to integrate the experience into your daily life." },
+        { q: "Do I need prior experience with psilocybin?", a: "No. The experience is designed for both people who have never had contact with the medicine and those with experience. We adapt to each individual process." },
+        { q: "What is the registration process?", a: "You complete the pre-selection form, then we coordinate a 30-minute online interview to meet, answer your questions, and confirm the experience is right for you." },
+        { q: "Is the experience safe?", a: "Yes. We work with small intimate groups, certified facilitators and proven experience. Each person goes through a prior evaluation and we have containment protocols for the entire experience." },
+        { q: "What happens after the experience?", a: "Integration is a fundamental part of the process. You have a post-experience online meeting and support to integrate the experience into your daily life." },
         { q: "What should I bring?", a: "Comfortable clothing, personal hygiene items, a personal journaling notebook and an open heart and mind. Once your registration is confirmed we send you a detailed preparation guide." },
         { q: "Can I go alone?", a: "Yes, most participants arrive alone. The group becomes a fundamental part of the experience." },
         { q: "Are there medical contraindications for the Psilocybin ceremony?", a: "Yes, it is important to evaluate them responsibly. That is why we send a prior form to rule out any possible risk. Some contraindications include certain mental health conditions, as well as the use of antidepressant or antipsychotic medication. We do not recommend suspending any treatment without medical supervision. It is also important to take special care in cases of heart problems, neurological conditions, pregnancy or breastfeeding. All of this will be evaluated in the prior interview." },
@@ -304,8 +296,8 @@ export default function UnionPage() {
 
       {/* 1. HERO */}
       <section className="relative h-screen w-full flex items-end overflow-hidden">
-        <Image src="/images/red-viva/hero-red-viva-desktop.webp" alt="Retiro Red Viva - Minas Uruguay" fill className="object-cover object-center hidden md:block" priority />
-        <Image src="/images/red-viva/hero-red-viva-mobile.webp" alt="Retiro Red Viva - Minas Uruguay" fill className="object-cover object-center block md:hidden" priority />
+        <Image src="/images/red-viva/hero-red-viva-desktop.webp" alt="Experiencia Red Viva - Punta del Este Uruguay" fill className="object-cover object-center hidden md:block" priority />
+        <Image src="/images/red-viva/hero-red-viva-mobile.webp" alt="Experiencia Red Viva - Punta del Este Uruguay" fill className="object-cover object-center block md:hidden" priority />
         <div className="absolute inset-0 bg-gradient-to-t from-[#292E17]/90 via-[#292E17]/30 to-transparent" />
 
         <div className="relative z-10 w-full px-6 lg:px-12 pb-16 md:pb-24">
@@ -331,10 +323,10 @@ export default function UnionPage() {
               </h1>
               <div className="flex flex-wrap gap-4 mb-8">
                 <span className="flex items-center gap-2 text-[#E8DCC4]/80 text-sm font-medium">
-                  <MapPin size={16} /> Minas, Uruguay
+                  <MapPin size={16} /> Punta del Este, Uruguay
                 </span>
                 <span className="flex items-center gap-2 text-[#E8DCC4]/80 text-sm font-medium">
-                  <Calendar size={16} /> {locale === "es" ? "1 al 4 de Octubre 2026" : "October 1-4, 2026"}
+                  <Calendar size={16} /> {locale === "es" ? "3 y 4 de Octubre 2026" : "October 3-4, 2026"}
                 </span>
                 <span className="flex items-center gap-2 text-[#E8DCC4]/80 text-sm font-medium">
                   <Users size={16} /> {locale === "es" ? "Cupos limitados" : "Limited spots"}
@@ -377,8 +369,8 @@ export default function UnionPage() {
               </p>
               <p>
                 {locale === "es"
-                  ? "Este retiro es una invitación a recordar esa sabiduría. A reunirnos como la Red Viva que ya somos, donde nuestras experiencias se entrelazan y nos permiten reconocernos parte de un mismo tejido, creando así caminos sostenibles desde lo real."
-                  : "This retreat is an invitation to remember that wisdom. To gather as the Living Network we already are, where our experiences intertwine and allow us to recognize ourselves as part of the same fabric, creating sustainable paths from what is real."}
+                  ? "Esta experiencia es una invitación a recordar esa sabiduría. A reunirnos como la Red Viva que ya somos, donde nuestras experiencias se entrelazan y nos permiten reconocernos parte de un mismo tejido, creando así caminos sostenibles desde lo real."
+                  : "This experience is an invitation to remember that wisdom. To gather as the Living Network we already are, where our experiences intertwine and allow us to recognize ourselves as part of the same fabric, creating sustainable paths from what is real."}
               </p>
               <p className="font-serif italic text-[#292E17] text-xl md:text-2xl text-center">
                 {locale === "es"
@@ -454,7 +446,7 @@ export default function UnionPage() {
                   viewport={{ once: true }}
                 >
                   <h2 className="text-3xl md:text-5xl font-bold font-serif text-[#292E17] mb-10">
-                    {locale === "es" ? "Este retiro es para vos si..." : "This retreat is for you if..."}
+                    {locale === "es" ? "Esta experiencia es para vos si..." : "This experience is for you if..."}
                   </h2>
                   <ul className="space-y-5">
                     {(locale === "es"
@@ -640,7 +632,7 @@ export default function UnionPage() {
           >
             <Image
               src="/images/red-viva/red-viva-que-incluye.webp"
-              alt="Retiro Red Viva"
+              alt="Experiencia Red Viva"
               fill
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 50vw"
@@ -654,10 +646,10 @@ export default function UnionPage() {
       <section className="py-28 md:py-36 px-6 lg:px-12 bg-[#292E17]">
         <div className="max-w-7xl mx-auto">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-16">
-            <p className="text-xs font-bold tracking-widest uppercase text-[#868859] mb-4">{locale === "es" ? "4 días" : "4 days"}</p>
+            <p className="text-xs font-bold tracking-widest uppercase text-[#868859] mb-4">{locale === "es" ? "2 días" : "2 days"}</p>
             <h2 className="text-3xl md:text-5xl font-bold font-serif text-[#E8DCC4]">{locale === "es" ? "Nuestro cronograma" : "Our schedule"}</h2>
           </motion.div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
             {schedule.map((item, i) => (
               <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} className="bg-[#E8DCC4]/5 border border-[#E8DCC4]/10 rounded-2xl p-6 flex flex-col gap-4">
                 <div>
@@ -758,48 +750,30 @@ export default function UnionPage() {
                 {locale === "es" ? "El espacio" : "The space"}
               </p>
               <h2 className="text-3xl md:text-5xl font-bold font-serif text-[#292E17]">
-                El Abrazo de las Sierras
+                El Sabiá
               </h2>
             </div>
             <div className="space-y-4 text-lg text-[#3B1B0E]/70 leading-relaxed">
               <p>
                 {locale === "es"
-                  ? "Un lugar a lo alto de las Sierras de Minas, rodeado de cañadas, montes, flora y fauna nativa y áreas de cuarzos blancos."
-                  : "A place high in the Sierras de Minas, surrounded by streams, forests, native flora and fauna, and areas of white quartz."}
+                  ? "Un refugio donde el diseño, la naturaleza y la tranquilidad se encuentran. En el corazón de Punta del Este, este espacio invita a desacelerar, respirar profundo y reconectar con uno mismo."
+                  : "A refuge where design, nature and tranquility meet. In the heart of Punta del Este, this space invites you to slow down, breathe deeply and reconnect with yourself."}
               </p>
               <p>
                 {locale === "es"
-                  ? "Ofrece un ambiente cálido, amable, familiar y descontracturado en un entorno de paz y calma."
-                  : "It offers a warm, friendly, familiar and relaxed atmosphere in an environment of peace and calm."}
-              </p>
-              <p>
-                {locale === "es"
-                  ? "Construcción de materiales amables con el medio ambiente y energías renovables."
-                  : "Built with environmentally friendly materials and renewable energy."}
-              </p>
-              <p>
-                {locale === "es"
-                  ? "El diseño y distribución de los espacios fueron pensados en base a estudios radiestésicos y de feng shui, procurando la mayor armonización para favorecer al máximo la energía positiva y lograr el mayor descanso y bienestar."
-                  : "The design and distribution of spaces were conceived based on dowsing and feng shui studies, seeking maximum harmonization to favor positive energy and achieve the greatest rest and wellbeing."}
+                  ? "Cada rincón ha sido pensado para sostener experiencias de transformación, ofreciendo el equilibrio perfecto entre confort, belleza y presencia. Un lugar ideal para retiros, encuentros y prácticas que buscan nutrir el cuerpo, la mente y el espíritu."
+                  : "Every corner has been designed to hold transformative experiences, offering the perfect balance between comfort, beauty and presence. An ideal place for retreats, gatherings and practices that seek to nourish the body, mind and spirit."}
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
-                href="https://maps.app.goo.gl/ynnUbGhA1EsRA4gFA"
+                href="https://goo.gl/maps/3dpJwauJxPjpKGrk8"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-[#292E17] text-[#E8DCC4] rounded-full font-bold hover:bg-[#3B1B0E] transition-all"
               >
                 <MapPin size={16} />
                 {locale === "es" ? "Ver en Google Maps" : "View on Google Maps"}
-              </Link>
-              <Link
-                href="https://www.instagram.com/el_abrazo_de_las_sierras/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3 border border-[#292E17] text-[#292E17] rounded-full font-bold hover:bg-[#292E17]/5 transition-all"
-              >
-                @el_abrazo_de_las_sierras
               </Link>
             </div>
           </motion.div>
@@ -949,13 +923,13 @@ export default function UnionPage() {
               </div>
               <div className="space-y-2">
                 <h3 className="text-xl uppercase tracking-widest font-bold text-[#7E2625]">
-                  {locale === "es" ? "Early Bird Mayo / Junio" : "May / June Early Bird"}
+                  {locale === "es" ? "Early Bird Julio / Agosto" : "July / August Early Bird"}
                 </h3>
                 <p className="text-6xl font-bold font-serif text-[#7E2625]">
-                  $657 <span className="text-xl text-[#7E2625]/60 font-sans">USD</span>
+                  $340 <span className="text-xl text-[#7E2625]/60 font-sans">USD</span>
                 </p>
                 <p className="text-sm text-[#3B1B0E]/50">
-                  {locale === "es" ? "Ahorrás $152 USD" : "You save $152 USD"}
+                  {locale === "es" ? "Ahorrás $45 USD" : "You save $45 USD"}
                 </p>
               </div>
               <CountdownTimer locale={locale} />
@@ -983,7 +957,7 @@ export default function UnionPage() {
                   {locale === "es" ? "Precio Regular" : "Regular Price"}
                 </h3>
                 <p className="text-6xl font-bold font-serif text-[#3B1B0E]">
-                  $809 <span className="text-xl text-[#3B1B0E]/50 font-sans">USD</span>
+                  $385 <span className="text-xl text-[#3B1B0E]/50 font-sans">USD</span>
                 </p>
                 <p className="text-sm text-[#3B1B0E]/30">
                   {locale === "es" ? "Precio final" : "Final price"}
@@ -1036,8 +1010,8 @@ export default function UnionPage() {
                   <p className="text-sm text-[#3B1B0E]/70 leading-relaxed">
                     <strong className="text-[#292E17]">{locale === "es" ? "Reserva:" : "Reservation:"}</strong>{" "}
                     {locale === "es"
-                      ? "Se efectiviza al completar el formulario, la entrevista y enviar el comprobante del pago completo o primera cuota. La totalidad debe abonarse antes del retiro."
-                      : "It becomes effective upon completing the form, the interview, and sending proof of full payment or first installment. Full payment must be made before the retreat."}
+                      ? "Se efectiviza al completar el formulario, la entrevista y enviar el comprobante del pago completo o primera cuota. La totalidad debe abonarse antes de la experiencia."
+                      : "It becomes effective upon completing the form, the interview, and sending proof of full payment or first installment. Full payment must be made before the experience."}
                   </p>
                 </div>
                 <div className="flex gap-3 bg-white/60 p-5 rounded-2xl border border-white">
@@ -1089,7 +1063,7 @@ export default function UnionPage() {
             <p className="text-xs font-bold tracking-widest uppercase text-[#868859] mb-4">{locale === "es" ? "Paso a paso" : "Step by step"}</p>
             <h2 className="text-3xl md:text-5xl font-bold font-serif text-[#292E17]">{locale === "es" ? "¿Cómo participar?" : "How to participate?"}</h2>
             <p className="mt-6 text-lg text-[#3B1B0E]/60 max-w-xl mx-auto leading-relaxed">
-              {locale === "es" ? "Cada etapa está diseñada para que llegues al retiro con claridad, apertura y confianza." : "Each stage is designed so you arrive at the retreat with clarity, openness and confidence."}
+              {locale === "es" ? "Cada etapa está diseñada para que llegues a la experiencia con claridad, apertura y confianza." : "Each stage is designed so you arrive at the experience with clarity, openness and confidence."}
             </p>
           </motion.div>
 
@@ -1097,21 +1071,21 @@ export default function UnionPage() {
             {(locale === "es"
               ? [
                   { num: "01", title: "Formulario inicial", desc: "Para inscribirte te enviamos un formulario con preguntas específicas para conocerte mejor: tu historial, motivaciones e intenciones." },
-                  { num: "02", title: "Entrevista previa", desc: "Coordinamos un encuentro online de 30 minutos para presentarnos, responder todas tus dudas y confirmar que el retiro es el espacio adecuado para vos." },
-                  { num: "03", title: "Firma de consentimiento informado", desc: "Firma digital que confirma la comprensión y aceptación de la información, autorizando tu participación voluntaria en el retiro." },
+                  { num: "02", title: "Entrevista previa", desc: "Coordinamos un encuentro online de 30 minutos para presentarnos, responder todas tus dudas y confirmar que la experiencia es el espacio adecuado para vos." },
+                  { num: "03", title: "Firma de consentimiento informado", desc: "Firma digital que confirma la comprensión y aceptación de la información, autorizando tu participación voluntaria en la experiencia." },
                   { num: "04", title: "Pago primera cuota", desc: "Tu confirmación queda efectiva con el pago de la primera cuota. A partir de ahí sos parte del grupo." },
-                  { num: "05", title: "Encuentro online grupal I", desc: "Una semana antes del retiro nos encontramos online con el grupo completo para conocerse, recibir herramientas de preparación y despejar cualquier consulta." },
-                  { num: "06", title: "RETIRO", desc: "Tu experiencia en Red Viva" },
-                  { num: "07", title: "Encuentro online grupal II", desc: "Dos semanas después del retiro nos volvemos a encontrar online para optimizar la integración y capitalizar los aprendizajes obtenidos." },
+                  { num: "05", title: "Encuentro online grupal I", desc: "Una semana antes de la experiencia nos encontramos online con el grupo completo para conocerse, recibir herramientas de preparación y despejar cualquier consulta." },
+                  { num: "06", title: "EXPERIENCIA", desc: "Tu experiencia en Red Viva" },
+                  { num: "07", title: "Encuentro online grupal II", desc: "Dos semanas después de la experiencia nos volvemos a encontrar online para optimizar la integración y capitalizar los aprendizajes obtenidos." },
                 ]
               : [
                   { num: "01", title: "Initial form", desc: "To register, we send you a form with specific questions to get to know you better: your history, motivations and intentions." },
-                  { num: "02", title: "Prior interview", desc: "We coordinate a 30-minute online meeting to introduce ourselves, answer all your questions and confirm the retreat is the right space for you." },
-                  { num: "03", title: "Informed consent signature", desc: "Digital signature confirming the understanding and acceptance of the information, authorizing your voluntary participation in the retreat." },
+                  { num: "02", title: "Prior interview", desc: "We coordinate a 30-minute online meeting to introduce ourselves, answer all your questions and confirm the experience is the right space for you." },
+                  { num: "03", title: "Informed consent signature", desc: "Digital signature confirming the understanding and acceptance of the information, authorizing your voluntary participation in the experience." },
                   { num: "04", title: "First installment payment", desc: "Your confirmation is effective with the payment of the first installment. From that point on, you are part of the group." },
-                  { num: "05", title: "Group online meeting I", desc: "One week before the retreat we meet online with the full group to get to know each other, receive preparation tools, and address any questions." },
-                  { num: "06", title: "RETREAT", desc: "Your experience at Red Viva" },
-                  { num: "07", title: "Group online meeting II", desc: "Two weeks after the retreat we meet online again to optimize integration and capitalize on the learnings obtained." },
+                  { num: "05", title: "Group online meeting I", desc: "One week before the experience we meet online with the full group to get to know each other, receive preparation tools, and address any questions." },
+                  { num: "06", title: "EXPERIENCE", desc: "Your experience at Red Viva" },
+                  { num: "07", title: "Group online meeting II", desc: "Two weeks after the experience we meet online again to optimize integration and capitalize on the learnings obtained." },
                 ]
             ).map((step, i) => (
               <motion.div key={i} initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} className="relative flex gap-8 pb-12 last:pb-0">

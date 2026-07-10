@@ -930,10 +930,10 @@ export default function UnionPage() {
                   {locale === "es" ? "Early Bird Junio / Julio" : "June / July Early Bird"}
                 </h3>
                 <p className="text-5xl font-bold font-serif text-[#7E2625]">
-                  $690 <span className="text-lg text-[#7E2625]/60 font-sans">USD</span>
+                  $680 <span className="text-lg text-[#7E2625]/60 font-sans">USD</span>
                 </p>
                 <p className="text-sm text-[#3B1B0E]/50">
-                  {locale === "es" ? "Ahorrás $87 USD" : "You save $87 USD"}
+                  {locale === "es" ? "Ahorrás $53 USD" : "You save $53 USD"}
                 </p>
               </div>
               <CountdownTimer locale={locale} />
@@ -961,7 +961,7 @@ export default function UnionPage() {
                   {locale === "es" ? "Precio Regular" : "Regular Price"}
                 </h3>
                 <p className="text-5xl font-bold font-serif text-[#3B1B0E]">
-                  $777 <span className="text-lg text-[#3B1B0E]/50 font-sans">USD</span>
+                  $733 <span className="text-lg text-[#3B1B0E]/50 font-sans">USD</span>
                 </p>
                 <p className="text-sm text-[#3B1B0E]/30">
                   {locale === "es" ? "Precio final" : "Final price"}

@@ -1,23 +1,23 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "RED VIVA — Retiro de Psilocibina en Minas, Uruguay",
+  title: "RED VIVA — Experiencia de Psilocibina en Punta del Este, Uruguay",
   alternates: {
   canonical: "https://trama-viva.com/retiros/red_viva",
   },
   description:
-    "Retiro terapéutico de 4 días en Minas, Uruguay. Conexión somática y miceliar. Ceremonia de macrodosis de psilocibina. Cupos limitados. 1-4 Octubre 2026.",
+    "Experiencia terapéutica en Punta del Este, Uruguay. Conexión somática y miceliar. Ceremonia de macrodosis de psilocibina. Cupos limitados. 3-4 Octubre 2026.",
   openGraph: {
-    title: "RED VIVA — Retiro de Psilocibina en Minas, Uruguay",
+    title: "RED VIVA — Experiencia de Psilocibina en Punta del Este, Uruguay",
     description:
-      "Retiro terapéutico de 4 días en Minas, Uruguay. Conexión somática y miceliar. Ceremonia de macrodosis de psilocibina. Cupos limitados.",
+      "Experiencia terapéutica en Punta del Este, Uruguay. Conexión somática y miceliar. Ceremonia de macrodosis de psilocibina. Cupos limitados.",
     url: "https://trama-viva.com/retiros/red_viva",
     images: [
       {
         url: "/images/red-viva/hero-red-viva-desktop.webp",
         width: 1200,
         height: 630,
-        alt: "Retiro RED VIVA — Uruguay",
+        alt: "Experiencia RED VIVA — Uruguay",
       },
     ],
   },
