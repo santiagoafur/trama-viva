@@ -83,7 +83,7 @@ function CountdownTimer({ locale }: { locale: string }) {
 
 function LugarSlider() {
   const [current, setCurrent] = useState(0);
-  const total = 6;
+  const total = 4;
 
   return (
     <div className="relative">
@@ -495,7 +495,7 @@ export default function UnionPage() {
                   className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl"
                 >
                   <Image
-                    src="/images/union/new_photos/FEED ABRAZO (19) 1.webp"
+                    src="/images/red-viva/para-vos-si.webp"
                     alt="¿Para quién es Within?"
                     fill
                     className="object-cover"
@@ -631,7 +631,7 @@ export default function UnionPage() {
             className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl"
           >
             <Image
-              src="/images/red-viva/red-viva-que-incluye.webp"
+              src="/images/red-viva/que-incluye.webp"
               alt="Experiencia Red Viva"
               fill
               className="object-cover"
@@ -803,7 +803,7 @@ export default function UnionPage() {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-10 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {[
               {
                 name: "Fernanda Olivera",
@@ -815,6 +815,17 @@ export default function UnionPage() {
                 bio: locale === "es"
                   ? "Mi propósito es acompañar a quienes están en compromiso con vivir una vida desde la libertad del corazón. Comparto las medicinas que fueron un antes y un después en mi vida. Acompaño desde mi experiencia viva, desde la maestría y las vueltas al espiral que me invita mi servicio."
                   : "My purpose is to accompany those committed to living a life from the freedom of the heart. I share the medicines that were a before and after in my life. I accompany from my lived experience, from mastery and the spirals my service invites me into.",
+              },
+              {
+                name: "Fabricio Méndez",
+                ig: "@fabriciomendez111",
+                image: "/images/red-viva/fabri-facilitador.webp",
+                role: locale === "es"
+                  ? "Terapeuta Gestalt · Facilitador de Mindfulness · Terapias Asistidas con Psicodélicos"
+                  : "Gestalt Therapist · Mindfulness Facilitator · Psychedelic Assisted Therapies",
+                bio: locale === "es"
+                  ? "Mi forma de acompañar se inspira en la Gestalt Viva, con la intención de crear un espacio seguro de presencia, cuidado y confianza para explorar la experiencia del momento presente y favorecer procesos de crecimiento y transformación."
+                  : "My way of accompanying is inspired by Living Gestalt, with the intention of creating a safe space of presence, care and trust to explore the experience of the present moment and foster processes of growth and transformation.",
               },
               {
                 name: "Eliana Martínez",
@@ -1032,25 +1043,37 @@ export default function UnionPage() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mt-8 bg-[#292E17] text-[#E8DCC4] rounded-3xl p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-6 border-2 border-[#868859]"
+            className="mt-8 bg-[#292E17] text-[#E8DCC4] rounded-3xl p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-8 border-2 border-[#868859]"
           >
             <div className="space-y-2 text-center md:text-left">
               <h4 className="text-2xl font-bold font-serif">
                 {locale === "es" ? "¿Venís acompañado o ya participaste?" : "Coming with someone or already participated?"}
               </h4>
-              <p className="text-[#E8DCC4]/70">
+              <p className="text-[#E8DCC4]/70 max-w-md">
                 {locale === "es"
-                  ? "Consultá por un valor especial si venís con alguien o ya participaste de alguno de nuestros espacios."
-                  : "Ask about a special rate if you're coming with someone or have previously participated in any of our spaces."}
+                  ? "Si venís con alguien o ya participaste de alguno de nuestros espacios, accedés a un valor especial."
+                  : "If you're coming with someone or have previously participated in any of our spaces, you get access to a special rate."}
               </p>
             </div>
-            <Link
-              href="/contacto"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-[#E8DCC4] text-[#292E17] rounded-full font-bold hover:bg-white transition-all whitespace-nowrap"
-            >
-              {locale === "es" ? "Consultar valor especial" : "Inquire about special rate"}
-              <ArrowRight size={18} />
-            </Link>
+
+            <div className="flex flex-col items-center gap-4 flex-shrink-0">
+              {/* Valor especial */}
+              <div className="relative px-8 py-5 rounded-2xl bg-[#E8DCC4]/[0.07] border border-[#868859]/40 text-center">
+                <span className="absolute -top-2.5 left-1/2 -translate-x-1/2 bg-[#7E2625] text-[#E8DCC4] text-[10px] font-bold tracking-widest uppercase px-3 py-0.5 rounded-full whitespace-nowrap">
+                  {locale === "es" ? "Valor especial" : "Special rate"}
+                </span>
+                <p className="text-4xl font-bold font-serif text-[#E8DCC4] mt-1">
+                  $305 <span className="text-base text-[#E8DCC4]/50 font-sans">USD</span>
+                </p>
+              </div>
+              <Link
+                href="/contacto"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-[#E8DCC4] text-[#292E17] rounded-full font-bold hover:bg-white transition-all whitespace-nowrap"
+              >
+                {locale === "es" ? "Consultar valor especial" : "Inquire about special rate"}
+                <ArrowRight size={18} />
+              </Link>
+            </div>
           </motion.div>
 
         </div>
