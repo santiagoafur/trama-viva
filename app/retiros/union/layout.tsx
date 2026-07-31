@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   canonical: "https://trama-viva.com/retiros/union",
   },
   description:
-    "Retiro terapéutico de 4 días en las sierras de Córdoba, Argentina. Ceremonia de macrodosis de psilocibina, yoga, meditación y Breathwork. Cupos limitados. 10-13 Septiembre 2026.",
+    "Retiro terapéutico de 4 días en las sierras de Córdoba, Argentina. Ceremonia de macrodosis de psilocibina, yoga, meditación y Breathwork. Cupos limitados. 24-27 Septiembre 2026.",
   openGraph: {
     title: "UNIÓN — Retiro de Psilocibina en Córdoba, Argentina",
     description:

@@ -332,7 +332,7 @@ export default function UnionPage() {
               <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold font-serif text-[#E8DCC4] mb-6">UNIÓN</h1>
               <div className="flex flex-wrap gap-4 mb-8">
                 <span className="flex items-center gap-2 text-[#E8DCC4]/80 text-sm font-medium"><MapPin size={16} /> Córdoba, Traslasierra - Argentina</span>
-                <span className="flex items-center gap-2 text-[#E8DCC4]/80 text-sm font-medium"><Calendar size={16} /> {locale === "es" ? "10-13 Septiembre 2026" : "September 10-13, 2026"}</span>
+                <span className="flex items-center gap-2 text-[#E8DCC4]/80 text-sm font-medium"><Calendar size={16} /> {locale === "es" ? "24-27 Septiembre 2026" : "September 24-27, 2026"}</span>
                 <span className="flex items-center gap-2 text-[#E8DCC4]/80 text-sm font-medium"><Users size={16} /> {locale === "es" ? "Cupos limitados" : "Limited spots"}</span>
               </div>
               <Link href={GOOGLE_FORM_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 px-8 py-4 bg-[#7E2625] text-[#E8DCC4] font-bold rounded-full hover:bg-[#7E2625]/90 transition-all hover:-translate-y-1 shadow-lg">

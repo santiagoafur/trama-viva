@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   canonical: "https://trama-viva.com/retiros/within",
   },
   description:
-    "Retiro terapéutico de 4 días en Santa Teresa, Costa Rica. Ceremonia de macrodosis de psilocibina, yoga, ice bath y sauna. Cupos limitados. 25-28 Junio 2026.",
+    "Retiro terapéutico de 4 días en Santa Teresa, Costa Rica. Ceremonia de macrodosis de psilocibina, yoga, ice bath y sauna. Cupos limitados. 25-28 Marzo 2027.",
   openGraph: {
     title: "WITHIN — Retiro de Psilocibina en Costa Rica",
     description:
