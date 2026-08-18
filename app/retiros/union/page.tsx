@@ -16,7 +16,7 @@ import { useLanguage } from "@/lib/language-context";
 
 const CHAR_LIMIT = 280;
 const GOOGLE_FORM_URL = "https://forms.gle/2bCtkwg6WRUzM4D4A";
-const EARLY_BIRD_DEADLINE = new Date("2026-07-31T23:59:59");
+const EARLY_BIRD_DEADLINE = new Date("2026-08-31T23:59:59");
 
 function TestimonialText({ text }: { text: string }) {
   const [expanded, setExpanded] = useState(false);
@@ -65,7 +65,7 @@ function CountdownTimer({ locale }: { locale: string }) {
   return (
     <div className="mt-6 bg-[#7E2625]/5 border border-[#7E2625]/20 rounded-2xl p-4">
       <p className="text-xs text-[#7E2625] font-bold tracking-widest uppercase mb-3">
-        {locale === "es" ? "El precio Early Bird vence en" : "Early Bird price expires in"}
+        {locale === "es" ? "El precio especial vence en" : "Special price expires in"}
       </p>
       <div className="grid grid-cols-4 gap-2">
         {[timeLeft.days, timeLeft.hours, timeLeft.minutes, timeLeft.seconds].map((val, i) => (
@@ -913,7 +913,7 @@ export default function UnionPage() {
 
           <div className="grid md:grid-cols-2 gap-6 mb-12">
 
-            {/* Early Bird Junio/Julio */}
+            {/* Especial Agosto */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -927,7 +927,7 @@ export default function UnionPage() {
               </div>
               <div className="space-y-2">
                 <h3 className="text-lg uppercase tracking-widest font-bold text-[#7E2625]">
-                  {locale === "es" ? "Early Bird Junio / Julio" : "June / July Early Bird"}
+                  {locale === "es" ? "Especial Agosto" : "August Special"}
                 </h3>
                 <p className="text-5xl font-bold font-serif text-[#7E2625]">
                   $680 <span className="text-lg text-[#7E2625]/60 font-sans">USD</span>
@@ -1039,25 +1039,40 @@ export default function UnionPage() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mt-8 bg-[#292E17] text-[#E8DCC4] rounded-3xl p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-6 border-2 border-[#868859]"
+            className="mt-8 bg-[#292E17] text-[#E8DCC4] rounded-3xl p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-8 border-2 border-[#868859]"
           >
             <div className="space-y-2 text-center md:text-left">
               <h4 className="text-2xl font-bold font-serif">
                 {locale === "es" ? "¿Venís acompañado o ya participaste?" : "Coming with someone or already participated?"}
               </h4>
-              <p className="text-[#E8DCC4]/70">
+              <p className="text-[#E8DCC4]/70 max-w-md">
                 {locale === "es"
-                  ? "Consultá por un valor especial si venís con alguien o ya participaste de alguno de nuestros espacios."
-                  : "Ask about a special rate if you're coming with someone or have previously participated in any of our spaces."}
+                  ? "Si venís con alguien o ya participaste de alguno de nuestros espacios, accedés a un valor especial."
+                  : "If you're coming with someone or have previously participated in any of our spaces, you get access to a special rate."}
               </p>
             </div>
-            <Link
-              href="/contacto"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-[#E8DCC4] text-[#292E17] rounded-full font-bold hover:bg-white transition-all whitespace-nowrap"
-            >
-              {locale === "es" ? "Consultar valor especial" : "Inquire about special rate"}
-              <ArrowRight size={18} />
-            </Link>
+
+            <div className="flex flex-col items-center gap-4 flex-shrink-0">
+              {/* Valor especial */}
+              <div className="relative px-8 py-5 rounded-2xl bg-[#E8DCC4]/[0.07] border border-[#868859]/40 text-center">
+                <span className="absolute -top-2.5 left-1/2 -translate-x-1/2 bg-[#7E2625] text-[#E8DCC4] text-[10px] font-bold tracking-widest uppercase px-3 py-0.5 rounded-full whitespace-nowrap">
+                  {locale === "es" ? "Valor especial" : "Special rate"}
+                </span>
+                <p className="text-4xl font-bold font-serif text-[#E8DCC4] mt-1">
+                  $610 <span className="text-base text-[#E8DCC4]/50 font-sans">USD</span>
+                </p>
+                <p className="text-xs text-[#E8DCC4]/50 mt-1">
+                  {locale === "es" ? "cada uno" : "each"}
+                </p>
+              </div>
+              <Link
+                href="/contacto"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-[#E8DCC4] text-[#292E17] rounded-full font-bold hover:bg-white transition-all whitespace-nowrap"
+              >
+                {locale === "es" ? "Consultar valor especial" : "Inquire about special rate"}
+                <ArrowRight size={18} />
+              </Link>
+            </div>
           </motion.div>
 
         </div>

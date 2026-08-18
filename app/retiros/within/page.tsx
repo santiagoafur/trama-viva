@@ -205,7 +205,7 @@ export default function WithinPage() {
               <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold font-serif text-[#E8DCC4] mb-6">WITHIN</h1>
               <div className="flex flex-wrap gap-4 mb-8">
                 <span className="flex items-center gap-2 text-[#E8DCC4]/80 text-sm font-medium"><MapPin size={16} /> Santa Teresa, Costa Rica</span>
-                <span className="flex items-center gap-2 text-[#E8DCC4]/80 text-sm font-medium"><Calendar size={16} /> {locale === "es" ? "25-28 Marzo 2027" : "March 25-28, 2027"}</span>
+                <span className="flex items-center gap-2 text-[#E8DCC4]/80 text-sm font-medium"><Calendar size={16} /> {locale === "es" ? "29 Abril - 2 Mayo 2027" : "April 29 - May 2, 2027"}</span>
                 <span className="flex items-center gap-2 text-[#E8DCC4]/80 text-sm font-medium"><Users size={16} /> {locale === "es" ? "Cupos limitados" : "Limited spots"}</span>
               </div>
               <Link href={GOOGLE_FORM_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 px-8 py-4 bg-[#7E2625] text-[#E8DCC4] font-bold rounded-full hover:bg-[#7E2625]/90 transition-all hover:-translate-y-1 shadow-lg">
@@ -853,25 +853,40 @@ export default function WithinPage() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mt-8 bg-[#292E17] text-[#E8DCC4] rounded-3xl p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-6 border-2 border-[#868859]"
+            className="mt-8 bg-[#292E17] text-[#E8DCC4] rounded-3xl p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-8 border-2 border-[#868859]"
           >
             <div className="space-y-2 text-center md:text-left">
               <h4 className="text-2xl font-bold font-serif">
                 {locale === "es" ? "¿Venís acompañado o ya participaste?" : "Coming with someone or already participated?"}
               </h4>
-              <p className="text-[#E8DCC4]/70">
+              <p className="text-[#E8DCC4]/70 max-w-md">
                 {locale === "es"
-                  ? "Consultá por un valor especial si venís con alguien o ya participaste de alguno de nuestros espacios."
-                  : "Ask about a special rate if you're coming with someone or have previously participated in any of our spaces."}
+                  ? "Si venís con alguien o ya participaste de alguno de nuestros espacios, accedés a un valor especial."
+                  : "If you're coming with someone or have previously participated in any of our spaces, you get access to a special rate."}
               </p>
             </div>
-            <Link
-              href="/contacto"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-[#E8DCC4] text-[#292E17] rounded-full font-bold hover:bg-white transition-all whitespace-nowrap"
-            >
-              {locale === "es" ? "Consultar valor especial" : "Inquire about special rate"}
-              <ArrowRight size={18} />
-            </Link>
+
+            <div className="flex flex-col items-center gap-4 flex-shrink-0">
+              {/* Valor especial */}
+              <div className="relative px-8 py-5 rounded-2xl bg-[#E8DCC4]/[0.07] border border-[#868859]/40 text-center">
+                <span className="absolute -top-2.5 left-1/2 -translate-x-1/2 bg-[#7E2625] text-[#E8DCC4] text-[10px] font-bold tracking-widest uppercase px-3 py-0.5 rounded-full whitespace-nowrap">
+                  {locale === "es" ? "Valor especial" : "Special rate"}
+                </span>
+                <p className="text-4xl font-bold font-serif text-[#E8DCC4] mt-1">
+                  $804 <span className="text-base text-[#E8DCC4]/50 font-sans">USD</span>
+                </p>
+                <p className="text-xs text-[#E8DCC4]/50 mt-1">
+                  {locale === "es" ? "cada uno" : "each"}
+                </p>
+              </div>
+              <Link
+                href="/contacto"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-[#E8DCC4] text-[#292E17] rounded-full font-bold hover:bg-white transition-all whitespace-nowrap"
+              >
+                {locale === "es" ? "Consultar valor especial" : "Inquire about special rate"}
+                <ArrowRight size={18} />
+              </Link>
+            </div>
           </motion.div>
         </div>
       </section>

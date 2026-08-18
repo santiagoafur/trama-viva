@@ -13,7 +13,7 @@ const retreatLinks = [
     id: "within",
     name: "Within",
     location: "Santa Teresa, Costa Rica",
-    date: { es: "25-28 Mar 2027", en: "Mar 25-28, 2027" },
+    date: { es: "29 Abr - 2 May 2027", en: "Apr 29 - May 2, 2027" },
     href: "/retiros/within",
   },
   {
@@ -26,8 +26,8 @@ const retreatLinks = [
   {
     id: "red_viva",
     name: "Red Viva",
-    location: "Minas, Uruguay",
-    date: { es: "1-4 Oct 2026", en: "Oct 1-4, 2026" },
+    location: "Punta del Este, Uruguay",
+    date: { es: "3-4 Oct 2026", en: "Oct 3-4, 2026" },
     href: "/retiros/red_viva",
   },
 ];
